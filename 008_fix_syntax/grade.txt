@@ -1,0 +1,10 @@
+Grading at 08/28/2024:20:25:02.592598
+For commit ID 126ec69a433fede03be3868906861ba5917543cb
+Grading at Wed Aug 28 04:25:02 PM EDT 2024
+Checking errors.txt
+Your file matched the expected output
+errors.txt is correct.
+Checking the syntax is code.c
+code.c does not have legal syntax
+
+Overall Grade: FAILED
