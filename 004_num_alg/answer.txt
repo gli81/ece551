@@ -1,0 +1,2 @@
+Count from 0 to (2*N)+2 (exclusive), call each count i
+For each i, write down the number (2*i+N*3)
