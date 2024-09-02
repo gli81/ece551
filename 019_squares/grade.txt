@@ -1,0 +1,1570 @@
+Grading at 09/02/2024:04:41:59.377816
+For commit ID c42470118a57c9ebdebadc9ae3ac7d3f0bf794b7
+Grading at Mon Sep  2 12:41:57 AM EDT 2024
+Checking the syntax of your code in squares.c
+The code is legal, now testing its behavior.
+Checking squares(1,1, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+# 								# 
+ *							      |	  
+Checking squares(1,1, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+#  								#  
+ **							      |	  *
+ **								 **
+Checking squares(1,1, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+#     								#     
+ *****							      |	  ****
+ *   *								 *   *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(1,1, 1, 9)
+Your program produced the wrong output!
+Here are the differences:
+#         							#         
+ *********						      |	  ********
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *********							 *********
+Checking squares(1,1, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+# 								# 
+  								  
+  								  
+ *							      |	  
+Checking squares(1,1, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+#  								#  
+   								   
+   								   
+ **							      |	  *
+ **								 **
+Checking squares(1,1, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+#     								#     
+      								      
+      								      
+ *****							      |	  ****
+ *   *								 *   *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(1,1, 3, 9)
+Your program produced the wrong output!
+Here are the differences:
+#         							#         
+          							          
+          							          
+ *********						      |	  ********
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *********							 *********
+Checking squares(1,1, 6, 1)
+Your program produced the wrong output!
+Here are the differences:
+# 								# 
+  								  
+  								  
+  								  
+  								  
+  								  
+ *							      |	  
+Checking squares(1,1, 6, 2)
+Your program produced the wrong output!
+Here are the differences:
+#  								#  
+   								   
+   								   
+   								   
+   								   
+   								   
+ **							      |	  *
+ **								 **
+Checking squares(1,1, 6, 5)
+Your program produced the wrong output!
+Here are the differences:
+#     								#     
+      								      
+      								      
+      								      
+      								      
+      								      
+ *****							      |	  ****
+ *   *								 *   *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(1,1, 6, 11)
+Your program produced the wrong output!
+Here are the differences:
+#           							#           
+            							            
+            							            
+            							            
+            							            
+            							            
+ ***********						      |	  **********
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ ***********							 ***********
+Checking squares(1,2, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+#  								#  
+  *							      |	   
+Checking squares(1,2, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+#   								#   
+  **							      |	   *
+  **								  **
+Checking squares(1,2, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+#      								#      
+  *****							      |	   ****
+  *   *								  *   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(1,2, 1, 8)
+Your program produced the wrong output!
+Here are the differences:
+#         							#         
+  ********						      |	   *******
+  *      *							  *      *
+  *      *							  *      *
+  *      *							  *      *
+  *      *							  *      *
+  *      *							  *      *
+  *      *							  *      *
+  ********							  ********
+Checking squares(1,2, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+#  								#  
+   								   
+   								   
+  *							      |	   
+Checking squares(1,2, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+#   								#   
+    								    
+    								    
+  **							      |	   *
+  **								  **
+Checking squares(1,2, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+#      								#      
+       								       
+       								       
+  *****							      |	   ****
+  *   *								  *   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(1,2, 3, 11)
+Your program produced the wrong output!
+Here are the differences:
+#            							#            
+             							             
+             							             
+  ***********						      |	   **********
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  ***********							  ***********
+Checking squares(1,2, 8, 1)
+Your program produced the wrong output!
+Here are the differences:
+#  								#  
+   								   
+   								   
+   								   
+   								   
+   								   
+   								   
+   								   
+  *							      |	   
+Checking squares(1,2, 8, 2)
+Your program produced the wrong output!
+Here are the differences:
+#   								#   
+    								    
+    								    
+    								    
+    								    
+    								    
+    								    
+    								    
+  **							      |	   *
+  **								  **
+Checking squares(1,2, 8, 5)
+Your program produced the wrong output!
+Here are the differences:
+#      								#      
+       								       
+       								       
+       								       
+       								       
+       								       
+       								       
+       								       
+  *****							      |	   ****
+  *   *								  *   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(1,2, 8, 11)
+Your program produced the wrong output!
+Here are the differences:
+#            							#            
+             							             
+             							             
+             							             
+             							             
+             							             
+             							             
+             							             
+  ***********						      |	   **********
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  ***********							  ***********
+Checking squares(1,5, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+#     								#     
+     *							      |	      
+Checking squares(1,5, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+#      								#      
+     **							      |	      *
+     **								     **
+Checking squares(1,5, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+#         							#         
+     *****						      |	      ****
+     *   *							     *   *
+     *   *							     *   *
+     *   *							     *   *
+     *****							     *****
+Checking squares(1,5, 1, 9)
+Your program produced the wrong output!
+Here are the differences:
+#             							#             
+     *********						      |	      ********
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *********							     *********
+Checking squares(1,5, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+#     								#     
+      								      
+      								      
+     *							      |	      
+Checking squares(1,5, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+#      								#      
+       								       
+       								       
+     **							      |	      *
+     **								     **
+Checking squares(1,5, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+#         							#         
+          							          
+          							          
+     *****						      |	      ****
+     *   *							     *   *
+     *   *							     *   *
+     *   *							     *   *
+     *****							     *****
+Checking squares(1,5, 3, 9)
+Your program produced the wrong output!
+Here are the differences:
+#             							#             
+              							              
+              							              
+     *********						      |	      ********
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *       *							     *       *
+     *********							     *********
+Checking squares(1,5, 6, 1)
+Your program produced the wrong output!
+Here are the differences:
+#     								#     
+      								      
+      								      
+      								      
+      								      
+      								      
+     *							      |	      
+Checking squares(1,5, 6, 2)
+Your program produced the wrong output!
+Here are the differences:
+#      								#      
+       								       
+       								       
+       								       
+       								       
+       								       
+     **							      |	      *
+     **								     **
+Checking squares(1,5, 6, 5)
+Your program produced the wrong output!
+Here are the differences:
+#         							#         
+          							          
+          							          
+          							          
+          							          
+          							          
+     *****						      |	      ****
+     *   *							     *   *
+     *   *							     *   *
+     *   *							     *   *
+     *****							     *****
+Checking squares(1,5, 6, 10)
+Your program produced the wrong output!
+Here are the differences:
+#              							#              
+               							               
+               							               
+               							               
+               							               
+               							               
+     **********						      |	      *********
+     *        *							     *        *
+     *        *							     *        *
+     *        *							     *        *
+     *        *							     *        *
+     *        *							     *        *
+     *        *							     *        *
+     *        *							     *        *
+     *        *							     *        *
+     **********							     **********
+Checking squares(2,1, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+##								##
+#*							      |	##
+Checking squares(2,1, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+## 								## 
+#**							      |	##*
+ **								 **
+Checking squares(2,1, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+##    								##    
+#*****							      |	##****
+ *   *								 *   *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(2,1, 1, 7)
+Your program produced the wrong output!
+Here are the differences:
+##      							##      
+#*******						      |	##******
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *******							 *******
+Checking squares(2,1, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+##								##
+##								##
+  								  
+ *							      |	  
+Checking squares(2,1, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+## 								## 
+## 								## 
+   								   
+ **							      |	  *
+ **								 **
+Checking squares(2,1, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+##    								##    
+##    								##    
+      								      
+ *****							      |	  ****
+ *   *								 *   *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(2,1, 3, 7)
+Your program produced the wrong output!
+Here are the differences:
+##      							##      
+##      							##      
+        							        
+ *******						      |	  ******
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *******							 *******
+Checking squares(2,1, 5, 1)
+Your program produced the wrong output!
+Here are the differences:
+##								##
+##								##
+  								  
+  								  
+  								  
+ *							      |	  
+Checking squares(2,1, 5, 2)
+Your program produced the wrong output!
+Here are the differences:
+## 								## 
+## 								## 
+   								   
+   								   
+   								   
+ **							      |	  *
+ **								 **
+Checking squares(2,1, 5, 5)
+Your program produced the wrong output!
+Here are the differences:
+##    								##    
+##    								##    
+      								      
+      								      
+      								      
+ *****							      |	  ****
+ *   *								 *   *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(2,1, 5, 11)
+Your program produced the wrong output!
+Here are the differences:
+##          							##          
+##          							##          
+            							            
+            							            
+            							            
+ ***********						      |	  **********
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ ***********							 ***********
+Checking squares(2,2, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+## 								## 
+##*							      |	## 
+Checking squares(2,2, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+##  								##  
+##**							      |	## *
+  **								  **
+Checking squares(2,2, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+##     								##     
+##*****							      |	## ****
+  *   *								  *   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(2,2, 1, 11)
+Your program produced the wrong output!
+Here are the differences:
+##           							##           
+##***********						      |	## **********
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  ***********							  ***********
+Checking squares(2,2, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+## 								## 
+## 								## 
+   								   
+  *							      |	   
+Checking squares(2,2, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+##  								##  
+##  								##  
+    								    
+  **							      |	   *
+  **								  **
+Checking squares(2,2, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+##     								##     
+##     								##     
+       								       
+  *****							      |	   ****
+  *   *								  *   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(2,2, 3, 9)
+Your program produced the wrong output!
+Here are the differences:
+##         							##         
+##         							##         
+           							           
+  *********						      |	   ********
+  *       *							  *       *
+  *       *							  *       *
+  *       *							  *       *
+  *       *							  *       *
+  *       *							  *       *
+  *       *							  *       *
+  *       *							  *       *
+  *********							  *********
+Checking squares(2,2, 6, 1)
+Your program produced the wrong output!
+Here are the differences:
+## 								## 
+## 								## 
+   								   
+   								   
+   								   
+   								   
+  *							      |	   
+Checking squares(2,2, 6, 2)
+Your program produced the wrong output!
+Here are the differences:
+##  								##  
+##  								##  
+    								    
+    								    
+    								    
+    								    
+  **							      |	   *
+  **								  **
+Checking squares(2,2, 6, 5)
+Your program produced the wrong output!
+Here are the differences:
+##     								##     
+##     								##     
+       								       
+       								       
+       								       
+       								       
+  *****							      |	   ****
+  *   *								  *   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(2,2, 6, 11)
+Your program produced the wrong output!
+Here are the differences:
+##           							##           
+##           							##           
+             							             
+             							             
+             							             
+             							             
+  ***********						      |	   **********
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  ***********							  ***********
+Checking squares(2,3, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+##  								##  
+## *							      |	##  
+Checking squares(2,3, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+##   								##   
+## **							      |	##  *
+   **								   **
+Checking squares(2,3, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+##      							##      
+## *****						      |	##  ****
+   *   *							   *   *
+   *   *							   *   *
+   *   *							   *   *
+   *****							   *****
+Checking squares(2,3, 1, 9)
+Your program produced the wrong output!
+Here are the differences:
+##          							##          
+## *********						      |	##  ********
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *********							   *********
+Checking squares(2,3, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+##  								##  
+##  								##  
+    								    
+   *							      |	    
+Checking squares(2,3, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+##   								##   
+##   								##   
+     								     
+   **							      |	    *
+   **								   **
+Checking squares(2,3, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+##      							##      
+##      							##      
+        							        
+   *****						      |	    ****
+   *   *							   *   *
+   *   *							   *   *
+   *   *							   *   *
+   *****							   *****
+Checking squares(2,3, 3, 9)
+Your program produced the wrong output!
+Here are the differences:
+##          							##          
+##          							##          
+            							            
+   *********						      |	    ********
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *       *							   *       *
+   *********							   *********
+Checking squares(2,3, 7, 1)
+Your program produced the wrong output!
+Here are the differences:
+##  								##  
+##  								##  
+    								    
+    								    
+    								    
+    								    
+    								    
+   *							      |	    
+Checking squares(2,3, 7, 2)
+Your program produced the wrong output!
+Here are the differences:
+##   								##   
+##   								##   
+     								     
+     								     
+     								     
+     								     
+     								     
+   **							      |	    *
+   **								   **
+Checking squares(2,3, 7, 5)
+Your program produced the wrong output!
+Here are the differences:
+##      							##      
+##      							##      
+        							        
+        							        
+        							        
+        							        
+        							        
+   *****						      |	    ****
+   *   *							   *   *
+   *   *							   *   *
+   *   *							   *   *
+   *****							   *****
+Checking squares(2,3, 7, 10)
+Your program produced the wrong output!
+Here are the differences:
+##           							##           
+##           							##           
+             							             
+             							             
+             							             
+             							             
+             							             
+   **********						      |	    *********
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   **********							   **********
+Checking squares(3,1, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+###								###
+#*#							      |	# #
+###								###
+Checking squares(3,1, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+###								###
+#**							      |	# *
+#**								#**
+Checking squares(3,1, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+###   								###   
+#*****							      |	# ****
+#*#  *								#*#  *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(3,1, 1, 7)
+Your program produced the wrong output!
+Here are the differences:
+###     							###     
+#*******						      |	# ******
+#*#    *							#*#    *
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *******							 *******
+Checking squares(3,1, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+###								###
+# #								# #
+###								###
+ * 							      |	   
+Checking squares(3,1, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+###								###
+# #								# #
+###								###
+ **							      |	  *
+ **								 **
+Checking squares(3,1, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+###   								###   
+# #   								# #   
+###   								###   
+ *****							      |	  ****
+ *   *								 *   *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(3,1, 3, 10)
+Your program produced the wrong output!
+Here are the differences:
+###        							###        
+# #        							# #        
+###        							###        
+ **********						      |	  *********
+ *        *							 *        *
+ *        *							 *        *
+ *        *							 *        *
+ *        *							 *        *
+ *        *							 *        *
+ *        *							 *        *
+ *        *							 *        *
+ *        *							 *        *
+ **********							 **********
+Checking squares(3,1, 5, 1)
+Your program produced the wrong output!
+Here are the differences:
+###								###
+# #								# #
+###								###
+   								   
+   								   
+ * 							      |	   
+Checking squares(3,1, 5, 2)
+Your program produced the wrong output!
+Here are the differences:
+###								###
+# #								# #
+###								###
+   								   
+   								   
+ **							      |	  *
+ **								 **
+Checking squares(3,1, 5, 5)
+Your program produced the wrong output!
+Here are the differences:
+###   								###   
+# #   								# #   
+###   								###   
+      								      
+      								      
+ *****							      |	  ****
+ *   *								 *   *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(3,1, 5, 7)
+Your program produced the wrong output!
+Here are the differences:
+###     							###     
+# #     							# #     
+###     							###     
+        							        
+        							        
+ *******						      |	  ******
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *     *							 *     *
+ *******							 *******
+Checking squares(3,2, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+###								###
+# *							      |	# #
+###								###
+Checking squares(3,2, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+### 								### 
+# **							      |	# #*
+##**								##**
+Checking squares(3,2, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+###    								###    
+# *****							      |	# #****
+##*   *								##*   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(3,2, 1, 11)
+Your program produced the wrong output!
+Here are the differences:
+###          							###          
+# ***********						      |	# #**********
+##*         *							##*         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  ***********							  ***********
+Checking squares(3,2, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+###								###
+# #								# #
+###								###
+  *							      |	   
+Checking squares(3,2, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+### 								### 
+# # 								# # 
+### 								### 
+  **							      |	   *
+  **								  **
+Checking squares(3,2, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+###    								###    
+# #    								# #    
+###    								###    
+  *****							      |	   ****
+  *   *								  *   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(3,2, 3, 10)
+Your program produced the wrong output!
+Here are the differences:
+###         							###         
+# #         							# #         
+###         							###         
+  **********						      |	   *********
+  *        *							  *        *
+  *        *							  *        *
+  *        *							  *        *
+  *        *							  *        *
+  *        *							  *        *
+  *        *							  *        *
+  *        *							  *        *
+  *        *							  *        *
+  **********							  **********
+Checking squares(3,2, 5, 1)
+Your program produced the wrong output!
+Here are the differences:
+###								###
+# #								# #
+###								###
+   								   
+   								   
+  *							      |	   
+Checking squares(3,2, 5, 2)
+Your program produced the wrong output!
+Here are the differences:
+### 								### 
+# # 								# # 
+### 								### 
+    								    
+    								    
+  **							      |	   *
+  **								  **
+Checking squares(3,2, 5, 5)
+Your program produced the wrong output!
+Here are the differences:
+###    								###    
+# #    								# #    
+###    								###    
+       								       
+       								       
+  *****							      |	   ****
+  *   *								  *   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(3,2, 5, 11)
+Your program produced the wrong output!
+Here are the differences:
+###          							###          
+# #          							# #          
+###          							###          
+             							             
+             							             
+  ***********						      |	   **********
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  ***********							  ***********
+Checking squares(3,4, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+###  								###  
+# # *							      |	# #  
+###  								###  
+Checking squares(3,4, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+###   								###   
+# # **							      |	# #  *
+### **								### **
+Checking squares(3,4, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+###      							###      
+# # *****						      |	# #  ****
+### *   *							### *   *
+    *   *							    *   *
+    *   *							    *   *
+    *****							    *****
+Checking squares(3,4, 1, 7)
+Your program produced the wrong output!
+Here are the differences:
+###        							###        
+# # *******						      |	# #  ******
+### *     *							### *     *
+    *     *							    *     *
+    *     *							    *     *
+    *     *							    *     *
+    *     *							    *     *
+    *******							    *******
+Checking squares(3,4, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+###  								###  
+# #  								# #  
+###  								###  
+    *							      |	     
+Checking squares(3,4, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+###   								###   
+# #   								# #   
+###   								###   
+    **							      |	     *
+    **								    **
+Checking squares(3,4, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+###      							###      
+# #      							# #      
+###      							###      
+    *****						      |	     ****
+    *   *							    *   *
+    *   *							    *   *
+    *   *							    *   *
+    *****							    *****
+Checking squares(3,4, 3, 7)
+Your program produced the wrong output!
+Here are the differences:
+###        							###        
+# #        							# #        
+###        							###        
+    *******						      |	     ******
+    *     *							    *     *
+    *     *							    *     *
+    *     *							    *     *
+    *     *							    *     *
+    *     *							    *     *
+    *******							    *******
+Checking squares(3,4, 5, 1)
+Your program produced the wrong output!
+Here are the differences:
+###  								###  
+# #  								# #  
+###  								###  
+     								     
+     								     
+    *							      |	     
+Checking squares(3,4, 5, 2)
+Your program produced the wrong output!
+Here are the differences:
+###   								###   
+# #   								# #   
+###   								###   
+      								      
+      								      
+    **							      |	     *
+    **								    **
+Checking squares(3,4, 5, 5)
+Your program produced the wrong output!
+Here are the differences:
+###      							###      
+# #      							# #      
+###      							###      
+         							         
+         							         
+    *****						      |	     ****
+    *   *							    *   *
+    *   *							    *   *
+    *   *							    *   *
+    *****							    *****
+Checking squares(3,4, 5, 7)
+Your program produced the wrong output!
+Here are the differences:
+###        							###        
+# #        							# #        
+###        							###        
+           							           
+           							           
+    *******						      |	     ******
+    *     *							    *     *
+    *     *							    *     *
+    *     *							    *     *
+    *     *							    *     *
+    *     *							    *     *
+    *******							    *******
+Checking squares(5,1, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#*  #							      |	#   #
+#   #								#   #
+#   #								#   #
+#####								#####
+Checking squares(5,1, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#** #							      |	# * #
+#** #								#** #
+#   #								#   #
+#####								#####
+Checking squares(5,1, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+##### 								##### 
+#*****							      |	# ****
+#*  #*								#*  #*
+#*  #*								#*  #*
+#*###*								#*###*
+ *****								 *****
+Checking squares(5,1, 1, 11)
+Your program produced the wrong output!
+Here are the differences:
+#####       							#####       
+#***********						      |	# **********
+#*  #      *							#*  #      *
+#*  #      *							#*  #      *
+#*###      *							#*###      *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ ***********							 ***********
+Checking squares(5,1, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#*  #							      |	#   #
+#####								#####
+Checking squares(5,1, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#** #							      |	# * #
+#**##								#**##
+Checking squares(5,1, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+##### 								##### 
+#   # 								#   # 
+#   # 								#   # 
+#*****							      |	# ****
+#*###*								#*###*
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(5,1, 3, 9)
+Your program produced the wrong output!
+Here are the differences:
+#####     							#####     
+#   #     							#   #     
+#   #     							#   #     
+#*********						      |	# ********
+#*###    *							#*###    *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *       *							 *       *
+ *********							 *********
+Checking squares(5,1, 8, 1)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#   #								#   #
+#####								#####
+     								     
+     								     
+     								     
+ *   							      |	     
+Checking squares(5,1, 8, 2)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#   #								#   #
+#####								#####
+     								     
+     								     
+     								     
+ **  							      |	  *  
+ **  								 **  
+Checking squares(5,1, 8, 5)
+Your program produced the wrong output!
+Here are the differences:
+##### 								##### 
+#   # 								#   # 
+#   # 								#   # 
+#   # 								#   # 
+##### 								##### 
+      								      
+      								      
+      								      
+ *****							      |	  ****
+ *   *								 *   *
+ *   *								 *   *
+ *   *								 *   *
+ *****								 *****
+Checking squares(5,1, 8, 11)
+Your program produced the wrong output!
+Here are the differences:
+#####       							#####       
+#   #       							#   #       
+#   #       							#   #       
+#   #       							#   #       
+#####       							#####       
+            							            
+            							            
+            							            
+ ***********						      |	  **********
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ *         *							 *         *
+ ***********							 ***********
+Checking squares(5,2, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+# * #							      |	#   #
+#   #								#   #
+#   #								#   #
+#####								#####
+Checking squares(5,2, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+# **#							      |	#  *#
+# **#								# **#
+#   #								#   #
+#####								#####
+Checking squares(5,2, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+#####  								#####  
+# *****							      |	#  ****
+# * # *								# * # *
+# * # *								# * # *
+##*## *								##*## *
+  *****								  *****
+Checking squares(5,2, 1, 7)
+Your program produced the wrong output!
+Here are the differences:
+#####    							#####    
+# *******						      |	#  ******
+# * #   *							# * #   *
+# * #   *							# * #   *
+##*##   *							##*##   *
+  *     *							  *     *
+  *     *							  *     *
+  *******							  *******
+Checking squares(5,2, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+# * #							      |	#   #
+#####								#####
+Checking squares(5,2, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+# **#							      |	#  *#
+##**#								##**#
+Checking squares(5,2, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+#####  								#####  
+#   #  								#   #  
+#   #  								#   #  
+# *****							      |	#  ****
+##*## *								##*## *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(5,2, 3, 11)
+Your program produced the wrong output!
+Here are the differences:
+#####        							#####        
+#   #        							#   #        
+#   #        							#   #        
+# ***********						      |	#  **********
+##*##       *							##*##       *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  *         *							  *         *
+  ***********							  ***********
+Checking squares(5,2, 7, 1)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#   #								#   #
+#####								#####
+     								     
+     								     
+  *  							      |	     
+Checking squares(5,2, 7, 2)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#   #								#   #
+#####								#####
+     								     
+     								     
+  ** 							      |	   * 
+  ** 								  ** 
+Checking squares(5,2, 7, 5)
+Your program produced the wrong output!
+Here are the differences:
+#####  								#####  
+#   #  								#   #  
+#   #  								#   #  
+#   #  								#   #  
+#####  								#####  
+       								       
+       								       
+  *****							      |	   ****
+  *   *								  *   *
+  *   *								  *   *
+  *   *								  *   *
+  *****								  *****
+Checking squares(5,2, 7, 7)
+Your program produced the wrong output!
+Here are the differences:
+#####    							#####    
+#   #    							#   #    
+#   #    							#   #    
+#   #    							#   #    
+#####    							#####    
+         							         
+         							         
+  *******						      |	   ******
+  *     *							  *     *
+  *     *							  *     *
+  *     *							  *     *
+  *     *							  *     *
+  *     *							  *     *
+  *******							  *******
+Checking squares(5,3, 1, 1)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#  *#							      |	#   #
+#   #								#   #
+#   #								#   #
+#####								#####
+Checking squares(5,3, 1, 2)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#  **							      |	#   *
+#  **								#  **
+#   #								#   #
+#####								#####
+Checking squares(5,3, 1, 5)
+Your program produced the wrong output!
+Here are the differences:
+#####   							#####   
+#  *****						      |	#   ****
+#  *#  *							#  *#  *
+#  *#  *							#  *#  *
+###*#  *							###*#  *
+   *****							   *****
+Checking squares(5,3, 1, 7)
+Your program produced the wrong output!
+Here are the differences:
+#####     							#####     
+#  *******						      |	#   ******
+#  *#    *							#  *#    *
+#  *#    *							#  *#    *
+###*#    *							###*#    *
+   *     *							   *     *
+   *     *							   *     *
+   *******							   *******
+Checking squares(5,3, 3, 1)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#  *#							      |	#   #
+#####								#####
+Checking squares(5,3, 3, 2)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#  **							      |	#   *
+###**								###**
+Checking squares(5,3, 3, 5)
+Your program produced the wrong output!
+Here are the differences:
+#####   							#####   
+#   #   							#   #   
+#   #   							#   #   
+#  *****						      |	#   ****
+###*#  *							###*#  *
+   *   *							   *   *
+   *   *							   *   *
+   *****							   *****
+Checking squares(5,3, 3, 10)
+Your program produced the wrong output!
+Here are the differences:
+#####        							#####        
+#   #        							#   #        
+#   #        							#   #        
+#  **********						      |	#   *********
+###*#       *							###*#       *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   *        *							   *        *
+   **********							   **********
+Checking squares(5,3, 7, 1)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#   #								#   #
+#####								#####
+     								     
+     								     
+   * 							      |	     
+Checking squares(5,3, 7, 2)
+Your program produced the wrong output!
+Here are the differences:
+#####								#####
+#   #								#   #
+#   #								#   #
+#   #								#   #
+#####								#####
+     								     
+     								     
+   **							      |	    *
+   **								   **
+Checking squares(5,3, 7, 5)
+Your program produced the wrong output!
+Here are the differences:
+#####   							#####   
+#   #   							#   #   
+#   #   							#   #   
+#   #   							#   #   
+#####   							#####   
+        							        
+        							        
+   *****						      |	    ****
+   *   *							   *   *
+   *   *							   *   *
+   *   *							   *   *
+   *****							   *****
+Checking squares(5,3, 7, 8)
+Your program produced the wrong output!
+Here are the differences:
+#####      							#####      
+#   #      							#   #      
+#   #      							#   #      
+#   #      							#   #      
+#####      							#####      
+           							           
+           							           
+   ********						      |	    *******
+   *      *							   *      *
+   *      *							   *      *
+   *      *							   *      *
+   *      *							   *      *
+   *      *							   *      *
+   *      *							   *      *
+   ********							   ********
+Passed 0 out of 144 tests
+
+Overall Grade: D
