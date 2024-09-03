@@ -6,7 +6,11 @@
 //and should have 3 doubles named x, y, and z.
 
 //YOUR CODE HERE
-
+typedef struct vector_tag {
+  double x;
+  double y;
+  double z;
+} vector_t;
 //write a typedef here which makes vector_t
 //and alias for struct vector_tag
 
