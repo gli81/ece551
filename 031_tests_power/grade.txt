@@ -1,0 +1,55 @@
+Grading at 09/11/2024:00:48:35.296724
+For commit ID 7e20b47cd7dede97f57abfbab4daf55fc3c9a048
+Grading at Tue Sep 10 08:48:34 PM EDT 2024
+**Testing broken implementation 10 **
+-------------------------------------
+
+Fail case power(2, 3) == 8
+**Testing broken implementation 11 **
+-------------------------------------
+
+Fail case power(4294967196, 1) == 4294967196
+**Testing broken implementation 1 **
+-------------------------------------
+
+Fail case power(2, 3) == 8
+**Testing broken implementation 2 **
+-------------------------------------
+
+Fail case power(1, 0) == 1
+**Testing broken implementation 3 **
+-------------------------------------
+
+Fail case power(0, 0) == 1
+**Testing broken implementation 4 **
+-------------------------------------
+
+Fail case power(4294967196, 1) == 4294967196
+**Testing broken implementation 5 **
+-------------------------------------
+
+Fail case power(2, 3) == 8
+**Testing broken implementation 6 **
+-------------------------------------
+
+Fail case power(1, 2) == 1
+**Testing broken implementation 7 **
+-------------------------------------
+
+Fail case power(2, 3) == 8
+**Testing broken implementation 8 **
+-------------------------------------
+
+Fail case power(2, 3) == 8
+**Testing broken implementation 9 **
+-------------------------------------
+
+Fail case power(2, 3) == 8
+**Testing correct implementation **
+-------------------------------------
+
+
+All tests were ok.
+
+
+Overall Grade: PASSED
