@@ -3,9 +3,11 @@
 #include <string.h>
 
 void reverse(char * str) {
+  if (str == NULL) return;
   size_t len = strlen(str);
+  char tmp;
   for (size_t i = 0; i < len / 2; ++i) {
-    char tmp = *(str + i);
+    tmp = *(str + i);
     *(str + i) = *(str + (len - 1 - i));
     *(str + (len - 1 - i)) = tmp;
   }
