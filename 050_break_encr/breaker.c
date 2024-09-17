@@ -9,10 +9,11 @@ int main(int argc, char** argv) {
   }
   // count
   int ct[26] = {0};
+  //for (int i = 0; i < 26; i++){printf("%d",ct[i]);}
   // read file
   FILE* f = fopen(argv[1], "r");
   if (f == NULL) {
-    perror("Could not open file\n");
+    fprintf(stderr,"Could not open file\n");
     return EXIT_FAILURE;
   }
   int c;
@@ -23,18 +24,18 @@ int main(int argc, char** argv) {
     }
   }
   if (fclose(f) != 0) {
-    perror("Could not close file\n");
+    fprintf(stderr, "Could not close file\n");
     return EXIT_FAILURE;
   }
   // find largest
-  unsigned ans = 0;
-  unsigned largest = ct[ans];
+  int ans = 0;
+  int largest = ct[ans];
   for (size_t i = 1; i < 26; ++i) {
     if (ct[i] > largest) {
       ans = i;
       largest = ct[ans];
     }
   }
-  printf("%u\n", ans - 4 >= 0 ? ans - 4 : ans +26 - 4);
+  printf("%d\n", ans - 4 >= 0 ? ans - 4 : ans +26 - 4);
   return EXIT_SUCCESS;
 }
