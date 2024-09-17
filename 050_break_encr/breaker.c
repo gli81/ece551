@@ -35,6 +35,6 @@ int main(int argc, char** argv) {
       largest = ct[ans];
     }
   }
-  printf("%d\n", ans - 4 >= 0 ? ans - 4 : ans +26 - 4);
+  printf("%u\n", ans - 4 >= 0 ? ans - 4 : ans +26 - 4);
   return EXIT_SUCCESS;
 }
