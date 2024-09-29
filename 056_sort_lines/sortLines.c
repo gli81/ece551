@@ -59,7 +59,7 @@ int main(int argc, char ** argv) {
       return EXIT_FAILURE;
     }
   }
-  else {
+  else if (argc > 1) {
     // loop through files
     for (size_t i = 1; i < argc; ++i) {
       FILE* cur_file = fopen(argv[i], "r");
