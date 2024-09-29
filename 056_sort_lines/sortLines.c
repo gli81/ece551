@@ -78,7 +78,7 @@ int main(int argc, char ** argv) {
         return EXIT_FAILURE;
       }
     }
-    printf("===== All file successfully processed =====\n");
+    // printf("===== All file successfully processed =====\n");
   }
   return EXIT_SUCCESS;
 }
