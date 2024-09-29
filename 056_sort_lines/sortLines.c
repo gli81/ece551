@@ -42,8 +42,8 @@ int dealWithFile(FILE* input){//, int isFile) {
   sortData(lines, line_num);
   for (size_t i = 0; i < line_num; ++i) {
     printf("%s", lines[i]);
-  }
-  for (size_t i = 0; i < line_num; ++i) {
+  // }
+  // for (size_t i = 0; i < line_num; ++i) {
     free(lines[i]);
   }
   free(lines);
@@ -70,6 +70,7 @@ int main(int argc, char ** argv) {
       int rslt = dealWithFile(cur_file);
       if (rslt == EXIT_FAILURE) {
         fprintf(stderr, "Error processing file %s\n", argv[i]);
+        return EXIT_FAILURE;
       }
       // close file
       if (fclose(cur_file) != 0) {
