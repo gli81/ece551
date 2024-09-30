@@ -25,8 +25,9 @@ kvarray_t * readKVs(const char * fname) {
       ans->arr = NULL;
     }
     // reallocate space for larger array
-    kvpair_t** tmp_arr = realloc(ans-> arr, (ln_ct+1) * sizeof(*(ans->arr)));
+    kvpair_t** tmp_arr = realloc(ans->arr, (ln_ct+1) * sizeof(*(ans->arr)));
     if (tmp_arr == NULL) {
+      freeKVs(ans);
       fprintf(stderr, "Error reallocating memory\n");
       return NULL;
     }
@@ -34,6 +35,7 @@ kvarray_t * readKVs(const char * fname) {
     tmp_arr = NULL;
     tmp = malloc(sizeof(*tmp)); // kvpair_t
     char* first_equal = strchr(line, '=');
+    line[strlen(line) - 1] = '\0';
     *first_equal = '\0';
     tmp->key = line;
     line = NULL;
@@ -45,9 +47,11 @@ kvarray_t * readKVs(const char * fname) {
     // free tmp.key later
     //free(line);
   }
+  free(line); // line is EOF for exiting while, it is not set to NULL, and is not in ans->arr
   ans->ct = ln_ct;
   // close file
   if (fclose(cur) != 0) {
+    freeKVs(ans);
     fprintf(stderr, "Error closing file %s\n", fname);
     return NULL;
   }
@@ -71,14 +75,20 @@ void freeKVs(kvarray_t * pairs) {
 void printKVs(kvarray_t * pairs) {
   //WRITE ME
   if (pairs == NULL) return;
+  // printf("%ld KVs in array\n", pairs->ct);
   for (size_t i = 0; i < pairs->ct; ++i) {
-    printf("Key: %s, Value: %s\n", pairs->arr[i]->key, pairs->arr[i]->value);
+    printf("key = '%s' value = '%s'\n", pairs->arr[i]->key, pairs->arr[i]->value);
   }
-  printf("==========\n");
+  // printf("==========\n");
 }
 
 char * lookupValue(kvarray_t * pairs, const char * key) {
   //WRITE ME
+  for (size_t i = 0; i < pairs->ct; ++i) {
+    if (strcmp(pairs->arr[i]->key, key) == 0) {
+      return pairs->arr[i]->value;
+    }
+  }
   return NULL;
 }
 
