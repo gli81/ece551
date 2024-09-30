@@ -1,0 +1,17 @@
+Grading at 09/30/2024:23:48:54.181365
+For commit ID 103854b0c0b147a1a3c9fc89a178c9e98ab9d136
+Grading at Mon Sep 30 07:48:50 PM EDT 2024
+Attempting to compile:
+#################################################
+testcase1:
+Your output is correct
+valgrind was clean
+#################################################
+testcase2:
+Your output is correct
+valgrind was clean
+#################################################
+testcase3:
+valgrind reported memory errors
+
+Overall Grade: C
