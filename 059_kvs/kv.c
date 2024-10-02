@@ -35,6 +35,11 @@ kvarray_t * readKVs(const char * fname) {
     tmp_arr = NULL;
     tmp = malloc(sizeof(*tmp)); // kvpair_t
     char* first_equal = strchr(line, '=');
+    if (first_equal == NULL) {
+      freeKVs(ans);
+      fprintf(stderr, "Invalid input format");
+      return NULL;
+    }
     line[strlen(line) - 1] = '\0';
     *first_equal = '\0';
     tmp->key = line;
@@ -63,6 +68,7 @@ void freeKVs(kvarray_t * pairs) {
   // free every key
   // free every kvpair
   for (size_t i = 0; i < pairs->ct; ++i) {
+    pairs->arr[i]->value = NULL;
     free(pairs->arr[i]->key);
     free(pairs->arr[i]);
   }
