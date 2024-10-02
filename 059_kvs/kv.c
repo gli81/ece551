@@ -15,7 +15,7 @@ kvarray_t * readKVs(const char * fname) {
   }
   kvarray_t* ans = NULL;
   // read each line
-  size_t ln_ct = 0;
+  // size_t ln_ct = 0;
   size_t sz;
   char* line = NULL;
   kvpair_t* tmp = NULL;
@@ -23,37 +23,42 @@ kvarray_t * readKVs(const char * fname) {
     if (ans == NULL) {
       ans = malloc(sizeof(*ans));
       ans->arr = NULL;
+      ans->ct = 0;
     }
     // reallocate space for larger array
-    kvpair_t** tmp_arr = realloc(ans->arr, (ln_ct+1) * sizeof(*(ans->arr)));
+    kvpair_t** tmp_arr = realloc(ans->arr, (ans->ct+1) * sizeof(*(ans->arr)));
     if (tmp_arr == NULL) {
       freeKVs(ans);
+      free(line);
+      fclose(cur);
       fprintf(stderr, "Error reallocating memory\n");
       return NULL;
     }
     ans->arr = tmp_arr;
     tmp_arr = NULL;
-    tmp = malloc(sizeof(*tmp)); // kvpair_t
     char* first_equal = strchr(line, '=');
-    if (first_equal == NULL) {
+    if (first_equal == NULL) { // = not found in input
       freeKVs(ans);
-      fprintf(stderr, "Invalid input format");
+      free(line);
+      fclose(cur);
+      fprintf(stderr, "Invalid input format\n");
       return NULL;
     }
+    tmp = malloc(sizeof(*tmp)); // kvpair_t
     line[strlen(line) - 1] = '\0';
     *first_equal = '\0';
     tmp->key = line;
     line = NULL;
     tmp->value = first_equal + 1;
     // not line, change it @_@
-    ans->arr[ln_ct++] = tmp;
+    ans->arr[ans->ct++] = tmp;
     tmp = NULL;
     // don't free line, tmp.key and tmp.value points inside line
     // free tmp.key later
     //free(line);
   }
   free(line); // line is EOF for exiting while, it is not set to NULL, and is not in ans->arr
-  ans->ct = ln_ct;
+  //ans->ct = ln_ct;
   // close file
   if (fclose(cur) != 0) {
     freeKVs(ans);
@@ -65,6 +70,9 @@ kvarray_t * readKVs(const char * fname) {
 
 void freeKVs(kvarray_t * pairs) {
   //WRITE ME
+  if (pairs == NULL) {
+    return;
+  }
   // free every key
   // free every kvpair
   for (size_t i = 0; i < pairs->ct; ++i) {
@@ -90,6 +98,9 @@ void printKVs(kvarray_t * pairs) {
 
 char * lookupValue(kvarray_t * pairs, const char * key) {
   //WRITE ME
+  if (pairs == NULL) {
+    return NULL;
+  }
   for (size_t i = 0; i < pairs->ct; ++i) {
     if (strcmp(pairs->arr[i]->key, key) == 0) {
       return pairs->arr[i]->value;

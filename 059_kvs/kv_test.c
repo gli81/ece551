@@ -4,8 +4,12 @@
 #include "kv.h"
 
 #define NUM_LOOKUPS 5
-int main(void) {
-  kvarray_t * array = readKVs("test.txt");
+int main(int argc, char** argv) {
+  if (argc != 2) {
+    fprintf(stderr, "Usage: kv_test <fileName>\n");
+    return EXIT_FAILURE;
+  }
+  kvarray_t * array = readKVs(argv[1]);
   printf("Printing all keys\n\n");
   printKVs(array);
   char *tests[NUM_LOOKUPS] = {"banana", "grapes", "cantaloupe", "lettuce", "orange"};
