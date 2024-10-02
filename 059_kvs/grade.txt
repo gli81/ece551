@@ -1,6 +1,6 @@
-Grading at 10/02/2024:16:01:30.945713
-For commit ID 7a4b9b1e960199f9d0b65163d96a0c805b23c1e4
-Grading at Wed Oct  2 12:01:27 PM EDT 2024
+Grading at 10/02/2024:16:28:45.283326
+For commit ID ad164f7df7b1f0a49a5d6a946a63a7558afd92e2
+Grading at Wed Oct  2 12:28:41 PM EDT 2024
 Attempting to compile:
 #################################################
 testcase1:
@@ -12,6 +12,7 @@ Your output is correct
 valgrind was clean
 #################################################
 testcase3:
-valgrind reported memory errors
+Your output is correct
+valgrind was clean
 
-Overall Grade: C
+Overall Grade: A
