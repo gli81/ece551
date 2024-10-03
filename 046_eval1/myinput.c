@@ -112,7 +112,7 @@ void parse_planet_info(planet_t * planet, char * line) {
     exit(EXIT_FAILURE);
   }
   // valid orbital_radius
-  printf("%.f\n", orbital_rad);
+  //printf("%.f\n", orbital_rad);
   planet->orbital_radius = orbital_rad;
   // ################################################################################################
   // ### read until third                                                                         ###
