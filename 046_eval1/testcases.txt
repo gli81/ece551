@@ -1,0 +1,5 @@
+./test-step1/test-empty-string.txt
+./test-step1/test-invalid-double.txt
+./test-step1/test-no-column.txt
+./test-step1/test-too-long-name.txt
+./test-step1/test-too-many-fields.txt
