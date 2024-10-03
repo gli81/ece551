@@ -1,0 +1,48 @@
+Grading at 10/03/2024:02:10:09.350768
+For commit ID 205d1c2070d58a84c01c0aca96899a0296f1f08f
+Grading at Wed Oct  2 10:10:09 PM EDT 2024
+Running your test cases
+-------------------------
+ This test case will run 
+ ./test-step1/test-empty-string.txt 
+ With arguments 
+  
+-------------------------
+./test-step1/test-empty-string.txt does not seem to be a valid command for this assignment
+Skipping this testcase
+-------------------------
+ This test case will run 
+ ./test-step1/test-invalid-double.txt 
+ With arguments 
+  
+-------------------------
+./test-step1/test-invalid-double.txt does not seem to be a valid command for this assignment
+Skipping this testcase
+-------------------------
+ This test case will run 
+ ./test-step1/test-no-column.txt 
+ With arguments 
+  
+-------------------------
+./test-step1/test-no-column.txt does not seem to be a valid command for this assignment
+Skipping this testcase
+-------------------------
+ This test case will run 
+ ./test-step1/test-too-long-name.txt 
+ With arguments 
+  
+-------------------------
+./test-step1/test-too-long-name.txt does not seem to be a valid command for this assignment
+Skipping this testcase
+-------------------------
+ This test case will run 
+ ./test-step1/test-too-many-fields.txt 
+ With arguments 
+  
+-------------------------
+./test-step1/test-too-many-fields.txt does not seem to be a valid command for this assignment
+Skipping this testcase
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
+
+Overall Grade: NO GRADE YET
