@@ -1,6 +1,6 @@
-Grading at 10/03/2024:15:59:15.373446
-For commit ID 9894f88a6e6a38e11300ebd57ff41079cf8ac2f3
-Grading at Thu Oct  3 11:59:04 AM EDT 2024
+Grading at 10/03/2024:16:06:45.911573
+For commit ID 32e4d0e88f834985500c8c4fcc433cdef570d43d
+Grading at Thu Oct  3 12:06:35 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -114,9 +114,8 @@ We agreed on this testcase and valgrind was clean
 -------------------------
 Running our code...
 Running your code
-We said this was an error.  Our error message was
-Year length must be positive
-However, you exited with EXIT_SUCCESS
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
  launches-step1 
@@ -166,7 +165,7 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
