@@ -1,47 +1,64 @@
-Grading at 10/03/2024:02:14:50.059191
-For commit ID a3065a1e2469c026a24550bca4b907b5ae7ad190
-Grading at Wed Oct  2 10:14:49 PM EDT 2024
+Grading at 10/03/2024:02:15:53.595491
+For commit ID 384e6b45e40a2b0a0c64644b50d3c3b9b20a1505
+Grading at Wed Oct  2 10:15:50 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
- ./launches-step1 
+ launches-step1 
  With arguments 
  ./test-step1/test-empty-string.txt 
 -------------------------
-./launches-step1 does not seem to be a valid command for this assignment
-Skipping this testcase
+I need to compile your code for launches-step1 (make launches-step1)
+
+Compiling launches-step1
+rm -f myinput.o step1.o *~ launches-step? launches-step4-debug
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
+gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
- ./launches-step1 
+ launches-step1 
  With arguments 
  ./test-step1/test-invalid-double.txt 
 -------------------------
-./launches-step1 does not seem to be a valid command for this assignment
-Skipping this testcase
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
- ./launches-step1 
+ launches-step1 
  With arguments 
  ./test-step1/test-no-column.txt 
 -------------------------
-./launches-step1 does not seem to be a valid command for this assignment
-Skipping this testcase
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
- ./launches-step1 
+ launches-step1 
  With arguments 
  ./test-step1/test-too-long-name.txt 
 -------------------------
-./launches-step1 does not seem to be a valid command for this assignment
-Skipping this testcase
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
- ./launches-step1 
+ launches-step1 
  With arguments 
  ./test-step1/test-too-many-fields.txt 
 -------------------------
-./launches-step1 does not seem to be a valid command for this assignment
-Skipping this testcase
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
 
