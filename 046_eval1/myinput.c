@@ -173,10 +173,11 @@ void parse_planet_info(planet_t * planet, char * line) {
     }
     cur++;
   }
-  if (init_pos_len == 0) {
-    fprintf(stderr, "Invalid input -- no initial position specified\n\t\t===\n%s\n\t\t===\n", line);
-    exit(EXIT_FAILURE);
-  }
+  // pregrader says it can be empty
+  //if (init_pos_len == 0) {
+  //  fprintf(stderr, "Invalid input -- no initial position specified\n\t\t===\n%s\n\t\t===\n", line);
+  //  exit(EXIT_FAILURE);
+  //}
   double init_pos = strToPosDouble(first_end+1,  init_pos_len);
   planet->init_pos = init_pos * M_PI / 180.0; // in radians
   //@@@printf("----------Completed processing %s----------\n", planet->name);
