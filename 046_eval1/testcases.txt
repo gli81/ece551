@@ -1,6 +1,10 @@
+launches-step1 ./test-step1/test-dup-dot.txt
 launches-step1 ./test-step1/test-empty-string.txt
 launches-step1 ./test-step1/test-ending-point-for-double.txt
 launches-step1 ./test-step1/test-invalid-double.txt
+launches-step1 ./test-step1/test-neg-initial.txt
+launches-step1 ./test-step1/test-neg-period.txt
+launches-step1 ./test-step1/test-neg-radius.txt
 launches-step1 ./test-step1/test-no-column.txt
 launches-step1 ./test-step1/test-no-initial.txt
 launches-step1 ./test-step1/test-no-name.txt

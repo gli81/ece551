@@ -15,6 +15,9 @@
 //}
 
 double strToPosDouble(char* str, size_t len) {
+  if (len == 0) {
+    return 0.0;
+  }
   if (len == 1 && *(str) == '.') {
     return -1.0;
   }
@@ -60,7 +63,7 @@ void parse_planet_info(planet_t * planet, char * line) {
     exit(EXIT_FAILURE);
   }
   /* ################################################################################################
-   * ### read until first :                                                                       ###
+   * ### read until first ':'                                                                     ###
    * ################################################################################################
    */
   char* first_end = strchr(line, ':');
@@ -77,13 +80,13 @@ void parse_planet_info(planet_t * planet, char * line) {
   }
   //printf("%ld\n", name_len);
   /* ??? can name be 0 length ??? README didn't specify
-   *pregrader says yes it can be, doesn't make sense
+   *pregrader and Drew says yes it can be, FINE 
    */
-  if (name_len == 0) {
-    // name too short
-    fprintf(stderr, "Invalid input -- no name specified\n\t\t===\n%s\n\t\t===\n", line);
-    exit(EXIT_FAILURE);
-  }
+  //if (name_len == 0) {
+  //  // name too short
+  //  fprintf(stderr, "Invalid input -- no name specified\n\t\t===\n%s\n\t\t===\n", line);
+  //  exit(EXIT_FAILURE);
+  //}
   // valid input, set planet->name
   strncpy(planet->name, line, name_len);
   // put \0 at the end
