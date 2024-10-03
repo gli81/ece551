@@ -1,6 +1,6 @@
-Grading at 10/03/2024:14:47:50.245203
-For commit ID 07569e289a9858157744ac882ce8d9ce82112e66
-Grading at Thu Oct  3 10:47:42 AM EDT 2024
+Grading at 10/03/2024:15:00:18.391354
+For commit ID a5437536d28df2e1dde5bae99d360b2225ab8849
+Grading at Thu Oct  3 11:00:10 AM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -56,16 +56,7 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Invalid input -- no initial position specified
-		===
-Venus:12.123:35.678:
-
-		===
-------
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step1 
