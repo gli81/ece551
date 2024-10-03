@@ -1,6 +1,6 @@
-Grading at 10/03/2024:02:30:52.203915
-For commit ID a8cca6ac2035ce14da94881a6f22a43dd77bccf0
-Grading at Wed Oct  2 10:30:48 PM EDT 2024
+Grading at 10/03/2024:02:31:56.544450
+For commit ID 98e65189081f0b1fe3fccbc9895e6819d812c4b4
+Grading at Wed Oct  2 10:31:52 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -67,26 +67,8 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-57900000						      <
-108200000						      <
-149600000						      <
-228000000						      <
-779300000						      <
-1427000000						      <
-2871000000						      <
-5913000000						      <
-Mercury      has radius     57900000.00, year length     2111	Mercury      has radius     57900000.00, year length     2111
-Venus        has radius    108200000.00, year length     5387	Venus        has radius    108200000.00, year length     5387
-Earth        has radius    149600000.00, year length     8766	Earth        has radius    149600000.00, year length     8766
-Mars         has radius    228000000.00, year length    16478	Mars         has radius    228000000.00, year length    16478
-Jupiter      has radius    779300000.00, year length   103894	Jupiter      has radius    779300000.00, year length   103894
-Saturn       has radius   1427000000.00, year length   258070	Saturn       has radius   1427000000.00, year length   258070
-Neptune      has radius   2871000000.00, year length   735928	Neptune      has radius   2871000000.00, year length   735928
-Pluto        has radius   5913000000.00, year length  2177736	Pluto        has radius   5913000000.00, year length  2177736
-Your file did not match the expected output
-You have FAILED one or more of your test cases
-Keep debugging
+We agreed on this testcase and valgrind was clean
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
