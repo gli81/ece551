@@ -1,12 +1,12 @@
-Grading at 10/03/2024:15:36:14.637338
-For commit ID 9e8bcf65e44dfaf553cf61b50069a6d26b0fddfb
-Grading at Thu Oct  3 11:36:06 AM EDT 2024
+Grading at 10/03/2024:15:59:15.373446
+For commit ID 9894f88a6e6a38e11300ebd57ff41079cf8ac2f3
+Grading at Thu Oct  3 11:59:04 AM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
  launches-step1 
  With arguments 
- ./test-step1/test-empty-string.txt 
+ ./test-step1/test-dup-dot.txt 
 -------------------------
 I need to compile your code for launches-step1 (make launches-step1)
 
@@ -15,6 +15,16 @@ rm -f  *~ launches-step? launches-step4-debug
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-empty-string.txt 
+-------------------------
 Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
@@ -33,6 +43,36 @@ We agreed on this testcase and valgrind was clean
  launches-step1 
  With arguments 
  ./test-step1/test-invalid-double.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-neg-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-neg-period.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-neg-radius.txt 
 -------------------------
 Running our code...
 Running your code
@@ -65,16 +105,7 @@ We agreed on this testcase and valgrind was clean
 -------------------------
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Invalid input -- no name specified
-		===
-:12.123:35.678:90.123
-
-		===
-------
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step1 
