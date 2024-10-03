@@ -1,6 +1,6 @@
-Grading at 10/03/2024:02:31:56.544450
-For commit ID 98e65189081f0b1fe3fccbc9895e6819d812c4b4
-Grading at Wed Oct  2 10:31:52 PM EDT 2024
+Grading at 10/03/2024:03:10:06.454533
+For commit ID 0c8d569dbcc4fabdd51174487a9d730c120be66e
+Grading at Wed Oct  2 11:09:58 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -19,6 +19,15 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-ending-point-for-double.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step1 
@@ -43,6 +52,80 @@ And valgrind reported no errors
  This test case will run 
  launches-step1 
  With arguments 
+ ./test-step1/test-no-initial.txt 
+-------------------------
+Running our code...
+Running your code
+You said this was an error (exit status was 1), but we said it was valid
+Note: this may happen if your code timed out too...
+Here is what you printed to stderr:
+------
+Invalid input -- no initial position specified
+	 === Venus:12.123:35.678:
+ ===
+------
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-no-name.txt 
+-------------------------
+Running our code...
+Running your code
+You said this was an error (exit status was 1), but we said it was valid
+Note: this may happen if your code timed out too...
+Here is what you printed to stderr:
+------
+Invalid input -- no name specified
+	 === :12.123:35.678:90.123
+ ===
+------
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-no-period.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-no-radius.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-point-for-double.txt 
+-------------------------
+Running our code...
+Running your code
+We said this was an error.  Our error message was
+Error converting field 3 of Venus:12.123:35.678:.
+ to an double (.
+ after num part)
+However, you exited with EXIT_SUCCESS
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-pointPlus-for-double.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
  ./test-step1/test-too-long-name.txt 
 -------------------------
 Running our code...
@@ -59,16 +142,7 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./sol.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
