@@ -1,6 +1,12 @@
 launches-step1 ./test-step1/test-empty-string.txt
+launches-step1 ./test-step1/test-ending-point-for-double.txt
 launches-step1 ./test-step1/test-invalid-double.txt
 launches-step1 ./test-step1/test-no-column.txt
+launches-step1 ./test-step1/test-no-initial.txt
+launches-step1 ./test-step1/test-no-name.txt
+launches-step1 ./test-step1/test-no-period.txt
+launches-step1 ./test-step1/test-no-radius.txt
+launches-step1 ./test-step1/test-point-for-double.txt
+launches-step1 ./test-step1/test-pointPlus-for-double.txt
 launches-step1 ./test-step1/test-too-long-name.txt
 launches-step1 ./test-step1/test-too-many-fields.txt
-launches-step1 ./sol.txt

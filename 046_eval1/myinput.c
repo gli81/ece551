@@ -5,10 +5,10 @@
 char* readUntilColumn(char* start) {
   char* ans = start;
   while (*ans != '\0' && *ans != '\n') {
-    ans++;
     if (*ans == ':') {
       return ans;
     }
+    ans++;
   }
   return NULL;
 }
@@ -71,6 +71,7 @@ void parse_planet_info(planet_t * planet, char * line) {
     fprintf(stderr, "Invalid input -- name exceeds 31 characters\n\t === %s ===\n", line);
     exit(EXIT_FAILURE);
   }
+  //printf("%ld\n", name_len);
   if (name_len == 0) {
     // name too short
     fprintf(stderr, "Invalid input -- no name specified\n\t === %s ===\n", line);
