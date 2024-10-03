@@ -1,6 +1,6 @@
-Grading at 10/03/2024:15:05:56.551017
-For commit ID ec0b7d27b9b7327bc36f1ae028932e73a5ddec9f
-Grading at Thu Oct  3 11:05:48 AM EDT 2024
+Grading at 10/03/2024:15:36:14.637338
+For commit ID 9e8bcf65e44dfaf553cf61b50069a6d26b0fddfb
+Grading at Thu Oct  3 11:36:06 AM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -104,11 +104,8 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-We said this was an error.  Our error message was
-Error converting field 1 of Venus:.:35.678:90.123
- to an double (.:35.678:90.123
- after num part)
-However, you exited with EXIT_SUCCESS
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
  launches-step1 
