@@ -1,5 +1,5 @@
-./launches-step1 ./test-step1/test-empty-string.txt
-./launches-step1 ./test-step1/test-invalid-double.txt
-./launches-step1 ./test-step1/test-no-column.txt
-./launches-step1 ./test-step1/test-too-long-name.txt
-./launches-step1 ./test-step1/test-too-many-fields.txt
+launches-step1 ./test-step1/test-empty-string.txt
+launches-step1 ./test-step1/test-invalid-double.txt
+launches-step1 ./test-step1/test-no-column.txt
+launches-step1 ./test-step1/test-too-long-name.txt
+launches-step1 ./test-step1/test-too-many-fields.txt
