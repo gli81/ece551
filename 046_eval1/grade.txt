@@ -1,6 +1,6 @@
-Grading at 10/03/2024:02:15:53.595491
-For commit ID 384e6b45e40a2b0a0c64644b50d3c3b9b20a1505
-Grading at Wed Oct  2 10:15:50 PM EDT 2024
+Grading at 10/03/2024:02:18:47.843297
+For commit ID 403dd36f4108db36fc5f4123ae98a8f391505bec
+Grading at Wed Oct  2 10:18:43 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -11,7 +11,7 @@ Running your test cases
 I need to compile your code for launches-step1 (make launches-step1)
 
 Compiling launches-step1
-rm -f myinput.o step1.o *~ launches-step? launches-step4-debug
+rm -f  *~ launches-step? launches-step4-debug
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
@@ -59,7 +59,26 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./sol.txt 
+-------------------------
+Running our code...
+Running your code
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+Mercury      has radius     57900000.00, year length     2111	Mercury      has radius     57900000.00, year length     2111
+Venus        has radius    108200000.00, year length     5387	Venus        has radius    108200000.00, year length     5387
+Earth        has radius    149600000.00, year length     8766	Earth        has radius    149600000.00, year length     8766
+Mars         has radius    228000000.00, year length    16478	Mars         has radius    228000000.00, year length    16478
+Jupiter      has radius    779300000.00, year length   103894	Jupiter      has radius    779300000.00, year length   103894
+Saturn       has radius   1427000000.00, year length   258070	Saturn       has radius   1427000000.00, year length   258070
+Neptune      has radius   2871000000.00, year length   735928	Neptune      has radius   2871000000.00, year length   735928
+Pluto        has radius   1618032704.00, year length  2177736 |	Pluto        has radius   5913000000.00, year length  2177736
+Your file did not match the expected output
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
