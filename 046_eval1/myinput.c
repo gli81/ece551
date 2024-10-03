@@ -138,11 +138,11 @@ void parse_planet_info(planet_t * planet, char * line) {
   }
   //@@@ printf("after third ':' '%s'\n", first_end+1);
   size_t period_len = first_end - sec_end - 1;
-  //if (period_len == 0) {
-  //  // period too short
-  //  fprintf(stderr, "Invalid input -- no period specified\n\t\t===\n%s\n\t\t===\n", line);
-  //  exit(EXIT_FAILURE);
-  //}
+  if (period_len == 0) {
+    // period too short
+    fprintf(stderr, "Invalid input -- no period specified\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
   double period = strToPosDouble(sec_end + 1, period_len);
   if (period == -1.0) {
     fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
