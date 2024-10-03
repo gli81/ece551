@@ -1,5 +1,181 @@
+#include <stdio.h>
 #include "myinput.h"
+#include <ctype.h>
+
+char* readUntilColumn(char* start) {
+  char* ans = start;
+  while (*ans != '\0' && *ans != '\n') {
+    ans++;
+    if (*ans == ':') {
+      return ans;
+    }
+  }
+  return NULL;
+}
+
+double strToPosDouble(char* str, size_t len) {
+  unsigned int_part = 0;
+  size_t i = 0;
+  while (i < len) {
+    char cur = *(str + i);
+    if (isdigit(cur)) {
+      int_part *= 10;
+      int_part += cur - '0';
+      i++;
+    } else if (cur == '.') {
+      i++;
+      break;
+    } else {
+      return -1.0;
+    }
+  }
+  // ??? is 12. valid ???
+  double float_part = 0.0;
+  unsigned ct = 1;
+  while (i < len) {
+    char cur = *(str + i);
+    if (isdigit(cur)) {
+      float_part *= 10;
+      float_part += cur - '0';
+      ct *= 10;
+      i++;
+    } else {
+      return -1.0;
+    }
+  }
+  float_part /= ct;
+  float_part += int_part;
+  return float_part;
+}
 
 void parse_planet_info(planet_t * planet, char * line) {
+  // ??? is line guarenteed to be \0 terminated ???
   //STEP 1: Write this
+  if (NULL == line) {
+    fprintf(stderr, "Invalid input\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  // ################################################################################################
+  // ### read until first :                                                                       ###
+  // ################################################################################################
+  char* first_end = readUntilColumn(line);
+  if (first_end == NULL) {
+    fprintf(stderr, "Invalid input -- no ':' found\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  size_t name_len = first_end - line;
+  //printf("%s", first_end);
+  // ??? can name be 0 length ??? README didn't specify
+  if (name_len > 31) {
+    // name too long
+    fprintf(stderr, "Invalid input -- name exceeds 31 characters\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  if (name_len == 0) {
+    // name too short
+    fprintf(stderr, "Invalid input -- no name specified\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  // valid input, set planet->name
+  strncpy(planet->name, line, name_len);
+  // put \0 at the end
+  planet->name[name_len] = '\0';
+  //for (size_t i = 0; i < 32; ++i) {
+  //  if (planet->name[i] == '\0') printf("\\0\t");
+  //  else printf("%c\t", planet->name[i]);
+  //  if (i % 6 == 5 || i == 31) {
+  //    printf("\n");
+  //  }
+  //}
+  // ################################################################################################
+  // ### read until second :                                                                      ###
+  // ################################################################################################
+  char* sec_end = readUntilColumn(first_end + 1);
+  if (NULL == sec_end) {
+    fprintf(stderr, "Invalid input -- only one ':' found\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  size_t radius_len = sec_end - first_end - 1;
+  // for (size_t i = 0; i < radius_len; ++i) {
+  //   printf("%c", *(first_end + 1 + i));
+  //   if (i == radius_len - 1) printf("\n");
+  // }
+  if (radius_len == 0) {
+    // radius too short
+    fprintf(stderr, "Invalid input -- no radius specified\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  double orbital_rad = strToPosDouble(first_end + 1, radius_len);
+  if (orbital_rad == -1.0) {
+    // invalid double
+    fprintf(stderr, "Invalid input -- invalid double\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  // valid orbital_radius
+  planet->orbital_radius = orbital_rad;
+  // ################################################################################################
+  // ### read until third                                                                         ###
+  // ################################################################################################
+  first_end = readUntilColumn(sec_end + 1);
+  if (NULL == first_end) {
+    fprintf(stderr, "Invalid input -- only two ':' found\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  size_t period_len = first_end - sec_end - 1;
+  if (period_len == 0) {
+    // period too short
+    fprintf(stderr, "Invalid input -- no period specified\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  double period = strToPosDouble(sec_end + 1, period_len);
+  if (period == -1.0) {
+    fprintf(stderr, "Invalid input -- invalid double\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  // valid period
+  planet->year_len = period;
+  // ################################################################################################
+  // ### read until end                                                                           ###
+  // ################################################################################################
+  char* cur = first_end + 1;
+  //printf("hello, %s", cur);
+  size_t init_pos_len = 0;
+  // ??? Is .05 valid input?????
+  while (*cur != '\0') {
+    if (isdigit(*cur) || *cur == '.') {
+      init_pos_len++;
+    } else if (*cur == ':') {
+      fprintf(stderr, "Invalid input -- too many fields\n\t === %s ===\n", line);
+      exit(EXIT_FAILURE);
+    } else if (*cur == '\n') {
+      if (*(cur+1) == '\0') {
+        cur++;
+        continue;
+      } else {
+        fprintf(stderr, "Invalid input -- too many fields\n\t === %s ===\n", line);
+        exit(EXIT_FAILURE);
+      }
+    } else {
+      fprintf(stderr, "Invalid input -- invalid double\n\t === %s ===\n", line);
+      exit(EXIT_FAILURE);
+    }
+    cur++;
+  }
+  if (init_pos_len == 0) {
+    fprintf(stderr, "Invalid input -- no initial position specified\n\t === %s ===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  double init_pos = strToPosDouble(first_end+1,  init_pos_len);
+  planet->init_pos = init_pos * M_PI / 180.0; // in radians
 }
+
+// int main() {
+//   printf("%.20f\n", strToPosDouble("12.3", 4));
+//   printf("%.20f\n", strToPosDouble("-12.3", 5));
+//   printf("%.20f\n", strToPosDouble("12.3.", 5));
+//   printf("%.20f\n", strToPosDouble("12.38923942", 11));
+//   printf("%.20f\n", strToPosDouble("12.38abc942", 11));
+//   printf("%.20f\n", strToPosDouble("12abc.38942", 11));
+//   return EXIT_SUCCESS;
+// }
+
