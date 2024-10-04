@@ -1,6 +1,6 @@
-Grading at 10/04/2024:01:48:06.983959
-For commit ID 77c7d2b18c3e0421ce6c98b00cc0a3cfe3599599
-Grading at Thu Oct  3 09:47:55 PM EDT 2024
+Grading at 10/04/2024:01:50:30.163203
+For commit ID 6c9ead6e30eca60c4a41fe52c2de041eb6e8ebd5
+Grading at Thu Oct  3 09:50:17 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -167,6 +167,15 @@ We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
 -------------------------
  This test case will run 
+ launches-step1 
+ With arguments 
+ ./sol.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
  launches-step2 
  With arguments 
  ./test-step2/test-large-speed.txt 
@@ -179,6 +188,15 @@ gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step2.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
 gcc -o launches-step2 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step2.o myinput.o provided.o planet_util.o dummy-s3.o -lm
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step2 
+ With arguments 
+ ./sol.txt 
+-------------------------
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
