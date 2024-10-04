@@ -1,6 +1,6 @@
-Grading at 10/03/2024:16:06:45.911573
-For commit ID 32e4d0e88f834985500c8c4fcc433cdef570d43d
-Grading at Thu Oct  3 12:06:35 PM EDT 2024
+Grading at 10/04/2024:01:48:06.983959
+For commit ID 77c7d2b18c3e0421ce6c98b00cc0a3cfe3599599
+Grading at Thu Oct  3 09:47:55 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -165,6 +165,23 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step2 
+ With arguments 
+ ./test-step2/test-large-speed.txt 
+-------------------------
+I need to compile your code for launches-step2 (make launches-step2)
+
+Compiling launches-step2
+rm -f myinput.o step1.o *~ launches-step? launches-step4-debug
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step2.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
+gcc -o launches-step2 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step2.o myinput.o provided.o planet_util.o dummy-s3.o -lm
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
 
