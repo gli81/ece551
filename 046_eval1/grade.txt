@@ -1,6 +1,6 @@
-Grading at 10/07/2024:03:05:38.869761
-For commit ID 290e6e209ec4fa4a5a5445c606058de3dc26f3bc
-Grading at Sun Oct  6 11:05:21 PM EDT 2024
+Grading at 10/07/2024:04:58:27.144219
+For commit ID aa018caa4dc4f4755bd5a6c0bc891d12862c5344
+Grading at Mon Oct  7 12:58:07 AM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -257,7 +257,48 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches1.txt 
+-------------------------
+I need to compile your code for launches-step4 (make launches-step4)
+
+Compiling launches-step4
+rm -f myinput.o planet_util.o step2.o *~ launches-step? launches-step4-debug
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 target.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 iter_target.c
+gcc -o launches-step4 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.o myinput.o provided.o planet_util.o target.o iter_target.o -lm
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./simple.txt ./launches_simple.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-zero-iter.txt 
+-------------------------
+Running our code...
+Running your code
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+Earth        to Venus        at          0 requires  0.00 deg and takes       0.0 hours	      |	Earth        to Venus        at          0 requires  0.00 deg and takes       inf hours
+   Will arrive at time       0.00 but need to wait until      74.82			      |	   Will arrive at time        inf and land immediately
+Your file did not match the expected output
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
