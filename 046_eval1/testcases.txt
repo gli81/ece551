@@ -23,3 +23,4 @@ launches-step1 ./test-step1/test-space-before-name.txt
 launches-step1 ./test-step1/test-double-pos-sign.txt
 launches-step2 ./test-step2/test-large-speed.txt
 launches-step2 ./sol.txt
+launches-step4 ./sol.txt ./launches/test-zero-iter.txt

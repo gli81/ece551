@@ -22,6 +22,10 @@ launch_result_t compute_launch_by_info(const launch_input_t * this_launch,
   double delta_y = dest.y - src.y;
   double delta_x = dest.x - src.x;
   double angle = atan2(delta_y, delta_x);
+  if (angle < 0) {
+    angle += 2 * M_PI;
+  }
+  angle = fmod(angle, 2 * M_PI);
   // calculate duration
   if (this_launch->speed == 0) {
     fprintf(stderr, "Invalid input -- speed can't be 0\n");
