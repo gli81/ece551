@@ -122,10 +122,10 @@ void parse_planet_info(planet_t * planet, char * line) {
   }
   //@@@printf("after second ':' '%s'\n", sec_end+1);
   size_t radius_len = sec_end - first_end - 1;
-  // for (size_t i = 0; i < radius_len; ++i) {
-  //   printf("%c", *(first_end + 1 + i));
-  //   if (i == radius_len - 1) printf("\n");
-  // }
+  //for (size_t i = 0; i < radius_len; ++i) {
+  //  printf("%c", *(first_end + 1 + i));
+  //  if (i == radius_len - 1) printf("\n");
+  //}
   if (radius_len == 0) {
     // radius too short
     fprintf(stderr, "Invalid input -- no radius specified\n\t\t===\n%s\n\t\t===\n", line);
