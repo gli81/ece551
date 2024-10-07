@@ -26,6 +26,10 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
   point_t dest = get_location_at(dest_planet, this_launch->time);
   double best_duration = DBL_MAX;
   launch_result_t ans;
+  if (this_launch->max_iterations <= 0) {
+    ans.duration = INFINITY;
+    return ans;
+  }
   ans.duration = DBL_MAX;
   for (size_t i = 0; i < this_launch->max_iterations; ++i) {
     // calculate distance and total time
@@ -39,8 +43,7 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
     double duration = sqrt(distance(src, dest)) / this_launch->speed;
     // check if close enough
     point_t dest_cur = get_location_at(dest_planet, this_launch->time + duration);
-    //@@@
-    printf("iter: %ld, angle: %.4f, duration: %.4f\n", i, angle, duration);
+    //@@@printf("iter: %ld, angle: %.4f, duration: %.4f\n", i, angle, duration);
     if (distance(dest, dest_cur) < this_launch->close_enough) {
       ans.theta = angle;
       ans.duration = duration;
