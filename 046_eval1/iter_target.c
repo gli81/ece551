@@ -44,8 +44,10 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
     if (angle < 0) angle += 2 * M_PI;
     angle = fmod(angle, 2 * M_PI);
     if (this_launch->speed == 0) {
-      fprintf(stderr, "Invalid input -- speed can't be 0\n");
-      exit(EXIT_FAILURE);
+      ans.theta = angle;
+      return ans;
+      //fprintf(stderr, "Invalid input -- speed can't be 0\n");
+      //exit(EXIT_FAILURE);
     }
     double duration = sqrt(distance(src, dest)) / this_launch->speed;
     // check if close enough
