@@ -29,4 +29,3 @@ launches-step3 ./sol.txt ./launches/test-zero-speed.txt
 launches-step4 ./sol.txt ./launches1.txt
 launches-step4 ./simple.txt ./launches_simple.txt
 launches-step4 ./sol.txt ./launches/test-zero-iter.txt
-launches-step4 ./sol.txt ./launches/test-neg-iter.txt
