@@ -1,6 +1,6 @@
-Grading at 10/07/2024:02:53:26.168898
-For commit ID 0f8ba6319d8aa1796f8cbb487d2c8dd1751c3606
-Grading at Sun Oct  6 10:53:12 PM EDT 2024
+Grading at 10/07/2024:02:54:42.232966
+For commit ID 92e9dee7541e0292df3eeb193ef672dbf4467df7
+Grading at Sun Oct  6 10:54:26 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -211,29 +211,50 @@ Running your code
 We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
- launch-step1 
+ launches-step1 
  With arguments 
  ./test-step1/test-space-before.txt 
 -------------------------
-launch-step1 does not seem to be a valid command for this assignment
-Skipping this testcase
+I need to compile your code for launches-step1 (make launches-step1)
+
+Compiling launches-step1
+rm -f myinput.o planet_util.o step2.o *~ launches-step? launches-step4-debug
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
+gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
+Running our code...
+Running your code
+You said this was an error (exit status was 1), but we said it was valid
+Note: this may happen if your code timed out too...
+Here is what you printed to stderr:
+------
+Invalid input -- invalid double
+		===
+Venus:    12.123:35.678:90.123
+
+		===
+------
 -------------------------
  This test case will run 
- launch-step1 
+ launches-step1 
  With arguments 
  ./test-step1/test-space-betweem.txt 
 -------------------------
-launch-step1 does not seem to be a valid command for this assignment
-Skipping this testcase
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
- launch-step1 
+ launches-step1 
  With arguments 
  ./test-step1/test-space-after.txt 
 -------------------------
-launch-step1 does not seem to be a valid command for this assignment
-Skipping this testcase
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
