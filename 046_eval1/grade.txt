@@ -1,6 +1,6 @@
-Grading at 10/07/2024:03:01:54.757242
-For commit ID d6c4a5cb069df6d6a6612380214fea821256c0f9
-Grading at Sun Oct  6 11:01:38 PM EDT 2024
+Grading at 10/07/2024:03:03:01.592303
+For commit ID 8e132600a8a49438a4a9f548b0fc8db12dd6736b
+Grading at Sun Oct  6 11:02:44 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -185,6 +185,44 @@ Running your code
 We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-space-before.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-space-betweem.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-space-after.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-space-before-name.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
  launches-step2 
  With arguments 
  ./test-step2/test-large-speed.txt 
@@ -209,42 +247,6 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-space-before.txt 
--------------------------
-I need to compile your code for launches-step1 (make launches-step1)
-
-Compiling launches-step1
-rm -f myinput.o planet_util.o step2.o *~ launches-step? launches-step4-debug
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
-gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-space-betweem.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-space-after.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
 
