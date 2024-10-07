@@ -23,6 +23,9 @@ double strToPosDouble(char* str, size_t len) {
   }
   unsigned long int_part = 0;
   size_t i = 0;
+  if (*str == '+') {
+    i++;
+  }
   while (i < len) {
     char cur = *(str + i);
     if (isdigit(cur)) {
