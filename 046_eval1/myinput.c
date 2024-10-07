@@ -25,6 +25,10 @@ double strToPosDouble(char* str, size_t len) {
   size_t i = 0;
   if (*str == '+') {
     i++;
+  } else if (*str == ' ') {
+    while (i < len && *(str+i) == ' ') {
+      i++;
+    }
   }
   while (i < len) {
     char cur = *(str + i);
