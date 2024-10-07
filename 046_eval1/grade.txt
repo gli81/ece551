@@ -1,6 +1,6 @@
-Grading at 10/04/2024:01:50:30.163203
-For commit ID 6c9ead6e30eca60c4a41fe52c2de041eb6e8ebd5
-Grading at Thu Oct  3 09:50:17 PM EDT 2024
+Grading at 10/07/2024:02:46:48.323061
+For commit ID 2637d19ae92d8ee7cf20f2a91ab4cfab398789ec
+Grading at Sun Oct  6 10:46:34 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -176,6 +176,24 @@ Running your code
 We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-pos-sign.txt 
+-------------------------
+Running our code...
+Running your code
+You said this was an error (exit status was 1), but we said it was valid
+Note: this may happen if your code timed out too...
+Here is what you printed to stderr:
+------
+Invalid input -- invalid double
+		===
+Venus:+12.123:35.678:90.123
+
+		===
+------
+-------------------------
+ This test case will run 
  launches-step2 
  With arguments 
  ./test-step2/test-large-speed.txt 
@@ -200,7 +218,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
