@@ -1,6 +1,6 @@
-Grading at 10/07/2024:02:54:42.232966
-For commit ID 92e9dee7541e0292df3eeb193ef672dbf4467df7
-Grading at Sun Oct  6 10:54:26 PM EDT 2024
+Grading at 10/07/2024:03:00:08.497156
+For commit ID 936edb8dc94d2cb9d7f58514c4a3a3a2d4c4b0f8
+Grading at Sun Oct  6 10:59:52 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -224,16 +224,7 @@ gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Invalid input -- invalid double
-		===
-Venus:    12.123:35.678:90.123
-
-		===
-------
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step1 
@@ -254,7 +245,7 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
