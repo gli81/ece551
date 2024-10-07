@@ -1,6 +1,6 @@
-Grading at 10/07/2024:03:03:01.592303
-For commit ID 8e132600a8a49438a4a9f548b0fc8db12dd6736b
-Grading at Sun Oct  6 11:02:44 PM EDT 2024
+Grading at 10/07/2024:03:05:38.869761
+For commit ID 290e6e209ec4fa4a5a5445c606058de3dc26f3bc
+Grading at Sun Oct  6 11:05:21 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -221,6 +221,16 @@ And valgrind reported no errors
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-double-pos-sign.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
  launches-step2 
