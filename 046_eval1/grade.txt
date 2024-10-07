@@ -1,6 +1,6 @@
-Grading at 10/07/2024:20:55:42.337731
-For commit ID 4faa043c16daa450a4ed7264b123408181b68217
-Grading at Mon Oct  7 04:55:20 PM EDT 2024
+Grading at 10/07/2024:21:00:14.649225
+For commit ID 9e5ee5d08808f6b22f10ea592938b586e5991c70
+Grading at Mon Oct  7 04:59:52 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -346,7 +346,20 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-zero-speed.txt 
+-------------------------
+Running our code...
+Running your code
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+Earth        to Jupiter      at         10 requires 51.05 deg and takes       inf hours								     |	Earth        to Jupiter      at         10 requires  0.00 deg and takes       inf hours
+   Will arrive at time        inf and land immediately													   Will arrive at time        inf and land immediately
+Your file did not match the expected output
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
