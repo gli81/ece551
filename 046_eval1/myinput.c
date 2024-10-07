@@ -36,7 +36,7 @@ double strToPosDouble(char* str, size_t len) {
       return -1.0;
     }
   }
-  // ??? is 12. valid ???
+  // ??? is 12. valid ??? yes it is
   double float_part = 0.0;
   unsigned ct = 1;
   while (i < len) {
@@ -62,9 +62,9 @@ void parse_planet_info(planet_t * planet, char * line) {
     fprintf(stderr, "Invalid input\n\t\t===\n%s\n\t\t===\n", line);
     exit(EXIT_FAILURE);
   }
-  /* ################################################################################################
-   * ### read until first ':'                                                                     ###
-   * ################################################################################################
+  /* ##################################################
+   * ### read until first ':'
+   * ##################################################
    */
   char* first_end = strchr(line, ':');
   //@@@printf("after first ':' '%s'\n", first_end+1);
@@ -98,9 +98,9 @@ void parse_planet_info(planet_t * planet, char * line) {
   //    printf("\n");
   //  }
   //}
-  /* ################################################################################################
-   * ### read until second :                                                                      ###
-   * ################################################################################################
+  /* ##################################################
+   * ### read until second ':'
+   * ##################################################
    */
   char* sec_end = strchr(first_end+1, ':');
   if (NULL == sec_end) {
@@ -127,9 +127,9 @@ void parse_planet_info(planet_t * planet, char * line) {
   // valid orbital_radius
   //printf("%.f\n", orbital_rad);
   planet->orbital_radius = orbital_rad;
-  /* ################################################################################################
-   * ### read until third                                                                         ###
-   * ################################################################################################
+  /* ##################################################
+   * ### read until third
+   * ##################################################
    */
   first_end = strchr(sec_end+1, ':');
   if (NULL == first_end) {
@@ -151,14 +151,14 @@ void parse_planet_info(planet_t * planet, char * line) {
   // valid period
   planet->year_len = period;
 
-  /* ################################################################################################
-   * ### read until end                                                                           ###
-   * ################################################################################################
+  /* ##################################################
+   * ### read until end
+   * ##################################################
    */
   char* cur = first_end + 1;
   //printf("cur = '%s'\n", cur);
   size_t init_pos_len = 0;
-  // ??? Is .05 valid input?????
+  // ??? Is .05 valid input ??? it is.
   while (*cur != '\0') {
     if (isdigit(*cur) || *cur == '.') {
       init_pos_len++;

@@ -7,9 +7,9 @@
 
 point_t get_location_at(const planet_t * p, double time) {
   // Step 2: WRITE THIS
-  /* ########################################################################
-   * ### check conditions?
-   * ########################################################################
+  /* ##################################################
+   * ### check conditions
+   * ##################################################
    */
   if (time < 0) {
     fprintf(stderr, "Invalid input -- time can't be negative\n");
@@ -19,9 +19,9 @@ point_t get_location_at(const planet_t * p, double time) {
     fprintf(stderr, "Invalid input -- invalid planet info\n");
     exit(EXIT_FAILURE);
   }
-  /* ########################################################################
+  /* ##################################################
    * ### calculate current position
-   * ########################################################################
+   * ##################################################
    */
    double delta = (2 * M_PI / p->year_len) * time;
    double cur_pos = p->init_pos + delta;

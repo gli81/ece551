@@ -15,5 +15,6 @@ launches-step1 ./test-step1/test-pointPlus-for-double.txt
 launches-step1 ./test-step1/test-too-long-name.txt
 launches-step1 ./test-step1/test-too-many-fields.txt
 launches-step1 ./sol.txt
+launches-step1 ./test-step1/test-pos-sign.txt
 launches-step2 ./test-step2/test-large-speed.txt
 launches-step2 ./sol.txt
