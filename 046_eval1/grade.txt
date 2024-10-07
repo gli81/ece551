@@ -1,6 +1,6 @@
-Grading at 10/07/2024:02:49:22.165156
-For commit ID ad2a1de2984ed767f24f723ff2f84f0dcad22738
-Grading at Sun Oct  6 10:49:08 PM EDT 2024
+Grading at 10/07/2024:02:53:26.168898
+For commit ID 0f8ba6319d8aa1796f8cbb487d2c8dd1751c3606
+Grading at Sun Oct  6 10:53:12 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -209,6 +209,30 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launch-step1 
+ With arguments 
+ ./test-step1/test-space-before.txt 
+-------------------------
+launch-step1 does not seem to be a valid command for this assignment
+Skipping this testcase
+-------------------------
+ This test case will run 
+ launch-step1 
+ With arguments 
+ ./test-step1/test-space-betweem.txt 
+-------------------------
+launch-step1 does not seem to be a valid command for this assignment
+Skipping this testcase
+-------------------------
+ This test case will run 
+ launch-step1 
+ With arguments 
+ ./test-step1/test-space-after.txt 
+-------------------------
+launch-step1 does not seem to be a valid command for this assignment
+Skipping this testcase
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
 
