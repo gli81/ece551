@@ -1,6 +1,6 @@
-Grading at 10/07/2024:05:04:12.022252
-For commit ID 4a3e51c521bf7a040316d8747e5049047d14ea5a
-Grading at Mon Oct  7 01:03:47 AM EDT 2024
+Grading at 10/07/2024:05:13:16.716021
+For commit ID 3d15b937e1bae0daa8f37d4ae6d8ad106df7aff0
+Grading at Mon Oct  7 01:12:52 AM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -275,23 +275,7 @@ gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 iter_target.c
 gcc -o launches-step4 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.o myinput.o provided.o planet_util.o target.o iter_target.o -lm
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-iter: 0, angle: 2.5780, duration: 214309.9807						      <
-iter: 1, angle: 3.0221, duration: 869603.0289						      <
-iter: 2, angle: 2.1261, duration: 1241692.0885						      <
-iter: 3, angle: 2.3140, duration: 1287412.5154						      <
-iter: 4, angle: 2.7803, duration: 236834.6496						      <
-Earth        to Venus        at          0 requires 147.71 deg and takes  214310.0 hours	Earth        to Venus        at          0 requires 147.71 deg and takes  214310.0 hours
-   Will arrive at time  214309.98 but need to wait until  215480.00				   Will arrive at time  214309.98 but need to wait until  215480.00
-iter: 0, angle: 2.9620, duration: 1689409.2443						      <
-iter: 1, angle: 1.0396, duration: 1046119.0827						      <
-iter: 2, angle: 0.8148, duration: 862948.6077						      <
-iter: 3, angle: 5.8908, duration: 409788.3870						      <
-iter: 4, angle: 2.4567, duration: 1884550.4509						      <
-Earth        to Mars         at         36 requires 337.52 deg and takes  409788.4 hours	Earth        to Mars         at         36 requires 337.52 deg and takes  409788.4 hours
-   Will arrive at time  409824.39 but need to wait until  418078.61				   Will arrive at time  409824.39 but need to wait until  418078.61
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -300,28 +284,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-iter: 0, angle: 0.0000, duration: 10.0000						      <
-iter: 1, angle: 0.1739, duration: 10.0758						      <
-Planet A     to Planet B     at          0 requires  9.96 deg and takes      10.1 hours		Planet A     to Planet B     at          0 requires  9.96 deg and takes      10.1 hours
-   Will arrive at time      10.08 and land immediately						   Will arrive at time      10.08 and land immediately
-iter: 0, angle: 3.1416, duration: 20.0000						      <
-iter: 1, angle: 3.3161, duration: 19.6962						      <
-Planet A     to Planet C     at          0 requires 190.00 deg and takes      19.7 hours	Planet A     to Planet C     at          0 requires 190.00 deg and takes      19.7 hours
-   Will arrive at time      19.70 and land immediately						   Will arrive at time      19.70 and land immediately
-iter: 0, angle: 3.1416, duration: 30.0000						      <
-iter: 1, angle: 3.3163, duration: 29.7720						      <
-Planet A     to Planet D     at          0 requires 190.01 deg and takes      29.8 hours	Planet A     to Planet D     at          0 requires 190.01 deg and takes      29.8 hours
-   Will arrive at time      29.77 and land immediately						   Will arrive at time      29.77 and land immediately
-iter: 0, angle: 3.1416, duration: 150.0000						      <
-iter: 1, angle: 4.0465, duration: 122.8340						      <
-iter: 2, angle: 3.8730, duration: 131.4698						      <
-iter: 3, angle: 3.9274, duration: 128.8782						      <
-iter: 4, angle: 3.9110, duration: 129.6715						      <
-Planet A     to Planet B     at        360 requires 225.02 deg and takes     128.9 hours	Planet A     to Planet B     at        360 requires 225.02 deg and takes     128.9 hours
-   Will arrive at time     488.88 but need to wait until     491.47				   Will arrive at time     488.88 but need to wait until     491.47
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -330,11 +293,711 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-Earth        to Venus        at          0 requires  0.00 deg and takes 179769313486231570814 |	Earth        to Venus        at          0 requires  0.00 deg and takes       inf hours
-   Will arrive at time 1797693134862315708145274237317043567980705675258449965989174768031572 |	   Will arrive at time        inf and land immediately
-Your file did not match the expected output
+We agreed on this testcase, but valgrind reported errors
+==1551700== Memcheck, a memory error detector
+==1551700== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1551700== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1551700== Command: ./launches-step4 ./sol.txt ./launches/test-zero-iter.txt
+==1551700== Parent PID: 1551699
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A4CB8: __printf_fp_l (printf_fp.c:396)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A4CD2: __printf_fp_l (printf_fp.c:396)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A050A: __mpn_extract_double (dbl2mpn.c:56)
+==1551700==    by 0x49A4FCE: __printf_fp_l (printf_fp.c:396)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A050F: __mpn_extract_double (dbl2mpn.c:60)
+==1551700==    by 0x49A4FCE: __printf_fp_l (printf_fp.c:396)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A501E: __printf_fp_l (printf_fp.c:437)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A5041: __printf_fp_l (printf_fp.c:437)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A5902: __printf_fp_l (printf_fp.c:437)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A5071: __printf_fp_l (printf_fp.c:438)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A5094: __printf_fp_l (printf_fp.c:438)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A5096: __printf_fp_l (printf_fp.c:438)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A50BF: __printf_fp_l (printf_fp.c:439)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A50E4: __printf_fp_l (printf_fp.c:439)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A50E6: __printf_fp_l (printf_fp.c:439)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A5104: __printf_fp_l (printf_fp.c:446)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A619D: __printf_fp_l (printf_fp.c:649)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A6489: __printf_fp_l (printf_fp.c:665)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499ED6C: __mpn_lshift (lshift.S:59)
+==1551700==    by 0x49A648D: __printf_fp_l (printf_fp.c:665)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499ED6F: __mpn_lshift (lshift.S:60)
+==1551700==    by 0x49A648D: __printf_fp_l (printf_fp.c:665)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A64CA: __printf_fp_l (printf_fp.c:666)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A658C: __printf_fp_l (printf_fp.c:677)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A657F: __printf_fp_l (printf_fp.c:789)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EFF8: __mpn_mul (mul.c:71)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x499EFFF: __mpn_mul (mul.c:72)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F4C0: __mpn_mul_1 (mul_1.S:90)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F522: __mpn_mul_1 (mul_1.S:117)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F1F9: __mpn_mul (mul.c:83)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F227: __mpn_mul (mul.c:88)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x499F254: __mpn_mul (mul.c:91)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x499F235: __mpn_mul (mul.c:94)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499E487: __mpn_add_n (add_n.S:37)
+==1551700==    by 0x499F280: __mpn_mul (mul.c:95)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F281: __mpn_mul (mul.c:95)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x499F247: __mpn_mul (mul.c:88)
+==1551700==    by 0x49A64FA: __printf_fp_l (printf_fp.c:685)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A650C: __printf_fp_l (printf_fp.c:694)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A652E: __printf_fp_l (printf_fp.c:697)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A6557: __printf_fp_l (printf_fp.c:706)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A6563: __printf_fp_l (printf_fp.c:728)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A660C: __printf_fp_l (printf_fp.c:745)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A6612: __printf_fp_l (printf_fp.c:745)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A6628: __printf_fp_l (printf_fp.c:745)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A664B: __printf_fp_l (printf_fp.c:745)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A6651: __printf_fp_l (printf_fp.c:746)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A6C38: __printf_fp_l (printf_fp.c:767)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EEE8: __mpn_rshift (rshift.S:92)
+==1551700==    by 0x49A6C53: __printf_fp_l (printf_fp.c:779)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F428: __mpn_mul_1 (mul_1.S:36)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F49C: __mpn_mul_1 (mul_1.S:77)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F4FD: __mpn_mul_1 (mul_1.S:106)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F4C0: __mpn_mul_1 (mul_1.S:90)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F4C7: __mpn_mul_1 (mul_1.S:92)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F522: __mpn_mul_1 (mul_1.S:117)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F1F9: __mpn_mul (mul.c:83)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499E53C: __mpn_addmul_1 (addmul_1.S:40)
+==1551700==    by 0x1FFF00000F: ???
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499E53F: __mpn_addmul_1 (addmul_1.S:41)
+==1551700==    by 0x1FFF00000F: ???
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F264: __mpn_mul (mul.c:98)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x499F247: __mpn_mul (mul.c:88)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A7192: __printf_fp_l (printf_fp.c:746)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A71A7: __printf_fp_l (printf_fp.c:756)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EE3B: __mpn_rshift (rshift.S:33)
+==1551700==    by 0x49A6C53: __printf_fp_l (printf_fp.c:779)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EF0A: __mpn_rshift (rshift.S:101)
+==1551700==    by 0x49A6C53: __printf_fp_l (printf_fp.c:779)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F487: __mpn_mul_1 (mul_1.S:70)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F4EA: __mpn_mul_1 (mul_1.S:101)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499ED25: __mpn_lshift (lshift.S:36)
+==1551700==    by 0x49A71D4: __printf_fp_l (printf_fp.c:762)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EDFA: __mpn_lshift (lshift.S:103)
+==1551700==    by 0x49A71D4: __printf_fp_l (printf_fp.c:762)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EDD7: __mpn_lshift (lshift.S:94)
+==1551700==    by 0x49A71D4: __printf_fp_l (printf_fp.c:762)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A71F4: __printf_fp_l (printf_fp.c:765)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F469: __mpn_mul_1 (mul_1.S:60)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499F4D7: __mpn_mul_1 (mul_1.S:96)
+==1551700==    by 0x499F1EC: __mpn_mul (mul.c:81)
+==1551700==    by 0x49A65CA: __printf_fp_l (printf_fp.c:690)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EE62: __mpn_rshift (rshift.S:46)
+==1551700==    by 0x49A6C53: __printf_fp_l (printf_fp.c:779)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EE71: __mpn_rshift (rshift.S:51)
+==1551700==    by 0x49A6C53: __printf_fp_l (printf_fp.c:779)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EEFA: __mpn_rshift (rshift.S:97)
+==1551700==    by 0x49A6C53: __printf_fp_l (printf_fp.c:779)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EEFE: __mpn_rshift (rshift.S:98)
+==1551700==    by 0x49A6C53: __printf_fp_l (printf_fp.c:779)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x499EEE4: __mpn_rshift (rshift.S:91)
+==1551700==    by 0x49A6C53: __printf_fp_l (printf_fp.c:779)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A6AFC: __printf_fp_l (printf_fp.c:791)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Use of uninitialised value of size 8
+==1551700==    at 0x49A5A1E: __printf_fp_l (printf_fp.c:991)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A5A24: __printf_fp_l (printf_fp.c:991)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A5CD5: __printf_fp_l (printf_fp.c:1166)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x49A5D4B: __printf_fp_l (printf_fp.c:1173)
+==1551700==    by 0x49C092C: __printf_fp_spec (vfprintf-internal.c:354)
+==1551700==    by 0x49C092C: __vfprintf_internal (vfprintf-internal.c:1558)
+==1551700==    by 0x49AA79E: printf (printf.c:33)
+==1551700==    by 0x10A7E5: report_launch_results (provided.c:225)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x48E4752: __cos_avx (s_sin.c:279)
+==1551700==    by 0x10A8C5: report_launch_results (provided.c:237)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x48E3E5F: __sin_avx (s_sin.c:212)
+==1551700==    by 0x10A8E4: report_launch_results (provided.c:238)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x48E3E79: __sin_avx (s_sin.c:214)
+==1551700==    by 0x10A8E4: report_launch_results (provided.c:238)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x487482C: sqrt (w_sqrt_compat.c:35)
+==1551700==    by 0x10A95F: report_launch_results (provided.c:244)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== Conditional jump or move depends on uninitialised value(s)
+==1551700==    at 0x10A988: report_launch_results (provided.c:246)
+==1551700==    by 0x109505: main (step4.c:22)
+==1551700== 
+==1551700== 
+==1551700== HEAP SUMMARY:
+==1551700==     in use at exit: 0 bytes in 0 blocks
+==1551700==   total heap usage: 30 allocs, 30 frees, 14,460 bytes allocated
+==1551700== 
+==1551700== All heap blocks were freed -- no leaks are possible
+==1551700== 
+==1551700== Use --track-origins=yes to see where uninitialised values come from
+==1551700== For lists of detected and suppressed errors, rerun with: -s
+==1551700== ERROR SUMMARY: 170 errors from 81 contexts (suppressed: 0 from 0)
 -------------------------
  This test case will run 
  launches-step4 
