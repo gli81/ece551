@@ -1,6 +1,6 @@
-Grading at 10/07/2024:22:40:38.779204
-For commit ID b3e851d6f3e926db26f4ebb6b37007e9915279bd
-Grading at Mon Oct  7 06:40:16 PM EDT 2024
+Grading at 10/07/2024:22:57:17.499616
+For commit ID ac90377196d086a543a2b412aaa91efe954b1598
+Grading at Mon Oct  7 06:56:55 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -240,16 +240,7 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Invalid input -- invalid double
-		===
-Venus:    +12.123:35.678:90.123
-
-		===
-------
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step1 
@@ -349,7 +340,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
