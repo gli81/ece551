@@ -1,6 +1,6 @@
-Grading at 10/07/2024:21:00:14.649225
-For commit ID 9e5ee5d08808f6b22f10ea592938b586e5991c70
-Grading at Mon Oct  7 04:59:52 PM EDT 2024
+Grading at 10/07/2024:21:02:46.911713
+For commit ID a6fc4ba8e26d7d258feaa7f6be52725cdbcea85a
+Grading at Mon Oct  7 05:02:24 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -354,12 +354,8 @@ We agreed on this testcase and valgrind was clean
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-Earth        to Jupiter      at         10 requires 51.05 deg and takes       inf hours								     |	Earth        to Jupiter      at         10 requires  0.00 deg and takes       inf hours
-   Will arrive at time        inf and land immediately													   Will arrive at time        inf and land immediately
-Your file did not match the expected output
-You have FAILED one or more of your test cases
-Keep debugging
+We agreed on this testcase and valgrind was clean
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
