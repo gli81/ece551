@@ -1,6 +1,6 @@
-Grading at 10/07/2024:23:12:05.884591
-For commit ID ee0f1591bbb1a4cf70f54f3109848b63f1697d10
-Grading at Mon Oct  7 07:11:42 PM EDT 2024
+Grading at 10/07/2024:23:17:59.733917
+For commit ID b72e3dba8c43e0cf1e7ed882507c61af8cf42f01
+Grading at Mon Oct  7 07:17:36 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -246,6 +246,16 @@ We agreed on this testcase and valgrind was clean
  launches-step1 
  With arguments 
  ./test-step1/test-plus-space-before.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-zero-radius.txt 
 -------------------------
 Running our code...
 Running your code
