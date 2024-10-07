@@ -25,12 +25,12 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
   point_t src = get_location_at(find_planet(planets, this_launch->src), this_launch->time);
   point_t dest = get_location_at(dest_planet, this_launch->time);
   double best_duration = DBL_MAX;
-  launch_result_t ans;
-  ans.duration = INFINITY;
+  launch_result_t ans = {.theta = 0.0, .duration=INFINITY};
+  //@@@printf("this_launch->max_iterations: %ld\n", this_launch->max_iterations);
   if (this_launch->max_iterations <= 0) {
     return ans;
   }
-  ans.duration = DBL_MAX;
+  //ans.duration = DBL_MAX;
   for (size_t i = 0; i < this_launch->max_iterations; ++i) {
     // calculate distance and total time
     double angle = atan2(dest.y - src.y, dest.x - src.x);
