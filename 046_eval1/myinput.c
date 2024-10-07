@@ -134,7 +134,7 @@ void parse_planet_info(planet_t * planet, char * line) {
     exit(EXIT_FAILURE);
   }
   double orbital_rad = strToPosDouble(first_end + 1, radius_len);
-  if (orbital_rad == -1.0) {
+  if (orbital_rad == -1.0 || orbital_rad == 0) {
     // invalid double
     fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
     exit(EXIT_FAILURE);
