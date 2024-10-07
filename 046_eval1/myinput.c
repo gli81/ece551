@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "myinput.h"
 #include <ctype.h>
+#include <assert.h>
 
 // will use strchr instead
 //char* readUntilColumn(char* start) {
@@ -29,12 +30,13 @@ double strToPosDouble(char* str, size_t len) {
   }
   unsigned long int_part = 0;
   size_t i = 0;
-  if (*str == '+') {
-    i++;
-  } else if (*str == ' ') {
+  if (*str == ' ') {
     while (i < len && *(str+i) == ' ') {
       i++;
     }
+  }
+  if (*(str+i) == '+') {
+    i++;
   }
   while (i < len) {
     char cur = *(str + i);
@@ -170,35 +172,47 @@ void parse_planet_info(planet_t * planet, char * line) {
    */
   char* cur = first_end + 1;
   //@@@printf("cur = '%s'\n", cur);
-  size_t init_pos_len = 0;
+  //size_t init_pos_len = 0;
   // ??? Is .05 valid input ??? it is.
-  while (*cur != '\0') {
-    if (isdigit(*cur) || *cur == '.') {
-      init_pos_len++;
-    } else if (*cur == ':') {
-      fprintf(stderr, "Invalid input -- too many fields\n\t\t===\n%s\n\t\t===\n", line);
-      exit(EXIT_FAILURE);
-    } else if (*cur == '\n') {
-      if (*(cur+1) == '\0') {
-        cur++;
-        continue;
-      } else {
-        fprintf(stderr, "Invalid input -- too many fields\n\t\t===\n%s\n\t\t===\n", line);
-        exit(EXIT_FAILURE);
-      }
-    } else {
-      fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
-      exit(EXIT_FAILURE);
-    }
-    cur++;
+  // find next ':', if found, fail
+  first_end = strchr(cur, ':');
+  if (first_end != NULL) {
+    fprintf(stderr, "Invalid input -- too many fields\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
   }
+  char* new_line = strchr(cur, '\n');
+  if (NULL == new_line) {
+    fprintf(stderr, "Invalid input\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  assert(*(new_line + 1) == '\0');
+  //while (*cur != '\0') {
+  //  if (isdigit(*cur) || *cur == '.') {
+  //    init_pos_len++;
+  //  } else if (*cur == ':') {
+  //    fprintf(stderr, "Invalid input -- too many fields\n\t\t===\n%s\n\t\t===\n", line);
+  //    exit(EXIT_FAILURE);
+  //  } else if (*cur == '\n') {
+  //    if (*(cur+1) == '\0') {
+  //      cur++;
+  //      continue;
+  //    } else {
+  //      fprintf(stderr, "Invalid input -- too many fields\n\t\t===\n%s\n\t\t===\n", line);
+  //      exit(EXIT_FAILURE);
+  //    }
+  //  } else {
+  //    fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
+  //    exit(EXIT_FAILURE);
+  //  }
+  //  cur++;
+  //}
   // pregrader says it can be empty
   // assume 0.0
   //if (init_pos_len == 0) {
   //  fprintf(stderr, "Invalid input -- no initial position specified\n\t\t===\n%s\n\t\t===\n", line);
   //  exit(EXIT_FAILURE);
   //}
-  double init_pos = strToPosDouble(first_end+1, init_pos_len);
+  double init_pos = strToPosDouble(cur, new_line - cur);
   if (init_pos == -1.0) {
     fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
     exit(EXIT_FAILURE);
@@ -206,14 +220,4 @@ void parse_planet_info(planet_t * planet, char * line) {
   planet->init_pos = init_pos * M_PI / 180.0; // in radians
   //@@@printf("----------Completed processing %s----------\n", planet->name);
 }
-
-// int main() {
-//   printf("%.20f\n", strToPosDouble("12.3", 4));
-//   printf("%.20f\n", strToPosDouble("-12.3", 5));
-//   printf("%.20f\n", strToPosDouble("12.3.", 5));
-//   printf("%.20f\n", strToPosDouble("12.38923942", 11));
-//   printf("%.20f\n", strToPosDouble("12.38abc942", 11));
-//   printf("%.20f\n", strToPosDouble("12abc.38942", 11));
-//   return EXIT_SUCCESS;
-// }
 
