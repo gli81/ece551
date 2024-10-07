@@ -25,7 +25,7 @@ double strToPosDouble(char* str, size_t len) {
     return 0.0;
   }
   if (len == 1 && *(str) == '.') {
-    return -1.0;
+    return 0.0;
   }
   unsigned long int_part = 0;
   size_t i = 0;
