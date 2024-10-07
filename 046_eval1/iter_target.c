@@ -5,6 +5,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ * calculate the distance between two points
+ * @param src : point_t
+ * @param dest : point_t
+ * @returns : double
+ */
 double distance(point_t src, point_t dest) {
     return (dest.y - src.y) * (dest.y - src.y) + (dest.x - src.x) * (dest.x - src.x);
 }
@@ -26,6 +32,7 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
   point_t dest = get_location_at(dest_planet, this_launch->time);
   double best_duration = DBL_MAX;
   launch_result_t ans = {.theta = 0.0, .duration=INFINITY};
+  // don't have to worry about max_iter <= 0 :-)
   //@@@printf("this_launch->max_iterations: %ld\n", this_launch->max_iterations);
   if (this_launch->max_iterations <= 0) {
     return ans;

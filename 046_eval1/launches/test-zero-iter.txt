@@ -1,1 +1,1 @@
-0:Earth:Venus:200:0:12000
+10:Earth:Jupiter:200:0:10

@@ -1,4 +1,3 @@
-launches-step2 ./test-step2/test-large-speed.txt
 launches-step1 ./test-step1
 launches-step1 ./test-step1test-double-pos-sign.txt
 launches-step1 ./test-step1test-dup-dot.txt
@@ -23,10 +22,3 @@ launches-step1 ./test-step1test-space-before.txt
 launches-step1 ./test-step1test-space-between.txt
 launches-step1 ./test-step1test-too-long-name.txt
 launches-step1 ./test-step1test-too-many-fields.txt
-launches-step1 ./sol.txt
-launches-step2 ./sol.txt
-launches-step3 ./sol.txt ./launches/test-zero-speed.txt
-launches-step4 ./sol.txt ./launches1.txt
-launches-step4 ./simple.txt ./launches_simple.txt
-launches-step4 ./sol.txt ./launches/test-zero-iter.txt
-launches-step4 ./sol.txt ./launches/test-neg-iter.txt

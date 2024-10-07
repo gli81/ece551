@@ -14,7 +14,13 @@
 //  return NULL;
 //}
 
+/* convert string to double
+ * @param str : char*
+ * @param len : size_t
+ * @returns : double
+ */
 double strToPosDouble(char* str, size_t len) {
+  // return 0.0 if empty string
   if (len == 0) {
     return 0.0;
   }
@@ -135,7 +141,7 @@ void parse_planet_info(planet_t * planet, char * line) {
   //printf("%.f\n", orbital_rad);
   planet->orbital_radius = orbital_rad;
   /* ##################################################
-   * ### read until third
+   * ### read until third ':'
    * ##################################################
    */
   first_end = strchr(sec_end+1, ':');
@@ -143,7 +149,7 @@ void parse_planet_info(planet_t * planet, char * line) {
     fprintf(stderr, "Invalid input -- only two ':' found\n\t\t===\n%s\n\t\t===\n", line);
     exit(EXIT_FAILURE);
   }
-  //@@@ printf("after third ':' '%s'\n", first_end+1);
+  //@@@printf("after third ':' '%s'\n", first_end+1);
   size_t period_len = first_end - sec_end - 1;
   if (period_len == 0) {
     // period too short
@@ -163,7 +169,7 @@ void parse_planet_info(planet_t * planet, char * line) {
    * ##################################################
    */
   char* cur = first_end + 1;
-  //printf("cur = '%s'\n", cur);
+  //@@@printf("cur = '%s'\n", cur);
   size_t init_pos_len = 0;
   // ??? Is .05 valid input ??? it is.
   while (*cur != '\0') {

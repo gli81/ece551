@@ -1,0 +1,3 @@
+#/bin/bash
+
+ls -l ./test-step1 | awk '{print "launches-step1 ./test-step1" $9}' > step1testcases.txt
