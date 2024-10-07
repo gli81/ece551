@@ -1,6 +1,6 @@
-Grading at 10/07/2024:22:23:54.712528
-For commit ID b83ae5538cbd7d15b988ef1fe11eeb8e50ef19a2
-Grading at Mon Oct  7 06:23:33 PM EDT 2024
+Grading at 10/07/2024:22:26:46.507537
+For commit ID 04ec4813a2b7be5c626c92a608138410f45ea91a
+Grading at Mon Oct  7 06:26:24 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -106,16 +106,7 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Invalid input -- invalid double
-		===
-Venus:12.123:35.678:
-
-		===
-------
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step1 
@@ -163,11 +154,8 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-We said this was an error.  Our error message was
-Error converting field 1 of Venus:.:35.678:90.123
- to an double (.:35.678:90.123
- after num part)
-However, you exited with EXIT_SUCCESS
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
  launches-step1 
@@ -343,7 +331,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
