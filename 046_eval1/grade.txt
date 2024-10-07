@@ -1,6 +1,6 @@
-Grading at 10/07/2024:22:26:46.507537
-For commit ID 04ec4813a2b7be5c626c92a608138410f45ea91a
-Grading at Mon Oct  7 06:26:24 PM EDT 2024
+Grading at 10/07/2024:22:40:38.779204
+For commit ID b3e851d6f3e926db26f4ebb6b37007e9915279bd
+Grading at Mon Oct  7 06:40:16 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -11,7 +11,7 @@ Running your test cases
 I need to compile your code for launches-step1 (make launches-step1)
 
 Compiling launches-step1
-rm -f  *~ launches-step? launches-step4-debug
+rm -f myinput.o step1.o *~ launches-step? launches-step4-debug
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
@@ -236,6 +236,24 @@ And valgrind reported no errors
  This test case will run 
  launches-step1 
  With arguments 
+ ./test-step1/test-space-plus-before.txt 
+-------------------------
+Running our code...
+Running your code
+You said this was an error (exit status was 1), but we said it was valid
+Note: this may happen if your code timed out too...
+Here is what you printed to stderr:
+------
+Invalid input -- invalid double
+		===
+Venus:    +12.123:35.678:90.123
+
+		===
+------
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
  ./sol.txt 
 -------------------------
 Running our code...
@@ -331,7 +349,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
