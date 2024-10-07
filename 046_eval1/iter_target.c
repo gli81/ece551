@@ -26,8 +26,8 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
   point_t dest = get_location_at(dest_planet, this_launch->time);
   double best_duration = DBL_MAX;
   launch_result_t ans;
+  ans.duration = INFINITY;
   if (this_launch->max_iterations <= 0) {
-    ans.duration = INFINITY;
     return ans;
   }
   ans.duration = DBL_MAX;
