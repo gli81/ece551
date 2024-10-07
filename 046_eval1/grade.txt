@@ -1,6 +1,6 @@
-Grading at 10/07/2024:04:58:27.144219
-For commit ID aa018caa4dc4f4755bd5a6c0bc891d12862c5344
-Grading at Mon Oct  7 12:58:07 AM EDT 2024
+Grading at 10/07/2024:05:04:12.022252
+For commit ID 4a3e51c521bf7a040316d8747e5049047d14ea5a
+Grading at Mon Oct  7 01:03:47 AM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -275,7 +275,23 @@ gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 iter_target.c
 gcc -o launches-step4 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.o myinput.o provided.o planet_util.o target.o iter_target.o -lm
 Running our code...
 Running your code
-We agreed on this testcase and valgrind was clean
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+iter: 0, angle: 2.5780, duration: 214309.9807						      <
+iter: 1, angle: 3.0221, duration: 869603.0289						      <
+iter: 2, angle: 2.1261, duration: 1241692.0885						      <
+iter: 3, angle: 2.3140, duration: 1287412.5154						      <
+iter: 4, angle: 2.7803, duration: 236834.6496						      <
+Earth        to Venus        at          0 requires 147.71 deg and takes  214310.0 hours	Earth        to Venus        at          0 requires 147.71 deg and takes  214310.0 hours
+   Will arrive at time  214309.98 but need to wait until  215480.00				   Will arrive at time  214309.98 but need to wait until  215480.00
+iter: 0, angle: 2.9620, duration: 1689409.2443						      <
+iter: 1, angle: 1.0396, duration: 1046119.0827						      <
+iter: 2, angle: 0.8148, duration: 862948.6077						      <
+iter: 3, angle: 5.8908, duration: 409788.3870						      <
+iter: 4, angle: 2.4567, duration: 1884550.4509						      <
+Earth        to Mars         at         36 requires 337.52 deg and takes  409788.4 hours	Earth        to Mars         at         36 requires 337.52 deg and takes  409788.4 hours
+   Will arrive at time  409824.39 but need to wait until  418078.61				   Will arrive at time  409824.39 but need to wait until  418078.61
+Your file did not match the expected output
 -------------------------
  This test case will run 
  launches-step4 
@@ -284,7 +300,28 @@ We agreed on this testcase and valgrind was clean
 -------------------------
 Running our code...
 Running your code
-We agreed on this testcase and valgrind was clean
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+iter: 0, angle: 0.0000, duration: 10.0000						      <
+iter: 1, angle: 0.1739, duration: 10.0758						      <
+Planet A     to Planet B     at          0 requires  9.96 deg and takes      10.1 hours		Planet A     to Planet B     at          0 requires  9.96 deg and takes      10.1 hours
+   Will arrive at time      10.08 and land immediately						   Will arrive at time      10.08 and land immediately
+iter: 0, angle: 3.1416, duration: 20.0000						      <
+iter: 1, angle: 3.3161, duration: 19.6962						      <
+Planet A     to Planet C     at          0 requires 190.00 deg and takes      19.7 hours	Planet A     to Planet C     at          0 requires 190.00 deg and takes      19.7 hours
+   Will arrive at time      19.70 and land immediately						   Will arrive at time      19.70 and land immediately
+iter: 0, angle: 3.1416, duration: 30.0000						      <
+iter: 1, angle: 3.3163, duration: 29.7720						      <
+Planet A     to Planet D     at          0 requires 190.01 deg and takes      29.8 hours	Planet A     to Planet D     at          0 requires 190.01 deg and takes      29.8 hours
+   Will arrive at time      29.77 and land immediately						   Will arrive at time      29.77 and land immediately
+iter: 0, angle: 3.1416, duration: 150.0000						      <
+iter: 1, angle: 4.0465, duration: 122.8340						      <
+iter: 2, angle: 3.8730, duration: 131.4698						      <
+iter: 3, angle: 3.9274, duration: 128.8782						      <
+iter: 4, angle: 3.9110, duration: 129.6715						      <
+Planet A     to Planet B     at        360 requires 225.02 deg and takes     128.9 hours	Planet A     to Planet B     at        360 requires 225.02 deg and takes     128.9 hours
+   Will arrive at time     488.88 but need to wait until     491.47				   Will arrive at time     488.88 but need to wait until     491.47
+Your file did not match the expected output
 -------------------------
  This test case will run 
  launches-step4 
@@ -295,9 +332,22 @@ Running our code...
 Running your code
 We both agreed this was not an error, but your output is different from ours
 Your output on the left, ours on the right
-Earth        to Venus        at          0 requires  0.00 deg and takes       0.0 hours	      |	Earth        to Venus        at          0 requires  0.00 deg and takes       inf hours
-   Will arrive at time       0.00 but need to wait until      74.82			      |	   Will arrive at time        inf and land immediately
+Earth        to Venus        at          0 requires  0.00 deg and takes 179769313486231570814 |	Earth        to Venus        at          0 requires  0.00 deg and takes       inf hours
+   Will arrive at time 1797693134862315708145274237317043567980705675258449965989174768031572 |	   Will arrive at time        inf and land immediately
 Your file did not match the expected output
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-neg-iter.txt 
+-------------------------
+Running our code...
+Running your code
+You said this was an error (exit status was 137), but we said it was valid
+Note: this may happen if your code timed out too...
+Here is what you printed to stderr:
+------
+------
 You have FAILED one or more of your test cases
 Keep debugging
 
