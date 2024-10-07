@@ -20,5 +20,6 @@ launches-step1 ./test-step1/test-space-before.txt
 launches-step1 ./test-step1/test-space-betweem.txt
 launches-step1 ./test-step1/test-space-after.txt
 launches-step1 ./test-step1/test-space-before-name.txt
+launches-step1 ./test-step1/test-double-pos-sign.txt
 launches-step2 ./test-step2/test-large-speed.txt
 launches-step2 ./sol.txt
