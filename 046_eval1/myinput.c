@@ -159,7 +159,7 @@ void parse_planet_info(planet_t * planet, char * line) {
     exit(EXIT_FAILURE);
   }
   double period = strToPosDouble(sec_end + 1, period_len);
-  if (period == -1.0) {
+  if (period == -1.0 || period == 0) {
     fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
     exit(EXIT_FAILURE);
   }
