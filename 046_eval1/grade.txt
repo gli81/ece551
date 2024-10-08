@@ -1,6 +1,6 @@
-Grading at 10/08/2024:19:33:47.520992
-For commit ID e271f09f9f4f72dc7d861f8998b85aaf872aaef8
-Grading at Tue Oct  8 03:33:37 PM EDT 2024
+Grading at 10/08/2024:19:37:05.806026
+For commit ID 39a23d866e56618749835dc353feef4cad5dda20
+Grading at Tue Oct  8 03:36:55 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -63,12 +63,7 @@ We agreed on this testcase and valgrind was clean
 -------------------------
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Invalid input -- time can't be negative
-------
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step3 
@@ -153,7 +148,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
