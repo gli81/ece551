@@ -1,6 +1,6 @@
-Grading at 10/08/2024:20:48:39.865999
-For commit ID ad772aee231d28d405e4e76cf88c06b9834defb7
-Grading at Tue Oct  8 04:48:24 PM EDT 2024
+Grading at 10/08/2024:21:06:30.795484
+For commit ID 1aac80761b93d6f2ad7df678c3421ae73f79bbb4
+Grading at Tue Oct  8 05:06:15 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -11,7 +11,7 @@ Running your test cases
 I need to compile your code for launches-step2 (make launches-step2)
 
 Compiling launches-step2
-rm -f myinput.o planet_util.o step3.o target.o *~ launches-step? launches-step4-debug
+rm -f  *~ launches-step? launches-step4-debug
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step2.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
@@ -164,11 +164,7 @@ We agreed on this testcase and valgrind was clean
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-Venus        to Mercury      at          0 requires  0.00 deg and takes  830500.0 hours								     |	Venus        to Mercury      at          0 requires 360.00 deg and takes  830500.0 hours
-   Will arrive at time  830500.00 but need to wait until  831734.00											   Will arrive at time  830500.00 but need to wait until  831734.00
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step3 
@@ -224,7 +220,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
