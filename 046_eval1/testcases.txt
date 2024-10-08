@@ -24,6 +24,8 @@ launches-step1 ./test-step1/test-too-many-fields.txt
 launches-step1 ./test-step1/test-space-plus-before.txt
 launches-step1 ./test-step1/test-plus-space-before.txt
 launches-step1 ./test-step1/test-zero-radius.txt
+launches-step1 ./test-step1/test-zero-period.txt
+launches-step1 ./test-step1/test-plus-before.txt
 launches-step1 ./sol.txt
 launches-step2 ./test-step2/test-large-speed.txt
 launches-step2 ./sol.txt
@@ -32,4 +34,3 @@ launches-step4 ./sol.txt ./launches1.txt
 launches-step4 ./simple.txt ./launches_simple.txt
 launches-step4 ./sol.txt ./launches/test-zero-iter.txt
 launches-step4 ./sol.txt ./launches/test-zero-speed.txt
-launches-step1 ./test-step1/test-zero-period.txt
