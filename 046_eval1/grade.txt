@@ -1,6 +1,6 @@
-Grading at 10/08/2024:01:06:13.750293
-For commit ID 89d5cdfcf1524c9f84b87a90b2037f7147f43160
-Grading at Mon Oct  7 09:05:46 PM EDT 2024
+Grading at 10/08/2024:01:09:11.891640
+For commit ID 55401c7d7bf72df7294ab153738685c2a0618a3b
+Grading at Mon Oct  7 09:08:43 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -314,6 +314,19 @@ And valgrind reported no errors
  This test case will run 
  launches-step1 
  With arguments 
+ ./test-step1/test-plus-for-double-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We said this was an error.  Our error message was
+Error converting field 3 of Venus:12.123:35.678:+
+ to an double (+
+ after num part)
+However, you exited with EXIT_SUCCESS
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
  ./sol.txt 
 -------------------------
 Running our code...
@@ -409,7 +422,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
