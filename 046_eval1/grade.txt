@@ -1,6 +1,6 @@
-Grading at 10/08/2024:00:57:01.500631
-For commit ID c7bc0ae3ae555e63277b4bf47180cfdc5994db4f
-Grading at Mon Oct  7 08:56:34 PM EDT 2024
+Grading at 10/08/2024:01:06:13.750293
+For commit ID 89d5cdfcf1524c9f84b87a90b2037f7147f43160
+Grading at Mon Oct  7 09:05:46 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -295,6 +295,16 @@ And valgrind reported no errors
  launches-step1 
  With arguments 
  ./test-step1/test-plus-between-num.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-plus-for-double.txt 
 -------------------------
 Running our code...
 Running your code
