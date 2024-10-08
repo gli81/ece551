@@ -39,6 +39,8 @@ launches-step1 ./test-step1/test-too-many-fields.txt
 launches-step1 ./test-step1/test-zero-initpos.txt
 launches-step1 ./test-step1/test-zero-period.txt
 launches-step1 ./test-step1/test-zero-radius.txt
+launches-step1 ./test-step1/test-invalid-chars.txt
+launches-step1 ./test-step1/test-invalid-chars-initial.txt
 launches-step2 ./test-step2/test-large-speed.txt
 launches-step2 ./sol.txt
 launches-step3 ./sol.txt ./launches/test-zero-speed.txt
