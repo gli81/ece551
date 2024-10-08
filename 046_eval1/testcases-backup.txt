@@ -1,0 +1,56 @@
+launches-step1 ./sol.txt
+launches-step1 ./test-step1/test-double-pos-sign.txt
+launches-step1 ./test-step1/test-dup-dot-initial.txt
+launches-step1 ./test-step1/test-dup-dot.txt
+launches-step1 ./test-step1/test-dup-plus-initial.txt
+launches-step1 ./test-step1/test-dup-plus.txt
+launches-step1 ./test-step1/test-empty-string.txt
+launches-step1 ./test-step1/test-ending-point-for-double.txt
+launches-step1 ./test-step1/test-invalid-double.txt
+launches-step1 ./test-step1/test-neg-initial.txt
+launches-step1 ./test-step1/test-neg-period.txt
+launches-step1 ./test-step1/test-neg-radius.txt
+launches-step1 ./test-step1/test-no-column.txt
+launches-step1 ./test-step1/test-no-initial.txt
+launches-step1 ./test-step1/test-no-name.txt
+launches-step1 ./test-step1/test-no-period.txt
+launches-step1 ./test-step1/test-no-radius.txt
+launches-step1 ./test-step1/test-one-more-empty-field.txt
+launches-step1 ./test-step1/test-plus-before.txt
+launches-step1 ./test-step1/test-plus-between-num-initial.txt
+launches-step1 ./test-step1/test-plus-between-num.txt
+launches-step1 ./test-step1/test-plus-for-double-initial.txt
+launches-step1 ./test-step1/test-plus-for-double.txt
+launches-step1 ./test-step1/test-plus-space-before-initial.txt
+launches-step1 ./test-step1/test-plus-space-before.txt
+launches-step1 ./test-step1/test-point-for-double-initial.txt
+launches-step1 ./test-step1/test-point-for-double.txt
+launches-step1 ./test-step1/test-pointPlus-for-double.txt
+launches-step1 ./test-step1/test-pos-sign.txt
+launches-step1 ./test-step1/test-space-after-initial.txt
+launches-step1 ./test-step1/test-space-after.txt
+launches-step1 ./test-step1/test-space-before-name.txt
+launches-step1 ./test-step1/test-space-before.txt
+launches-step1 ./test-step1/test-space-between-initial.txt
+launches-step1 ./test-step1/test-space-between.txt
+launches-step1 ./test-step1/test-space-plus-before.txt
+launches-step1 ./test-step1/test-too-long-name.txt
+launches-step1 ./test-step1/test-too-many-fields.txt
+launches-step1 ./test-step1/test-zero-initpos.txt
+launches-step1 ./test-step1/test-zero-period.txt
+launches-step1 ./test-step1/test-zero-radius.txt
+launches-step1 ./test-step1/test-invalid-chars.txt
+launches-step1 ./test-step1/test-invalid-chars-initial.txt
+launches-step2 ./test-step2/test-large-speed.txt
+launches-step2 ./sol.txt
+launches-step3 ./sol.txt ./launches/test-zero-speed.txt
+launches-step3 ./sol.txt ./launches1.txt
+launches-step3 ./sol.txt ./launches/test-neg-time.txt
+launches-step3 ./sol.txt ./launches/test-invalid-name.txt
+launches-step3 ./sol.txt ./launches/test-too-long-name.txt
+launches-step3 ./sol.txt ./launches/test-empty-time.txt
+launches-step3 ./sol.txt ./launches/test-empty-speed.txt
+launches-step4 ./sol.txt ./launches1.txt
+launches-step4 ./simple.txt ./launches_simple.txt
+launches-step4 ./sol.txt ./launches/test-zero-iter.txt
+launches-step4 ./sol.txt ./launches/test-zero-speed.txt
