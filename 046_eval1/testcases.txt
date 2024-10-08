@@ -33,3 +33,6 @@ launches-step4 ./test-step3/sameaxis.txt ./launches/test-0.txt
 launches-step4 ./test-step3/sameaxis.txt ./launches/test-90.txt
 launches-step4 ./test-step3/sameaxis.txt ./launches/test-180.txt
 launches-step4 ./test-step3/sameaxis.txt ./launches/test-270.txt
+launches-step3 ./step4-neg-time-debug/iter1.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter2.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter3.txt ./launches/test-neg-time.txt
