@@ -28,6 +28,7 @@ launches-step1 ./test-step1/test-zero-period.txt
 launches-step1 ./test-step1/test-plus-before.txt
 launches-step1 ./test-step1/test-dup-plus.txt
 launches-step1 ./test-step1/test-plus-between-num.txt
+launches-step1 ./test-step1/test-plus-for-double.txt
 launches-step1 ./sol.txt
 launches-step2 ./test-step2/test-large-speed.txt
 launches-step2 ./sol.txt
