@@ -1,1 +1,1 @@
-0:Venus:Mercury:200:5:1000
+0:Mercury:Venus:200:5:1000

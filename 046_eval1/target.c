@@ -26,6 +26,7 @@ launch_result_t compute_launch_by_info(const launch_input_t * this_launch,
     angle += 2 * M_PI;
   }
   angle = fmod(angle, 2 * M_PI);
+  if (angle == 0) angle += 2 * M_PI;
   // calculate duration
   if (this_launch->speed == 0) {
     launch_result_t ans = {.theta = angle, .duration = INFINITY};
