@@ -1,6 +1,6 @@
-Grading at 10/07/2024:23:17:59.733917
-For commit ID b72e3dba8c43e0cf1e7ed882507c61af8cf42f01
-Grading at Mon Oct  7 07:17:36 PM EDT 2024
+Grading at 10/08/2024:00:12:06.679428
+For commit ID ebb4c4b97753ab6bcc775f21e5a4162379f7f899
+Grading at Mon Oct  7 08:11:42 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -11,7 +11,7 @@ Running your test cases
 I need to compile your code for launches-step1 (make launches-step1)
 
 Compiling launches-step1
-rm -f myinput.o step1.o *~ launches-step? launches-step4-debug
+rm -f  *~ launches-step? launches-step4-debug
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
@@ -360,6 +360,23 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-zero-period.txt 
+-------------------------
+I need to compile your code for launches-step1 (make launches-step1)
+
+Compiling launches-step1
+rm -f iter_target.o myinput.o planet_util.o step4.o target.o *~ launches-step? launches-step4-debug
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
+gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
 
