@@ -1,6 +1,6 @@
-Grading at 10/08/2024:00:40:27.055432
-For commit ID f31bbab8df21eebcbf88f3a6172c8f50c8438b0c
-Grading at Mon Oct  7 08:40:02 PM EDT 2024
+Grading at 10/08/2024:00:44:32.844896
+For commit ID ba461034b2e7dac09f1620a7010795d99f12b58e
+Grading at Mon Oct  7 08:44:07 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -265,6 +265,25 @@ And valgrind reported no errors
  This test case will run 
  launches-step1 
  With arguments 
+ ./test-step1/test-zero-period.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-plus-before.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
  ./sol.txt 
 -------------------------
 Running our code...
@@ -360,23 +379,6 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-zero-period.txt 
--------------------------
-I need to compile your code for launches-step1 (make launches-step1)
-
-Compiling launches-step1
-rm -f iter_target.o myinput.o planet_util.o step4.o target.o *~ launches-step? launches-step4-debug
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
-gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
 
