@@ -1,6 +1,6 @@
-Grading at 10/08/2024:01:09:11.891640
-For commit ID 55401c7d7bf72df7294ab153738685c2a0618a3b
-Grading at Mon Oct  7 09:08:43 PM EDT 2024
+Grading at 10/08/2024:01:11:30.184684
+For commit ID d591505070e991fa544cef9b8d5d343ceccd0c23
+Grading at Mon Oct  7 09:11:02 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -318,11 +318,8 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-We said this was an error.  Our error message was
-Error converting field 3 of Venus:12.123:35.678:+
- to an double (+
- after num part)
-However, you exited with EXIT_SUCCESS
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
  launches-step1 
@@ -422,7 +419,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
