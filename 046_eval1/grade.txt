@@ -1,12 +1,12 @@
-Grading at 10/08/2024:01:11:30.184684
-For commit ID d591505070e991fa544cef9b8d5d343ceccd0c23
-Grading at Mon Oct  7 09:11:02 PM EDT 2024
+Grading at 10/08/2024:02:20:39.837900
+For commit ID d753f5d34c29734995bbacb226e6d6a1a98f7f05
+Grading at Mon Oct  7 10:20:08 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
  launches-step1 
  With arguments 
- ./test-step1/test-double-pos-sign.txt 
+ ./sol.txt 
 -------------------------
 I need to compile your code for launches-step1 (make launches-step1)
 
@@ -17,6 +17,25 @@ gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
 Running our code...
 Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-double-pos-sign.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-dup-dot-initial.txt 
+-------------------------
+Running our code...
+Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
 -------------------------
@@ -24,6 +43,26 @@ And valgrind reported no errors
  launches-step1 
  With arguments 
  ./test-step1/test-dup-dot.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-dup-plus-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-dup-plus.txt 
 -------------------------
 Running our code...
 Running your code
@@ -150,6 +189,85 @@ And valgrind reported no errors
  This test case will run 
  launches-step1 
  With arguments 
+ ./test-step1/test-plus-before.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-plus-between-num-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-plus-between-num.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-plus-for-double-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-plus-for-double.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-plus-space-before-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-plus-space-before.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-point-for-double-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
  ./test-step1/test-point-for-double.txt 
 -------------------------
 Running our code...
@@ -174,6 +292,16 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-space-after-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
  launches-step1 
@@ -206,12 +334,31 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  launches-step1 
  With arguments 
+ ./test-step1/test-space-between-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
  ./test-step1/test-space-between.txt 
 -------------------------
 Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-space-plus-before.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step1 
@@ -236,7 +383,7 @@ And valgrind reported no errors
  This test case will run 
  launches-step1 
  With arguments 
- ./test-step1/test-space-plus-before.txt 
+ ./test-step1/test-zero-initpos.txt 
 -------------------------
 Running our code...
 Running your code
@@ -245,7 +392,7 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  launches-step1 
  With arguments 
- ./test-step1/test-plus-space-before.txt 
+ ./test-step1/test-zero-period.txt 
 -------------------------
 Running our code...
 Running your code
@@ -261,74 +408,6 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-zero-period.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-plus-before.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-dup-plus.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-plus-between-num.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-plus-for-double.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./test-step1/test-plus-for-double-initial.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- launches-step1 
- With arguments 
- ./sol.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step2 
@@ -392,33 +471,9 @@ gcc -o launches-step4 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.o myinput
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step4 
- With arguments 
- ./simple.txt ./launches_simple.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step4 
- With arguments 
- ./sol.txt ./launches/test-zero-iter.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step4 
- With arguments 
- ./sol.txt ./launches/test-zero-speed.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
+
+Grading has taken more than 30 seconds
+Skipping remaining test cases
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
 
