@@ -1,6 +1,6 @@
-Grading at 10/08/2024:00:18:01.945868
-For commit ID 117ef74a38aeb9b03d2a95dfecf24a25f54b3f45
-Grading at Mon Oct  7 08:17:36 PM EDT 2024
+Grading at 10/08/2024:00:30:06.782984
+For commit ID 37c72439210fcda1a1d4055debefdca7b1f747ef
+Grading at Mon Oct  7 08:29:42 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -11,7 +11,7 @@ Running your test cases
 I need to compile your code for launches-step1 (make launches-step1)
 
 Compiling launches-step1
-rm -f  *~ launches-step? launches-step4-debug
+rm -f myinput.o step1.o *~ launches-step? launches-step4-debug
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
