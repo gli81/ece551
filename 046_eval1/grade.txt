@@ -1,6 +1,6 @@
-Grading at 10/08/2024:02:20:39.837900
-For commit ID d753f5d34c29734995bbacb226e6d6a1a98f7f05
-Grading at Mon Oct  7 10:20:08 PM EDT 2024
+Grading at 10/08/2024:02:25:12.463057
+For commit ID eaba0c880ab47de11d18764ec4c5ca1a1c079505
+Grading at Mon Oct  7 10:24:41 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -410,6 +410,26 @@ We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
 -------------------------
  This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-invalid-chars.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-invalid-chars-initial.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
  launches-step2 
  With arguments 
  ./test-step2/test-large-speed.txt 
@@ -431,43 +451,6 @@ We agreed on this testcase and valgrind was clean
  With arguments 
  ./sol.txt 
 -------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step3 
- With arguments 
- ./sol.txt ./launches/test-zero-speed.txt 
--------------------------
-I need to compile your code for launches-step3 (make launches-step3)
-
-Compiling launches-step3
-rm -f myinput.o planet_util.o step2.o *~ launches-step? launches-step4-debug
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step3.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 target.c
-gcc -o launches-step3 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step3.o myinput.o provided.o planet_util.o target.o -lm
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step4 
- With arguments 
- ./sol.txt ./launches1.txt 
--------------------------
-I need to compile your code for launches-step4 (make launches-step4)
-
-Compiling launches-step4
-rm -f myinput.o planet_util.o step3.o target.o *~ launches-step? launches-step4-debug
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 target.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 iter_target.c
-gcc -o launches-step4 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.o myinput.o provided.o planet_util.o target.o iter_target.o -lm
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
