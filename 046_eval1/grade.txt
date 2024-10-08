@@ -1,6 +1,6 @@
-Grading at 10/08/2024:21:06:30.795484
-For commit ID 1aac80761b93d6f2ad7df678c3421ae73f79bbb4
-Grading at Tue Oct  8 05:06:15 PM EDT 2024
+Grading at 10/08/2024:21:14:15.990091
+For commit ID 4a67e081bd3ac0e02abf561fa6d4ed9bbfc01210
+Grading at Tue Oct  8 05:13:51 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -220,7 +220,139 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches1.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-neg-time.txt 
+-------------------------
+Running our code...
+Running your code
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+Earth        to Mars         at        -20 requires 327.20 deg and takes  398705.2 hours							     |	Earth        to Mars         at        -20 requires 250.26 deg and takes  592155.7 hours
+   Will arrive at time  398685.19 but need to wait until  401362.78										     |	   Will arrive at time  592135.72 but need to wait until  597618.99
+Your file did not match the expected output
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-invalid-name.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-too-long-name.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-empty-time.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-empty-speed.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-090.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-90180.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-180270.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-270360.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./test-step3/sameaxis.txt ./launches/test-0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./test-step3/sameaxis.txt ./launches/test-90.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./test-step3/sameaxis.txt ./launches/test-180.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./test-step3/sameaxis.txt ./launches/test-270.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
