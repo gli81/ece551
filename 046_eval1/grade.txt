@@ -1,6 +1,6 @@
-Grading at 10/08/2024:19:37:05.806026
-For commit ID 39a23d866e56618749835dc353feef4cad5dda20
-Grading at Tue Oct  8 03:36:55 PM EDT 2024
+Grading at 10/08/2024:20:48:39.865999
+For commit ID ad772aee231d28d405e4e76cf88c06b9834defb7
+Grading at Tue Oct  8 04:48:24 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -104,6 +104,82 @@ Running your code
 We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
+ launches-step3 
+ With arguments 
+ ./sol.txt ./launches/test-090.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./sol.txt ./launches/test-90180.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./sol.txt ./launches/test-180270.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./sol.txt ./launches/test-270360.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./test-step3/sameaxis.txt ./launches/test-0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./test-step3/sameaxis.txt ./launches/test-90.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./test-step3/sameaxis.txt ./launches/test-180.txt 
+-------------------------
+Running our code...
+Running your code
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+Venus        to Mercury      at          0 requires  0.00 deg and takes  830500.0 hours								     |	Venus        to Mercury      at          0 requires 360.00 deg and takes  830500.0 hours
+   Will arrive at time  830500.00 but need to wait until  831734.00											   Will arrive at time  830500.00 but need to wait until  831734.00
+Your file did not match the expected output
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./test-step3/sameaxis.txt ./launches/test-270.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
  launches-step4 
  With arguments 
  ./sol.txt ./launches1.txt 
@@ -148,7 +224,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
