@@ -43,6 +43,7 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
     double angle = atan2(dest.y - src.y, dest.x - src.x);
     if (angle < 0) angle += 2 * M_PI;
     angle = fmod(angle, 2 * M_PI);
+    if (angle == 0) angle += 2 * M_PI;
     if (this_launch->speed == 0) {
       //ans.theta = angle;
       return ans;
