@@ -7,6 +7,14 @@ launches-step3 ./sol.txt ./launches/test-invalid-name.txt
 launches-step3 ./sol.txt ./launches/test-too-long-name.txt
 launches-step3 ./sol.txt ./launches/test-empty-time.txt
 launches-step3 ./sol.txt ./launches/test-empty-speed.txt
+launches-step3 ./sol.txt ./launches/test-090.txt
+launches-step3 ./sol.txt ./launches/test-90180.txt
+launches-step3 ./sol.txt ./launches/test-180270.txt
+launches-step3 ./sol.txt ./launches/test-270360.txt
+launches-step3 ./test-step3/sameaxis.txt ./launches/test-0.txt
+launches-step3 ./test-step3/sameaxis.txt ./launches/test-90.txt
+launches-step3 ./test-step3/sameaxis.txt ./launches/test-180.txt
+launches-step3 ./test-step3/sameaxis.txt ./launches/test-270.txt
 launches-step4 ./sol.txt ./launches1.txt
 launches-step4 ./simple.txt ./launches_simple.txt
 launches-step4 ./sol.txt ./launches/test-zero-iter.txt

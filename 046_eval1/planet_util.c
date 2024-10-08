@@ -11,6 +11,7 @@ point_t get_location_at(const planet_t * p, double time) {
    * ### check conditions
    * ##################################################
    */
+  // time can be negative
   //if (time < 0) {
   //  fprintf(stderr, "Invalid input -- time can't be negative\n");
   //  exit(EXIT_FAILURE);
