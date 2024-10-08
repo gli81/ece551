@@ -44,6 +44,12 @@ launches-step1 ./test-step1/test-invalid-chars-initial.txt
 launches-step2 ./test-step2/test-large-speed.txt
 launches-step2 ./sol.txt
 launches-step3 ./sol.txt ./launches/test-zero-speed.txt
+launches-step3 ./sol.txt ./launches1.txt
+launches-step3 ./sol.txt ./launches/test-neg-time.txt
+launches-step3 ./sol.txt ./launches/test-invalid-name.txt
+launches-step3 ./sol.txt ./launches/test-too-long-name.txt
+launches-step3 ./sol.txt ./launches/test-empty-time.txt
+launches-step3 ./sol.txt ./launches/test-empty-speed.txt
 launches-step4 ./sol.txt ./launches1.txt
 launches-step4 ./simple.txt ./launches_simple.txt
 launches-step4 ./sol.txt ./launches/test-zero-iter.txt
