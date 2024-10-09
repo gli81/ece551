@@ -1,6 +1,6 @@
-Grading at 10/09/2024:02:12:04.111368
-For commit ID 1aa8fefebddaf6dce99551464d5c67a4b9e5ffed
-Grading at Tue Oct  8 10:11:38 PM EDT 2024
+Grading at 10/09/2024:02:13:19.693438
+For commit ID 59b8b15ef8c4151239ea603b644999c9f2a4530a
+Grading at Tue Oct  8 10:12:54 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -311,11 +311,7 @@ We agreed on this testcase and valgrind was clean
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-Earth        to Mars         at         20 requires 316.29 deg and takes  392008.5 hours							     |	Earth        to Mars         at         20 requires 316.29 deg and takes  392008.6 hours
-   Will arrive at time  392028.54 but need to wait until  401238.47										     |	   Will arrive at time  392028.55 but need to wait until  401238.48
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -352,7 +348,7 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
