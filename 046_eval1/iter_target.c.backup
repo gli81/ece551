@@ -28,6 +28,7 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
     exit(EXIT_FAILURE);
   }
   planet_t* dest_planet = find_planet(planets, this_launch->dest);
+  //@@@printf("dest planet speed: %.6f radian / hr\n", 2 * M_PI / dest_planet->year_len);
   point_t src = get_location_at(find_planet(planets, this_launch->src), this_launch->time);
   point_t dest = get_location_at(dest_planet, this_launch->time);
   double best_duration = DBL_MAX;
@@ -37,17 +38,42 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
   if (this_launch->max_iterations <= 0) {
     return ans;
   }
+  //@@@printf("src pos: {%.6f, %.6f}\n", src.x, src.y);
+  //ans.duration = DBL_MAX;
   for (size_t i = 0; i < this_launch->max_iterations; ++i) {
+    //@@@printf("dest pos: {%.6f, %.6f}\n", dest.x, dest.y);
+    //double dest_point_rad = atan2(dest.y, dest.x);
+    //if (dest_point_rad < 0) dest_point_rad += 2 * M_PI;
+    //dest_point_rad = fmod(dest_point_rad, 2*M_PI);
+    //if (dest_point_rad == 0) dest_point_rad += 2 * M_PI;
+    //@@@printf("(dest point) dest radian: %.6f, angle: %.6f\n", dest_point_rad, dest_point_rad * 180 / M_PI);
+    // calculate distance and total time
     double angle = atan2(dest.y - src.y, dest.x - src.x);
     if (angle < 0) angle += 2 * M_PI;
     angle = fmod(angle, 2 * M_PI);
     if (angle == 0) angle += 2 * M_PI;
     if (this_launch->speed == 0) {
+      //ans.theta = angle;
       return ans;
+      //fprintf(stderr, "Invalid input -- speed can't be 0\n");
+      //exit(EXIT_FAILURE);
     }
     double duration = sqrt(distance(src, dest)) / this_launch->speed;
     // check if close enough
     point_t dest_cur = get_location_at(dest_planet, this_launch->time + duration);
+    //double dest_cur_angle = atan2(dest_cur.y, dest_cur.x);
+    //if (dest_cur_angle < 0) dest_cur_angle += 2*M_PI;
+    //dest_cur_angle = fmod(dest_cur_angle, 2*M_PI);
+    //if (dest_cur_angle == 0) dest_cur_angle += 2*M_PI;
+    //double next_input = dest_cur_angle + 20 * (2*M_PI) / dest_planet->year_len;
+    //if (next_input < 0) next_input += 2*M_PI;
+    //next_input = fmod(next_input, 2*M_PI);
+    //if (next_input == 0) next_input += 2*M_PI;
+    //@@@printf("iter: %ld, rad: %.4f, angle: %.4f, duration: %.4f\n", i, angle, angle * 180 / M_PI, duration);
+    //@@@printf("dest planet traveled %.6f radian during this period (%.6f)\n", duration * 2*M_PI/dest_planet->year_len, fmod(duration * 2*M_PI / dest_planet->year_len, 2*M_PI));
+    //@@@printf("current destination position: {%.6f, %.6f}\n", dest_cur.x, dest_cur.y);
+    //@@@printf("current destination radian: %.6f, angle: %.6f\n", dest_cur_angle, dest_cur_angle * 180 / M_PI);
+    //@@@printf("20hr later (for next input file) rad: %.6f, angle: %.6f\n", next_input, next_input * 180 / M_PI);
     if (sqrt(distance(dest, dest_cur)) <= this_launch->close_enough) {
       ans.theta = angle;
       ans.duration = duration;
@@ -62,10 +88,12 @@ launch_result_t solve_launch(const launch_input_t * this_launch,
       best_duration = total_time;
       ans.theta = angle;
       ans.duration = duration;
+      //@@@printf("*");
     }
+    //@@@printf("\n");
+    //@@@printf("==============================================\n");
     dest.x = dest_cur.x;
     dest.y = dest_cur.y;
   }
   return ans;
 }
-
