@@ -1,6 +1,6 @@
-Grading at 10/08/2024:22:49:48.988474
-For commit ID d8fd03af02911af9dcd7f2899c29ec94b5824a56
-Grading at Tue Oct  8 06:49:20 PM EDT 2024
+Grading at 10/09/2024:01:40:39.590493
+For commit ID 5a66d5270c41abf3cd15c5fde3825bc0cb5e59b3
+Grading at Tue Oct  8 09:40:08 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -11,7 +11,7 @@ Running your test cases
 I need to compile your code for launches-step2 (make launches-step2)
 
 Compiling launches-step2
-rm -f iter_target-debug.o myinput.o planet_util.o step3.o step4.o target.o *~ launches-step? launches-step4-debug
+rm -f  *~ launches-step? launches-step4-debug
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step2.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
@@ -192,173 +192,7 @@ gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 iter_target.c
 gcc -o launches-step4 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.o myinput.o provided.o planet_util.o target.o iter_target.o -lm
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {69549619.368084, -82886008.745473}													     <
-current destination position: {-66896236.025085, -85041952.033547}										     <
-current destination radian: 4.045856, angle: 231.810479												     <
-20hr later rad: 4.069183, angle: 233.147030													     <
-iter: 0, rad: 2.5780, angle: 147.7099, duration: 214309.9807											     <
-wait time: 215480.0000, total_time: 429789.9807, best time: 1797693134862315708145274237317043567980705675258449965989174768031572607800285387605895 <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-66896236.025085, -85041952.033547}													     <
-current destination position: {-25144891.015022, 105237704.535222}										     <
-current destination radian: 1.805333, angle: 103.437982												     <
-20hr later rad: 1.828661, angle: 104.774532													     <
-iter: 1, rad: 3.0221, angle: 173.1508, duration: 869603.0289											     <
-wait time: 871523.9807, total_time: 1741127.0096, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-25144891.015022, 105237704.535222}													     <
-current destination position: {-68440283.913452, 83804340.805510}										     <
-current destination radian: 2.255618, angle: 129.237397												     <
-20hr later rad: 2.278945, angle: 130.573948													     <
-iter: 2, rad: 2.1261, angle: 121.8176, duration: 1241692.0885											     <
-wait time: 1246693.0289, total_time: 2488385.1174, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-68440283.913452, 83804340.805510}													     <
-current destination position: {61473975.929057, -89040385.688033}										     <
-current destination radian: 5.316647, angle: 304.621414												     <
-20hr later rad: 5.339974, angle: 305.957965													     <
-iter: 3, rad: 2.3140, angle: 132.5818, duration: 1287412.5154											     <
-wait time: 1290175.0885, total_time: 2577587.6039, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {61473975.929057, -89040385.688033}													     <
-current destination position: {49254433.952479, -96339196.259990}										     <
-current destination radian: 5.185004, angle: 297.078870												     <
-20hr later rad: 5.208332, angle: 298.415421													     <
-iter: 4, rad: 2.7803, angle: 159.3003, duration: 236834.6496											     <
-wait time: 236947.5154, total_time: 473782.1651, best time: 429789.9807										     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {49254433.952479, -96339196.259990}													     <
-current destination position: {101567168.080985, 37300809.213861}										     <
-current destination radian: 0.351961, angle: 20.165892												     <
-20hr later rad: 0.375288, angle: 21.502443													     <
-iter: 5, rad: 2.9761, angle: 170.5155, duration: 286560.9546											     <
-wait time: 290704.6496, total_time: 577265.6043, best time: 429789.9807										     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {101567168.080985, 37300809.213861}													     <
-current destination position: {-17842243.618867, -106718762.842553}										     <
-current destination radian: 4.546732, angle: 260.508541												     <
-20hr later rad: 4.570059, angle: 261.845091													     <
-iter: 6, rad: 1.6003, angle: 91.6877, duration: 715730.4153											     <
-wait time: 717520.9546, total_time: 1433251.3699, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-17842243.618867, -106718762.842553}													     <
-current destination position: {-83967518.107866, -68239987.564515}										     <
-current destination radian: 3.824027, angle: 219.100590												     <
-20hr later rad: 3.847354, angle: 220.437141													     <
-iter: 7, rad: 3.1492, angle: 180.4336, duration: 618144.7913											     <
-wait time: 618764.4153, total_time: 1236909.2066, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-83967518.107866, -68239987.564515}													     <
-current destination position: {-85218202.194786, 66671568.263305}										     <
-current destination radian: 2.477699, angle: 141.961689												     <
-20hr later rad: 2.501026, angle: 143.298240													     <
-iter: 8, rad: 2.9463, angle: 168.8083, duration: 967145.4934											     <
-wait time: 968299.7913, total_time: 1935445.2847, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-85218202.194786, 66671568.263305}													     <
-current destination position: {-26368913.774016, -104937697.641879}										     <
-current destination radian: 4.466204, angle: 255.894666												     <
-20hr later rad: 4.489532, angle: 257.231217													     <
-iter: 9, rad: 2.4072, angle: 137.9212, duration: 1286683.3738											     <
-wait time: 1290365.4934, total_time: 2577048.8672, best time: 429789.9807									     <
-==============================================													     <
-Earth        to Venus        at          0 requires 147.71 deg and takes  214310.0 hours								Earth        to Venus        at          0 requires 147.71 deg and takes  214310.0 hours
-   Will arrive at time  214309.98 but need to wait until  215480.00											   Will arrive at time  214309.98 but need to wait until  215480.00
-src pos: {108477247.347165, -103018672.132687}													     |	Earth        to Mars         at         36 requires 337.52 deg and takes  409788.4 hours
-dest pos: {-223971550.909412, -42670181.429575}													     |	   Will arrive at time  409824.39 but need to wait until  418078.61
-current destination position: {214471398.464782, 77369368.877875}										     <
-current destination radian: 0.346214, angle: 19.836628												     <
-20hr later rad: 0.353841, angle: 20.273574													     <
-iter: 0, rad: 2.9620, angle: 169.7113, duration: 1689409.2443											     <
-wait time: 1697270.0000, total_time: 3386679.2443, best time: 17976931348623157081452742373170435679807056752584499659891747680315726078002853876058 <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {214471398.464782, 77369368.877875}													     <
-current destination position: {226882119.810780, 22550026.832951}										     <
-current destination radian: 0.099066, angle: 5.676040												     <
-20hr later rad: 0.106692, angle: 6.112986													     <
-iter: 1, rad: 1.0396, angle: 59.5619, duration: 1046119.0827											     <
-wait time: 1046803.2443, total_time: 2092922.3271, best time: 3386679.2443									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {226882119.810780, 22550026.832951}													     <
-current destination position: {184206692.589020, -134357338.487387}										     <
-current destination radian: 5.653010, angle: 323.893602												     <
-20hr later rad: 5.660636, angle: 324.330549													     <
-iter: 2, rad: 0.8148, angle: 46.6819, duration: 862948.6077											     <
-wait time: 864897.0827, total_time: 1727845.6905, best time: 2092922.3271									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {184206692.589020, -134357338.487387}													     <
-current destination position: {-183423815.661702, 135424162.718851}										     <
-current destination radian: 2.505613, angle: 143.561071												     <
-20hr later rad: 2.513240, angle: 143.998017													     <
-iter: 3, rad: 5.8908, angle: 337.5191, duration: 409788.3870											     <
-wait time: 418078.6077, total_time: 827866.9947, best time: 1727845.6905									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {-183423815.661702, 135424162.718851}													     <
-current destination position: {182441213.892792, -136745030.890795}										     <
-current destination radian: 5.639986, angle: 323.147367												     <
-20hr later rad: 5.647612, angle: 323.584314													     <
-iter: 4, rad: 2.4567, angle: 140.7559, duration: 1884550.4509											     <
-wait time: 1892844.3870, total_time: 3777394.8379, best time: 827866.9947									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {182441213.892792, -136745030.890795}													     <
-current destination position: {75453627.419017, 215152852.896057}										     <
-current destination radian: 1.233500, angle: 70.674345												     <
-20hr later rad: 1.241126, angle: 71.111291													     <
-iter: 5, rad: 5.8554, angle: 335.4878, duration: 406452.1996											     <
-wait time: 418044.4509, total_time: 824496.6505, best time: 827866.9947										     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {75453627.419017, 215152852.896057}													     <
-current destination position: {-190222726.529533, -125695323.348446}										     <
-current destination radian: 3.725509, angle: 213.455920												     <
-20hr later rad: 3.733135, angle: 213.892866													     <
-iter: 6, rad: 1.6742, angle: 95.9256, duration: 1599403.6296											     <
-wait time: 1609382.1996, total_time: 3208785.8292, best time: 824496.6505									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {-190222726.529533, -125695323.348446}												     <
-current destination position: {-204287936.039269, 101244452.632308}										     <
-current destination radian: 2.681474, angle: 153.637131												     <
-20hr later rad: 2.689100, angle: 154.074077													     <
-iter: 7, rad: 3.2174, angle: 184.3414, duration: 1497797.5907											     <
-wait time: 1500571.6296, total_time: 2998369.2202, best time: 824496.6505									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {-204287936.039269, 101244452.632308}													     <
-current destination position: {166647224.685555, -155604313.901003}										     <
-current destination radian: 5.532042, angle: 316.962643												     <
-20hr later rad: 5.539668, angle: 317.399589													     <
-iter: 8, rad: 2.5630, angle: 146.8519, duration: 1867789.3623											     <
-wait time: 1876827.5907, total_time: 3744616.9530, best time: 824496.6505									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {166647224.685555, -155604313.901003}													     <
-current destination position: {-102194116.383561, 203814529.846582}										     <
-current destination radian: 2.035569, angle: 116.629526												     <
-20hr later rad: 2.043195, angle: 117.066472													     <
-iter: 9, rad: 5.5482, angle: 317.8864, duration: 392077.6704											     <
-wait time: 401283.3623, total_time: 793361.0327, best time: 824496.6505										     <
-==============================================													     <
-Earth        to Mars         at         36 requires 317.89 deg and takes  392077.7 hours							     <
-   Will arrive at time  392113.67 but need to wait until  401283.36										     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -367,105 +201,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {100.000000, 0.000000}															     <
-dest pos: {200.000000, 0.000000}														     <
-current destination position: {199.238940, 17.431149}												     <
-current destination radian: 0.087266, angle: 5.000000												     <
-20hr later rad: 0.261799, angle: 15.000000													     <
-iter: 0, rad: 6.2832, angle: 360.0000, duration: 10.0000											     <
-wait time: 720.0000, total_time: 730.0000, best time: 1797693134862315708145274237317043567980705675258449965989174768031572607800285387605895586327 <
-==============================================													     <
-src pos: {100.000000, 0.000000}															     <
-dest pos: {199.238940, 17.431149}														     <
-current destination position: {199.227363, 17.562970}												     <
-current destination radian: 0.087928, angle: 5.037909												     <
-20hr later rad: 0.262461, angle: 15.037909													     <
-iter: 1, rad: 0.1739, angle: 9.9623, duration: 10.0758												     <
-Planet A     to Planet B     at          0 requires  9.96 deg and takes      10.1 hours									Planet A     to Planet B     at          0 requires  9.96 deg and takes      10.1 hours
-   Will arrive at time      10.08 and land immediately													   Will arrive at time      10.08 and land immediately
-src pos: {100.000000, 0.000000}															     <
-dest pos: {-100.000000, 0.000000}														     <
-current destination position: {-93.969262, -34.202014}												     <
-current destination radian: 3.490659, angle: 200.000000												     <
-20hr later rad: 3.839724, angle: 220.000000													     <
-iter: 0, rad: 3.1416, angle: 180.0000, duration: 20.0000											     <
-wait time: 360.0000, total_time: 380.0000, best time: 1797693134862315708145274237317043567980705675258449965989174768031572607800285387605895586327 <
-==============================================													     <
-src pos: {100.000000, 0.000000}															     <
-dest pos: {-93.969262, -34.202014}														     <
-current destination position: {-94.149316, -33.703208}												     <
-current destination radian: 3.485355, angle: 199.696155												     <
-20hr later rad: 3.834421, angle: 219.696155													     <
-iter: 1, rad: 3.3161, angle: 190.0000, duration: 19.6962											     <
-Planet A     to Planet C     at          0 requires 190.00 deg and takes      19.7 hours								Planet A     to Planet C     at          0 requires 190.00 deg and takes      19.7 hours
-   Will arrive at time      19.70 and land immediately													   Will arrive at time      19.70 and land immediately
-src pos: {100.000000, 0.000000}															     <
-dest pos: {-200.000000, 0.000000}														     <
-current destination position: {-193.185165, -51.763809}												     <
-current destination radian: 3.403392, angle: 195.000000												     <
-20hr later rad: 3.577925, angle: 205.000000													     <
-iter: 0, rad: 3.1416, angle: 180.0000, duration: 30.0000											     <
-wait time: 720.0000, total_time: 750.0000, best time: 1797693134862315708145274237317043567980705675258449965989174768031572607800285387605895586327 <
-==============================================													     <
-src pos: {100.000000, 0.000000}															     <
-dest pos: {-193.185165, -51.763809}														     <
-current destination position: {-193.287788, -51.379284}												     <
-current destination radian: 3.401402, angle: 194.885986												     <
-20hr later rad: 3.575935, angle: 204.885986													     <
-iter: 1, rad: 3.3163, angle: 190.0128, duration: 29.7720											     <
-Planet A     to Planet D     at          0 requires 190.01 deg and takes      29.8 hours								Planet A     to Planet D     at          0 requires 190.01 deg and takes      29.8 hours
-   Will arrive at time      29.77 and land immediately													   Will arrive at time      29.77 and land immediately
-src pos: {100.000000, -0.000000}														     |	Planet A     to Planet B     at        360 requires 225.02 deg and takes     128.9 hours
-dest pos: {-200.000000, 0.000000}														     |	   Will arrive at time     488.88 but need to wait until     491.47
-current destination position: {-51.763809, -193.185165}												     <
-current destination radian: 4.450590, angle: 255.000000												     <
-20hr later rad: 4.625123, angle: 265.000000													     <
-iter: 0, rad: 3.1416, angle: 180.0000, duration: 150.0000											     <
-wait time: 1080.0000, total_time: 1230.0000, best time: 17976931348623157081452742373170435679807056752584499659891747680315726078002853876058955863 <
-==============================================													     <
-src pos: {100.000000, -0.000000}														     <
-dest pos: {-51.763809, -193.185165}														     <
-current destination position: {-95.686274, -175.624990}												     <
-current destination radian: 4.213521, angle: 241.416998												     <
-20hr later rad: 4.388054, angle: 251.416998													     <
-iter: 1, rad: 4.0465, angle: 231.8473, duration: 122.8340											     <
-wait time: 510.0000, total_time: 632.8340, best time: 1230.0000											     <
-==============================================													     <
-src pos: {100.000000, -0.000000}														     <
-dest pos: {-95.686274, -175.624990}														     <
-current destination position: {-82.191793, -182.330768}												     <
-current destination radian: 4.288883, angle: 245.734910												     <
-20hr later rad: 4.463416, angle: 255.734910													     <
-iter: 2, rad: 3.8730, angle: 221.9074, duration: 131.4698											     <
-wait time: 1202.8340, total_time: 1334.3038, best time: 632.8340										     <
-==============================================													     <
-src pos: {100.000000, -0.000000}														     <
-dest pos: {-82.191793, -182.330768}														     <
-current destination position: {-86.294048, -180.425434}												     <
-current destination radian: 4.266267, angle: 244.439098												     <
-20hr later rad: 4.440800, angle: 254.439098													     <
-iter: 3, rad: 3.9274, angle: 225.0218, duration: 128.8782											     <
-wait time: 491.4698, total_time: 620.3480, best time: 632.8340											     <
-==============================================													     <
-src pos: {100.000000, -0.000000}														     <
-dest pos: {-86.294048, -180.425434}														     <
-current destination position: {-85.042900, -181.018522}												     <
-current destination radian: 4.273190, angle: 244.835759												     <
-20hr later rad: 4.447723, angle: 254.835759													     <
-iter: 4, rad: 3.9110, angle: 224.0832, duration: 129.6715											     <
-wait time: 1208.8782, total_time: 1338.5497, best time: 620.3480										     <
-==============================================													     <
-src pos: {100.000000, -0.000000}														     <
-dest pos: {-85.042900, -181.018522}														     <
-current destination position: {-85.424110, -180.838938}												     <
-current destination radian: 4.271083, angle: 244.715039												     <
-20hr later rad: 4.445616, angle: 254.715039													     <
-iter: 5, rad: 3.9160, angle: 224.3701, duration: 129.4301											     <
-Planet A     to Planet B     at        360 requires 224.37 deg and takes     129.4 hours							     <
-   Will arrive at time     489.43 and land immediately												     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -483,13 +219,7 @@ We agreed on this testcase and valgrind was clean
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {106538670.232687, -105022244.048824}													     <
-dest pos: {596675381.915086, 501285326.552141}													     <
-Earth        to Jupiter      at         10 requires  0.00 deg and takes       inf hours									Earth        to Jupiter      at         10 requires  0.00 deg and takes       inf hours
-   Will arrive at time        inf and land immediately													   Will arrive at time        inf and land immediately
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -498,173 +228,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {69549619.368084, -82886008.745473}													     <
-current destination position: {-66896236.025085, -85041952.033547}										     <
-current destination radian: 4.045856, angle: 231.810479												     <
-20hr later rad: 4.069183, angle: 233.147030													     <
-iter: 0, rad: 2.5780, angle: 147.7099, duration: 214309.9807											     <
-wait time: 215480.0000, total_time: 429789.9807, best time: 1797693134862315708145274237317043567980705675258449965989174768031572607800285387605895 <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-66896236.025085, -85041952.033547}													     <
-current destination position: {-25144891.015022, 105237704.535222}										     <
-current destination radian: 1.805333, angle: 103.437982												     <
-20hr later rad: 1.828661, angle: 104.774532													     <
-iter: 1, rad: 3.0221, angle: 173.1508, duration: 869603.0289											     <
-wait time: 871523.9807, total_time: 1741127.0096, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-25144891.015022, 105237704.535222}													     <
-current destination position: {-68440283.913452, 83804340.805510}										     <
-current destination radian: 2.255618, angle: 129.237397												     <
-20hr later rad: 2.278945, angle: 130.573948													     <
-iter: 2, rad: 2.1261, angle: 121.8176, duration: 1241692.0885											     <
-wait time: 1246693.0289, total_time: 2488385.1174, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-68440283.913452, 83804340.805510}													     <
-current destination position: {61473975.929057, -89040385.688033}										     <
-current destination radian: 5.316647, angle: 304.621414												     <
-20hr later rad: 5.339974, angle: 305.957965													     <
-iter: 3, rad: 2.3140, angle: 132.5818, duration: 1287412.5154											     <
-wait time: 1290175.0885, total_time: 2577587.6039, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {61473975.929057, -89040385.688033}													     <
-current destination position: {49254433.952479, -96339196.259990}										     <
-current destination radian: 5.185004, angle: 297.078870												     <
-20hr later rad: 5.208332, angle: 298.415421													     <
-iter: 4, rad: 2.7803, angle: 159.3003, duration: 236834.6496											     <
-wait time: 236947.5154, total_time: 473782.1651, best time: 429789.9807										     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {49254433.952479, -96339196.259990}													     <
-current destination position: {101567168.080985, 37300809.213861}										     <
-current destination radian: 0.351961, angle: 20.165892												     <
-20hr later rad: 0.375288, angle: 21.502443													     <
-iter: 5, rad: 2.9761, angle: 170.5155, duration: 286560.9546											     <
-wait time: 290704.6496, total_time: 577265.6043, best time: 429789.9807										     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {101567168.080985, 37300809.213861}													     <
-current destination position: {-17842243.618867, -106718762.842553}										     <
-current destination radian: 4.546732, angle: 260.508541												     <
-20hr later rad: 4.570059, angle: 261.845091													     <
-iter: 6, rad: 1.6003, angle: 91.6877, duration: 715730.4153											     <
-wait time: 717520.9546, total_time: 1433251.3699, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-17842243.618867, -106718762.842553}													     <
-current destination position: {-83967518.107866, -68239987.564515}										     <
-current destination radian: 3.824027, angle: 219.100590												     <
-20hr later rad: 3.847354, angle: 220.437141													     <
-iter: 7, rad: 3.1492, angle: 180.4336, duration: 618144.7913											     <
-wait time: 618764.4153, total_time: 1236909.2066, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-83967518.107866, -68239987.564515}													     <
-current destination position: {-85218202.194786, 66671568.263305}										     <
-current destination radian: 2.477699, angle: 141.961689												     <
-20hr later rad: 2.501026, angle: 143.298240													     <
-iter: 8, rad: 2.9463, angle: 168.8083, duration: 967145.4934											     <
-wait time: 968299.7913, total_time: 1935445.2847, best time: 429789.9807									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-85218202.194786, 66671568.263305}													     <
-current destination position: {-26368913.774016, -104937697.641879}										     <
-current destination radian: 4.466204, angle: 255.894666												     <
-20hr later rad: 4.489532, angle: 257.231217													     <
-iter: 9, rad: 2.4072, angle: 137.9212, duration: 1286683.3738											     <
-wait time: 1290365.4934, total_time: 2577048.8672, best time: 429789.9807									     <
-==============================================													     <
-Earth        to Venus        at          0 requires 147.71 deg and takes  214310.0 hours								Earth        to Venus        at          0 requires 147.71 deg and takes  214310.0 hours
-   Will arrive at time  214309.98 but need to wait until  215480.00											   Will arrive at time  214309.98 but need to wait until  215480.00
-src pos: {108477247.347165, -103018672.132687}													     |	Earth        to Mars         at         36 requires 337.52 deg and takes  409788.4 hours
-dest pos: {-223971550.909412, -42670181.429575}													     |	   Will arrive at time  409824.39 but need to wait until  418078.61
-current destination position: {214471398.464782, 77369368.877875}										     <
-current destination radian: 0.346214, angle: 19.836628												     <
-20hr later rad: 0.353841, angle: 20.273574													     <
-iter: 0, rad: 2.9620, angle: 169.7113, duration: 1689409.2443											     <
-wait time: 1697270.0000, total_time: 3386679.2443, best time: 17976931348623157081452742373170435679807056752584499659891747680315726078002853876058 <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {214471398.464782, 77369368.877875}													     <
-current destination position: {226882119.810780, 22550026.832951}										     <
-current destination radian: 0.099066, angle: 5.676040												     <
-20hr later rad: 0.106692, angle: 6.112986													     <
-iter: 1, rad: 1.0396, angle: 59.5619, duration: 1046119.0827											     <
-wait time: 1046803.2443, total_time: 2092922.3271, best time: 3386679.2443									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {226882119.810780, 22550026.832951}													     <
-current destination position: {184206692.589020, -134357338.487387}										     <
-current destination radian: 5.653010, angle: 323.893602												     <
-20hr later rad: 5.660636, angle: 324.330549													     <
-iter: 2, rad: 0.8148, angle: 46.6819, duration: 862948.6077											     <
-wait time: 864897.0827, total_time: 1727845.6905, best time: 2092922.3271									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {184206692.589020, -134357338.487387}													     <
-current destination position: {-183423815.661702, 135424162.718851}										     <
-current destination radian: 2.505613, angle: 143.561071												     <
-20hr later rad: 2.513240, angle: 143.998017													     <
-iter: 3, rad: 5.8908, angle: 337.5191, duration: 409788.3870											     <
-wait time: 418078.6077, total_time: 827866.9947, best time: 1727845.6905									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {-183423815.661702, 135424162.718851}													     <
-current destination position: {182441213.892792, -136745030.890795}										     <
-current destination radian: 5.639986, angle: 323.147367												     <
-20hr later rad: 5.647612, angle: 323.584314													     <
-iter: 4, rad: 2.4567, angle: 140.7559, duration: 1884550.4509											     <
-wait time: 1892844.3870, total_time: 3777394.8379, best time: 827866.9947									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {182441213.892792, -136745030.890795}													     <
-current destination position: {75453627.419017, 215152852.896057}										     <
-current destination radian: 1.233500, angle: 70.674345												     <
-20hr later rad: 1.241126, angle: 71.111291													     <
-iter: 5, rad: 5.8554, angle: 335.4878, duration: 406452.1996											     <
-wait time: 418044.4509, total_time: 824496.6505, best time: 827866.9947										     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {75453627.419017, 215152852.896057}													     <
-current destination position: {-190222726.529533, -125695323.348446}										     <
-current destination radian: 3.725509, angle: 213.455920												     <
-20hr later rad: 3.733135, angle: 213.892866													     <
-iter: 6, rad: 1.6742, angle: 95.9256, duration: 1599403.6296											     <
-wait time: 1609382.1996, total_time: 3208785.8292, best time: 824496.6505									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {-190222726.529533, -125695323.348446}												     <
-current destination position: {-204287936.039269, 101244452.632308}										     <
-current destination radian: 2.681474, angle: 153.637131												     <
-20hr later rad: 2.689100, angle: 154.074077													     <
-iter: 7, rad: 3.2174, angle: 184.3414, duration: 1497797.5907											     <
-wait time: 1500571.6296, total_time: 2998369.2202, best time: 824496.6505									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {-204287936.039269, 101244452.632308}													     <
-current destination position: {166647224.685555, -155604313.901003}										     <
-current destination radian: 5.532042, angle: 316.962643												     <
-20hr later rad: 5.539668, angle: 317.399589													     <
-iter: 8, rad: 2.5630, angle: 146.8519, duration: 1867789.3623											     <
-wait time: 1876827.5907, total_time: 3744616.9530, best time: 824496.6505									     <
-==============================================													     <
-src pos: {108477247.347165, -103018672.132687}													     <
-dest pos: {166647224.685555, -155604313.901003}													     <
-current destination position: {-102194116.383561, 203814529.846582}										     <
-current destination radian: 2.035569, angle: 116.629526												     <
-20hr later rad: 2.043195, angle: 117.066472													     <
-iter: 9, rad: 5.5482, angle: 317.8864, duration: 392077.6704											     <
-wait time: 401283.3623, total_time: 793361.0327, best time: 824496.6505										     <
-==============================================													     <
-Earth        to Mars         at         36 requires 317.89 deg and takes  392077.7 hours							     <
-   Will arrive at time  392113.67 but need to wait until  401283.36										     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -675,168 +239,8 @@ Running our code...
 Running your code
 We both agreed this was not an error, but your output is different from ours
 Your output on the left, ours on the right
-src pos: {104255918.075717, -107288692.536490}													     |	Earth        to Mars         at        -20 requires 250.26 deg and takes  592155.7 hours
-dest pos: {-224831568.388418, -37878303.235545}													     |	   Will arrive at time  592135.72 but need to wait until  597618.99
-current destination position: {-199697976.025796, -110021445.051411}										     <
-current destination radian: 3.645157, angle: 208.852092												     <
-20hr later rad: 3.652783, angle: 209.289039													     <
-iter: 0, rad: 2.9337, angle: 168.0899, duration: 1681638.9022											     <
-wait time: 1697214.0000, total_time: 3378852.9022, best time: 17976931348623157081452742373170435679807056752584499659891747680315726078002853876058 <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-199697976.025796, -110021445.051411}												     <
-current destination position: {15039342.902127, -227503446.490536}										     <
-current destination radian: 4.778399, angle: 273.782092												     <
-20hr later rad: 4.786025, angle: 274.219038													     <
-iter: 1, rad: 3.1506, angle: 180.5151, duration: 1519830.8925											     <
-wait time: 1533316.9022, total_time: 3053147.7947, best time: 3378852.9022									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {15039342.902127, -227503446.490536}													     <
-current destination position: {217655897.280091, -67896320.807526}										     <
-current destination radian: 5.980808, angle: 342.675033												     <
-20hr later rad: 5.988434, angle: 343.111980													     <
-iter: 2, rad: 4.0739, angle: 233.4193, duration: 748518.2756											     <
-wait time: 761822.8925, total_time: 1510341.1681, best time: 3053147.7947									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {217655897.280091, -67896320.807526}													     <
-current destination position: {218151973.225137, -66285115.810256}										     <
-current destination radian: 5.988202, angle: 343.098683												     <
-20hr later rad: 5.995828, angle: 343.535629													     <
-iter: 3, rad: 0.3343, angle: 19.1560, duration: 600235.6669											     <
-wait time: 616674.2756, total_time: 1216909.9425, best time: 1510341.1681									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {218151973.225137, -66285115.810256}													     <
-current destination position: {-11435693.034871, 227713031.960870}										     <
-current destination radian: 1.620974, angle: 92.874965												     <
-20hr later rad: 1.628600, angle: 93.311911													     <
-iter: 4, rad: 0.3456, angle: 19.7993, duration: 605260.3713											     <
-wait time: 616693.6669, total_time: 1221954.0382, best time: 1216909.9425									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-11435693.034871, 227713031.960870}													     <
-current destination position: {207060916.934379, 95445150.103576}										     <
-current destination radian: 0.431924, angle: 24.747435												     <
-20hr later rad: 0.439550, angle: 25.184381													     <
-iter: 5, rad: 1.9033, angle: 109.0522, duration: 1772080.0229											     <
-wait time: 1775178.3713, total_time: 3547258.3942, best time: 1216909.9425									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {207060916.934379, 95445150.103576}													     <
-current destination position: {-227999364.660334, -538251.320534}										     <
-current destination radian: 3.143953, angle: 180.135261												     <
-20hr later rad: 3.151580, angle: 180.572207													     <
-iter: 6, rad: 1.1015, angle: 63.1107, duration: 1136550.4690											     <
-wait time: 1145896.0229, total_time: 2282446.4918, best time: 1216909.9425									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-227999364.660334, -538251.320534}													     <
-current destination position: {-199950394.363289, 109562036.280662}										     <
-current destination radian: 2.640328, angle: 151.279634												     <
-20hr later rad: 2.647954, angle: 151.716581													     <
-iter: 7, rad: 2.8307, angle: 162.1883, duration: 1744915.6828											     <
-wait time: 1746216.4690, total_time: 3491132.1518, best time: 1216909.9425									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-199950394.363289, 109562036.280662}													     <
-current destination position: {171282107.906589, -150487340.035884}										     <
-current destination radian: 5.562324, angle: 318.697672												     <
-20hr later rad: 5.569950, angle: 319.134618													     <
-iter: 8, rad: 2.5223, angle: 144.5172, duration: 1867924.7784											     <
-wait time: 1876719.6828, total_time: 3744644.4613, best time: 1216909.9425									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {171282107.906589, -150487340.035884}													     <
-current destination position: {-38809136.204602, -224672764.141657}										     <
-current destination radian: 4.541341, angle: 260.199651												     <
-20hr later rad: 4.548967, angle: 260.636597													     <
-iter: 9, rad: 5.7107, angle: 327.1981, duration: 398705.1940											     <
-wait time: 401362.7784, total_time: 800067.9724, best time: 1216909.9425									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-38809136.204602, -224672764.141657}													     <
-current destination position: {-97397436.046979, -206149798.572481}										     <
-current destination radian: 4.271015, angle: 244.711161												     <
-20hr later rad: 4.278642, angle: 245.148108													     <
-iter: 10, rad: 3.8287, angle: 219.3687, duration: 925292.2514											     <
-wait time: 925981.1940, total_time: 1851273.4454, best time: 800067.9724									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-97397436.046979, -206149798.572481}													     <
-current destination position: {-106146534.180609, -201784323.676159}										     <
-current destination radian: 4.228127, angle: 242.253855												     <
-20hr later rad: 4.235754, angle: 242.690801													     <
-iter: 11, rad: 3.5974, angle: 206.1165, duration: 1122915.7751											     <
-wait time: 1123008.2514, total_time: 2245924.0265, best time: 800067.9724									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-106146534.180609, -201784323.676159}												     <
-current destination position: {-227205627.977658, -19015851.684268}										     <
-current destination radian: 3.225093, angle: 184.784189												     <
-20hr later rad: 3.232719, angle: 185.221135													     <
-iter: 12, rad: 3.5637, angle: 204.1857, duration: 1153241.2608											     <
-wait time: 1155851.7751, total_time: 2309093.0358, best time: 800067.9724									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-227205627.977658, -19015851.684268}													     <
-current destination position: {-176508656.523647, -144321495.877146}										     <
-current destination radian: 3.827001, angle: 219.270993												     <
-20hr later rad: 3.834627, angle: 219.707939													     <
-iter: 13, rad: 2.8813, angle: 165.0875, duration: 1715071.7984											     <
-wait time: 1729951.2608, total_time: 3445023.0591, best time: 800067.9724									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-176508656.523647, -144321495.877146}												     <
-current destination position: {-220187717.622712, 59172366.930018}										     <
-current destination radian: 2.879059, angle: 164.957947												     <
-20hr later rad: 2.886685, angle: 165.394893													     <
-iter: 14, rad: 3.2727, angle: 187.5139, duration: 1415981.7696											     <
-wait time: 1418447.7984, total_time: 2834429.5680, best time: 800067.9724									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-220187717.622712, 59172366.930018}													     <
-current destination position: {102894814.661771, 203461684.637968}										     <
-current destination radian: 1.102583, angle: 63.173325												     <
-20hr later rad: 1.110209, angle: 63.610271													     <
-iter: 15, rad: 2.6675, angle: 152.8392, duration: 1823272.8613											     <
-wait time: 1827911.7696, total_time: 3651184.6309, best time: 800067.9724									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {102894814.661771, 203461684.637968}													     <
-current destination position: {97042458.339551, -206317137.628982}										     <
-current destination radian: 5.152041, angle: 295.190219												     <
-20hr later rad: 5.159667, angle: 295.627165													     <
-iter: 16, rad: 1.5752, angle: 90.2510, duration: 1553766.7901											     <
-wait time: 1559604.8613, total_time: 3113371.6513, best time: 800067.9724									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {97042458.339551, -206317137.628982}													     <
-current destination position: {-128318021.804903, -188463485.269897}										     <
-current destination radian: 4.114622, angle: 235.750457												     <
-20hr later rad: 4.122248, angle: 236.187403													     <
-iter: 17, rad: 4.6397, angle: 265.8338, duration: 496454.1001											     <
-wait time: 499154.7901, total_time: 995608.8901, best time: 800067.9724										     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-128318021.804903, -188463485.269897}												     <
-current destination position: {-32284600.405576, 225702690.672159}										     <
-current destination radian: 1.712873, angle: 98.140391												     <
-20hr later rad: 1.720499, angle: 98.577338													     <
-iter: 18, rad: 3.4774, angle: 199.2404, duration: 1231665.3816											     <
-wait time: 1237944.1001, total_time: 2469609.4816, best time: 800067.9724									     <
-==============================================													     <
-src pos: {104255918.075717, -107288692.536490}													     <
-dest pos: {-32284600.405576, 225702690.672159}													     <
-current destination position: {-25484659.056014, -226571251.823347}										     <
-current destination radian: 4.600380, angle: 263.582364												     <
-20hr later rad: 4.608006, angle: 264.019310													     <
-iter: 19, rad: 1.9599, angle: 112.2957, duration: 1799490.0283											     <
-wait time: 1808375.3816, total_time: 3607865.4099, best time: 800067.9724									     <
-==============================================													     <
-Earth        to Mars         at        -20 requires 327.20 deg and takes  398705.2 hours							     <
-   Will arrive at time  398685.19 but need to wait until  401362.78										     <
+Earth        to Mars         at        -20 requires 327.20 deg and takes  398705.2 hours							     |	Earth        to Mars         at        -20 requires 250.26 deg and takes  592155.7 hours
+   Will arrive at time  398685.19 but need to wait until  401362.78										     |	   Will arrive at time  592135.72 but need to wait until  597618.99
 Your file did not match the expected output
 -------------------------
  This test case will run 
@@ -866,91 +270,7 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {105783174.465507, -105783174.465508}													     |	Earth        to Mars         at          0 requires 229.41 deg and takes  804735.8 hours
-dest pos: {-224536167.686783, -39591784.508060}													     |	   Will arrive at time  804735.78 but need to wait until  811095.93
-current destination position: {1056707.650541, -227997551.234528}										     <
-current destination radian: 4.717024, angle: 270.265549												     <
-20hr later rad: 4.724650, angle: 270.702495													     <
-iter: 0, rad: 2.9438, angle: 168.6688, duration: 1684429.9325											     <
-wait time: 1697234.0000, total_time: 3381663.9325, best time: 17976931348623157081452742373170435679807056752584499659891747680315726078002853876058 <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {1056707.650541, -227997551.234528}													     <
-current destination position: {-150519893.208484, 171253501.419698}										     <
-current destination radian: 2.291848, angle: 131.313218												     <
-20hr later rad: 2.299474, angle: 131.750165													     <
-iter: 1, rad: 4.0039, angle: 229.4065, duration: 804735.7756											     <
-wait time: 811095.9325, total_time: 1615831.7081, best time: 3381663.9325									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-150519893.208484, 171253501.419698}													     <
-current destination position: {217687346.010171, 67795423.053834}										     <
-current destination radian: 0.301914, angle: 17.298408												     <
-20hr later rad: 0.309540, angle: 17.735354													     <
-iter: 2, rad: 2.3173, angle: 132.7737, duration: 1887065.0644											     <
-wait time: 1892283.7756, total_time: 3779348.8399, best time: 1615831.7081									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {217687346.010171, 67795423.053834}													     <
-current destination position: {78177946.309342, 214177983.721142}										     <
-current destination radian: 1.220809, angle: 69.947214												     <
-20hr later rad: 1.228435, angle: 70.384160													     <
-iter: 3, rad: 0.9982, angle: 57.1906, duration: 1032618.9172											     <
-wait time: 1046687.0644, total_time: 2079305.9816, best time: 1615831.7081									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {78177946.309342, 214177983.721142}													     <
-current destination position: {225375551.012008, -34494361.945598}										     <
-current destination radian: 6.131311, angle: 351.298247												     <
-20hr later rad: 6.138937, angle: 351.735193													     <
-iter: 4, rad: 1.6569, angle: 94.9311, duration: 1605748.9792											     <
-wait time: 1609348.9172, total_time: 3215097.8964, best time: 1615831.7081									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {225375551.012008, -34494361.945598}													     <
-current destination position: {34824314.411050, -225324803.618688}										     <
-current destination radian: 4.865727, angle: 278.785644												     <
-20hr later rad: 4.873354, angle: 279.222590													     <
-iter: 5, rad: 0.5375, angle: 30.7991, duration: 696139.9162											     <
-wait time: 699458.9792, total_time: 1395598.8954, best time: 1615831.7081									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {34824314.411050, -225324803.618688}													     <
-current destination position: {-56720524.810428, -220832022.282163}										     <
-current destination radian: 4.460974, angle: 255.595011												     <
-20hr later rad: 4.468601, angle: 256.031957													     <
-iter: 6, rad: 4.1767, angle: 239.3070, duration: 695078.4294											     <
-wait time: 696139.9162, total_time: 1391218.3456, best time: 1395598.8954									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-56720524.810428, -220832022.282163}													     <
-current destination position: {213960763.160778, -78770500.999151}										     <
-current destination radian: 5.930430, angle: 339.788616												     <
-20hr later rad: 5.938056, angle: 340.225563													     <
-iter: 7, rad: 3.7577, angle: 215.2976, duration: 995536.1578											     <
-wait time: 1008160.4294, total_time: 2003696.5872, best time: 1391218.3456									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {213960763.160778, -78770500.999151}													     <
-current destination position: {-145916222.572131, 175192625.387829}										     <
-current destination radian: 2.265273, angle: 129.790584												     <
-20hr later rad: 2.272899, angle: 130.227530													     <
-iter: 8, rad: 0.2447, angle: 14.0204, duration: 557496.0812											     <
-wait time: 567108.1578, total_time: 1124604.2391, best time: 1391218.3456									     <
-==============================================													     <
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-145916222.572131, 175192625.387829}													     <
-current destination position: {227676339.358401, -12144319.509885}										     <
-current destination radian: 6.229896, angle: 356.946721												     <
-20hr later rad: 6.237522, angle: 357.383667													     <
-iter: 9, rad: 2.3013, angle: 131.8541, duration: 1886133.5224											     <
-wait time: 1892214.0812, total_time: 3778347.6036, best time: 1124604.2391									     <
-==============================================													     <
-Earth        to Mars         at          0 requires 14.02 deg and takes  557496.1 hours								     <
-   Will arrive at time  557496.08 but need to wait until  567108.16										     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -959,13 +279,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {105783174.465507, -105783174.465508}													     <
-dest pos: {-224536167.686783, -39591784.508060}													     <
-Earth        to Mars         at          0 requires  0.00 deg and takes       inf hours									Earth        to Mars         at          0 requires  0.00 deg and takes       inf hours
-   Will arrive at time        inf and land immediately													   Will arrive at time        inf and land immediately
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -974,91 +288,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {-224536167.686783, -39591784.508060}													     |	Mars         to Jupiter      at          0 requires 145.68 deg and takes 2998659.9 hours
-dest pos: {596978434.522620, 500924384.228720}													     |	   Will arrive at time 2998659.86 but need to wait until 3046827.69
-current destination position: {-719832147.013074, 298580257.429302}										     <
-current destination radian: 2.748400, angle: 157.471742												     <
-20hr later rad: 2.749610, angle: 157.541043													     <
-iter: 0, rad: 0.5819, angle: 33.3429, duration: 4916919.6920											     <
-wait time: 4986912.0000, total_time: 9903831.6920, best time: 17976931348623157081452742373170435679807056752584499659891747680315726078002853876058 <
-==============================================													     <
-src pos: {-224536167.686783, -39591784.508060}													     <
-dest pos: {-719832147.013074, 298580257.429302}													     <
-current destination position: {768761820.275666, -127725305.583684}										     <
-current destination radian: 6.118545, angle: 350.566807												     <
-20hr later rad: 6.119755, angle: 350.636109													     <
-iter: 1, rad: 2.5425, angle: 145.6760, duration: 2998659.8552											     <
-wait time: 3046827.6920, total_time: 6045487.5472, best time: 9903831.6920									     <
-==============================================													     <
-src pos: {-224536167.686783, -39591784.508060}													     <
-dest pos: {768761820.275666, -127725305.583684}													     <
-current destination position: {623644665.077668, 467306988.734561}										     <
-current destination radian: 0.643063, angle: 36.844811												     <
-20hr later rad: 0.644273, angle: 36.914113													     <
-iter: 2, rad: 6.1947, angle: 354.9295, duration: 4986001.4301											     <
-wait time: 5076539.8552, total_time: 10062541.2853, best time: 6045487.5472									     <
-==============================================													     <
-src pos: {-224536167.686783, -39591784.508060}													     <
-dest pos: {623644665.077668, 467306988.734561}													     <
-current destination position: {-397691963.021705, -670186237.211674}										     <
-current destination radian: 4.176833, angle: 239.314888												     <
-20hr later rad: 4.178042, angle: 239.384190													     <
-iter: 3, rad: 0.5387, angle: 30.8638, duration: 4940539.1694											     <
-wait time: 4986001.4301, total_time: 9926540.5995, best time: 6045487.5472									     <
-==============================================													     <
-src pos: {-224536167.686783, -39591784.508060}													     <
-dest pos: {-397691963.021705, -670186237.211674}												     <
-current destination position: {-677122298.124872, -385764025.515719}										     <
-current destination radian: 3.659443, angle: 209.670641												     <
-20hr later rad: 3.660653, angle: 209.739942													     <
-iter: 4, rad: 4.4444, angle: 254.6455, duration: 3269680.0044											     <
-wait time: 3278235.1694, total_time: 6547915.1738, best time: 6045487.5472									     <
-==============================================													     <
-src pos: {-224536167.686783, -39591784.508060}													     <
-dest pos: {-677122298.124872, -385764025.515719}												     <
-current destination position: {-762425141.332189, -161295982.171259}										     <
-current destination radian: 3.350075, angle: 191.945166												     <
-20hr later rad: 3.351285, angle: 192.014467													     <
-iter: 5, rad: 3.7945, angle: 217.4115, duration: 2848988.5306											     <
-wait time: 2854104.0044, total_time: 5703092.5350, best time: 6045487.5472									     <
-==============================================													     <
-src pos: {-224536167.686783, -39591784.508060}													     <
-dest pos: {-762425141.332189, -161295982.171259}												     <
-current destination position: {-450513599.660986, -635882053.938072}										     <
-current destination radian: 4.095990, angle: 234.682958												     <
-20hr later rad: 4.097200, angle: 234.752260													     <
-iter: 6, rad: 3.3641, angle: 192.7492, duration: 2757428.4202											     <
-wait time: 2848988.5306, total_time: 5606416.9508, best time: 5703092.5350									     <
-==============================================													     <
-src pos: {-224536167.686783, -39591784.508060}													     <
-dest pos: {-450513599.660986, -635882053.938072}												     <
-current destination position: {239813445.703665, -741483648.679953}										     <
-current destination radian: 5.025195, angle: 287.922441												     <
-20hr later rad: 5.026404, angle: 287.991742													     <
-iter: 7, rad: 4.3501, angle: 249.2447, duration: 3188369.0391											     <
-wait time: 3276898.4202, total_time: 6465267.4593, best time: 5606416.9508									     <
-==============================================													     <
-src pos: {-224536167.686783, -39591784.508060}													     <
-dest pos: {239813445.703665, -741483648.679953}													     <
-current destination position: {-589642029.877951, -509539759.588405}										     <
-current destination radian: 3.854245, angle: 220.831969												     <
-20hr later rad: 3.855454, angle: 220.901271													     <
-iter: 8, rad: 5.2969, angle: 303.4874, duration: 4207947.1018											     <
-wait time: 4227309.0391, total_time: 8435256.1409, best time: 5606416.9508									     <
-==============================================													     <
-src pos: {-224536167.686783, -39591784.508060}													     <
-dest pos: {-589642029.877951, -509539759.588405}												     <
-current destination position: {6158939.828896, -779275662.047894}										     <
-current destination radian: 4.720292, angle: 270.452823												     <
-20hr later rad: 4.721502, angle: 270.522124													     <
-iter: 9, rad: 4.0519, angle: 232.1561, duration: 2975539.4044											     <
-wait time: 3065113.1018, total_time: 6040652.5062, best time: 5606416.9508									     <
-==============================================													     <
-Mars         to Jupiter      at          0 requires 192.75 deg and takes 2757428.4 hours							     <
-   Will arrive at time 2757428.42 but need to wait until 2848988.53										     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -1067,91 +297,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {69549619.368084, -82886008.745473}													     <
-current destination position: {-80636944.687654, -72145153.346848}										     <
-current destination radian: 3.871467, angle: 221.818713												     <
-20hr later rad: 3.894794, angle: 223.155264													     <
-iter: 0, rad: 2.5519, angle: 146.2131, duration: 6613916.4650											     <
-wait time: 6615236.0000, total_time: 13229152.4650, best time: 1797693134862315708145274237317043567980705675258449965989174768031572607800285387605 <
-==============================================													     <
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {-80636944.687654, -72145153.346848}													     <
-current destination position: {26910010.444963, -104800244.932214}										     <
-current destination radian: 4.963733, angle: 284.400965												     <
-20hr later rad: 4.987060, angle: 285.737516													     <
-iter: 1, rad: 2.6032, angle: 149.1507, duration: 7277453.9389											     <
-wait time: 7281904.4650, total_time: 14559358.4039, best time: 13229152.4650									     <
-==============================================													     <
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {26910010.444963, -104800244.932214}													     <
-current destination position: {35551055.202760, -102192771.143414}										     <
-current destination radian: 5.047176, angle: 289.181881												     <
-20hr later rad: 5.070503, angle: 290.518432													     <
-iter: 2, rad: 2.5830, angle: 147.9971, duration: 6733438.4800											     <
-wait time: 6738753.9389, total_time: 13472192.4189, best time: 13229152.4650									     <
-==============================================													     <
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {35551055.202760, -102192771.143414}													     <
-current destination position: {-33738563.908815, 102805395.312555}										     <
-current destination radian: 1.887901, angle: 108.168746												     <
-20hr later rad: 1.911228, angle: 109.505297													     <
-iter: 3, rad: 2.5780, angle: 147.7069, duration: 6703794.8195											     <
-wait time: 6706503.4800, total_time: 13410298.2995, best time: 13229152.4650									     <
-==============================================													     <
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {-33738563.908815, 102805395.312555}													     <
-current destination position: {107548384.090023, 11856857.915353}										     <
-current destination radian: 0.109803, angle: 6.291266												     <
-20hr later rad: 0.133131, angle: 7.627817													     <
-iter: 4, rad: 2.4879, angle: 142.5462, duration: 7574964.3362											     <
-wait time: 7576488.8195, total_time: 15151453.1558, best time: 13229152.4650									     <
-==============================================													     <
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {107548384.090023, 11856857.915353}													     <
-current destination position: {-66019670.675245, -85724226.936918}										     <
-current destination radian: 4.056122, angle: 232.398687												     <
-20hr later rad: 4.079449, angle: 233.735238													     <
-iter: 5, rad: 2.4777, angle: 141.9629, duration: 6737975.7826											     <
-wait time: 6739979.3362, total_time: 13477955.1188, best time: 13229152.4650									     <
-==============================================													     <
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {-66019670.675245, -85724226.936918}													     <
-current destination position: {-42938779.679352, -99315160.975795}										     <
-current destination radian: 4.304310, angle: 246.618821												     <
-20hr later rad: 4.327638, angle: 247.955372													     <
-iter: 6, rad: 2.6061, angle: 149.3168, duration: 7179922.5711											     <
-wait time: 7185096.7826, total_time: 14365019.3537, best time: 13229152.4650									     <
-==============================================													     <
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {-42938779.679352, -99315160.975795}													     <
-current destination position: {48718805.003445, -96611169.328584}										     <
-current destination radian: 5.179452, angle: 296.760766												     <
-20hr later rad: 5.202780, angle: 298.097317													     <
-iter: 7, rad: 2.6060, angle: 149.3132, duration: 7045997.8896											     <
-wait time: 7050634.5711, total_time: 14096632.4607, best time: 13229152.4650									     <
-==============================================													     <
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {48718805.003445, -96611169.328584}													     <
-current destination position: {23554000.422484, -105605156.427599}										     <
-current destination radian: 4.931836, angle: 282.573360												     <
-20hr later rad: 4.955163, angle: 283.909911													     <
-iter: 8, rad: 2.5692, angle: 147.2016, duration: 6663308.5908											     <
-wait time: 6663520.8896, total_time: 13326829.4804, best time: 13229152.4650									     <
-==============================================													     <
-src pos: {1168929967.200391, -818493574.672943}													     <
-dest pos: {23554000.422484, -105605156.427599}													     <
-current destination position: {102702071.678034, 34051791.040119}										     <
-current destination radian: 0.320153, angle: 18.343402												     <
-20hr later rad: 0.343480, angle: 19.679953													     <
-iter: 9, rad: 2.5849, angle: 148.1016, duration: 6745546.6831											     <
-wait time: 6749500.5908, total_time: 13495047.2739, best time: 13229152.4650									     <
-==============================================													     <
-Saturn       to Venus        at          0 requires 146.21 deg and takes 6613916.5 hours								Saturn       to Venus        at          0 requires 146.21 deg and takes 6613916.5 hours
-   Will arrive at time 6613916.47 but need to wait until 6615236.00											   Will arrive at time 6613916.47 but need to wait until 6615236.00
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -1160,91 +306,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {596978434.522620, 500924384.228720}													     |	Jupiter      to Mars         at          0 requires 203.99 deg and takes 3364720.1 hours
-dest pos: {-224536167.686783, -39591784.508060}													     |	   Will arrive at time 3364720.08 but need to wait until 3373618.03
-current destination position: {200325589.485682, -108874506.645101}										     <
-current destination radian: 5.785356, angle: 331.476461												     <
-20hr later rad: 5.792982, angle: 331.913407													     <
-iter: 0, rad: 3.7235, angle: 213.3429, duration: 4916919.6920											     <
-wait time: 4926922.0000, total_time: 9843841.6920, best time: 17976931348623157081452742373170435679807056752584499659891747680315726078002853876058 <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {200325589.485682, -108874506.645101}													     <
-current destination position: {-17825990.347709, 227302076.691181}										     <
-current destination radian: 1.649060, angle: 94.484199												     <
-20hr later rad: 1.656687, angle: 94.921146													     <
-iter: 1, rad: 4.1357, angle: 236.9574, duration: 3637266.0295											     <
-wait time: 3648113.6920, total_time: 7285379.7216, best time: 9843841.6920									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {-17825990.347709, 227302076.691181}													     <
-current destination position: {-39247381.977058, -224596622.877431}										     <
-current destination radian: 4.539390, angle: 260.087871												     <
-20hr later rad: 4.547016, angle: 260.524817													     <
-iter: 2, rad: 3.5603, angle: 203.9917, duration: 3364720.0776											     <
-wait time: 3373618.0295, total_time: 6738338.1071, best time: 7285379.7216									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {-39247381.977058, -224596622.877431}													     <
-current destination position: {-113402964.287352, 197797289.392048}										     <
-current destination radian: 2.091374, angle: 119.826907												     <
-20hr later rad: 2.099000, angle: 120.263853													     <
-iter: 3, rad: 3.9925, angle: 228.7517, duration: 4824842.0216											     <
-wait time: 4831262.0776, total_time: 9656104.0992, best time: 6738338.1071									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {-113402964.287352, 197797289.392048}													     <
-current destination position: {172295276.340638, -149326279.504658}										     <
-current destination radian: 5.569082, angle: 319.084913												     <
-20hr later rad: 5.576708, angle: 319.521859													     <
-iter: 4, rad: 3.5449, angle: 203.1084, duration: 3861760.5033											     <
-wait time: 3869118.0216, total_time: 7730878.5249, best time: 6738338.1071									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {172295276.340638, -149326279.504658}													     <
-current destination position: {84207374.887132, 211879961.333341}										     <
-current destination radian: 1.192508, angle: 68.325661												     <
-20hr later rad: 1.200134, angle: 68.762607													     <
-iter: 5, rad: 4.1338, angle: 236.8512, duration: 3883238.6951											     <
-wait time: 3894716.5033, total_time: 7777955.1984, best time: 6738338.1071									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {84207374.887132, 211879961.333341}													     <
-current destination position: {148064601.151435, 173380719.475570}										     <
-current destination radian: 0.863993, angle: 49.503157												     <
-20hr later rad: 0.871619, angle: 49.940103													     <
-iter: 6, rad: 3.6549, angle: 209.4096, duration: 2943131.1473											     <
-wait time: 2943992.6951, total_time: 5887123.8424, best time: 6738338.1071									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {148064601.151435, 173380719.475570}													     <
-current destination position: {136117679.395066, 182909751.943690}										     <
-current destination radian: 0.931031, angle: 53.344135												     <
-20hr later rad: 0.938657, angle: 53.781081													     <
-iter: 7, rad: 3.7719, angle: 216.1158, duration: 2778526.9574											     <
-wait time: 2794829.1473, total_time: 5573356.1047, best time: 5887123.8424									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {136117679.395066, 182909751.943690}													     <
-current destination position: {-207054786.199836, 95458449.137518}										     <
-current destination radian: 2.709604, angle: 155.248885												     <
-20hr later rad: 2.717230, angle: 155.685831													     <
-iter: 8, rad: 3.7456, angle: 214.6074, duration: 2799669.3642											     <
-wait time: 2811482.9574, total_time: 5611152.3216, best time: 5573356.1047									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {-207054786.199836, 95458449.137518}													     <
-current destination position: {23078690.699991, -226828953.256797}										     <
-current destination radian: 4.813785, angle: 275.809562												     <
-20hr later rad: 4.821411, angle: 276.246508													     <
-iter: 9, rad: 3.6087, angle: 206.7614, duration: 4502421.6943											     <
-wait time: 4513381.3642, total_time: 9015803.0586, best time: 5573356.1047									     <
-==============================================													     <
-Jupiter      to Mars         at          0 requires 216.12 deg and takes 2778527.0 hours							     <
-   Will arrive at time 2778526.96 but need to wait until 2794829.15										     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -1253,91 +315,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {596978434.522620, 500924384.228720}													     |	Jupiter      to Saturn       at          0 requires 113.98 deg and takes 4997568.8 hours
-dest pos: {1168929967.200391, -818493574.672943}												     |	   Will arrive at time 4997568.84 but need to wait until 5245499.34
-current destination position: {129246624.913849, -1421134866.910378}										     <
-current destination radian: 4.803086, angle: 275.196530												     <
-20hr later rad: 4.803572, angle: 275.224429													     <
-iter: 0, rad: 5.1214, angle: 293.4361, duration: 7190257.8292											     <
-wait time: 7225960.0000, total_time: 14416217.8292, best time: 1797693134862315708145274237317043567980705675258449965989174768031572607800285387605 <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {129246624.913849, -1421134866.910378}												     <
-current destination position: {190801346.265779, 1414186637.704927}										     <
-current destination radian: 1.436687, angle: 82.316082												     <
-20hr later rad: 1.437174, angle: 82.343982													     <
-iter: 1, rad: 4.4737, angle: 256.3230, duration: 9890759.3371											     <
-wait time: 10029027.8292, total_time: 19919787.1663, best time: 14416217.8292									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {190801346.265779, 1414186637.704927}													     <
-current destination position: {-160560572.434025, 1417938398.725296}										     <
-current destination radian: 1.683551, angle: 96.460382												     <
-20hr later rad: 1.684038, angle: 96.488281													     <
-iter: 2, rad: 1.9893, angle: 113.9773, duration: 4997568.8356											     <
-wait time: 5245499.3371, total_time: 10243068.1727, best time: 14416217.8292									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {-160560572.434025, 1417938398.725296}												     <
-current destination position: {1350904307.403709, -459767933.025028}										     <
-current destination radian: 5.955141, angle: 341.204462												     <
-20hr later rad: 5.955628, angle: 341.232362													     <
-iter: 3, rad: 2.2612, angle: 129.5599, duration: 5947226.3490											     <
-wait time: 6029848.8356, total_time: 11977075.1846, best time: 10243068.1727									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {1350904307.403709, -459767933.025028}												     <
-current destination position: {-1316443792.041641, -550731098.082380}										     <
-current destination radian: 3.537815, angle: 202.701879												     <
-20hr later rad: 3.538302, angle: 202.729779													     <
-iter: 4, rad: 5.3778, angle: 308.1239, duration: 6106009.2332											     <
-wait time: 6205296.3490, total_time: 12311305.5822, best time: 10243068.1727									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {-1316443792.041641, -550731098.082380}												     <
-current destination position: {398673234.569974, 1370178328.553446}										     <
-current destination radian: 1.287649, angle: 73.776880												     <
-20hr later rad: 1.288136, angle: 73.804779													     <
-iter: 5, rad: 3.6441, angle: 208.7941, duration: 10916917.9151											     <
-wait time: 11009339.2332, total_time: 21926257.1483, best time: 10243068.1727									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {398673234.569974, 1370178328.553446}													     <
-current destination position: {632549431.303127, 1279144329.994896}										     <
-current destination radian: 1.111551, angle: 63.687152												     <
-20hr later rad: 1.112037, angle: 63.715052													     <
-iter: 6, rad: 1.7951, angle: 102.8511, duration: 4457934.9817											     <
-wait time: 4465167.9151, total_time: 8923102.8968, best time: 10243068.1727									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {632549431.303127, 1279144329.994896}													     <
-current destination position: {1426595633.214506, -33969093.206961}										     <
-current destination radian: 6.259379, angle: 358.635971												     <
-20hr later rad: 6.259865, angle: 358.663870													     <
-iter: 7, rad: 1.5251, angle: 87.3829, duration: 3895162.3195											     <
-wait time: 3941794.9817, total_time: 7836957.3012, best time: 8923102.8968									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {1426595633.214506, -33969093.206961}													     <
-current destination position: {1405711943.466159, 245566553.090182}										     <
-current destination radian: 0.172947, angle: 9.909119												     <
-20hr later rad: 0.173434, angle: 9.937018													     <
-iter: 8, rad: 5.7105, angle: 327.1882, duration: 4935523.6008											     <
-wait time: 5185512.3195, total_time: 10121035.9203, best time: 7836957.3012									     <
-==============================================													     <
-src pos: {596978434.522620, 500924384.228720}													     <
-dest pos: {1405711943.466159, 245566553.090182}													     <
-current destination position: {-720081244.256832, 1231995130.538077}										     <
-current destination radian: 2.099729, angle: 120.305596												     <
-20hr later rad: 2.100216, angle: 120.333495													     <
-iter: 9, rad: 5.9773, angle: 342.4765, duration: 4240452.5419											     <
-wait time: 4419383.6008, total_time: 8659836.1427, best time: 7836957.3012									     <
-==============================================													     <
-Jupiter      to Saturn       at          0 requires 87.38 deg and takes 3895162.3 hours								     <
-   Will arrive at time 3895162.32 but need to wait until 3941794.98										     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -1346,91 +324,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {57900000.000000, 0.000000}														     <
-current destination position: {-49918793.134438, 29334690.930726}										     <
-current destination radian: 2.610305, angle: 149.559450												     <
-20hr later rad: 2.669833, angle: 152.970156													     <
-iter: 0, rad: 6.2832, angle: 360.0000, duration: 830500.0000											     <
-wait time: 831734.0000, total_time: 1662234.0000, best time: 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589 <
-==============================================													     <
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {-49918793.134438, 29334690.930726}													     <
-current destination position: {-55947566.249115, -14909051.975257}										     <
-current destination radian: 3.402023, angle: 194.921570												     <
-20hr later rad: 3.461551, angle: 198.332276													     <
-iter: 1, rad: 0.4663, angle: 26.7175, duration: 326236.9984											     <
-wait time: 328082.0000, total_time: 654318.9984, best time: 1662234.0000									     <
-==============================================													     <
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {-55947566.249115, -14909051.975257}													     <
-current destination position: {-17349191.270095, -55239619.497908}										     <
-current destination radian: 4.408073, angle: 252.563981												     <
-20hr later rad: 4.467601, angle: 255.974687													     <
-iter: 2, rad: 6.0052, angle: 344.0751, duration: 271689.0071											     <
-wait time: 273461.9984, total_time: 545151.0056, best time: 654318.9984										     <
-==============================================													     <
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {-17349191.270095, -55239619.497908}													     <
-current destination position: {30634758.015254, -49131676.150390}										     <
-current destination radian: 5.269926, angle: 301.944512												     <
-20hr later rad: 5.329454, angle: 305.355218													     <
-iter: 3, rad: 5.7369, angle: 328.6993, duration: 531631.5691											     <
-wait time: 533453.0071, total_time: 1065084.5762, best time: 545151.0056									     <
-==============================================													     <
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {30634758.015254, -49131676.150390}													     <
-current destination position: {24725075.453390, -52355330.615174}										     <
-current destination radian: 5.153595, angle: 295.279266												     <
-20hr later rad: 5.213123, angle: 298.689972													     <
-iter: 4, rad: 5.9431, angle: 340.5118, duration: 736359.4848											     <
-wait time: 736398.5691, total_time: 1472758.0539, best time: 545151.0056									     <
-==============================================													     <
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {24725075.453390, -52355330.615174}													     <
-current destination position: {-42255859.566271, 39583485.600887}										     <
-current destination radian: 2.388837, angle: 136.870266												     <
-20hr later rad: 2.448365, angle: 140.280972													     <
-iter: 5, rad: 5.9080, angle: 338.5020, duration: 714320.5920											     <
-wait time: 715249.4848, total_time: 1429570.0768, best time: 545151.0056									     <
-==============================================													     <
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {-42255859.566271, 39583485.600887}													     <
-current destination position: {27896088.024726, 50736754.654951}										     <
-current destination radian: 1.068091, angle: 61.197120												     <
-20hr later rad: 1.127619, angle: 64.607826													     <
-iter: 6, rad: 0.5406, angle: 30.9746, duration: 384560.8531											     <
-wait time: 385004.5920, total_time: 769565.4451, best time: 545151.0056										     <
-==============================================													     <
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {27896088.024726, 50736754.654951}													     <
-current destination position: {57373066.070688, 7793669.844717}											     <
-current destination radian: 0.135016, angle: 7.735820												     <
-20hr later rad: 0.194544, angle: 11.146526													     <
-iter: 7, rad: 0.3568, angle: 20.4455, duration: 726229.3620											     <
-wait time: 726542.8531, total_time: 1452772.2151, best time: 545151.0056									     <
-==============================================													     <
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {57373066.070688, 7793669.844717}													     <
-current destination position: {-46499381.653961, -34499529.066340}										     <
-current destination radian: 3.779912, angle: 216.573021												     <
-20hr later rad: 3.839440, angle: 219.983727													     <
-iter: 8, rad: 0.0470, angle: 2.6950, duration: 828781.9601											     <
-wait time: 829668.3620, total_time: 1658450.3221, best time: 545151.0056									     <
-==============================================													     <
-src pos: {-108200000.000000, 0.000000}														     <
-dest pos: {-46499381.653961, -34499529.066340}													     <
-current destination position: {-53036475.239121, 23228049.728939}										     <
-current destination radian: 2.728793, angle: 156.348327												     <
-20hr later rad: 2.788321, angle: 159.759033													     <
-iter: 9, rad: 5.7733, angle: 330.7885, duration: 353453.8092											     <
-wait time: 353806.9601, total_time: 707260.7694, best time: 545151.0056										     <
-==============================================													     <
-Venus        to Mercury      at          0 requires 344.08 deg and takes  271689.0 hours								Venus        to Mercury      at          0 requires 344.08 deg and takes  271689.0 hours
-   Will arrive at time  271689.01 but need to wait until  273462.00											   Will arrive at time  271689.01 but need to wait until  273462.00
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -1439,91 +333,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {-0.000000, -149600000.000000}														     |	Earth        to Mars         at          0 requires 243.63 deg and takes  420351.5 hours
-dest pos: {0.000000, 228000000.000000}														     |	   Will arrive at time  420351.52 but need to wait until  436235.51
-current destination position: {106069375.817648, -201824893.196193}										     <
-current destination radian: 5.196268, angle: 297.724238												     <
-20hr later rad: 5.203894, angle: 298.161185													     <
-iter: 0, rad: 1.5708, angle: 90.0000, duration: 1888000.0000											     <
-wait time: 1894970.0000, total_time: 3782970.0000, best time: 17976931348623157081452742373170435679807056752584499659891747680315726078002853876058 <
-==============================================													     <
-src pos: {-0.000000, -149600000.000000}														     <
-dest pos: {106069375.817648, -201824893.196193}													     <
-current destination position: {161347924.106265, 161092667.078918}										     <
-current destination radian: 0.784607, angle: 44.954642												     <
-20hr later rad: 0.792233, angle: 45.391589													     <
-iter: 1, rad: 5.8257, angle: 333.7860, duration: 591146.1739											     <
-wait time: 602716.0000, total_time: 1193862.1739, best time: 3782970.0000									     <
-==============================================													     <
-src pos: {-0.000000, -149600000.000000}														     <
-dest pos: {161347924.106265, 161092667.078918}													     <
-current destination position: {-226120799.987989, 29212733.743895}										     <
-current destination radian: 3.013113, angle: 172.638684												     <
-20hr later rad: 3.020740, angle: 173.075630													     <
-iter: 2, rad: 1.0918, angle: 62.5564, duration: 1750450.5562											     <
-wait time: 1761084.1739, total_time: 3511534.7301, best time: 1193862.1739									     <
-==============================================													     <
-src pos: {-0.000000, -149600000.000000}														     <
-dest pos: {-226120799.987989, 29212733.743895}													     <
-current destination position: {-37343975.982845, -224920936.014842}										     <
-current destination radian: 4.547858, angle: 260.573086												     <
-20hr later rad: 4.555484, angle: 261.010033													     <
-iter: 3, rad: 2.4725, angle: 141.6636, duration: 1441393.5092											     <
-wait time: 1453846.5562, total_time: 2895240.0654, best time: 1193862.1739									     <
-==============================================													     <
-src pos: {-0.000000, -149600000.000000}														     <
-dest pos: {-37343975.982845, -224920936.014842}													     <
-current destination position: {14119959.352463, -227562357.932688}										     <
-current destination radian: 4.774358, angle: 273.550579												     <
-20hr later rad: 4.781984, angle: 273.987526													     <
-iter: 4, rad: 4.2521, angle: 243.6279, duration: 420351.5179											     <
-wait time: 436235.5092, total_time: 856587.0271, best time: 1193862.1739									     <
-==============================================													     <
-src pos: {-0.000000, -149600000.000000}														     <
-dest pos: {14119959.352463, -227562357.932688}													     <
-current destination position: {-58580266.150424, 220345983.439103}										     <
-current destination radian: 1.830642, angle: 104.888036												     <
-20hr later rad: 1.838268, angle: 105.324982													     <
-iter: 5, rad: 4.8916, angle: 280.2657, duration: 396153.4585											     <
-wait time: 403873.5179, total_time: 800026.9764, best time: 856587.0271										     <
-==============================================													     <
-src pos: {-0.000000, -149600000.000000}														     <
-dest pos: {-58580266.150424, 220345983.439103}													     <
-current destination position: {187068571.784030, -130343198.712795}										     <
-current destination radian: 5.674632, angle: 325.132491												     <
-20hr later rad: 5.682259, angle: 325.569437													     <
-iter: 6, rad: 1.7278, angle: 98.9980, duration: 1872776.5366											     <
-wait time: 1879173.4585, total_time: 3751949.9951, best time: 800026.9764									     <
-==============================================													     <
-src pos: {-0.000000, -149600000.000000}														     <
-dest pos: {187068571.784030, -130343198.712795}													     <
-current destination position: {-88026539.130246, 210321963.686038}										     <
-current destination radian: 1.967176, angle: 112.710886												     <
-20hr later rad: 1.974802, angle: 113.147832													     <
-iter: 7, rad: 0.1026, angle: 5.8773, duration: 940285.5277											     <
-wait time: 950008.5366, total_time: 1890294.0643, best time: 800026.9764									     <
-==============================================													     <
-src pos: {-0.000000, -149600000.000000}														     <
-dest pos: {-88026539.130246, 210321963.686038}													     <
-current destination position: {-94827556.990041, -207344482.529197}										     <
-current destination radian: 4.283445, angle: 245.423342												     <
-20hr later rad: 4.291072, angle: 245.860288													     <
-iter: 8, rad: 1.8107, angle: 103.7431, duration: 1852650.0718											     <
-wait time: 1863053.5277, total_time: 3715703.5995, best time: 800026.9764									     <
-==============================================													     <
-src pos: {-0.000000, -149600000.000000}														     <
-dest pos: {-94827556.990041, -207344482.529197}													     <
-current destination position: {211483981.096272, -85196981.986875}										     <
-current destination radian: 5.900222, angle: 338.057805												     <
-20hr later rad: 5.907848, angle: 338.494752													     <
-iter: 9, rad: 3.6886, angle: 211.3390, duration: 555128.1570											     <
-wait time: 567366.0718, total_time: 1122494.2287, best time: 800026.9764									     <
-==============================================													     <
-Earth        to Mars         at          0 requires 280.27 deg and takes  396153.5 hours							     <
-   Will arrive at time  396153.46 but need to wait until  403873.52										     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -1532,91 +342,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {57900000.000000, 0.000000}														     |	Mercury      to Venus        at          0 requires 281.70 deg and takes  402067.5 hours
-dest pos: {-108200000.000000, 0.000000}														     |	   Will arrive at time  402067.51 but need to wait until  406019.72
-current destination position: {-53643977.064353, -93965758.256501}										     <
-current destination radian: 4.193650, angle: 240.278448												     <
-20hr later rad: 4.216977, angle: 241.614999													     <
-iter: 0, rad: 3.1416, angle: 180.0000, duration: 830500.0000											     <
-wait time: 834985.0000, total_time: 1665485.0000, best time: 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589 <
-==============================================													     <
-src pos: {57900000.000000, 0.000000}														     <
-dest pos: {-53643977.064353, -93965758.256501}													     <
-current destination position: {74208278.572748, -78742437.041721}										     <
-current destination radian: 5.468151, angle: 313.301988												     <
-20hr later rad: 5.491478, angle: 314.638539													     <
-iter: 1, rad: 3.8417, angle: 220.1111, duration: 729239.7161											     <
-wait time: 733534.0000, total_time: 1462773.7161, best time: 1665485.0000									     <
-==============================================													     <
-src pos: {57900000.000000, 0.000000}														     <
-dest pos: {74208278.572748, -78742437.041721}													     <
-current destination position: {70720376.553512, 81889366.465552}										     <
-current destination radian: 0.858455, angle: 49.185821												     <
-20hr later rad: 0.881782, angle: 50.522372													     <
-iter: 2, rad: 4.9166, angle: 281.7010, duration: 402067.5112											     <
-wait time: 406019.7161, total_time: 808087.2273, best time: 1462773.7161									     <
-==============================================													     <
-src pos: {57900000.000000, 0.000000}														     <
-dest pos: {70720376.553512, 81889366.465552}													     <
-current destination position: {-98555967.761697, 44653792.879837}										     <
-current destination radian: 2.716180, angle: 155.625644												     <
-20hr later rad: 2.739507, angle: 156.962195													     <
-iter: 3, rad: 1.4155, angle: 81.1022, duration: 414434.2648											     <
-wait time: 418228.5112, total_time: 832662.7760, best time: 808087.2273										     <
-==============================================													     <
-src pos: {57900000.000000, 0.000000}														     <
-dest pos: {-98555967.761697, 44653792.879837}													     <
-current destination position: {-107723028.305518, -10148358.127721}										     <
-current destination radian: 3.235523, angle: 185.381830												     <
-20hr later rad: 3.258851, angle: 186.718381													     <
-iter: 4, rad: 2.8636, angle: 164.0708, duration: 813517.5331											     <
-wait time: 818459.2648, total_time: 1631976.7980, best time: 808087.2273									     <
-==============================================													     <
-src pos: {57900000.000000, 0.000000}														     <
-dest pos: {-107723028.305518, -10148358.127721}													     <
-current destination position: {-107836920.912921, -8856550.571210}										     <
-current destination radian: 3.223538, angle: 184.695114												     <
-20hr later rad: 3.246865, angle: 186.031665													     <
-iter: 5, rad: 3.2028, angle: 183.5063, duration: 829668.2572											     <
-wait time: 829678.5331, total_time: 1659346.7903, best time: 808087.2273									     <
-==============================================													     <
-src pos: {57900000.000000, 0.000000}														     <
-dest pos: {-107836920.912921, -8856550.571210}													     <
-current destination position: {-102920340.862831, -33386276.172682}										     <
-current destination radian: 3.455272, angle: 197.972518												     <
-20hr later rad: 3.478599, angle: 199.309069													     <
-iter: 6, rad: 3.1950, angle: 183.0588, duration: 829866.9388											     <
-wait time: 835055.2572, total_time: 1664922.1959, best time: 808087.2273									     <
-==============================================													     <
-src pos: {57900000.000000, 0.000000}														     <
-dest pos: {-102920340.862831, -33386276.172682}													     <
-current destination position: {102835550.424830, -33646538.734650}										     <
-current destination radian: 5.966976, angle: 341.882534												     <
-20hr later rad: 5.990303, angle: 343.219085													     <
-iter: 7, rad: 3.3463, angle: 191.7280, duration: 821246.3923											     <
-wait time: 824479.9388, total_time: 1645726.3310, best time: 808087.2273									     <
-==============================================													     <
-src pos: {57900000.000000, 0.000000}														     <
-dest pos: {102835550.424830, -33646538.734650}													     <
-current destination position: {-86089234.647835, -65542991.065025}										     <
-current destination radian: 3.792311, angle: 217.283390												     <
-20hr later rad: 3.815638, angle: 218.619941													     <
-iter: 8, rad: 5.6405, angle: 323.1751, duration: 280681.9045											     <
-wait time: 282546.3923, total_time: 563228.2968, best time: 808087.2273										     <
-==============================================													     <
-src pos: {57900000.000000, 0.000000}														     <
-dest pos: {-86089234.647835, -65542991.065025}													     <
-current destination position: {-57689457.379380, 91537787.319078}										     <
-current destination radian: 2.133145, angle: 122.220180												     <
-20hr later rad: 2.156472, angle: 123.556731													     <
-iter: 9, rad: 3.5688, angle: 204.4747, duration: 791024.3892											     <
-wait time: 792446.9045, total_time: 1583471.2937, best time: 563228.2968									     <
-==============================================													     <
-Mercury      to Venus        at          0 requires 323.18 deg and takes  280681.9 hours							     <
-   Will arrive at time  280681.90 but need to wait until  282546.39										     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step4 
@@ -1625,91 +351,7 @@ Your file did not match the expected output
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-src pos: {0.000000, 228000000.000000}														     |	Mars         to Earth        at          0 requires 310.81 deg and takes  796035.5 hours
-dest pos: {-0.000000, -149600000.000000}													     |	   Will arrive at time  796035.54 but need to wait until  801016.00
-current destination position: {104044237.752071, 107493983.973944}										     <
-current destination radian: 0.801705, angle: 45.934292												     <
-20hr later rad: 0.816040, angle: 46.755647													     <
-iter: 0, rad: 4.7124, angle: 270.0000, duration: 1888000.0000											     <
-wait time: 1893456.0000, total_time: 3781456.0000, best time: 17976931348623157081452742373170435679807056752584499659891747680315726078002853876058 <
-==============================================													     <
-src pos: {0.000000, 228000000.000000}														     <
-dest pos: {104044237.752071, 107493983.973944}													     <
-current destination position: {-139287863.122687, -54580685.106689}										     <
-current destination radian: 3.515058, angle: 201.397992												     <
-20hr later rad: 3.529393, angle: 202.219347													     <
-iter: 1, rad: 5.4246, angle: 310.8071, duration: 796035.5411											     <
-wait time: 801016.0000, total_time: 1597051.5411, best time: 3781456.0000									     <
-==============================================													     <
-src pos: {0.000000, 228000000.000000}														     <
-dest pos: {-139287863.122687, -54580685.106689}													     <
-current destination position: {-141308614.022662, 49112479.096400}										     <
-current destination radian: 2.807098, angle: 160.834862												     <
-20hr later rad: 2.821433, angle: 161.656217													     <
-iter: 2, rad: 4.2544, angle: 243.7607, duration: 1575221.8289											     <
-wait time: 1576209.5411, total_time: 3151431.3700, best time: 1597051.5411									     <
-==============================================													     <
-src pos: {0.000000, 228000000.000000}														     <
-dest pos: {-141308614.022662, 49112479.096400}													     <
-current destination position: {27094638.632953, -147125934.346565}										     <
-current destination radian: 4.894508, angle: 280.434648												     <
-20hr later rad: 4.908843, angle: 281.256003													     <
-iter: 3, rad: 4.0438, angle: 231.6937, duration: 1139834.0837											     <
-wait time: 1145687.8289, total_time: 2285521.9126, best time: 1597051.5411									     <
-==============================================													     <
-src pos: {0.000000, 228000000.000000}														     <
-dest pos: {27094638.632953, -147125934.346565}													     <
-current destination position: {-22305177.051966, 147927817.115918}										     <
-current destination radian: 1.720453, angle: 98.574703												     <
-20hr later rad: 1.734788, angle: 99.396058													     <
-iter: 4, rad: 4.7845, angle: 274.1312, duration: 1880515.7940											     <
-wait time: 1884944.0837, total_time: 3765459.8777, best time: 1597051.5411									     <
-==============================================													     <
-src pos: {0.000000, 228000000.000000}														     <
-dest pos: {-22305177.051966, 147927817.115918}													     <
-current destination position: {79417668.153418, 126779312.133619}										     <
-current destination radian: 1.011173, angle: 57.935963												     <
-20hr later rad: 1.025509, angle: 58.757318													     <
-iter: 5, rad: 4.4407, angle: 254.4341, duration: 415604.2407											     <
-wait time: 416593.7940, total_time: 832198.0347, best time: 1597051.5411									     <
-==============================================													     <
-src pos: {0.000000, 228000000.000000}														     <
-dest pos: {79417668.153418, 126779312.133619}													     <
-current destination position: {99302214.825117, 111889365.584162}										     <
-current destination radian: 0.844928, angle: 48.410830												     <
-20hr later rad: 0.859264, angle: 49.232185													     <
-iter: 6, rad: 5.3777, angle: 308.1177, duration: 643288.3037											     <
-wait time: 643520.2407, total_time: 1286808.5444, best time: 832198.0347									     <
-==============================================													     <
-src pos: {0.000000, 228000000.000000}														     <
-dest pos: {99302214.825117, 111889365.584162}													     <
-current destination position: {118295482.302986, -91576955.980770}										     <
-current destination radian: 5.624414, angle: 322.255206												     <
-20hr later rad: 5.638750, angle: 323.076562													     <
-iter: 7, rad: 5.4199, angle: 310.5383, duration: 763914.4143											     <
-wait time: 766012.3037, total_time: 1529926.7180, best time: 832198.0347									     <
-==============================================													     <
-src pos: {0.000000, 228000000.000000}														     <
-dest pos: {118295482.302986, -91576955.980770}													     <
-current destination position: {109370525.215867, 102069820.289865}										     <
-current destination radian: 0.750883, angle: 43.022452												     <
-20hr later rad: 0.765219, angle: 43.843807													     <
-iter: 8, rad: 5.0669, angle: 290.3127, duration: 1703843.0967											     <
-wait time: 1710642.4143, total_time: 3414485.5110, best time: 832198.0347									     <
-==============================================													     <
-src pos: {0.000000, 228000000.000000}														     <
-dest pos: {109370525.215867, 102069820.289865}													     <
-current destination position: {113472587.651257, -97489137.096026}										     <
-current destination radian: 5.573407, angle: 319.332720												     <
-20hr later rad: 5.587743, angle: 320.154075													     <
-iter: 9, rad: 5.4275, angle: 310.9744, duration: 833971.2517											     <
-wait time: 836009.0967, total_time: 1669980.3484, best time: 832198.0347									     <
-==============================================													     <
-Mars         to Earth        at          0 requires 254.43 deg and takes  415604.2 hours							     <
-   Will arrive at time  415604.24 but need to wait until  416593.79										     <
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step3 
@@ -1746,6 +388,54 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./step4-neg-time-debug/iter4.txt ./launches/test-neg-time.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./step4-neg-time-debug/iter5.txt ./launches/test-neg-time.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./step4-neg-time-debug/iter6.txt ./launches/test-neg-time.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./step4-neg-time-debug/iter7.txt ./launches/test-neg-time.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step3 
+ With arguments 
+ ./step4-neg-time-debug/iter8.txt ./launches/test-neg-time.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+
+Grading has taken more than 30 seconds
+Skipping remaining test cases
 You have FAILED one or more of your test cases
 Keep debugging
 
