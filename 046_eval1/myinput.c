@@ -217,7 +217,8 @@ void parse_planet_info(planet_t * planet, char * line) {
     fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
     exit(EXIT_FAILURE);
   }
-  planet->init_pos = init_pos * M_PI / 180.0; // in radians
+  //planet->init_pos = init_pos * M_PI / 180.0; // in radians
+  planet->init_pos = fmod(init_pos * M_PI / 180.0, 2*M_PI); // in radians
   //@@@printf("----------Completed processing %s----------\n", planet->name);
 }
 
