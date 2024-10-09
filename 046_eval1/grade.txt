@@ -1,6 +1,6 @@
-Grading at 10/09/2024:02:16:57.178447
-For commit ID f8653ac53861ee522702dc985915c1fa85de7eee
-Grading at Tue Oct  8 10:16:29 PM EDT 2024
+Grading at 10/09/2024:02:19:19.355376
+For commit ID 643a33276c8cb64db10840d7d7e30fc3be266b86
+Grading at Tue Oct  8 10:18:52 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -363,7 +363,10 @@ gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
 Running our code...
 Running your code
-We agreed on this testcase and valgrind was clean
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+Venus        has radius           12.12, year length       35.68 initial angle 0.0000								     |	Venus        has radius           12.12, year length       35.68 initial angle 6.2832
+Your file did not match the expected output
 -------------------------
  This test case will run 
  launches-step1 
@@ -372,8 +375,11 @@ We agreed on this testcase and valgrind was clean
 -------------------------
 Running our code...
 Running your code
-We agreed on this testcase and valgrind was clean
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+Venus        has radius           12.12, year length       35.68 initial angle 0.0176								     |	Venus        has radius           12.12, year length       35.68 initial angle 6.3008
+Your file did not match the expected output
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
