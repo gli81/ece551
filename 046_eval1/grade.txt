@@ -1,6 +1,6 @@
-Grading at 10/09/2024:02:07:18.569503
-For commit ID f1aa6aba4b81c7fa8b5a191560bbc5198690d188
-Grading at Tue Oct  8 10:06:52 PM EDT 2024
+Grading at 10/09/2024:02:12:04.111368
+For commit ID 1aa8fefebddaf6dce99551464d5c67a4b9e5ffed
+Grading at Tue Oct  8 10:11:38 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -233,19 +233,6 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  launches-step4 
  With arguments 
- ./sol.txt ./launches/test-extra.txt 
--------------------------
-Running our code...
-Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-Earth        to Mars         at         20 requires 316.29 deg and takes  392008.5 hours							     |	Earth        to Mars         at         20 requires 316.29 deg and takes  392008.6 hours
-   Will arrive at time  392028.54 but need to wait until  401238.47										     |	   Will arrive at time  392028.55 but need to wait until  401238.48
-Your file did not match the expected output
--------------------------
- This test case will run 
- launches-step4 
- With arguments 
  ./sol.txt ./launches/test-invalid-name.txt 
 -------------------------
 Running our code...
@@ -316,6 +303,19 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ ./sol.txt ./launches/test-extra-extra.txt 
+-------------------------
+Running our code...
+Running your code
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+Earth        to Mars         at         20 requires 316.29 deg and takes  392008.5 hours							     |	Earth        to Mars         at         20 requires 316.29 deg and takes  392008.6 hours
+   Will arrive at time  392028.54 but need to wait until  401238.47										     |	   Will arrive at time  392028.55 but need to wait until  401238.48
+Your file did not match the expected output
 -------------------------
  This test case will run 
  launches-step4 
