@@ -1,0 +1,10 @@
+launches-step3 ./step4-neg-time-debug/iter1.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter2.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter3.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter4.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter5.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter6.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter7.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter8.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter9.txt ./launches/test-neg-time.txt
+launches-step3 ./step4-neg-time-debug/iter10.txt ./launches/test-neg-time.txt
