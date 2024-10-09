@@ -60,5 +60,5 @@ double when_does_planet_return_to(const planet_t * planet,
     wait_rad += 2 * M_PI;
   }
   //@@@printf("wait_rad < 6.283? === %f\n", wait_rad);
-  return start_time + wait_rad / (2 * M_PI / planet->year_len);
+  return start_time + wait_rad * planet->year_len / (2 * M_PI);
 }
