@@ -1,6 +1,6 @@
-Grading at 10/09/2024:02:13:19.693438
-For commit ID 59b8b15ef8c4151239ea603b644999c9f2a4530a
-Grading at Tue Oct  8 10:12:54 PM EDT 2024
+Grading at 10/09/2024:02:16:57.178447
+For commit ID f8653ac53861ee522702dc985915c1fa85de7eee
+Grading at Tue Oct  8 10:16:29 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -11,7 +11,7 @@ Running your test cases
 I need to compile your code for launches-step2 (make launches-step2)
 
 Compiling launches-step2
-rm -f  *~ launches-step? launches-step4-debug
+rm -f myinput.o step1.o *~ launches-step? launches-step4-debug
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step2.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
@@ -344,6 +344,31 @@ We agreed on this testcase and valgrind was clean
  launches-step4 
  With arguments 
  ./test-step3/sameaxis.txt ./launches/test-270.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-360.txt 
+-------------------------
+I need to compile your code for launches-step1 (make launches-step1)
+
+Compiling launches-step1
+rm -f iter_target.o myinput.o planet_util.o step4.o target.o *~ launches-step? launches-step4-debug
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
+gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ ./test-step1/test-361.txt 
 -------------------------
 Running our code...
 Running your code
