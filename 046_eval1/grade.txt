@@ -1,6 +1,6 @@
-Grading at 10/09/2024:01:40:39.590493
-For commit ID 5a66d5270c41abf3cd15c5fde3825bc0cb5e59b3
-Grading at Tue Oct  8 09:40:08 PM EDT 2024
+Grading at 10/09/2024:01:59:34.544362
+For commit ID 3c60d47372c47895e772f51f0da365e316d54315
+Grading at Tue Oct  8 09:59:08 PM EDT 2024
 Running your test cases
 -------------------------
  This test case will run 
@@ -233,14 +233,14 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  launches-step4 
  With arguments 
- ./sol.txt ./launches/test-neg-time.txt 
+ ./sol.txt ./launches/test-extra.txt 
 -------------------------
 Running our code...
 Running your code
 We both agreed this was not an error, but your output is different from ours
 Your output on the left, ours on the right
-Earth        to Mars         at        -20 requires 327.20 deg and takes  398705.2 hours							     |	Earth        to Mars         at        -20 requires 250.26 deg and takes  592155.7 hours
-   Will arrive at time  398685.19 but need to wait until  401362.78										     |	   Will arrive at time  592135.72 but need to wait until  597618.99
+Earth        to Mars         at         20 requires 316.29 deg and takes  392008.5 hours							     |	Earth        to Mars         at         20 requires 316.29 deg and takes  392008.6 hours
+   Will arrive at time  392028.54 but need to wait until  401238.47										     |	   Will arrive at time  392028.55 but need to wait until  401238.48
 Your file did not match the expected output
 -------------------------
  This test case will run 
@@ -352,90 +352,6 @@ We agreed on this testcase and valgrind was clean
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step3 
- With arguments 
- ./step4-neg-time-debug/iter1.txt ./launches/test-neg-time.txt 
--------------------------
-I need to compile your code for launches-step3 (make launches-step3)
-
-Compiling launches-step3
-rm -f iter_target.o myinput.o planet_util.o step4.o target.o *~ launches-step? launches-step4-debug
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step3.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
-gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 target.c
-gcc -o launches-step3 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step3.o myinput.o provided.o planet_util.o target.o -lm
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step3 
- With arguments 
- ./step4-neg-time-debug/iter2.txt ./launches/test-neg-time.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step3 
- With arguments 
- ./step4-neg-time-debug/iter3.txt ./launches/test-neg-time.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step3 
- With arguments 
- ./step4-neg-time-debug/iter4.txt ./launches/test-neg-time.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step3 
- With arguments 
- ./step4-neg-time-debug/iter5.txt ./launches/test-neg-time.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step3 
- With arguments 
- ./step4-neg-time-debug/iter6.txt ./launches/test-neg-time.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step3 
- With arguments 
- ./step4-neg-time-debug/iter7.txt ./launches/test-neg-time.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
--------------------------
- This test case will run 
- launches-step3 
- With arguments 
- ./step4-neg-time-debug/iter8.txt ./launches/test-neg-time.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
-
-Grading has taken more than 30 seconds
-Skipping remaining test cases
 You have FAILED one or more of your test cases
 Keep debugging
 
