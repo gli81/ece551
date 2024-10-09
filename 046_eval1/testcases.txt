@@ -33,3 +33,5 @@ launches-step4 ./test-step3/sameaxis.txt ./launches/test-0.txt
 launches-step4 ./test-step3/sameaxis.txt ./launches/test-90.txt
 launches-step4 ./test-step3/sameaxis.txt ./launches/test-180.txt
 launches-step4 ./test-step3/sameaxis.txt ./launches/test-270.txt
+launches-step1 ./test-step1/test-360.txt
+launches-step1 ./test-step1/test-361.txt
