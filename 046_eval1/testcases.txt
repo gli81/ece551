@@ -1,3 +1,38 @@
+launches-step2 ./sol.txt
+launches-step2 ./test-step2/test-large-speed.txt
+launches-step3 ./sol.txt ./launches1.txt
+launches-step3 ./sol.txt ./launches/test-zero-speed.txt
+launches-step3 ./sol.txt ./launches/test-neg-time.txt
+launches-step3 ./sol.txt ./launches/test-invalid-name.txt
+launches-step3 ./sol.txt ./launches/test-too-long-name.txt
+launches-step3 ./sol.txt ./launches/test-empty-time.txt
+launches-step3 ./sol.txt ./launches/test-empty-speed.txt
+launches-step3 ./sol.txt ./launches/test-090.txt
+launches-step3 ./sol.txt ./launches/test-90180.txt
+launches-step3 ./sol.txt ./launches/test-180270.txt
+launches-step3 ./sol.txt ./launches/test-270360.txt
+launches-step3 ./test-step3/sameaxis.txt ./launches/test-0.txt
+launches-step3 ./test-step3/sameaxis.txt ./launches/test-90.txt
+launches-step3 ./test-step3/sameaxis.txt ./launches/test-180.txt
+launches-step3 ./test-step3/sameaxis.txt ./launches/test-270.txt
+launches-step4 ./sol.txt ./launches1.txt
+launches-step4 ./simple.txt ./launches_simple.txt
+launches-step4 ./sol.txt ./launches/test-zero-iter.txt
+launches-step4 ./sol.txt ./launches/test-zero-speed.txt
+launches-step4 ./sol.txt ./launches1.txt
+launches-step4 ./sol.txt ./launches/test-invalid-name.txt
+launches-step4 ./sol.txt ./launches/test-too-long-name.txt
+launches-step4 ./sol.txt ./launches/test-empty-time.txt
+launches-step4 ./sol.txt ./launches/test-empty-speed.txt
+launches-step4 ./sol.txt ./launches/test-090.txt
+launches-step4 ./sol.txt ./launches/test-90180.txt
+launches-step4 ./sol.txt ./launches/test-180270.txt
+launches-step4 ./sol.txt ./launches/test-270360.txt
+launches-step4 ./sol.txt ./launches/test-extra-extra.txt
+launches-step4 ./test-step3/sameaxis.txt ./launches/test-0.txt
+launches-step4 ./test-step3/sameaxis.txt ./launches/test-90.txt
+launches-step4 ./test-step3/sameaxis.txt ./launches/test-180.txt
+launches-step4 ./test-step3/sameaxis.txt ./launches/test-270.txt
 launches-step1 ./sol.txt
 launches-step1 ./test-step1/test-double-pos-sign.txt
 launches-step1 ./test-step1/test-dup-dot-initial.txt
@@ -43,38 +78,3 @@ launches-step1 ./test-step1/test-invalid-chars.txt
 launches-step1 ./test-step1/test-invalid-chars-initial.txt
 launches-step1 ./test-step1/test-360.txt
 launches-step1 ./test-step1/test-361.txt
-launches-step2 ./sol.txt
-launches-step2 ./test-step2/test-large-speed.txt
-launches-step3 ./sol.txt ./launches1.txt
-launches-step3 ./sol.txt ./launches/test-zero-speed.txt
-launches-step3 ./sol.txt ./launches/test-neg-time.txt
-launches-step3 ./sol.txt ./launches/test-invalid-name.txt
-launches-step3 ./sol.txt ./launches/test-too-long-name.txt
-launches-step3 ./sol.txt ./launches/test-empty-time.txt
-launches-step3 ./sol.txt ./launches/test-empty-speed.txt
-launches-step3 ./sol.txt ./launches/test-090.txt
-launches-step3 ./sol.txt ./launches/test-90180.txt
-launches-step3 ./sol.txt ./launches/test-180270.txt
-launches-step3 ./sol.txt ./launches/test-270360.txt
-launches-step3 ./test-step3/sameaxis.txt ./launches/test-0.txt
-launches-step3 ./test-step3/sameaxis.txt ./launches/test-90.txt
-launches-step3 ./test-step3/sameaxis.txt ./launches/test-180.txt
-launches-step3 ./test-step3/sameaxis.txt ./launches/test-270.txt
-launches-step4 ./sol.txt ./launches1.txt
-launches-step4 ./simple.txt ./launches_simple.txt
-launches-step4 ./sol.txt ./launches/test-zero-iter.txt
-launches-step4 ./sol.txt ./launches/test-zero-speed.txt
-launches-step4 ./sol.txt ./launches1.txt
-launches-step4 ./sol.txt ./launches/test-invalid-name.txt
-launches-step4 ./sol.txt ./launches/test-too-long-name.txt
-launches-step4 ./sol.txt ./launches/test-empty-time.txt
-launches-step4 ./sol.txt ./launches/test-empty-speed.txt
-launches-step4 ./sol.txt ./launches/test-090.txt
-launches-step4 ./sol.txt ./launches/test-90180.txt
-launches-step4 ./sol.txt ./launches/test-180270.txt
-launches-step4 ./sol.txt ./launches/test-270360.txt
-launches-step4 ./sol.txt ./launches/test-extra-extra.txt
-launches-step4 ./test-step3/sameaxis.txt ./launches/test-0.txt
-launches-step4 ./test-step3/sameaxis.txt ./launches/test-90.txt
-launches-step4 ./test-step3/sameaxis.txt ./launches/test-180.txt
-launches-step4 ./test-step3/sameaxis.txt ./launches/test-270.txt
