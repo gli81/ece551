@@ -43,6 +43,7 @@ void addCount(counts_t * c, const char * name) {
     // free everything
     // free(c);
     fprintf(stderr, "Error reallocating");
+    exit(EXIT_FAILURE);
     return;
   }
   c->arr = tmp_arr;
