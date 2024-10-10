@@ -11,6 +11,7 @@ kvarray_t * readKVs(const char * fname) {
   FILE* cur = fopen(fname, "r");
   if (cur == NULL) {
     fprintf(stderr, "Error opening file %s\n", fname);
+    exit(EXIT_FAILURE);
     return NULL;
   }
   kvarray_t* ans = NULL;
@@ -28,20 +29,22 @@ kvarray_t * readKVs(const char * fname) {
     // reallocate space for larger array
     kvpair_t** tmp_arr = realloc(ans->arr, (ans->ct+1) * sizeof(*(ans->arr)));
     if (tmp_arr == NULL) {
+      fprintf(stderr, "Error reallocating memory\n");
+      exit(EXIT_FAILURE);
       freeKVs(ans);
       free(line);
       fclose(cur);
-      fprintf(stderr, "Error reallocating memory\n");
       return NULL;
     }
     ans->arr = tmp_arr;
     tmp_arr = NULL;
     char* first_equal = strchr(line, '=');
     if (first_equal == NULL) { // = not found in input
+      fprintf(stderr, "Invalid input format\n");
+      exit(EXIT_FAILURE);
       freeKVs(ans);
       free(line);
       fclose(cur);
-      fprintf(stderr, "Invalid input format\n");
       return NULL;
     }
     tmp = malloc(sizeof(*tmp)); // kvpair_t
@@ -61,8 +64,9 @@ kvarray_t * readKVs(const char * fname) {
   //ans->ct = ln_ct;
   // close file
   if (fclose(cur) != 0) {
-    freeKVs(ans);
     fprintf(stderr, "Error closing file %s\n", fname);
+    exit(EXIT_FAILURE);
+    freeKVs(ans);
     return NULL;
   }
   return ans;
