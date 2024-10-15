@@ -1,12 +1,6 @@
-Grading at 10/15/2024:23:27:52.616257
-For commit ID 2fc5f0700c557bda095afcb0e7830b5f036aab7e
-Grading at Tue Oct 15 07:27:52 PM EDT 2024
+Grading at 10/15/2024:23:33:43.431598
+For commit ID c8c6c43fd542c9db926006d40270e74de4cb0808
+Grading at Tue Oct 15 07:33:43 PM EDT 2024
 Reading your quiz answers from answers.txt
-You got 2 questions incorrect.
-You might want to review these concepts:
-------------
-Encapsulation: Methods Act on Objects
-Function Overloading
-------------
 
-Overall Grade: FAILED
+Overall Grade: PASSED
