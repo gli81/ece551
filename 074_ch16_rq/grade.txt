@@ -1,11 +1,6 @@
-Grading at 10/16/2024:18:54:13.268368
-For commit ID 6f249eb37fd7d5ab42903e1c23e7d05a01202d7e
-Grading at Wed Oct 16 02:54:13 PM EDT 2024
+Grading at 10/16/2024:18:56:53.528379
+For commit ID e972ec7e610c28b550b6ee788a15e9a3963f3dc0
+Grading at Wed Oct 16 02:56:53 PM EDT 2024
 Reading your quiz answers from answers.txt
-You got 1 questions incorrect.
-You might want to review these concepts:
-------------
-Return Type of Stream Insertion
-------------
 
-Overall Grade: FAILED
+Overall Grade: PASSED
