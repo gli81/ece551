@@ -81,13 +81,13 @@ bool IntMatrix::operator==(const IntMatrix & rhs) const {
 
 IntMatrix IntMatrix::operator+(const IntMatrix & rhs) const {
   assert(this->numRows == rhs.numRows && this->numColumns == rhs.numColumns);
-  IntMatrix* ans = new IntMatrix(*this);
-  for (int i = 0; i < ans->numRows; ++i) {
-    for (int j = 0; j < ans->numColumns; ++j) {
-      (*ans)[i][j] += rhs[i][j];
+  IntMatrix ans = IntMatrix(*this);
+  for (int i = 0; i < ans.numRows; ++i) {
+    for (int j = 0; j < ans.numColumns; ++j) {
+      ans[i][j] += rhs[i][j];
     }
   }
-  return *ans;
+  return ans;
 }
 
 std::ostream & operator<<(std::ostream & s, const IntMatrix & rhs) {
