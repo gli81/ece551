@@ -1,297 +1,297 @@
-Grading at 10/16/2024:22:45:35.084716
-For commit ID 29f387bff28d469938677a7e2d9f120e66454ac9
-Grading at Wed Oct 16 06:45:19 PM EDT 2024
+Grading at 10/16/2024:22:49:11.010459
+For commit ID 65cc4cbdd4c478accc89e80a4d75ef47a4ae0d31
+Grading at Wed Oct 16 06:48:55 PM EDT 2024
 Attempting to compile:
 rm -f *.o  *~ intMatrixTest
 #################################################
 testcase1:
 Your output is correct
 valgrind was not clean
-==2065131== Memcheck, a memory error detector
-==2065131== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065131== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065131== 
-==2065131== Parent PID: 2065130
-==2065131== 
-==2065131== 
-==2065131== HEAP SUMMARY:
-==2065131==     in use at exit: 16 bytes in 2 blocks
-==2065131==   total heap usage: 8 allocs, 6 frees, 76,816 bytes allocated
-==2065131== 
-==2065131== 16 bytes in 1 blocks are definitely lost in loss record 2 of 2
-==2065131==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065131==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065131==    by 0x109647: main (in intMatrixTest)
-==2065131== 
-==2065131== LEAK SUMMARY:
-==2065131==    definitely lost: 16 bytes in 1 blocks
-==2065131==    indirectly lost: 0 bytes in 1 blocks
-==2065131==      possibly lost: 0 bytes in 0 blocks
-==2065131==    still reachable: 0 bytes in 0 blocks
-==2065131==         suppressed: 0 bytes in 0 blocks
-==2065131== 
-==2065131== For lists of detected and suppressed errors, rerun with: -s
-==2065131== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2071527== Memcheck, a memory error detector
+==2071527== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2071527== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2071527== 
+==2071527== Parent PID: 2071526
+==2071527== 
+==2071527== 
+==2071527== HEAP SUMMARY:
+==2071527==     in use at exit: 16 bytes in 2 blocks
+==2071527==   total heap usage: 8 allocs, 6 frees, 76,816 bytes allocated
+==2071527== 
+==2071527== 16 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==2071527==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2071527==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2071527==    by 0x109647: main (in intMatrixTest)
+==2071527== 
+==2071527== LEAK SUMMARY:
+==2071527==    definitely lost: 16 bytes in 1 blocks
+==2071527==    indirectly lost: 0 bytes in 1 blocks
+==2071527==      possibly lost: 0 bytes in 0 blocks
+==2071527==    still reachable: 0 bytes in 0 blocks
+==2071527==         suppressed: 0 bytes in 0 blocks
+==2071527== 
+==2071527== For lists of detected and suppressed errors, rerun with: -s
+==2071527== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase2:
 Your output is correct
 valgrind was not clean
-==2065169== Memcheck, a memory error detector
-==2065169== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065169== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065169== 
-==2065169== Parent PID: 2065168
-==2065169== 
-==2065169== 
-==2065169== HEAP SUMMARY:
-==2065169==     in use at exit: 16 bytes in 2 blocks
-==2065169==   total heap usage: 8 allocs, 6 frees, 76,816 bytes allocated
-==2065169== 
-==2065169== 16 bytes in 1 blocks are definitely lost in loss record 2 of 2
-==2065169==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065169==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065169==    by 0x109647: main (in intMatrixTest)
-==2065169== 
-==2065169== LEAK SUMMARY:
-==2065169==    definitely lost: 16 bytes in 1 blocks
-==2065169==    indirectly lost: 0 bytes in 1 blocks
-==2065169==      possibly lost: 0 bytes in 0 blocks
-==2065169==    still reachable: 0 bytes in 0 blocks
-==2065169==         suppressed: 0 bytes in 0 blocks
-==2065169== 
-==2065169== For lists of detected and suppressed errors, rerun with: -s
-==2065169== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2071609== Memcheck, a memory error detector
+==2071609== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2071609== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2071609== 
+==2071609== Parent PID: 2071608
+==2071609== 
+==2071609== 
+==2071609== HEAP SUMMARY:
+==2071609==     in use at exit: 16 bytes in 2 blocks
+==2071609==   total heap usage: 8 allocs, 6 frees, 76,816 bytes allocated
+==2071609== 
+==2071609== 16 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==2071609==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2071609==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2071609==    by 0x109647: main (in intMatrixTest)
+==2071609== 
+==2071609== LEAK SUMMARY:
+==2071609==    definitely lost: 16 bytes in 1 blocks
+==2071609==    indirectly lost: 0 bytes in 1 blocks
+==2071609==      possibly lost: 0 bytes in 0 blocks
+==2071609==    still reachable: 0 bytes in 0 blocks
+==2071609==         suppressed: 0 bytes in 0 blocks
+==2071609== 
+==2071609== For lists of detected and suppressed errors, rerun with: -s
+==2071609== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase3:
 Your output is correct
 valgrind was not clean
-==2065222== Memcheck, a memory error detector
-==2065222== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065222== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065222== 
-==2065222== Parent PID: 2065221
-==2065222== 
-==2065222== 
-==2065222== HEAP SUMMARY:
-==2065222==     in use at exit: 40 bytes in 4 blocks
-==2065222==   total heap usage: 18 allocs, 14 frees, 76,936 bytes allocated
-==2065222== 
-==2065222== 40 (16 direct, 24 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==2065222==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065222==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065222==    by 0x109647: main (in intMatrixTest)
-==2065222== 
-==2065222== LEAK SUMMARY:
-==2065222==    definitely lost: 16 bytes in 1 blocks
-==2065222==    indirectly lost: 24 bytes in 3 blocks
-==2065222==      possibly lost: 0 bytes in 0 blocks
-==2065222==    still reachable: 0 bytes in 0 blocks
-==2065222==         suppressed: 0 bytes in 0 blocks
-==2065222== 
-==2065222== For lists of detected and suppressed errors, rerun with: -s
-==2065222== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2071701== Memcheck, a memory error detector
+==2071701== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2071701== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2071701== 
+==2071701== Parent PID: 2071700
+==2071701== 
+==2071701== 
+==2071701== HEAP SUMMARY:
+==2071701==     in use at exit: 40 bytes in 4 blocks
+==2071701==   total heap usage: 18 allocs, 14 frees, 76,936 bytes allocated
+==2071701== 
+==2071701== 40 (16 direct, 24 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==2071701==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2071701==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2071701==    by 0x109647: main (in intMatrixTest)
+==2071701== 
+==2071701== LEAK SUMMARY:
+==2071701==    definitely lost: 16 bytes in 1 blocks
+==2071701==    indirectly lost: 24 bytes in 3 blocks
+==2071701==      possibly lost: 0 bytes in 0 blocks
+==2071701==    still reachable: 0 bytes in 0 blocks
+==2071701==         suppressed: 0 bytes in 0 blocks
+==2071701== 
+==2071701== For lists of detected and suppressed errors, rerun with: -s
+==2071701== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase4:
 Your output is correct
 valgrind was not clean
-==2065246== Memcheck, a memory error detector
-==2065246== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065246== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065246== 
-==2065246== Parent PID: 2065245
-==2065246== 
-==2065246== 
-==2065246== HEAP SUMMARY:
-==2065246==     in use at exit: 80 bytes in 4 blocks
-==2065246==   total heap usage: 18 allocs, 14 frees, 77,136 bytes allocated
-==2065246== 
-==2065246== 80 (16 direct, 64 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==2065246==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065246==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065246==    by 0x109647: main (in intMatrixTest)
-==2065246== 
-==2065246== LEAK SUMMARY:
-==2065246==    definitely lost: 16 bytes in 1 blocks
-==2065246==    indirectly lost: 64 bytes in 3 blocks
-==2065246==      possibly lost: 0 bytes in 0 blocks
-==2065246==    still reachable: 0 bytes in 0 blocks
-==2065246==         suppressed: 0 bytes in 0 blocks
-==2065246== 
-==2065246== For lists of detected and suppressed errors, rerun with: -s
-==2065246== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2071789== Memcheck, a memory error detector
+==2071789== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2071789== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2071789== 
+==2071789== Parent PID: 2071788
+==2071789== 
+==2071789== 
+==2071789== HEAP SUMMARY:
+==2071789==     in use at exit: 80 bytes in 4 blocks
+==2071789==   total heap usage: 18 allocs, 14 frees, 77,136 bytes allocated
+==2071789== 
+==2071789== 80 (16 direct, 64 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==2071789==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2071789==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2071789==    by 0x109647: main (in intMatrixTest)
+==2071789== 
+==2071789== LEAK SUMMARY:
+==2071789==    definitely lost: 16 bytes in 1 blocks
+==2071789==    indirectly lost: 64 bytes in 3 blocks
+==2071789==      possibly lost: 0 bytes in 0 blocks
+==2071789==    still reachable: 0 bytes in 0 blocks
+==2071789==         suppressed: 0 bytes in 0 blocks
+==2071789== 
+==2071789== For lists of detected and suppressed errors, rerun with: -s
+==2071789== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase5:
 Your output is correct
 valgrind was not clean
-==2065284== Memcheck, a memory error detector
-==2065284== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065284== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065284== 
-==2065284== Parent PID: 2065283
-==2065284== 
-==2065284== 
-==2065284== HEAP SUMMARY:
-==2065284==     in use at exit: 256 bytes in 22 blocks
-==2065284==   total heap usage: 108 allocs, 86 frees, 78,016 bytes allocated
-==2065284== 
-==2065284== 256 (16 direct, 240 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==2065284==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065284==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065284==    by 0x109647: main (in intMatrixTest)
-==2065284== 
-==2065284== LEAK SUMMARY:
-==2065284==    definitely lost: 16 bytes in 1 blocks
-==2065284==    indirectly lost: 240 bytes in 21 blocks
-==2065284==      possibly lost: 0 bytes in 0 blocks
-==2065284==    still reachable: 0 bytes in 0 blocks
-==2065284==         suppressed: 0 bytes in 0 blocks
-==2065284== 
-==2065284== For lists of detected and suppressed errors, rerun with: -s
-==2065284== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2071860== Memcheck, a memory error detector
+==2071860== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2071860== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2071860== 
+==2071860== Parent PID: 2071859
+==2071860== 
+==2071860== 
+==2071860== HEAP SUMMARY:
+==2071860==     in use at exit: 256 bytes in 22 blocks
+==2071860==   total heap usage: 108 allocs, 86 frees, 78,016 bytes allocated
+==2071860== 
+==2071860== 256 (16 direct, 240 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==2071860==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2071860==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2071860==    by 0x109647: main (in intMatrixTest)
+==2071860== 
+==2071860== LEAK SUMMARY:
+==2071860==    definitely lost: 16 bytes in 1 blocks
+==2071860==    indirectly lost: 240 bytes in 21 blocks
+==2071860==      possibly lost: 0 bytes in 0 blocks
+==2071860==    still reachable: 0 bytes in 0 blocks
+==2071860==         suppressed: 0 bytes in 0 blocks
+==2071860== 
+==2071860== For lists of detected and suppressed errors, rerun with: -s
+==2071860== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase6:
 Your output is correct
 valgrind was not clean
-==2065332== Memcheck, a memory error detector
-==2065332== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065332== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065332== 
-==2065332== Parent PID: 2065331
-==2065332== 
-==2065332== 
-==2065332== HEAP SUMMARY:
-==2065332==     in use at exit: 656 bytes in 22 blocks
-==2065332==   total heap usage: 108 allocs, 86 frees, 80,016 bytes allocated
-==2065332== 
-==2065332== 656 (16 direct, 640 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==2065332==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065332==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065332==    by 0x109647: main (in intMatrixTest)
-==2065332== 
-==2065332== LEAK SUMMARY:
-==2065332==    definitely lost: 16 bytes in 1 blocks
-==2065332==    indirectly lost: 640 bytes in 21 blocks
-==2065332==      possibly lost: 0 bytes in 0 blocks
-==2065332==    still reachable: 0 bytes in 0 blocks
-==2065332==         suppressed: 0 bytes in 0 blocks
-==2065332== 
-==2065332== For lists of detected and suppressed errors, rerun with: -s
-==2065332== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2071951== Memcheck, a memory error detector
+==2071951== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2071951== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2071951== 
+==2071951== Parent PID: 2071950
+==2071951== 
+==2071951== 
+==2071951== HEAP SUMMARY:
+==2071951==     in use at exit: 656 bytes in 22 blocks
+==2071951==   total heap usage: 108 allocs, 86 frees, 80,016 bytes allocated
+==2071951== 
+==2071951== 656 (16 direct, 640 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==2071951==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2071951==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2071951==    by 0x109647: main (in intMatrixTest)
+==2071951== 
+==2071951== LEAK SUMMARY:
+==2071951==    definitely lost: 16 bytes in 1 blocks
+==2071951==    indirectly lost: 640 bytes in 21 blocks
+==2071951==      possibly lost: 0 bytes in 0 blocks
+==2071951==    still reachable: 0 bytes in 0 blocks
+==2071951==         suppressed: 0 bytes in 0 blocks
+==2071951== 
+==2071951== For lists of detected and suppressed errors, rerun with: -s
+==2071951== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase7:
 Your output is correct
 valgrind was not clean
-==2065374== Memcheck, a memory error detector
-==2065374== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065374== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065374== 
-==2065374== Parent PID: 2065373
-==2065374== 
-==2065374== 
-==2065374== HEAP SUMMARY:
-==2065374==     in use at exit: 2,416 bytes in 202 blocks
-==2065374==   total heap usage: 1,008 allocs, 806 frees, 88,816 bytes allocated
-==2065374== 
-==2065374== 2,416 (16 direct, 2,400 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==2065374==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065374==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065374==    by 0x109647: main (in intMatrixTest)
-==2065374== 
-==2065374== LEAK SUMMARY:
-==2065374==    definitely lost: 16 bytes in 1 blocks
-==2065374==    indirectly lost: 2,400 bytes in 201 blocks
-==2065374==      possibly lost: 0 bytes in 0 blocks
-==2065374==    still reachable: 0 bytes in 0 blocks
-==2065374==         suppressed: 0 bytes in 0 blocks
-==2065374== 
-==2065374== For lists of detected and suppressed errors, rerun with: -s
-==2065374== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2072043== Memcheck, a memory error detector
+==2072043== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2072043== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2072043== 
+==2072043== Parent PID: 2072042
+==2072043== 
+==2072043== 
+==2072043== HEAP SUMMARY:
+==2072043==     in use at exit: 2,416 bytes in 202 blocks
+==2072043==   total heap usage: 1,008 allocs, 806 frees, 88,816 bytes allocated
+==2072043== 
+==2072043== 2,416 (16 direct, 2,400 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==2072043==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2072043==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2072043==    by 0x109647: main (in intMatrixTest)
+==2072043== 
+==2072043== LEAK SUMMARY:
+==2072043==    definitely lost: 16 bytes in 1 blocks
+==2072043==    indirectly lost: 2,400 bytes in 201 blocks
+==2072043==      possibly lost: 0 bytes in 0 blocks
+==2072043==    still reachable: 0 bytes in 0 blocks
+==2072043==         suppressed: 0 bytes in 0 blocks
+==2072043== 
+==2072043== For lists of detected and suppressed errors, rerun with: -s
+==2072043== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase8:
 Your output is correct
 valgrind was not clean
-==2065423== Memcheck, a memory error detector
-==2065423== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065423== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065423== 
-==2065423== Parent PID: 2065422
-==2065423== 
-==2065423== 
-==2065423== HEAP SUMMARY:
-==2065423==     in use at exit: 6,416 bytes in 202 blocks
-==2065423==   total heap usage: 1,008 allocs, 806 frees, 108,816 bytes allocated
-==2065423== 
-==2065423== 6,416 (16 direct, 6,400 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==2065423==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065423==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065423==    by 0x109647: main (in intMatrixTest)
-==2065423== 
-==2065423== LEAK SUMMARY:
-==2065423==    definitely lost: 16 bytes in 1 blocks
-==2065423==    indirectly lost: 6,400 bytes in 201 blocks
-==2065423==      possibly lost: 0 bytes in 0 blocks
-==2065423==    still reachable: 0 bytes in 0 blocks
-==2065423==         suppressed: 0 bytes in 0 blocks
-==2065423== 
-==2065423== For lists of detected and suppressed errors, rerun with: -s
-==2065423== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2072125== Memcheck, a memory error detector
+==2072125== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2072125== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2072125== 
+==2072125== Parent PID: 2072124
+==2072125== 
+==2072125== 
+==2072125== HEAP SUMMARY:
+==2072125==     in use at exit: 6,416 bytes in 202 blocks
+==2072125==   total heap usage: 1,008 allocs, 806 frees, 108,816 bytes allocated
+==2072125== 
+==2072125== 6,416 (16 direct, 6,400 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==2072125==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2072125==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2072125==    by 0x109647: main (in intMatrixTest)
+==2072125== 
+==2072125== LEAK SUMMARY:
+==2072125==    definitely lost: 16 bytes in 1 blocks
+==2072125==    indirectly lost: 6,400 bytes in 201 blocks
+==2072125==      possibly lost: 0 bytes in 0 blocks
+==2072125==    still reachable: 0 bytes in 0 blocks
+==2072125==         suppressed: 0 bytes in 0 blocks
+==2072125== 
+==2072125== For lists of detected and suppressed errors, rerun with: -s
+==2072125== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase9:
 Your output is correct
 valgrind was not clean
-==2065483== Memcheck, a memory error detector
-==2065483== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065483== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065483== 
-==2065483== Parent PID: 2065482
-==2065483== 
-==2065483== 
-==2065483== HEAP SUMMARY:
-==2065483==     in use at exit: 24,016 bytes in 2,002 blocks
-==2065483==   total heap usage: 10,008 allocs, 8,006 frees, 196,816 bytes allocated
-==2065483== 
-==2065483== 24,016 (16 direct, 24,000 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==2065483==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065483==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065483==    by 0x109647: main (in intMatrixTest)
-==2065483== 
-==2065483== LEAK SUMMARY:
-==2065483==    definitely lost: 16 bytes in 1 blocks
-==2065483==    indirectly lost: 24,000 bytes in 2,001 blocks
-==2065483==      possibly lost: 0 bytes in 0 blocks
-==2065483==    still reachable: 0 bytes in 0 blocks
-==2065483==         suppressed: 0 bytes in 0 blocks
-==2065483== 
-==2065483== For lists of detected and suppressed errors, rerun with: -s
-==2065483== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2072217== Memcheck, a memory error detector
+==2072217== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2072217== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2072217== 
+==2072217== Parent PID: 2072216
+==2072217== 
+==2072217== 
+==2072217== HEAP SUMMARY:
+==2072217==     in use at exit: 24,016 bytes in 2,002 blocks
+==2072217==   total heap usage: 10,008 allocs, 8,006 frees, 196,816 bytes allocated
+==2072217== 
+==2072217== 24,016 (16 direct, 24,000 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==2072217==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2072217==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2072217==    by 0x109647: main (in intMatrixTest)
+==2072217== 
+==2072217== LEAK SUMMARY:
+==2072217==    definitely lost: 16 bytes in 1 blocks
+==2072217==    indirectly lost: 24,000 bytes in 2,001 blocks
+==2072217==      possibly lost: 0 bytes in 0 blocks
+==2072217==    still reachable: 0 bytes in 0 blocks
+==2072217==         suppressed: 0 bytes in 0 blocks
+==2072217== 
+==2072217== For lists of detected and suppressed errors, rerun with: -s
+==2072217== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase10:
 Your output is correct
 valgrind was not clean
-==2065542== Memcheck, a memory error detector
-==2065542== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2065542== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2065542== 
-==2065542== Parent PID: 2065541
-==2065542== 
-==2065542== 
-==2065542== HEAP SUMMARY:
-==2065542==     in use at exit: 64,016 bytes in 2,002 blocks
-==2065542==   total heap usage: 10,008 allocs, 8,006 frees, 396,816 bytes allocated
-==2065542== 
-==2065542== 64,016 (16 direct, 64,000 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==2065542==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2065542==    by 0x109CFC: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
-==2065542==    by 0x109647: main (in intMatrixTest)
-==2065542== 
-==2065542== LEAK SUMMARY:
-==2065542==    definitely lost: 16 bytes in 1 blocks
-==2065542==    indirectly lost: 64,000 bytes in 2,001 blocks
-==2065542==      possibly lost: 0 bytes in 0 blocks
-==2065542==    still reachable: 0 bytes in 0 blocks
-==2065542==         suppressed: 0 bytes in 0 blocks
-==2065542== 
-==2065542== For lists of detected and suppressed errors, rerun with: -s
-==2065542== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2072310== Memcheck, a memory error detector
+==2072310== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2072310== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2072310== 
+==2072310== Parent PID: 2072309
+==2072310== 
+==2072310== 
+==2072310== HEAP SUMMARY:
+==2072310==     in use at exit: 64,016 bytes in 2,002 blocks
+==2072310==   total heap usage: 10,008 allocs, 8,006 frees, 396,816 bytes allocated
+==2072310== 
+==2072310== 64,016 (16 direct, 64,000 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==2072310==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2072310==    by 0x109D5E: IntMatrix::operator+(IntMatrix const&) const (in intMatrixTest)
+==2072310==    by 0x109647: main (in intMatrixTest)
+==2072310== 
+==2072310== LEAK SUMMARY:
+==2072310==    definitely lost: 16 bytes in 1 blocks
+==2072310==    indirectly lost: 64,000 bytes in 2,001 blocks
+==2072310==      possibly lost: 0 bytes in 0 blocks
+==2072310==    still reachable: 0 bytes in 0 blocks
+==2072310==         suppressed: 0 bytes in 0 blocks
+==2072310== 
+==2072310== For lists of detected and suppressed errors, rerun with: -s
+==2072310== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 
 Overall Grade: B
