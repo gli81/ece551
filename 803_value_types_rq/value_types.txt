@@ -1,0 +1,44 @@
+AoP has a typo in the rules it lists for xvalues
+====This is what is in AoP====
+  (c) Access to a member of an xvalue.
+       For example,
+           Point && g(int a, int b, int c) { ...}
+
+            g(1,2,3).x  //xvalue, because g(1,2,3) is an xvalue
+                        //and .x is a member inside an xvalue
+       Note that this also works with the pointer-to-member (.*) operator,
+       which we have not covered (see end of this document if you are curious). 
+
+       This does NOT however work with -> (or anything else that dereferences
+       a pointer).  So if you have
+         Point *&& h(int a) {...}
+
+             h(42)->x   //h(42) is an xvalue, h(42)->x is an lvalue
+==============
+
+That first line should say Acces to a member of an rvalue
+(remember: rvalue = prvalue union xvalue)
+
+That means that if you have something like
+
+(a+b).m
+
+then the expression is an xvalue.  This makes sense with the
+notion of "expiring" as (a+b) is an unnamed temporary that will
+go away soon, so  (a+b).m is expiring.
+
+We can use it as an lvalue if we need:
+
+(a+b).m=something;
+
+But if we did e.g.
+
+SomeType((a+b).m) st;  //construct a new SomeType
+
+where SomeType is an object that has a copy and a move constructor,
+we would use the move constructor
+
+Note also that the name of a variable is always an lvalue
+regardless of its type---even if its type is an rvalue
+reference (Something &&).
+
