@@ -12,5 +12,5 @@ public:
 
   void move(double dx, double dy);
 
-  double distanceFrom(const Point& p);
+  double distanceFrom(const Point& p) const;
 };

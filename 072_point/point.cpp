@@ -9,7 +9,7 @@ void Point::move(double dx, double dy) {
     this->y += dy;
 }
 
-double Point::distanceFrom(const Point& p) {
+double Point::distanceFrom(const Point& p) const{
   double dist_x = p.x - this->x;
   double dist_y = p.y - this->y;
   return std::sqrt(dist_x * dist_x + dist_y * dist_y);
