@@ -39,6 +39,10 @@ IntMatrix &IntMatrix::operator=(const IntMatrix & rhs) {
       //  tmp[i][j] = rhs.rows[i][j];
       //}
     }
+    for (int i = 0; i < this->numRows; ++i) {
+      delete this->rows[i];
+    }
+    delete[] this->rows;
     this->rows = tmp;
     tmp = NULL;
     this->numRows = rhs.numRows;
