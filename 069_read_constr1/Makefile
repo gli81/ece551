@@ -1,5 +1,5 @@
 .PHONY=clean
-TARGET=tee
+TARGET=code
 CXXFLAGS=-Wall -Werror -std=gnu++98
 
 $(TARGET) : code.cpp
