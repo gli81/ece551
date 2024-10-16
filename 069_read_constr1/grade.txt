@@ -1,8 +1,14 @@
-Grading at 10/16/2024:01:09:06.994683
-For commit ID 2c8d748df2d33dba90ef98c05c7df88998cb8b8a
-Grading at Tue Oct 15 09:09:06 PM EDT 2024
+Grading at 10/16/2024:01:09:57.308825
+For commit ID ba692631efb985f4c4a28643e7734e17b3b9f071
+Grading at Tue Oct 15 09:09:57 PM EDT 2024
 Attempting to compile:
-g++ -o tee -Wall -Werror -std=gnu++98 code.cpp
-Your Makefile did not produce a binary called 'code'.   Please correct that
+g++ -o code -Wall -Werror -std=gnu++98 code.cpp
+Your Makefile produced a binary called 'code'
+Line_12_did_not_match
+Line_13_did_not_match
+Line_14_did_not_match
+Line_15_did_not_match
+Your file did not match the expected output
+Your output did not match what we expected.
 
 Overall Grade: FAILED
