@@ -44,10 +44,10 @@ int main(int argc, char** argv) {
       }
       // close file
       cur_file.close();
-      if (cur_file.fail()) {
-        std::cerr << "Error closing file " << argv[i] << std::endl;
-        exit(EXIT_FAILURE);
-      }
+      //if (cur_file.fail()) {
+      //  std::cerr << "Error closing file " << argv[i] << std::endl;
+      //  exit(EXIT_FAILURE);
+      //}
     }
   }
   return EXIT_SUCCESS;
