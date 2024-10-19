@@ -91,17 +91,19 @@ int Matrix<T>::getColumns() const {
 
 template<typename T>
 const std::vector<T>& Matrix<T>::operator[](int index) const {
+  assert(index < this->numRows);
   return *this->rows[index];
 }
 
 template<typename T>
 std::vector<T>& Matrix<T>::operator[](int index){
+  assert(index < this->numRows);
   return *this->rows[index];
 }
 
 template<typename T>
 bool Matrix<T>::operator==(const Matrix<T> & rhs) const {
-  if (this->numRows != rhs.numRows) {
+  if (this->numRows != rhs.numRows || this->numColumns != rhs.numColumns) {
     return false;
   }
   for (int i = 0; i < this->numRows; ++i) {
