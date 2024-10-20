@@ -6,6 +6,19 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <sstream>
+
+std::string NumExpression::toString() const {
+    std::stringstream s;
+    s << this->num;
+    return s.str();
+}
+
+std::string PlusExpression::toString() const {
+  std::stringstream s;
+  s << "(" << this->left->toString() << " + " << this->right->toString() << ")";
+  return s.str();
+}
 
 Expression * parse(const char ** strp);
 
