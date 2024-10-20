@@ -16,7 +16,7 @@ std::string NumExpression::toString() const {
 
 std::string ArithmeticExpression::toString() const {
   std::stringstream s;
-  s << "(" << this->left->toString() << this->m << this->right->toString() << ")";
+  s << "(" << this->left->toString() << " " << this->m << " " << this->right->toString() << ")";
   return s.str();
 }
 

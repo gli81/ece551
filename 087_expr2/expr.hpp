@@ -25,7 +25,7 @@ private:
   Expression* right;
   std::string m;
 public:
-  ArithmeticExpression(Expression* lhs, Expression* rhs): left(lhs), right(rhs) {}
+  ArithmeticExpression(Expression* lhs, Expression* rhs, std::string m): left(lhs), right(rhs), m(m) {}
   std::string toString() const;
   virtual ~ArithmeticExpression() {
     delete this->left;
@@ -34,31 +34,23 @@ public:
 };
 
 class PlusExpression : public ArithmeticExpression {
-private:
-  std::string m;
 public:
-  PlusExpression(Expression* lhs, Expression* rhs): ArithmeticExpression(lhs, rhs), m("+") {}
+  PlusExpression(Expression* lhs, Expression* rhs): ArithmeticExpression(lhs, rhs, "+") {}
   //std::string toString() const;
 };
 
 class MinusExpression : public ArithmeticExpression {
-private:
-  std::string m;
 public:
-  MinusExpression(Expression* lhs, Expression* rhs): ArithmeticExpression(lhs, rhs), m("-") {}
+  MinusExpression(Expression* lhs, Expression* rhs): ArithmeticExpression(lhs, rhs, "-") {}
 };
 
 class TimesExpression : public ArithmeticExpression {
-private:
-  std::string m;
 public:
-  TimesExpression(Expression* lhs, Expression* rhs): ArithmeticExpression(lhs, rhs), m("*") {}
+  TimesExpression(Expression* lhs, Expression* rhs): ArithmeticExpression(lhs, rhs, "*") {}
 };
 
 class DivExpression : public ArithmeticExpression {
-private:
-  std::string m;
 public:
-  DivExpression(Expression* lhs, Expression* rhs): ArithmeticExpression(lhs, rhs), m("/") {}
+  DivExpression(Expression* lhs, Expression* rhs): ArithmeticExpression(lhs, rhs, "/") {}
 };
 #endif
