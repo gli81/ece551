@@ -7,6 +7,7 @@ int main(int argc, char** argv) {
     if (argc == 2) {
       char** story_read = readAFile(argv[1]);
       char** story_processed = replaceCategory(story_read);
+      if (NULL == story_processed) return EXIT_SUCCESS;
       int i = 0;
       while (story_read[i] != NULL) {
         printf("%s", story_processed[i]);

@@ -54,6 +54,10 @@ char** readAFile(const char* fileName) {
  */
 char** replaceCategory(char** story) {
   size_t ct = 0;
+  if (NULL == story) {
+    // empty file
+    return NULL;
+  }
   while (NULL != story[ct]) {
     ct++;
   }
