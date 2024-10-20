@@ -4,5 +4,6 @@
 #include "provided.h"
 
 //any functions you want your main to use
-
+char** readAFile(const char* fileName);
+char** replaceCategory(char** story);
 #endif
