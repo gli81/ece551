@@ -6,6 +6,36 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <sstream>
+
+std::string NumExpression::toString() const {
+  std::stringstream s;
+  s << this->num;
+  return s.str();
+}
+
+std::string ArithmeticExpression::toString() const {
+  std::stringstream s;
+  s << "(" << this->left->toString() << " " << this->m << " " << this->right->toString() << ")";
+  return s.str();
+}
+
+long NumExpression::evaluate() const {
+  return this->num;
+}
+
+long PlusExpression::evaluate() const {
+  return this->left->evaluate() + this->right->evaluate();
+}
+long MinusExpression::evaluate() const {
+  return this->left->evaluate() - this->right->evaluate();
+}
+long TimesExpression::evaluate() const {
+  return this->left->evaluate() * this->right->evaluate();
+}
+long DivExpression::evaluate() const {
+  return this->left->evaluate() / this->right->evaluate();
+}
 
 Expression * parse(const char ** strp);
 
@@ -14,6 +44,7 @@ void skipSpace(const char ** strp) {
     *strp = *strp + 1;
   }
 }
+
 Expression * makeExpr(char op, Expression * lhs, Expression * rhs) {
   switch (op) {
     case '+':
