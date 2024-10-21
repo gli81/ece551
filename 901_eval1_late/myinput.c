@@ -1,0 +1,162 @@
+#include <stdio.h>
+#include "myinput.h"
+#include <ctype.h>
+#include <assert.h>
+
+
+/* convert string to double
+ * @param str : char*
+ * @param len : size_t
+ * @returns : double
+ */
+double strToPosDouble(char* str, size_t len) {
+  // return 0.0 if empty string
+  if (len == 0) {
+    return 0.0;
+  }
+  if (len == 1 && (*(str) == '.' || *(str) == '+')) {
+    return -1.0;
+  }
+  unsigned long int_part = 0;
+  size_t i = 0;
+  if (*str == ' ') {
+    while (i < len && *(str+i) == ' ') {
+      i++;
+    }
+  }
+  if (*(str+i) == '+') {
+    i++;
+  }
+  while (i < len) {
+    char cur = *(str + i);
+    if (isdigit(cur)) {
+      int_part *= 10;
+      int_part += cur - '0';
+      i++;
+    } else if (cur == '.') {
+      i++;
+      break;
+    } else {
+      return -1.0;
+    }
+  }
+  // ??? is 12. valid ??? yes it is
+  double float_part = 0.0;
+  unsigned ct = 1;
+  while (i < len) {
+    char cur = *(str + i);
+    if (isdigit(cur)) {
+      float_part *= 10;
+      float_part += cur - '0';
+      ct *= 10;
+      i++;
+    } else {
+      return -1.0;
+    }
+  }
+  float_part /= ct;
+  float_part += int_part;
+  return float_part;
+}
+
+void parse_planet_info(planet_t * planet, char * line) {
+  //STEP 1: Write this
+  if (NULL == line) {
+    fprintf(stderr, "Invalid input\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  /* ##################################################
+   * ### read until first ':'
+   * ##################################################
+   */
+  char* first_end = strchr(line, ':');
+  //@@@printf("after first ':' '%s'\n", first_end+1);
+  if (first_end == NULL) {
+    fprintf(stderr, "Invalid input -- no ':' found\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  size_t name_len = first_end - line;
+  if (name_len > 31) {
+    // name too long
+    fprintf(stderr, "Invalid input -- name exceeds 31 characters\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  // valid input, set planet->name
+  strncpy(planet->name, line, name_len);
+  // put \0 at the end
+  planet->name[name_len] = '\0';
+  /* ##################################################
+   * ### read until second ':'
+   * ##################################################
+   */
+  char* sec_end = strchr(first_end+1, ':');
+  if (NULL == sec_end) {
+    fprintf(stderr, "Invalid input -- only one ':' found\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  //@@@printf("after second ':' '%s'\n", sec_end+1);
+  size_t radius_len = sec_end - first_end - 1;
+  if (radius_len == 0) {
+    // radius too short
+    fprintf(stderr, "Invalid input -- no radius specified\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  double orbital_rad = strToPosDouble(first_end + 1, radius_len);
+  if (orbital_rad == -1.0 || orbital_rad == 0) {
+    // invalid double
+    fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  // valid orbital_radius
+  planet->orbital_radius = orbital_rad;
+  /* ##################################################
+   * ### read until third ':'
+   * ##################################################
+   */
+  first_end = strchr(sec_end+1, ':');
+  if (NULL == first_end) {
+    fprintf(stderr, "Invalid input -- only two ':' found\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  //@@@printf("after third ':' '%s'\n", first_end+1);
+  size_t period_len = first_end - sec_end - 1;
+  if (period_len == 0) {
+    // period too short
+    fprintf(stderr, "Invalid input -- no period specified\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  double period = strToPosDouble(sec_end + 1, period_len);
+  if (period == -1.0 || period == 0) {
+    fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  // valid period
+  planet->year_len = period;
+
+  /* ##################################################
+   * ### read until end
+   * ##################################################
+   */
+  char* cur = first_end + 1;
+  //@@@printf("cur = '%s'\n", cur);
+  // find next ':', if found, fail
+  first_end = strchr(cur, ':');
+  if (first_end != NULL) {
+    fprintf(stderr, "Invalid input -- too many fields\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  char* new_line = strchr(cur, '\n');
+  if (NULL == new_line) {
+    fprintf(stderr, "Invalid input\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  assert(*(new_line + 1) == '\0');
+  double init_pos = strToPosDouble(cur, new_line - cur);
+  if (init_pos == -1.0) {
+    fprintf(stderr, "Invalid input -- invalid double\n\t\t===\n%s\n\t\t===\n", line);
+    exit(EXIT_FAILURE);
+  }
+  planet->init_pos = init_pos * M_PI / 180.0; // in radians
+  //@@@printf("----------Completed processing %s----------\n", planet->name);
+}
+

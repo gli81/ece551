@@ -1,0 +1,1 @@
+10:Earth:Jupiter:200:0:10
