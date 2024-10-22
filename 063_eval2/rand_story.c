@@ -118,6 +118,27 @@ char** replaceCategory(char** story) {
   return ans;
 }
 
+catarray_t* buildCategory(char** lines) {
+  catarray_t* ans = NULL;
+  size_t ct = 0;
+  while (NULL != lines[ct]) {
+    if (NULL == ans) {
+      ans = malloc(sizeof(*ans));
+      ans->n=0;
+      ans->arr=NULL;
+    }
+    // parse line
+    // find first colon
+    char* first_colon = strchr(lines[ct], ':');
+    if (NULL == first_colon) {
+      fprintf(stderr, "Invalid kv -- No ':' found\n");
+      exit(EXIT_FAILURE);
+    }
+    char* second_colon = 
+  }
+  return ans;
+}
+
 //int main(int argc, char** argv) {
 //    char** test = readAFile(argv[1]);
 //    int i = 0;

@@ -6,4 +6,5 @@
 //any functions you want your main to use
 char** readAFile(const char* fileName);
 char** replaceCategory(char** story);
+catarray_t* buildCategory(char** lines);
 #endif
