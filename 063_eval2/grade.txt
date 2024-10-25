@@ -1,11 +1,11 @@
-Grading at 10/20/2024:20:10:41.763421
-For commit ID 7671465ee57a29c4c98e3e53b32c5284a55f34ed
-Grading at Sun Oct 20 04:10:38 PM EDT 2024
+Grading at 10/25/2024:14:46:17.936020
+For commit ID f11b4d35ad85053eba6955898471af33b456d53a
+Grading at Fri Oct 25 10:46:13 AM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
 Checking that story-step1 compiles
-rm -f *~ story-step1 story-step1.o rand_story.o
+rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
 gcc -o story-step1 story-step1.o rand_story.o provided.o
@@ -50,7 +50,29 @@ Valgrind was clean
 
 Step 2
 Checking that story-step2 compiles
-rm -f *~ story-step1 story-step1.o rand_story.o
+rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
+gcc -o story-step2 story-step2.o rand_story.o provided.o
+rm story-step2.o
+The code compiled (good)
+Executable story-step2 exists (good)
+Now running YOUR tests for step 2
+
+2.1: Current test is story-step2 ./words.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+2.2: Current test is story-step2 ./test-step2/double-colon.txt
+-----------------------------
+You considered this a failure case:
+Invalid kv -- More than one ':' found
+But we did not.
+
+Step 3
+Checking that story-step3 compiles
+rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
 The code did not compile!
 
 Overall Grade: NO GRADE YET
