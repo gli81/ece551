@@ -9,10 +9,10 @@
  * 
  * Params
  * ----------
- * fileName (const char*): name of the file wish to read
+ * fileName (const char*) : name of the file wish to read
  *
  * Returns:
- *     char**: array of lines in the file, each malloced
+ *     char** : array of lines in the file, each malloced
  */
 char** readAFile(const char* fileName) {
   // open file
@@ -47,10 +47,10 @@ char** readAFile(const char* fileName) {
  *
  * Params
  * ----------
- *      (char**): story template put in an array
+ *      story (char**) : story template put in an array
  *
  * Returns:
- *     char**: processed story
+ *     char** : processed story
  */
 char** replaceCategory(char** story) {
   size_t ct = 0;
@@ -118,6 +118,97 @@ char** replaceCategory(char** story) {
   return ans;
 }
 
+/* 
+ * helper function to find a category_t by name
+ * 
+ * Params
+ * ----------
+ *     cat (catarray_t*): where to search for the category
+ *     cat_name (const char*): name being searched
+ *
+ * Returns
+ * ----------
+ *     int: index of the category struct; create if not found
+ */
+int findCategory(catarray_t* cat, const char* cat_name) {
+  for (size_t i = 0; i < cat->n; ++i) {
+    if (strcmp(cat->arr[i].name, cat_name) == 0) {
+      return i;
+    }
+  }
+  // not found, put a new category_t struct in cat->arr
+  int num_cat = cat->n;
+  cat->arr = realloc(cat->arr, (num_cat + 1) * sizeof(*cat->arr));
+  // cat->arr[num_cat];
+  size_t name_len = strlen(cat_name);
+  cat->arr[num_cat].name = malloc(
+    (name_len+1) * sizeof(*cat->arr[num_cat].name)
+  );
+  strncpy(cat->arr[num_cat].name, cat_name,  name_len+1); // also copy '\0'
+  cat->arr[num_cat].words = NULL;
+  cat->arr[num_cat].n_words = 0;
+  cat->n++;
+  return num_cat;
+}
+
+/* 
+ * helper function to add a new category struct to category array
+ * 
+ * Params
+ * ----------
+ *     cat (catarray_t*): where to search for the category
+ *     cat_name (const char*): name being searched
+ *
+ * Returns
+ * ----------
+ *     category_t*: a pointer to the category struct
+ *         NULL if not found
+ *
+void addCategory(catarray_t* cat, const char* cat_name) {
+
+}
+*/
+
+/*
+ * helper function to add a word to category->words
+ *
+ * Params
+ * ----------
+ *     cat (category_t*) : the category to which the word will be added
+ *     word (const char*) : the word to be added
+ * 
+ * Returns
+ * ----------
+ *     None
+ */
+void addValue(catarray_t* cat, int idx, const char* word) {
+  // realloc larger space for cat->arr[idx].words
+  size_t new_word_idx = cat->arr[idx].n_words;
+  cat->arr[idx].words = realloc(
+    cat->arr[idx].words, (new_word_idx + 1) * sizeof(*cat->arr[idx].words)
+  );
+  // word ends with \n\0
+  size_t word_len = strlen(word);
+  cat->arr[idx].words[new_word_idx] = malloc(
+    word_len * sizeof(cat->arr[idx].words[new_word_idx])
+  );
+  strncpy(cat->arr[idx].words[new_word_idx], word, word_len);
+  // change '\n' to '\0'
+  cat->arr[idx].words[new_word_idx][word_len - 1] = '\0';
+  cat->arr[idx].n_words++;
+}
+
+/*
+ * step 2, build category array struct based on input
+ * 
+ * Params
+ * ----------
+ *     lines (char**) : an array of lines in the file
+ *
+ * Returns
+ * ----------
+ *     catarray_t* : a pointer to the struct
+ */
 catarray_t* buildCategory(char** lines) {
   catarray_t* ans = NULL;
   size_t ct = 0;
@@ -129,12 +220,25 @@ catarray_t* buildCategory(char** lines) {
     }
     // parse line
     // find first colon
+    //@@@printf("%s\n", lines[ct]);
     char* first_colon = strchr(lines[ct], ':');
     if (NULL == first_colon) {
       fprintf(stderr, "Invalid kv -- No ':' found\n");
       exit(EXIT_FAILURE);
     }
-    char* second_colon = 
+    char* after_first_colon = first_colon + 1;
+    //@@@printf("%s\n", first_colon);
+    // check if there is another colon
+    char* second_colon = strchr(after_first_colon, ':');
+    if (NULL != second_colon) {
+      fprintf(stderr, "Invalid kv -- More than one ':' found\n");
+      exit(EXIT_FAILURE);
+    }
+    *first_colon = '\0'; // now lines[ct] is key, after_first_colon is value
+    int cat_found_idx = findCategory(ans, lines[ct]);
+    // add value to cat_found
+    addValue(ans, cat_found_idx, after_first_colon);
+    ct++;
   }
   return ans;
 }
