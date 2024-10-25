@@ -1,6 +1,6 @@
-Grading at 10/25/2024:14:46:17.936020
-For commit ID f11b4d35ad85053eba6955898471af33b456d53a
-Grading at Fri Oct 25 10:46:13 AM EDT 2024
+Grading at 10/25/2024:14:48:03.229320
+For commit ID 8daf9860aa0cdd7dd493197cd7d6fbaa72e3eb64
+Grading at Fri Oct 25 10:47:58 AM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -66,9 +66,8 @@ Valgrind was clean
 
 2.2: Current test is story-step2 ./test-step2/double-colon.txt
 -----------------------------
-You considered this a failure case:
-Invalid kv -- More than one ':' found
-But we did not.
+Your output looks good. Lets check valgrind
+Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
