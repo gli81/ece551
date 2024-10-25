@@ -229,11 +229,11 @@ catarray_t* buildCategory(char** lines) {
     char* after_first_colon = first_colon + 1;
     //@@@printf("%s\n", first_colon);
     // check if there is another colon
-    char* second_colon = strchr(after_first_colon, ':');
-    if (NULL != second_colon) {
-      fprintf(stderr, "Invalid kv -- More than one ':' found\n");
-      exit(EXIT_FAILURE);
-    }
+    //char* second_colon = strchr(after_first_colon, ':');
+    //if (NULL != second_colon) {
+    //  fprintf(stderr, "Invalid kv -- More than one ':' found\n");
+    //  exit(EXIT_FAILURE);
+    //}
     *first_colon = '\0'; // now lines[ct] is key, after_first_colon is value
     int cat_found_idx = findCategory(ans, lines[ct]);
     // add value to cat_found
