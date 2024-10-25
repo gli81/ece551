@@ -1,6 +1,6 @@
-Grading at 10/25/2024:14:48:03.229320
-For commit ID 8daf9860aa0cdd7dd493197cd7d6fbaa72e3eb64
-Grading at Fri Oct 25 10:47:58 AM EDT 2024
+Grading at 10/25/2024:14:49:39.057022
+For commit ID 615cf921c5c65e4017b6d72d40ed65328bee1481
+Grading at Fri Oct 25 10:49:33 AM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -67,6 +67,12 @@ Valgrind was clean
 2.2: Current test is story-step2 ./test-step2/double-colon.txt
 -----------------------------
 Your output looks good. Lets check valgrind
+Valgrind was clean
+
+2.3: Current test is story-step2 ./test-step2/no-colon.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
 Valgrind was clean
 
 Step 3
