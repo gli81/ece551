@@ -7,9 +7,9 @@ int main(int argc, char** argv) {
     if (argc == 3) {
       char** story_read = readAFile(argv[2]);
       //@@@char** story_processed = replaceCategory(story_read);
-      if (NULL == story_read) return EXIT_SUCCESS;
       char** kv_read = readAFile(argv[1]);
       catarray_t* kv_processed = buildCategory(kv_read);
+      if (NULL == story_read) return EXIT_SUCCESS;
       if (NULL == kv_processed) return EXIT_SUCCESS;
     } else {
       fprintf(stderr, "Error -- worng arguments\n");
