@@ -1,5 +1,6 @@
 #include <complex>
 #include <cstdlib>
+#include <iostream>
 
 #include "poly.hpp"
 
