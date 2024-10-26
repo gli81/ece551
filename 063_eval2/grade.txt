@@ -1,11 +1,11 @@
-Grading at 10/26/2024:21:29:08.355109
-For commit ID 92b7a39b819daa69efb35a1e97a7d40f21a3aa40
-Grading at Sat Oct 26 05:29:00 PM EDT 2024
+Grading at 10/26/2024:21:50:33.324842
+For commit ID a22e597a1d97ebda35b3abc331962020069417ba
+Grading at Sat Oct 26 05:50:18 PM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
 Checking that story-step1 compiles
-rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1 story-step2 story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
 gcc -o story-step1 story-step1.o rand_story.o provided.o
@@ -50,7 +50,7 @@ Valgrind was clean
 
 Step 2
 Checking that story-step2 compiles
-rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1 story-step2 story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
 gcc -o story-step2 story-step2.o rand_story.o provided.o
@@ -94,7 +94,181 @@ Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
-rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1 story-step2 story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
+gcc -o story-step3 story-step3.o rand_story.o provided.o
+rm story-step3.o
+The code compiled (good)
+Executable story-step3 exists (good)
+Now running YOUR tests for step 3
+
+3.1: Current test is story-step3 ./words.txt ./story.txt 
+-----------------------------
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+							      >	Once upon a time, there was a walrus who lived in a very pecu
+							      >	cave. 
+Your file did not match the expected output
+
+
+3.2: Current test is story-step3 ./words.txt ./story2.txt
+-----------------------------
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+							      >	Once upon a time, there was a walrus. This walrus lived in a 
+							      >	peculiar cave. One day, it left its peculiar cave and met a w
+Your file did not match the expected output
+
+
+3.3: Current test is story-step3 ./test-step1/nonexist.txt ./story.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.4: Current test is story-step3 ./test-step1/empty.txt ./story.txt
+-----------------------------
+We considered this a failure case.
+But you did not (exit status was EXIT_SUCCESS).
+
+3.5: Current test is story-step3 ./test-step1/newline.txt ./story.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.6: Current test is story-step3 ./words.txt ./test-step1/nonexist.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.7: Current test is story-step3 ./test-step1/nonexist.txt ./test-step1/nonexist.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.8: Current test is story-step3 ./test-step1/empty.txt ./test-step1/nonexist.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.9: Current test is story-step3 ./test-step1/newline.txt ./test-step1/nonexist.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.10: Current test is story-step3 ./words.txt ./test-step1/empty.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+3.11: Current test is story-step3 ./test-step1/nonexist.txt ./test-step1/empty.txt
+-----------------------------
+We considered this a failure case.
+But you did not (exit status was EXIT_SUCCESS).
+
+3.12: Current test is story-step3 ./test-step1/empty.txt ./test-step1/empty.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+3.13: Current test is story-step3 ./test-step1/newline.txt ./test-step1/empty.txt
+-----------------------------
+We considered this a failure case.
+But you did not (exit status was EXIT_SUCCESS).
+
+3.14: Current test is story-step3 ./words.txt ./test-step1/newline.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind reported errors or memory leaks:
+==3702163== Memcheck, a memory error detector
+==3702163== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3702163== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3702163== Command: ./story-step3 ./words.txt ./test-step1/newline.txt
+==3702163== Parent PID: 3702162
+==3702163== 
+==3702163== 
+==3702163== HEAP SUMMARY:
+==3702163==     in use at exit: 1,543 bytes in 24 blocks
+==3702163==   total heap usage: 41 allocs, 17 frees, 11,199 bytes allocated
+==3702163== 
+==3702163== 264 (24 direct, 240 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 10
+==3702163==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3702163==    by 0x10951F: readAFile (rand_story.c:30)
+==3702163==    by 0x1093D4: main (story-step3.c:8)
+==3702163== 
+==3702163== 503 (16 direct, 487 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 10
+==3702163==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3702163==    by 0x109CCF: buildCategory (rand_story.c:221)
+==3702163==    by 0x10940C: main (story-step3.c:12)
+==3702163== 
+==3702163== 776 (56 direct, 720 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 10
+==3702163==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3702163==    by 0x10951F: readAFile (rand_story.c:30)
+==3702163==    by 0x1093FC: main (story-step3.c:11)
+==3702163== 
+==3702163== LEAK SUMMARY:
+==3702163==    definitely lost: 96 bytes in 3 blocks
+==3702163==    indirectly lost: 1,447 bytes in 21 blocks
+==3702163==      possibly lost: 0 bytes in 0 blocks
+==3702163==    still reachable: 0 bytes in 0 blocks
+==3702163==         suppressed: 0 bytes in 0 blocks
+==3702163== 
+==3702163== For lists of detected and suppressed errors, rerun with: -s
+==3702163== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+
+3.15: Current test is story-step3 ./test-step1/nonexist.txt ./test-step1/newline.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.16: Current test is story-step3 ./test-step1/empty.txt ./test-step1/newline.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind reported errors or memory leaks:
+==3702225== Memcheck, a memory error detector
+==3702225== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3702225== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3702225== Command: ./story-step3 ./test-step1/empty.txt ./test-step1/newline.txt
+==3702225== Parent PID: 3702224
+==3702225== 
+==3702225== 
+==3702225== HEAP SUMMARY:
+==3702225==     in use at exit: 264 bytes in 3 blocks
+==3702225==   total heap usage: 10 allocs, 7 frees, 9,656 bytes allocated
+==3702225== 
+==3702225== 264 (24 direct, 240 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==3702225==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3702225==    by 0x10951F: readAFile (rand_story.c:30)
+==3702225==    by 0x1093D4: main (story-step3.c:8)
+==3702225== 
+==3702225== LEAK SUMMARY:
+==3702225==    definitely lost: 24 bytes in 1 blocks
+==3702225==    indirectly lost: 240 bytes in 2 blocks
+==3702225==      possibly lost: 0 bytes in 0 blocks
+==3702225==    still reachable: 0 bytes in 0 blocks
+==3702225==         suppressed: 0 bytes in 0 blocks
+==3702225== 
+==3702225== For lists of detected and suppressed errors, rerun with: -s
+==3702225== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+3.17: Current test is story-step3 ./test-step1/newline.txt ./test-step1/newline.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+Step 4
+Checking that story-step4 compiles
+rm -f *~ story-step1 story-step2 story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
 The code did not compile!
 
 Overall Grade: NO GRADE YET
