@@ -4,6 +4,8 @@
 #include <ostream>
 #include <vector>
 #include <iostream>
+#include <cmath>
+//#include <complex>
 
 template<typename NumT>
 class Polynomial {
@@ -176,11 +178,35 @@ public:
 
   template<typename N>
   friend std::ostream& operator<<(std::ostream& os, const Polynomial<N>& p);
+
+  NumT eval(const NumT& x) const {
+    NumT ans = NumT();
+    for (size_t i = 0; i < this->coeff.size(); ++i) {
+      ans += this->coeff[i] * pow(x, i); // will pow work?
+    }
+    return ans;
+  }
+
+  Polynomial derivative() const {
+    Polynomial<NumT> ans;
+    if (this->coeff.size() == 1) {
+      return ans;
+    }
+    ans.coeff[0] = this->coeff[1];
+    for (size_t i = 2; i < this->coeff.size(); ++i) {
+      ans.addTerm(NumT(i) * this->coeff[i], i - 1);
+    }
+    return ans;
+  }
+
+  NumT operator()(const NumT& x) const {
+    return this->eval(x);
+  }
 };
 
 template<typename N>
 std::ostream& operator<<(std::ostream& os, const Polynomial<N>& p) {
-  if (p.coeff.size() == 1) {
+  if (p.coeff.size() == 1 && p.coeff[0] == -p.coeff[0]) {
     return os << p.coeff[0];
   }
   bool first = true;
