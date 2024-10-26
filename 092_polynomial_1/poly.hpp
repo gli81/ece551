@@ -5,7 +5,17 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
-//#include <complex>
+#include <exception>
+
+template<typename NumT>
+class convergence_failure: public std::exception {
+public:
+  NumT value;
+  convergence_failure(const NumT value_): value(value_) {}
+  virtual const char* what() const throw(){
+    return "Convergence failure";
+  }
+};
 
 template<typename NumT>
 class Polynomial {
@@ -201,6 +211,42 @@ public:
 
   NumT operator()(const NumT& x) const {
     return this->eval(x);
+  }
+
+  template<typename T>
+  friend class Polynomial;
+  template<typename OtherNumT>
+  Polynomial<OtherNumT> convert() const {
+    Polynomial<OtherNumT> ans;
+    ans.coeff[0] = OtherNumT(this->coeff[0]);
+    for (size_t i = 1; i < this->coeff.size(); ++i) {
+      ans.addTerm(OtherNumT(this->coeff[i]), i);
+    }
+    return ans;
+  }
+
+  template<typename ToleranceT>
+  NumT findZero(
+    NumT x, unsigned maxSteps, const ToleranceT& tolerance,
+    const ToleranceT& deriv_tolerance 
+  ) {
+    // start here
+    for (size_t i = 0; i <= maxSteps; ++i) {
+      NumT fx = (*this)(x);
+      if (std::abs(fx) <= tolerance) {
+        return x;
+      }
+      NumT fxderiv = this->derivative()(x);
+      if (std::abs(fxderiv) < deriv_tolerance) {
+        // throw exception later
+        throw convergence_failure<NumT>(x);
+      }
+      //std::cout << "x is " << x << std::endl;
+      if (i != maxSteps) x -= fx / fxderiv;
+    }
+    // over maxSteps
+    // throw exception
+    throw convergence_failure<NumT>(x);
   }
 };
 
