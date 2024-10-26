@@ -10,6 +10,23 @@ story-step2 ./test-step2/no-colon.txt
 story-step2 ./test-step1/nonexist.txt
 story-step2 ./test-step1/empty.txt
 story-step2 ./test-step1/newline.txt
-#story-step3 words.txt story2.txt
+#
+story-step3 ./words.txt ./story.txt 
+story-step3 ./words.txt ./story2.txt
+story-step3 ./test-step1/nonexist.txt ./story.txt
+story-step3 ./test-step1/empty.txt ./story.txt
+story-step3 ./test-step1/newline.txt ./story.txt
+story-step3 ./words.txt ./test-step1/nonexist.txt
+story-step3 ./test-step1/nonexist.txt ./test-step1/nonexist.txt
+story-step3 ./test-step1/empty.txt ./test-step1/nonexist.txt
+story-step3 ./test-step1/newline.txt ./test-step1/nonexist.txt
+story-step3 ./words.txt ./test-step1/empty.txt
+story-step3 ./test-step1/nonexist.txt ./test-step1/empty.txt
+story-step3 ./test-step1/empty.txt ./test-step1/empty.txt
+story-step3 ./test-step1/newline.txt ./test-step1/empty.txt
+story-step3 ./words.txt ./test-step1/newline.txt
+story-step3 ./test-step1/nonexist.txt ./test-step1/newline.txt
+story-step3 ./test-step1/empty.txt ./test-step1/newline.txt
+story-step3 ./test-step1/newline.txt ./test-step1/newline.txt
 #story-step4 words.txt story2.txt
 #story-step4 -n words.txt story2.txt
