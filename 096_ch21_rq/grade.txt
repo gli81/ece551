@@ -1,0 +1,12 @@
+Grading at 10/26/2024:18:32:23.816054
+For commit ID f80e97191b4badbd06917c8fd90a20fea739541d
+Grading at Sat Oct 26 02:32:23 PM EDT 2024
+Reading your quiz answers from answers.txt
+You got 2 questions incorrect.
+You might want to review these concepts:
+------------
+Removing from a List
+STL List
+------------
+
+Overall Grade: FAILED
