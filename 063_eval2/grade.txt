@@ -1,6 +1,6 @@
-Grading at 10/25/2024:14:49:39.057022
-For commit ID 615cf921c5c65e4017b6d72d40ed65328bee1481
-Grading at Fri Oct 25 10:49:33 AM EDT 2024
+Grading at 10/26/2024:21:29:08.355109
+For commit ID 92b7a39b819daa69efb35a1e97a7d40f21a3aa40
+Grading at Sat Oct 26 05:29:00 PM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -70,6 +70,23 @@ Your output looks good. Lets check valgrind
 Valgrind was clean
 
 2.3: Current test is story-step2 ./test-step2/no-colon.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+2.4: Current test is story-step2 ./test-step1/nonexist.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+2.5: Current test is story-step2 ./test-step1/empty.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+2.6: Current test is story-step2 ./test-step1/newline.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
