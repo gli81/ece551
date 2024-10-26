@@ -3,6 +3,7 @@
 
 #include <ostream>
 #include <vector>
+#include <iostream>
 
 template<typename NumT>
 class Polynomial {
