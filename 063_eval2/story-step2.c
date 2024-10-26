@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
     if (argc == 2) {
       char** kv_read = readAFile(argv[1]);
       catarray_t* kv_processed = buildCategory(kv_read);
-      //if (NULL == kv_processed) return EXIT_SUCCESS;
+      if (NULL == kv_processed) return EXIT_SUCCESS;
 
       printWords(kv_processed);
       int i = 0;

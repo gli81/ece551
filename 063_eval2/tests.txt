@@ -7,6 +7,9 @@ story-step1 ./test-step1/newline.txt
 story-step2 ./words.txt
 story-step2 ./test-step2/double-colon.txt
 story-step2 ./test-step2/no-colon.txt
+story-step2 ./test-step1/nonexist.txt
+story-step2 ./test-step1/empty.txt
+story-step2 ./test-step1/newline.txt
 #story-step3 words.txt story2.txt
 #story-step4 words.txt story2.txt
 #story-step4 -n words.txt story2.txt

@@ -210,6 +210,10 @@ void addValue(catarray_t* cat, int idx, const char* word) {
  *     catarray_t* : a pointer to the struct
  */
 catarray_t* buildCategory(char** lines) {
+  if (NULL == lines) {
+    // empty file
+    return NULL;
+  }
   catarray_t* ans = NULL;
   size_t ct = 0;
   while (NULL != lines[ct]) {
