@@ -1,6 +1,6 @@
-Grading at 10/27/2024:02:54:21.744023
-For commit ID 598d873881db3b9735a18bbebf24a84ef37a8421
-Grading at Sat Oct 26 10:54:04 PM EDT 2024
+Grading at 10/27/2024:03:04:18.719258
+For commit ID 61052d5ff0ba3e946e49ce7aaa57622bb09bef78
+Grading at Sat Oct 26 11:04:01 PM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -157,38 +157,10 @@ Valgrind was clean
 
 3.10: Current test is story-step3 ./words.txt ./test-step1/empty.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==170986== Memcheck, a memory error detector
-==170986== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==170986== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==170986== Command: ./story-step3 ./words.txt ./test-step1/empty.txt
-==170986== Parent PID: 170985
-==170986== 
-==170986== 
-==170986== HEAP SUMMARY:
-==170986==     in use at exit: 1,279 bytes in 21 blocks
-==170986==   total heap usage: 37 allocs, 16 frees, 10,919 bytes allocated
-==170986== 
-==170986== 503 (16 direct, 487 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 8
-==170986==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==170986==    by 0x109E73: buildCategory (rand_story.c:223)
-==170986==    by 0x10944E: main (story-step3.c:11)
-==170986== 
-==170986== 776 (56 direct, 720 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 8
-==170986==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==170986==    by 0x1096C3: readAFile (rand_story.c:31)
-==170986==    by 0x10943E: main (story-step3.c:10)
-==170986== 
-==170986== LEAK SUMMARY:
-==170986==    definitely lost: 72 bytes in 2 blocks
-==170986==    indirectly lost: 1,207 bytes in 19 blocks
-==170986==      possibly lost: 0 bytes in 0 blocks
-==170986==    still reachable: 0 bytes in 0 blocks
-==170986==         suppressed: 0 bytes in 0 blocks
-==170986== 
-==170986== For lists of detected and suppressed errors, rerun with: -s
-==170986== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+You considered this a failure case:
+free(): double free detected in tcache 2
+timeout: the monitored command dumped core
+But we did not.
 
 3.11: Current test is story-step3 ./test-step1/nonexist.txt ./test-step1/empty.txt
 -----------------------------
@@ -198,8 +170,9 @@ Valgrind was clean
 
 3.12: Current test is story-step3 ./test-step1/empty.txt ./test-step1/empty.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-Valgrind was clean
+You considered this a failure case:
+timeout: the monitored command dumped core
+But we did not.
 
 3.13: Current test is story-step3 ./test-step1/newline.txt ./test-step1/empty.txt
 -----------------------------
@@ -220,9 +193,8 @@ Valgrind was clean
 
 3.16: Current test is story-step3 ./test-step1/empty.txt ./test-step1/newline.txt
 -----------------------------
-You considered this a failure case:
-timeout: the monitored command dumped core
-But we did not.
+Your output looks good. Lets check valgrind
+Valgrind was clean
 
 3.17: Current test is story-step3 ./test-step1/newline.txt ./test-step1/newline.txt
 -----------------------------
