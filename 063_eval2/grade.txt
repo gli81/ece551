@@ -1,6 +1,6 @@
-Grading at 10/27/2024:03:08:56.249110
-For commit ID 2da36f124064f9cd45c27e4ea452783071c016d9
-Grading at Sat Oct 26 11:08:38 PM EDT 2024
+Grading at 10/27/2024:03:12:44.169167
+For commit ID ed9fb5afd825086e139815411cc5358d68f243a8
+Grading at Sat Oct 26 11:12:26 PM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -157,10 +157,8 @@ Valgrind was clean
 
 3.10: Current test is story-step3 ./words.txt ./test-step1/empty.txt
 -----------------------------
-You considered this a failure case:
-free(): double free detected in tcache 2
-timeout: the monitored command dumped core
-But we did not.
+Your output looks good. Lets check valgrind
+Valgrind was clean
 
 3.11: Current test is story-step3 ./test-step1/nonexist.txt ./test-step1/empty.txt
 -----------------------------
