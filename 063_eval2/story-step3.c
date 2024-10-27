@@ -12,6 +12,12 @@ int main(int argc, char** argv) {
       if (NULL == story_read) {
         // no real story
         // free everything in word and exit
+        freeKVs(kv_processed);
+        int i = 0;
+        while (NULL != kv_read[i]) {
+          free(kv_read[i]);
+        }
+        free(kv_read);
         return EXIT_SUCCESS;
       }
       if (NULL == kv_processed) {
@@ -32,11 +38,13 @@ int main(int argc, char** argv) {
       free(story_read);
       free(story_processed);
       i = 0;
-      while (NULL != kv_read[i]) {
-        free(kv_read[i++]);
+      if (NULL != kv_read) {
+        while (NULL != kv_read[i]) {
+          free(kv_read[i++]);
+        }
+        free(kv_read);
+        freeKVs(kv_processed);
       }
-      free(kv_read);
-      freeKVs(kv_processed);
     } else {
       fprintf(stderr, "Error -- worng arguments\n");
       fprintf(stderr, "Usage: story-step3 <kv_file> <story_template>\n");
