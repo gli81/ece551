@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
         int i = 0;
         if (NULL != kv_read) {
           while (NULL != kv_read[i]) {
-            free(kv_read[i]);
+            free(kv_read[i++]);
           }
           free(kv_read);
         }
