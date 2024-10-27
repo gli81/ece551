@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "provided.h"
+#include <ctype.h>
 
 /*
  * read the file specified by fileName
@@ -170,11 +171,12 @@ void addCategory(catarray_t* cat, const char* cat_name) {
 */
 
 /*
- * helper function to add a word to category->words
+ * helper function to add a word to cat->arr[idx]->words
  *
  * Params
  * ----------
- *     cat (category_t*) : the category to which the word will be added
+ *     cat (catarray_t*) : the categories
+ *     idx (int) : the index of the category to be added to
  *     word (const char*) : the word to be added
  * 
  * Returns
@@ -245,6 +247,151 @@ catarray_t* buildCategory(char** lines) {
     ct++;
   }
   return ans;
+}
+
+/*
+ * helper function to check if a category is a positive integer or not
+ * for back reference
+ *
+ * Params
+ * ----------
+ *     str (char*) : the string being checked
+ *
+ * Returns
+ * ----------
+ *     int : 0 for not qualify (no back reference)
+ *         other number for transformed num
+ */
+int isPosNum(char* str) {
+  if (NULL == str) return 0;
+  if (*str == '\0') return 0;
+  size_t i = 0;
+  while (str[i] != '\0') {
+    if (!isdigit(str[i++])) {
+      return 0;
+    }
+  }
+  return atoi(str);
+}
+
+/*
+ * step3, replace _stuff_ with random word, or back reference
+ *
+ * Params
+ * ----------
+ *      story (char**) : story template put in an array
+ *      words (catarray_t*) : the words options
+ *
+ * Returns:
+ *     char** : processed story
+ */
+char** replaceWords(char** story, catarray_t* words) {
+  size_t ct = 0;
+  while (NULL != story[ct]) {
+    ct++;
+  }
+  char** ans = malloc((ct+1) * sizeof(*ans));
+  ans[ct] = NULL;
+  // track used word with a array
+  char** used_word = malloc(sizeof(*used_word));
+  size_t sz = 0;
+  used_word[0] = NULL;
+  for (size_t i = 0; i < ct; ++i) {
+    char* cur = story[i];
+    ans[i] = malloc(sizeof(*ans[i]));
+    *ans[i] = '\0'; // initialize ans[i] to be empty string
+    while (NULL != cur) {
+      //@@@printf("cur is %p, %s\n", cur, cur);
+      char* temp = strsep(&cur, "_");
+      size_t follow = 0;
+      if (NULL != cur) {
+        while (NULL != cur && cur[follow] != '_') {
+          if (cur[follow] == '\n') {
+            // reach end of line, didn't find matching '_'
+            // fail the program
+            fprintf(stderr, "Invalid story -- unmatched '_'\n");
+            exit(EXIT_FAILURE);
+          }
+          follow++;
+        }
+        cur[follow] = '\0'; // a new category found
+        char* category = cur;
+        //@@@printf("%s->", category);
+        // determine if it is a number of not
+        int isBackReference = isPosNum(category);
+        const char* selected;
+        if (isBackReference > 0) {
+          // backreference
+          selected = used_word[sz - isBackReference];
+        } else {
+          selected = chooseWord(category, words);
+        }
+        //@@@printf("%s\n", selected);
+        // add temp and parsed "cat" to ans
+        // make sure enough space for them
+        ans[i] = realloc(
+          ans[i],
+          (
+            strlen(ans[i]) + 1 + strlen(selected) + strlen(temp)
+          ) * sizeof(*ans[i])
+        );
+        // copy temp into ans[i]
+        strncat(ans[i], temp, strlen(temp));
+        // copy selected into ans[i]
+        strncat(ans[i], selected, strlen(selected));
+        cur += follow + 1;
+        // make more space in used_word
+        used_word = realloc(used_word, (sz+2)*sizeof(*used_word));
+        used_word[sz+1] = NULL;
+        used_word[sz] = realloc(used_word[sz], (strlen(selected)+1) * sizeof(*used_word[sz]));
+        strncpy(used_word[sz], selected, strlen(selected)+1);
+        ++sz;
+      } else {
+        // no more '_' found
+        // add temp to ans
+        ans[i] = realloc(
+          ans[i],
+          (
+            strlen(ans[i]) + 1 + strlen(temp)
+          ) * sizeof(*ans[i])
+        );
+        strncat(ans[i], temp, strlen(temp));
+      }
+      //@@@printf("temp is %p, %s\n", temp, temp);
+      //@@@printf("ans[%ld]: %s\n", i, ans[i]);
+      //@@@printf("length of temp is %ld\n", strlen(temp));
+    }
+  }
+  //@@@printf("%ld\n", sz);
+  for (size_t i = 0; i < sz; ++i) {
+    //@@@printf("%s\n", used_word[i]);
+    free(used_word[i]);
+  }
+  free(used_word);
+  return ans;
+}
+
+/*
+ * helper function to free a catarray_t
+ *
+ * Params
+ * ----------
+ *     cat (catarray_t*) : the catarray_t to be freed
+ *
+ * Returns
+ * ----------
+ *     None
+ */
+void freeKVs(catarray_t* cat) {
+  for (size_t i = 0; i < cat->n; ++i) {
+    for (size_t j = 0; j < cat->arr[i].n_words; ++j) {
+      free(cat->arr[i].words[j]);
+    }
+    free(cat->arr[i].words);
+    free(cat->arr[i].name);
+  }
+  free(cat->arr);
+  free(cat);
 }
 
 //int main(int argc, char** argv) {

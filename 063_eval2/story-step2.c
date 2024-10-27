@@ -20,15 +20,7 @@ int main(int argc, char** argv) {
       // kv_processed->arr is malloced
       // kv_processed->arr[idx].words
       // kv_processed->arr[idx].words[i] is malloced
-      for (size_t i = 0; i < kv_processed->n; ++i) {
-        for (size_t j = 0; j < kv_processed->arr[i].n_words; ++j) {
-          free(kv_processed->arr[i].words[j]);
-        }
-        free(kv_processed->arr[i].words);
-        free(kv_processed->arr[i].name);
-      }
-      free(kv_processed->arr);
-      free(kv_processed);
+      freeKVs(kv_processed);
     } else {
       fprintf(stderr, "Error -- worng arguments\n");
       fprintf(stderr, "Usage: story-step2 <kv_file>\n");
