@@ -1,6 +1,6 @@
-Grading at 10/27/2024:03:04:18.719258
-For commit ID 61052d5ff0ba3e946e49ce7aaa57622bb09bef78
-Grading at Sat Oct 26 11:04:01 PM EDT 2024
+Grading at 10/27/2024:03:08:56.249110
+For commit ID 2da36f124064f9cd45c27e4ea452783071c016d9
+Grading at Sat Oct 26 11:08:38 PM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -170,9 +170,8 @@ Valgrind was clean
 
 3.12: Current test is story-step3 ./test-step1/empty.txt ./test-step1/empty.txt
 -----------------------------
-You considered this a failure case:
-timeout: the monitored command dumped core
-But we did not.
+Your output looks good. Lets check valgrind
+Valgrind was clean
 
 3.13: Current test is story-step3 ./test-step1/newline.txt ./test-step1/empty.txt
 -----------------------------
