@@ -321,6 +321,10 @@ char** replaceWords(char** story, catarray_t* words) {
         int isBackReference = isPosNum(category);
         const char* selected;
         if (isBackReference > 0) {
+          if (isBackReference > sz) {
+            fprintf(stderr, "Error - Invalid backreference\n");
+            exit(EXIT_FAILURE);
+          }
           // backreference
           selected = used_word[sz - isBackReference];
         } else {
