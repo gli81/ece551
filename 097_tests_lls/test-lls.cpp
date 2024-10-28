@@ -17,8 +17,85 @@ class Tester {
   // example of another method you might want to write
   void testAddFront() {
     // WRITE ME
+    IntList il;
+    il.addFront(1);
+    assert(il.head->data == 1);
+    assert(il.head->prev == NULL);
+    assert(il.tail->prev == NULL);
+    assert(il.head->next == NULL);
+    assert(il.tail->next == NULL);
+    assert(il.tail->data == 1);
+    assert(il.getSize() == 1);
+    il.addFront(2);
+    assert(il.head->data == 2);
+    assert(il.head->prev == NULL);
+    assert(il.head->next->data == 1);
+    assert(il.tail->data == 1);
+    assert(il.tail->next == NULL);
+    assert(il.tail->prev->data == 2);
+    assert(il.head->next->prev->data == 2);
+    assert(il.getSize() == 2);
+    il.addBack(3);
+    // 2, 1, 3
+    assert(il.head->data == 2);
+    assert(il.head->prev == NULL);
+    assert(il.head->next->data == 1);
+    assert(il.tail->prev->data == 1);
+    assert(il.tail->data == 3);
+    assert(il.tail->next == NULL);
+    assert(il.tail->prev->next->data == 3);
+    assert(il.getSize() == 3);
+    // add to a new list
+    IntList il2;
+    il2.addBack(10);
+    assert(il2.head->data == 10);
+    assert(il2.head->prev == NULL);
+    assert(il2.head->next == NULL);
+    assert(il2.tail->data == 10);
+    assert(il2.tail->next == NULL);
+    assert(il2.tail->prev == NULL);
   }
+
   // many more tester methods
+  void testRuleOfThree() {
+    IntList il;
+    assert(il.head == NULL);
+    assert(il.tail == NULL);
+    {
+      IntList il_copy(il);
+      IntList il2;
+      il2 = il;
+      assert(il_copy.head== NULL);
+      assert(il2.head == NULL);
+      assert(il_copy.tail== NULL);
+      assert(il2.tail == NULL);
+    }
+    il.addFront(3);
+    il.addFront(2);
+    il.addFront(1);
+    // 1, 2, 3
+    {
+      IntList il_copy(il);
+      IntList il2;
+      il2 = il;
+      assert(il_copy.head->data == 1);
+      assert(il_copy.head->prev == NULL);
+      assert(il_copy.head->next->data == 2);
+      assert(il_copy.head->next->prev == il_copy.head);
+      assert(il_copy.tail->data == 3);
+      assert(il_copy.tail->next == NULL);
+      assert(il_copy.tail->prev->data == 2);
+      assert(il_copy.tail->prev->next == il_copy.tail);
+      assert(il2.head->data == 1);
+      assert(il2.head->prev == NULL);
+      assert(il2.head->next->data == 2);
+      assert(il2.head->next->prev == il2.head);
+      assert(il2.tail->data == 3);
+      assert(il2.tail->next == NULL);
+      assert(il2.tail->prev->data == 2);
+      assert(il2.tail->prev->next == il2.tail);
+    }
+  }
 };
 
 int main(void) {
@@ -26,5 +103,6 @@ int main(void) {
   t.testDefCtor();
   t.testAddFront();
   // write calls to your other test methods here
+  t.testRuleOfThree();
   return EXIT_SUCCESS;
 }
