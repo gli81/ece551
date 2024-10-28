@@ -37,5 +37,6 @@ story-step3 ./words.txt ./test-step3-story/negative-backref.txt
 story-step3 ./test-step3-words/float-words.txt ./test-step3-story/float-backref.txt
 story-step3 ./test-step3-words/negative-words.txt ./test-step3-story/negative-backref.txt
 story-step3 ./test-step3-words/zero-words.txt ./test-step3-story/zero-backref.txt
-#story-step4 words.txt story2.txt
-#story-step4 -n words.txt story2.txt
+story-step4 ./words.txt ./story2.txt
+story-step4 ./words.txt -n ./story2.txt
+#story-step4 -n ./words.txt ./story2.txt
