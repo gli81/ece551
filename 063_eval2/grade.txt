@@ -1,6 +1,6 @@
-Grading at 10/27/2024:03:12:44.169167
-For commit ID ed9fb5afd825086e139815411cc5358d68f243a8
-Grading at Sat Oct 26 11:12:26 PM EDT 2024
+Grading at 10/28/2024:17:49:06.453309
+For commit ID fb3a459047a5cf53391d748543a28055cea45d3a
+Grading at Mon Oct 28 01:48:43 PM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -197,6 +197,56 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
+Valgrind was clean
+
+3.18: Current test is story-step3 ./words.txt ./test-step3-story/large-backref.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.19: Current test is story-step3 ./words.txt ./test-step3-story/large-backref2.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.20: Current test is story-step3 ./words.txt ./test-step3-story/ref-after-backref.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+3.21: Current test is story-step3 ./words.txt ./test-step3-story/float-backref.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.22: Current test is story-step3 ./words.txt ./test-step3-story/zero-backref.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.23: Current test is story-step3 ./words.txt ./test-step3-story/negative-backref.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.24: Current test is story-step3 ./test-step3-words/float-words.txt ./test-step3-story/float-backref.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+3.25: Current test is story-step3 ./test-step3-words/negative-words.txt ./test-step3-story/negative-backref.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+3.26: Current test is story-step3 ./test-step3-words/zero-words.txt ./test-step3-story/zero-backref.txt
+-----------------------------
+Your output looks good. Lets check valgrind
 Valgrind was clean
 
 Step 4
