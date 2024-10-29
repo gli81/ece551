@@ -44,11 +44,11 @@ public:
   }
   
   ~LinkedList() {
-    Node** cur = &this->head;
+    Node* cur = this->head;
     Node* temp;
-    while (*cur != NULL) {
-      temp = *cur;
-      cur = &(*cur)->next;
+    while (cur != NULL) {
+      temp = cur;
+      cur = cur->next;
       delete temp;
     }
   }
@@ -92,14 +92,17 @@ public:
   bool remove(const T& item) {
     Node** cur = &head;
     while (*cur != NULL) {
-      if ((*cur)->next != NULL && (*cur)->next->data == item) {
+      if ((*cur)->data == item) {
         // remove (*cur)->next
-        Node* temp = (*cur)->next;
-        (*cur)->next = (*cur)->next->next;
-        if ((*cur)->next != NULL) {
-          (*cur)->next->prev = *cur;
+        Node* temp = *cur;
+        *cur = (*cur)->next;
+        if (*cur != NULL) {
+          (*cur)->prev = temp->prev;
+        } else {
+          this->tail = temp->prev;
         }
         delete temp;
+        --this->size;
         return true;
       }
       cur = &(*cur)->next;

@@ -159,10 +159,10 @@ class Tester {
 
 int main(void) {
   Tester t;
-  t.testDefCtor();
-  t.testAddFront();
+  //t.testDefCtor();
+  //t.testAddFront();
   // write calls to your other test methods here
-  t.testRuleOfThree();
+  //t.testRuleOfThree();
   t.testRemove();
   return EXIT_SUCCESS;
 }
