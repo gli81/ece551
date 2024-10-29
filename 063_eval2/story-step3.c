@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
         catarray_t empty = {.arr=NULL, .n=0};
         kv_processed = &empty;
       }
-      char** story_processed = replaceWords(story_read, kv_processed);
+      char** story_processed = replaceWords(story_read, kv_processed, 0);
       int i = 0;
       // freeing...
       while (NULL != story_processed[i]) {

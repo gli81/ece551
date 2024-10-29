@@ -9,6 +9,7 @@ char** replaceCategory(char** story);
 int findCategory(catarray_t* cat, const char* cat_name);
 void addValue(catarray_t* cat, int idx, const char* word);
 catarray_t* buildCategory(char** lines);
-char** replaceWords(char** story, catarray_t* words);
+//char** replaceWords(char** story, catarray_t* words);
+char** replaceWords(char** story, catarray_t* words, int remove);
 void freeKVs(catarray_t* cat);
 #endif
