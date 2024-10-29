@@ -1,6 +1,6 @@
-Grading at 10/28/2024:18:05:32.712122
-For commit ID b6501b8775de58c334ab2dd334923347e18fe213
-Grading at Mon Oct 28 02:05:08 PM EDT 2024
+Grading at 10/29/2024:01:13:48.699644
+For commit ID 783911417560d6d9f990c5be665d6482a3a42cf0
+Grading at Mon Oct 28 09:13:21 PM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -267,8 +267,110 @@ Valgrind was clean
 
 4.2: Current test is story-step4 ./words.txt -n ./story2.txt
 -----------------------------
-We considered this a failure case.
-But you did not (exit status was EXIT_SUCCESS).
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.3: Current test is story-step4 ./words.txt ./story.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+4.4: Current test is story-step4 -n ./words.txt ./story.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind reported errors or memory leaks:
+==1347543== Memcheck, a memory error detector
+==1347543== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1347543== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1347543== Command: ./story-step4 -n ./words.txt ./story.txt
+==1347543== Parent PID: 1347542
+==1347543== 
+==1347543== Invalid read of size 8
+==1347543==    at 0x10A290: removeUsedWord (rand_story.c:312)
+==1347543==    by 0x10A729: replaceWords (rand_story.c:488)
+==1347543==    by 0x10955A: main (story-step4.c:134)
+==1347543==  Address 0x4a92180 is 0 bytes after a block of size 16 alloc'd
+==1347543==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1347543==    by 0x109DF6: addValue (rand_story.c:189)
+==1347543==    by 0x10A00A: buildCategory (rand_story.c:246)
+==1347543==    by 0x1094A0: main (story-step4.c:112)
+==1347543== 
+==1347543== 
+==1347543== HEAP SUMMARY:
+==1347543==     in use at exit: 0 bytes in 0 blocks
+==1347543==   total heap usage: 60 allocs, 60 frees, 15,653 bytes allocated
+==1347543== 
+==1347543== All heap blocks were freed -- no leaks are possible
+==1347543== 
+==1347543== For lists of detected and suppressed errors, rerun with: -s
+==1347543== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+
+4.5: Current test is story-step4 ./words.txt ./test-step4-story/remove-too-many.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+4.6: Current test is story-step4 -n ./words.txt ./test-step4-story/remove-too-many.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind reported errors:
+==1347620== Memcheck, a memory error detector
+==1347620== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1347620== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1347620== Command: ./story-step4 -n ./words.txt ./test-step4-story/remove-too-many.txt
+==1347620== Parent PID: 1347619
+==1347620== 
+==1347620== Invalid read of size 8
+==1347620==    at 0x10A290: removeUsedWord (rand_story.c:312)
+==1347620==    by 0x10A729: replaceWords (rand_story.c:488)
+==1347620==    by 0x10955A: main (story-step4.c:134)
+==1347620==  Address 0x4a922a0 is 0 bytes after a block of size 16 alloc'd
+==1347620==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1347620==    by 0x109DF6: addValue (rand_story.c:189)
+==1347620==    by 0x10A00A: buildCategory (rand_story.c:246)
+==1347620==    by 0x1094A0: main (story-step4.c:112)
+==1347620== 
+==1347620== 
+==1347620== HEAP SUMMARY:
+==1347620==     in use at exit: 1,729 bytes in 33 blocks
+==1347620==   total heap usage: 75 allocs, 42 frees, 12,187 bytes allocated
+==1347620== 
+==1347620== For a detailed leak analysis, rerun with: --leak-check=full
+==1347620== 
+==1347620== For lists of detected and suppressed errors, rerun with: -s
+==1347620== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+
+4.7: Current test is story-step4 -n ./words.txt ./story2.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind reported errors or memory leaks:
+==1347659== Memcheck, a memory error detector
+==1347659== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1347659== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1347659== Command: ./story-step4 -n ./words.txt ./story2.txt
+==1347659== Parent PID: 1347658
+==1347659== 
+==1347659== Invalid read of size 8
+==1347659==    at 0x10A290: removeUsedWord (rand_story.c:312)
+==1347659==    by 0x10A729: replaceWords (rand_story.c:488)
+==1347659==    by 0x10955A: main (story-step4.c:134)
+==1347659==  Address 0x4a92180 is 0 bytes after a block of size 16 alloc'd
+==1347659==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1347659==    by 0x109DF6: addValue (rand_story.c:189)
+==1347659==    by 0x10A00A: buildCategory (rand_story.c:246)
+==1347659==    by 0x1094A0: main (story-step4.c:112)
+==1347659== 
+==1347659== 
+==1347659== HEAP SUMMARY:
+==1347659==     in use at exit: 0 bytes in 0 blocks
+==1347659==   total heap usage: 73 allocs, 73 frees, 16,122 bytes allocated
+==1347659== 
+==1347659== All heap blocks were freed -- no leaks are possible
+==1347659== 
+==1347659== For lists of detected and suppressed errors, rerun with: -s
+==1347659== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
 
 You have NOT passed your test cases!
 You should go and figure out/understand where thing went wrong
