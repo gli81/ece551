@@ -95,6 +95,62 @@ class Tester {
       assert(il2.tail->prev->data == 2);
       assert(il2.tail->prev->next == il2.tail);
     }
+    {
+      // test move il2 to a new empty list
+      IntList il2;
+      il2 = il;
+      IntList il3;
+      il2 = il3;
+      assert(il2.head == NULL);
+      assert(il2.tail == NULL);
+      assert(il2.getSize() == 0);
+    }
+  }
+
+  void testRemove() {
+    IntList il;
+    assert(il.remove(1) == false);
+    assert(il.getSize() == 0);
+    il.addFront(3);
+    il.addFront(2);
+    il.addFront(1);
+    // 1, 2, 3
+    assert(il.remove(1) == true);
+    assert(il.remove(1) == false);
+    assert(il.head->data == 2);
+    assert(il.head->prev == NULL);
+    assert(il.head->next == il.tail);
+    assert(il.tail->data == 3);
+    assert(il.tail->prev == il.head);
+    assert(il.tail->next == NULL);
+    assert(il.getSize() == 2);
+    assert(il.remove(3) == true);
+    assert(il.remove(3) == false);
+    assert(il.head->data == 2);
+    assert(il.head->prev == NULL);
+    assert(il.head->next == NULL);
+    assert(il.tail->data == 2);
+    assert(il.tail->prev == NULL);
+    assert(il.tail->next == NULL);
+    assert(il.getSize() == 1);
+    assert(il.remove(2) == true);
+    assert(il.remove(2) == false);
+    assert(il.head == NULL);
+    assert(il.tail == NULL);
+    assert(il.getSize() == 0);
+    il.addFront(3);
+    il.addFront(2);
+    il.addFront(1);
+    assert(il.remove(5) == false);
+    assert(il.remove(2) == true);
+    assert(il.remove(2) == false);
+    assert(il.head->data == 1);
+    assert(il.head->next->data == 3);
+    assert(il.head->prev == NULL);
+    assert(il.getSize() == 2);
+    assert(il.tail->data == 3);
+    assert(il.tail->next == NULL);
+    assert(il.tail->prev->data == 1);
   }
 };
 
@@ -104,5 +160,6 @@ int main(void) {
   t.testAddFront();
   // write calls to your other test methods here
   t.testRuleOfThree();
+  t.testRemove();
   return EXIT_SUCCESS;
 }
