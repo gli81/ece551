@@ -308,12 +308,16 @@ void removeUsedWord(catarray_t* words, char* category, const char* word) {
   }
   // found, free it, move everything one place ahead, decrease n_words
   free(words->arr[cat_found_idx].words[word_idx]);
-  while (word_idx < words->arr[cat_found_idx].n_words) {
+  while (word_idx < words->arr[cat_found_idx].n_words - 1) {
     words->arr[cat_found_idx].words[word_idx] = words->arr[cat_found_idx].words[1+word_idx];
     word_idx++;
   }
-  // now have multiple NULLs at the end
+  // now have NULL at the end
   // decrease n_words
+  words->arr[cat_found_idx].words = realloc(
+    words->arr[cat_found_idx].words,
+    (words->arr[cat_found_idx].n_words - 1) * sizeof(*words->arr[cat_found_idx].words)
+  );
   words->arr[cat_found_idx].n_words--;
 }
 
