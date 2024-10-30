@@ -1,6 +1,6 @@
-Grading at 10/30/2024:01:46:02.217053
-For commit ID d2eef6670d0b0d30a3bcae4f5e3579cc9bfcbb5a
-Grading at Tue Oct 29 09:45:30 PM EDT 2024
+Grading at 10/30/2024:02:10:09.728812
+For commit ID afc3703b947d4bfec93e914c3c1dce659d5a4115
+Grading at Tue Oct 29 10:09:36 PM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -285,6 +285,11 @@ Valgrind was clean
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
+3.27: Current test is story-step3 ./test-step2/empty-name.txt ./test-step3-story/empty-cat.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
 Step 4
 Checking that story-step4 compiles
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -329,6 +334,16 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 4.7: Current test is story-step4 -n ./words.txt ./story2.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+4.8: Current test is story-step4 ./test-step4-word/duplicate-animal.txt ./test-step4-story/remove-too-many.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+4.9: Current test is story-step4 -n ./test-step4-word/duplicate-animal.txt ./test-step4-story/remove-too-many.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
