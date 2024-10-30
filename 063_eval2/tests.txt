@@ -45,6 +45,8 @@ story-step3 ./words.txt ./test-step3-story/negative-backref.txt
 story-step3 ./test-step3-words/float-words.txt ./test-step3-story/float-backref.txt
 story-step3 ./test-step3-words/negative-words.txt ./test-step3-story/negative-backref.txt
 story-step3 ./test-step3-words/zero-words.txt ./test-step3-story/zero-backref.txt
+sotry-step3 ./test-step2/positive-words.txt ./story2.txt
+story-step3 ./test-step2/empty-name.txt ./test-step3-story/empty-cat.txt
 #
 story-step4 ./words.txt ./story2.txt
 story-step4 ./words.txt -n ./story2.txt
@@ -53,4 +55,5 @@ story-step4 -n ./words.txt ./story.txt
 story-step4 ./words.txt ./test-step4-story/remove-too-many.txt
 story-step4 -n ./words.txt ./test-step4-story/remove-too-many.txt
 story-step4 -n ./words.txt ./story2.txt
-
+story-step4 ./test-step4-word/duplicate-animal.txt ./test-step4-story/remove-too-many.txt
+story-step4 -n ./test-step4-word/duplicate-animal.txt ./test-step4-story/remove-too-many.txt

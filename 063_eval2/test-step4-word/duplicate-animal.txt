@@ -1,0 +1,10 @@
+animal:horse
+animal:lion
+animal:horse
+adjective:peaceful
+adjective:pretty
+adjective:pink
+place:castle
+place:maze
+place:Jermey's house
+place:605 West End
