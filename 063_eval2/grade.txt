@@ -1,6 +1,6 @@
-Grading at 10/29/2024:01:37:56.425305
-For commit ID 14697b798b70c2aa9fa154a3c3222724a9ed7566
-Grading at Mon Oct 28 09:37:29 PM EDT 2024
+Grading at 10/30/2024:01:37:27.174492
+For commit ID 306307251e8e1a646811d2e93a8269cb84fa2de5
+Grading at Tue Oct 29 09:36:59 PM EDT 2024
 Doing some basic checking for your submission
 
 Step 1
@@ -46,6 +46,17 @@ Valgrind was clean
 1.6: Current test is story-step1 ./test-step1/newline.txt
 -----------------------------
 Your output looks good. Lets check valgrind
+Valgrind was clean
+
+1.7: Current test is story-step1 ./test-step1/two-consecutive.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+1.8: Current test is story-step1 ./test-step1/single.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
 Valgrind was clean
 
 Step 2
