@@ -13,6 +13,11 @@ story-step2 ./test-step2/no-colon.txt
 story-step2 ./test-step1/nonexist.txt
 story-step2 ./test-step1/empty.txt
 story-step2 ./test-step1/newline.txt
+story-step2 ./test-step2/empty-name.txt
+story-step2 ./test-step3-words/float-words.txt
+story-step2 ./test-step3-words/negative-words.txt
+story-step2 ./test-step3-words/zero-words.txt
+story-step2 ./test-step2/positive-words.txt
 #
 story-step3 ./words.txt ./story.txt 
 story-step3 ./words.txt ./story2.txt
