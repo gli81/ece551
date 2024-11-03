@@ -1,13 +1,28 @@
-Grading at 11/03/2024:07:32:43.423035
-For commit ID 378dc87793235d6a54911653e405490db8033417
-Grading at Sun Nov  3 02:32:42 AM EST 2024
+Grading at 11/03/2024:07:34:34.879144
+For commit ID 066e82185378815d6da0f53c4c07ea072e8d8271
+Grading at Sun Nov  3 02:34:33 AM EST 2024
 -----------------------------------------------
 testcase 1 : Testing with BstMap<int,int>
 ...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h:9:26: error: expected template-name before ‘<’ token
+    9 | class BstMap : public Map<K, V> {
+      |                          ^
+bstmap.h:9:26: error: expected ‘{’ before ‘<’ token
+bstmap.h:97:2: error: extra ‘;’ [-Werror=pedantic]
+   97 | };
+      |  ^
 89-tester.cpp:55:9: error: ‘Map’ does not name a type
    55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
       |         ^~~
 89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |                                 ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
    71 |   MapTy * m = bmt;
       |   ^~~~~
@@ -16,20 +31,124 @@ testcase 1 : Testing with BstMap<int,int>
    71 |   MapTy * m = bmt;
       |           ^
       |           tm
+89-tester.cpp:95:36: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |                                    ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
    99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:119:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+  119 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:131:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+  131 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
   134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:152:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+  152 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<int, int>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:166:26: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+  166 |   m = bmt = new BSTMapTy();
+      |                          ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:167:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+  167 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:182:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+  182 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<int, int>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:195:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  195 |   delete m2;
+      |   ^~~~~~~~~
+89-tester.cpp:95:14: error: ‘m2’ has incomplete type [-Werror]
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |              ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<int, int>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:195:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  195 |   delete m2;
+      |   ^~~~~~~~~
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 2 : Testing with BstMap<int,std::string>
 ...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h:9:26: error: expected template-name before ‘<’ token
+    9 | class BstMap : public Map<K, V> {
+      |                          ^
+bstmap.h:9:26: error: expected ‘{’ before ‘<’ token
+bstmap.h:97:2: error: extra ‘;’ [-Werror=pedantic]
+   97 | };
+      |  ^
 89-tester.cpp:55:9: error: ‘Map’ does not name a type
    55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
       |         ^~~
 89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |                                 ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
    71 |   MapTy * m = bmt;
       |   ^~~~~
@@ -38,20 +157,124 @@ testcase 2 : Testing with BstMap<int,std::string>
    71 |   MapTy * m = bmt;
       |           ^
       |           tm
+89-tester.cpp:95:36: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |                                    ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
    99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:119:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+  119 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:131:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+  131 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
   134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:152:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+  152 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<int, std::__cxx11::basic_string<char> >’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:166:26: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+  166 |   m = bmt = new BSTMapTy();
+      |                          ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:167:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+  167 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:182:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+  182 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<int, std::__cxx11::basic_string<char> >’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:195:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  195 |   delete m2;
+      |   ^~~~~~~~~
+89-tester.cpp:95:14: error: ‘m2’ has incomplete type [-Werror]
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |              ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<int, std::__cxx11::basic_string<char> >’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:195:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  195 |   delete m2;
+      |   ^~~~~~~~~
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
 ...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h:9:26: error: expected template-name before ‘<’ token
+    9 | class BstMap : public Map<K, V> {
+      |                          ^
+bstmap.h:9:26: error: expected ‘{’ before ‘<’ token
+bstmap.h:97:2: error: extra ‘;’ [-Werror=pedantic]
+   97 | };
+      |  ^
 89-tester.cpp:55:9: error: ‘Map’ does not name a type
    55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
       |         ^~~
 89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |                                 ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
    71 |   MapTy * m = bmt;
       |   ^~~~~
@@ -60,20 +283,124 @@ testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
    71 |   MapTy * m = bmt;
       |           ^
       |           tm
+89-tester.cpp:95:36: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |                                    ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
    99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:119:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+  119 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:131:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+  131 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
   134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:152:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+  152 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<int, Tester>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:166:26: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+  166 |   m = bmt = new BSTMapTy();
+      |                          ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:167:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+  167 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:182:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+  182 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<int, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<int, Tester>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:195:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  195 |   delete m2;
+      |   ^~~~~~~~~
+89-tester.cpp:95:14: error: ‘m2’ has incomplete type [-Werror]
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |              ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<int, Tester>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:195:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  195 |   delete m2;
+      |   ^~~~~~~~~
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 4 : Testing with BstMap<std::string,int>
 ...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h:9:26: error: expected template-name before ‘<’ token
+    9 | class BstMap : public Map<K, V> {
+      |                          ^
+bstmap.h:9:26: error: expected ‘{’ before ‘<’ token
+bstmap.h:97:2: error: extra ‘;’ [-Werror=pedantic]
+   97 | };
+      |  ^
 89-tester.cpp:55:9: error: ‘Map’ does not name a type
    55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
       |         ^~~
 89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |                                 ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
    71 |   MapTy * m = bmt;
       |   ^~~~~
@@ -82,20 +409,124 @@ testcase 4 : Testing with BstMap<std::string,int>
    71 |   MapTy * m = bmt;
       |           ^
       |           tm
+89-tester.cpp:95:36: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |                                    ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
    99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:119:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+  119 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:131:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+  131 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
   134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:152:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+  152 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<std::__cxx11::basic_string<char>, int>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:166:26: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+  166 |   m = bmt = new BSTMapTy();
+      |                          ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:167:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+  167 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:182:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+  182 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<std::__cxx11::basic_string<char>, int>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:195:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  195 |   delete m2;
+      |   ^~~~~~~~~
+89-tester.cpp:95:14: error: ‘m2’ has incomplete type [-Werror]
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |              ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<std::__cxx11::basic_string<char>, int>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:195:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  195 |   delete m2;
+      |   ^~~~~~~~~
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 5 : Testing with BstMap<std::string,std::string>
 ...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h:9:26: error: expected template-name before ‘<’ token
+    9 | class BstMap : public Map<K, V> {
+      |                          ^
+bstmap.h:9:26: error: expected ‘{’ before ‘<’ token
+bstmap.h:97:2: error: extra ‘;’ [-Werror=pedantic]
+   97 | };
+      |  ^
 89-tester.cpp:55:9: error: ‘Map’ does not name a type
    55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
       |         ^~~
 89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |                                 ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
    71 |   MapTy * m = bmt;
       |   ^~~~~
@@ -104,20 +535,124 @@ testcase 5 : Testing with BstMap<std::string,std::string>
    71 |   MapTy * m = bmt;
       |           ^
       |           tm
+89-tester.cpp:95:36: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |                                    ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
    99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:119:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+  119 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:131:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+  131 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
   134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:152:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+  152 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:166:26: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+  166 |   m = bmt = new BSTMapTy();
+      |                          ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:167:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+  167 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:182:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+  182 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:195:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  195 |   delete m2;
+      |   ^~~~~~~~~
+89-tester.cpp:95:14: error: ‘m2’ has incomplete type [-Werror]
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |              ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:195:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  195 |   delete m2;
+      |   ^~~~~~~~~
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
 ...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h:9:26: error: expected template-name before ‘<’ token
+    9 | class BstMap : public Map<K, V> {
+      |                          ^
+bstmap.h:9:26: error: expected ‘{’ before ‘<’ token
+bstmap.h:97:2: error: extra ‘;’ [-Werror=pedantic]
+   97 | };
+      |  ^
 89-tester.cpp:55:9: error: ‘Map’ does not name a type
    55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
       |         ^~~
 89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |                                 ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
    71 |   MapTy * m = bmt;
       |   ^~~~~
@@ -126,20 +661,124 @@ testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
    71 |   MapTy * m = bmt;
       |           ^
       |           tm
+89-tester.cpp:95:36: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |                                    ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
    99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:119:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+  119 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:131:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+  131 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
   134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:152:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+  152 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:166:26: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+  166 |   m = bmt = new BSTMapTy();
+      |                          ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:167:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+  167 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:182:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+  182 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:195:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  195 |   delete m2;
+      |   ^~~~~~~~~
+89-tester.cpp:95:14: error: ‘m2’ has incomplete type [-Werror]
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |              ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<std::__cxx11::basic_string<char>, Tester>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:195:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  195 |   delete m2;
+      |   ^~~~~~~~~
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 7 : Testing with BstMap<(a custom class we wrote),int>
 ...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h:9:26: error: expected template-name before ‘<’ token
+    9 | class BstMap : public Map<K, V> {
+      |                          ^
+bstmap.h:9:26: error: expected ‘{’ before ‘<’ token
+bstmap.h:97:2: error: extra ‘;’ [-Werror=pedantic]
+   97 | };
+      |  ^
 89-tester.cpp:55:9: error: ‘Map’ does not name a type
    55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
       |         ^~~
 89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |                                 ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
    71 |   MapTy * m = bmt;
       |   ^~~~~
@@ -148,20 +787,124 @@ testcase 7 : Testing with BstMap<(a custom class we wrote),int>
    71 |   MapTy * m = bmt;
       |           ^
       |           tm
+89-tester.cpp:95:36: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |                                    ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
    99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:119:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+  119 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:131:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+  131 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
   134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:152:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+  152 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<Tester, int>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:166:26: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+  166 |   m = bmt = new BSTMapTy();
+      |                          ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:167:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+  167 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:182:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+  182 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, int>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<Tester, int>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:195:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  195 |   delete m2;
+      |   ^~~~~~~~~
+89-tester.cpp:95:14: error: ‘m2’ has incomplete type [-Werror]
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |              ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<Tester, int>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:195:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  195 |   delete m2;
+      |   ^~~~~~~~~
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
 ...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h:9:26: error: expected template-name before ‘<’ token
+    9 | class BstMap : public Map<K, V> {
+      |                          ^
+bstmap.h:9:26: error: expected ‘{’ before ‘<’ token
+bstmap.h:97:2: error: extra ‘;’ [-Werror=pedantic]
+   97 | };
+      |  ^
 89-tester.cpp:55:9: error: ‘Map’ does not name a type
    55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
       |         ^~~
 89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |                                 ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
    71 |   MapTy * m = bmt;
       |   ^~~~~
@@ -170,20 +913,124 @@ testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
    71 |   MapTy * m = bmt;
       |           ^
       |           tm
+89-tester.cpp:95:36: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |                                    ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
    99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:119:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+  119 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:131:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+  131 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
   134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:152:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+  152 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:166:26: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+  166 |   m = bmt = new BSTMapTy();
+      |                          ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:167:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+  167 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:182:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+  182 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:195:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  195 |   delete m2;
+      |   ^~~~~~~~~
+89-tester.cpp:95:14: error: ‘m2’ has incomplete type [-Werror]
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |              ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<Tester, std::__cxx11::basic_string<char> >’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:195:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  195 |   delete m2;
+      |   ^~~~~~~~~
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wrote)>
 ...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h:9:26: error: expected template-name before ‘<’ token
+    9 | class BstMap : public Map<K, V> {
+      |                          ^
+bstmap.h:9:26: error: expected ‘{’ before ‘<’ token
+bstmap.h:97:2: error: extra ‘;’ [-Werror=pedantic]
+   97 | };
+      |  ^
 89-tester.cpp:55:9: error: ‘Map’ does not name a type
    55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
       |         ^~~
 89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |                                 ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
    71 |   MapTy * m = bmt;
       |   ^~~~~
@@ -192,12 +1039,101 @@ testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wr
    71 |   MapTy * m = bmt;
       |           ^
       |           tm
+89-tester.cpp:95:36: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |                                    ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
    99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:119:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+  119 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:131:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+  131 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
 89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
   134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
       |              ^~~
+89-tester.cpp:152:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+  152 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<Tester, Tester>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:164:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  164 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:166:26: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+  166 |   m = bmt = new BSTMapTy();
+      |                          ^
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:167:3: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+  167 |   *m2 = *bmt;
+      |   ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:182:23: error: invalid use of incomplete type ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+  182 |         VALTYPE v = m2->lookup(k);
+      |                       ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘BSTMapTy’ {aka ‘class BstMap<Tester, Tester>’}
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTMapTy * bmt = new BSTMapTy();
+      |              ^~~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<Tester, Tester>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:194:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  194 |   delete bmt;
+      |   ^~~~~~~~~~
+89-tester.cpp:195:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  195 |   delete m2;
+      |   ^~~~~~~~~
+89-tester.cpp:95:14: error: ‘m2’ has incomplete type [-Werror]
+   95 |   BSTMapTy * m2 = new BSTMapTy(*bmt);
+      |              ^~
+In file included from 89-tester.cpp:1:
+bstmap.h:9:7: note: declaration of ‘class BstMap<Tester, Tester>’
+    9 | class BstMap : public Map<K, V> {
+      |       ^~~~~~
+89-tester.cpp:195:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  195 |   delete m2;
+      |   ^~~~~~~~~
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 
 Overall Grade: F
