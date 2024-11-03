@@ -1,275 +1,1151 @@
-Grading at 11/03/2024:08:36:49.138868
-For commit ID 8f5a23761db68d235f305d51613c7baf74f4e7ad
-Grading at Sun Nov  3 03:36:40 AM EST 2024
+Grading at 11/03/2024:08:40:09.272084
+For commit ID 799a37fb2c354e706404949d9e973f67b4ccbbe6
+Grading at Sun Nov  3 03:39:59 AM EST 2024
 -----------------------------------------------
 testcase 1 : Testing with BstMap<int,int>
 ...compiling...
 The code compiled.
 Valgrind reported errors (test failed).
-==3462253== Memcheck, a memory error detector
-==3462253== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3462253== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3462253== Command: ./test.1
-==3462253== Parent PID: 3462252
-==3462253== 
-==3462253== 
-==3462253== HEAP SUMMARY:
-==3462253==     in use at exit: 744 bytes in 31 blocks
-==3462253==   total heap usage: 498 allocs, 467 frees, 109,008 bytes allocated
-==3462253== 
-==3462253== 744 (480 direct, 264 indirect) bytes in 20 blocks are definitely lost in loss record 3 of 3
-==3462253==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3462253==    by 0x10BA86: BstMap<int, int>::add(int const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.1)
-==3462253==    by 0x10A75D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.1)
-==3462253== 
-==3462253== LEAK SUMMARY:
-==3462253==    definitely lost: 480 bytes in 20 blocks
-==3462253==    indirectly lost: 264 bytes in 11 blocks
-==3462253==      possibly lost: 0 bytes in 0 blocks
-==3462253==    still reachable: 0 bytes in 0 blocks
-==3462253==         suppressed: 0 bytes in 0 blocks
-==3462253== 
-==3462253== For lists of detected and suppressed errors, rerun with: -s
-==3462253== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==3468762== Memcheck, a memory error detector
+==3468762== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3468762== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3468762== Command: ./test.1
+==3468762== Parent PID: 3468761
+==3468762== 
+==3468762== Invalid read of size 4
+==3468762==    at 0x10BAEF: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==  Address 0x4dd5ce0 is 16 bytes inside a block of size 24 free'd
+==3468762==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468762==    by 0x10BCBC: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==  Block was alloc'd at
+==3468762==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468762==    by 0x10BA86: BstMap<int, int>::add(int const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A75D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762== 
+==3468762== Invalid read of size 4
+==3468762==    at 0x10BB03: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==  Address 0x4dd5ce0 is 16 bytes inside a block of size 24 free'd
+==3468762==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468762==    by 0x10BCBC: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==  Block was alloc'd at
+==3468762==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468762==    by 0x10BA86: BstMap<int, int>::add(int const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A75D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762== 
+==3468762== Invalid read of size 8
+==3468762==    at 0x10BB2A: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==  Address 0x4dd5cd8 is 8 bytes inside a block of size 24 free'd
+==3468762==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468762==    by 0x10BCBC: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==  Block was alloc'd at
+==3468762==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468762==    by 0x10BA86: BstMap<int, int>::add(int const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A75D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762== 
+==3468762== Invalid read of size 8
+==3468762==    at 0x10BB39: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==  Address 0x4dd5cd8 is 8 bytes inside a block of size 24 free'd
+==3468762==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468762==    by 0x10BCBC: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==  Block was alloc'd at
+==3468762==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468762==    by 0x10BA86: BstMap<int, int>::add(int const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A75D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762== 
+==3468762== 
+==3468762== Process terminating with default action of signal 6 (SIGABRT)
+==3468762==    at 0x4B459FC: __pthread_kill_implementation (pthread_kill.c:44)
+==3468762==    by 0x4B459FC: __pthread_kill_internal (pthread_kill.c:78)
+==3468762==    by 0x4B459FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==3468762==    by 0x4AF1475: raise (raise.c:26)
+==3468762==    by 0x4AD77F2: abort (abort.c:79)
+==3468762==    by 0x4905B9D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468762==    by 0x491120B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468762==    by 0x4911276: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468762==    by 0x49114D7: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468762==    by 0x10BBB6: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762== 
+==3468762== HEAP SUMMARY:
+==3468762==     in use at exit: 77,162 bytes in 12 blocks
+==3468762==   total heap usage: 105 allocs, 93 frees, 82,564 bytes allocated
+==3468762== 
+==3468762== 144 bytes in 1 blocks are possibly lost in loss record 5 of 7
+==3468762==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468762==    by 0x4910073: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468762==    by 0x10BB4A: BstMap<int, int>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762==    by 0x10A951: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.1)
+==3468762== 
+==3468762== LEAK SUMMARY:
+==3468762==    definitely lost: 0 bytes in 0 blocks
+==3468762==    indirectly lost: 0 bytes in 0 blocks
+==3468762==      possibly lost: 144 bytes in 1 blocks
+==3468762==    still reachable: 77,018 bytes in 11 blocks
+==3468762==                       of which reachable via heuristic:
+==3468762==                         stdstring          : 42 bytes in 1 blocks
+==3468762==         suppressed: 0 bytes in 0 blocks
+==3468762== Reachable blocks (those to which a pointer was found) are not shown.
+==3468762== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3468762== 
+==3468762== For lists of detected and suppressed errors, rerun with: -s
+==3468762== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 2 : Testing with BstMap<int,std::string>
 ...compiling...
 The code compiled.
 Valgrind reported errors (test failed).
-==3462290== Memcheck, a memory error detector
-==3462290== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3462290== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3462290== Command: ./test.2
-==3462290== Parent PID: 3462289
-==3462290== 
-==3462290== 
-==3462290== HEAP SUMMARY:
-==3462290==     in use at exit: 2,292 bytes in 57 blocks
-==3462290==   total heap usage: 610 allocs, 553 frees, 112,418 bytes allocated
-==3462290== 
-==3462290== 2,292 (1,120 direct, 1,172 indirect) bytes in 20 blocks are definitely lost in loss record 5 of 5
-==3462290==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3462290==    by 0x10BCC7: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.2)
-==3462290==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.2)
-==3462290== 
-==3462290== LEAK SUMMARY:
-==3462290==    definitely lost: 1,120 bytes in 20 blocks
-==3462290==    indirectly lost: 1,172 bytes in 37 blocks
-==3462290==      possibly lost: 0 bytes in 0 blocks
-==3462290==    still reachable: 0 bytes in 0 blocks
-==3462290==         suppressed: 0 bytes in 0 blocks
-==3462290== 
-==3462290== For lists of detected and suppressed errors, rerun with: -s
-==3462290== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==3468808== Memcheck, a memory error detector
+==3468808== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3468808== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3468808== Command: ./test.2
+==3468808== Parent PID: 3468807
+==3468808== 
+==3468808== Invalid read of size 4
+==3468808==    at 0x10BDA7: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==  Address 0x4dd5ce0 is 16 bytes inside a block of size 56 free'd
+==3468808==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468808==    by 0x10BF89: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==  Block was alloc'd at
+==3468808==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468808==    by 0x10BCC7: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808== 
+==3468808== Invalid read of size 4
+==3468808==    at 0x10BDBB: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==  Address 0x4dd5ce0 is 16 bytes inside a block of size 56 free'd
+==3468808==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468808==    by 0x10BF89: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==  Block was alloc'd at
+==3468808==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468808==    by 0x10BCC7: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808== 
+==3468808== Invalid read of size 8
+==3468808==    at 0x10BDE2: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==  Address 0x4dd5cd8 is 8 bytes inside a block of size 56 free'd
+==3468808==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468808==    by 0x10BF89: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==  Block was alloc'd at
+==3468808==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468808==    by 0x10BCC7: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808== 
+==3468808== Invalid read of size 8
+==3468808==    at 0x10BDF1: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==  Address 0x4dd5cd8 is 8 bytes inside a block of size 56 free'd
+==3468808==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468808==    by 0x10BF89: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==  Block was alloc'd at
+==3468808==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468808==    by 0x10BCC7: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808== 
+==3468808== 
+==3468808== Process terminating with default action of signal 6 (SIGABRT)
+==3468808==    at 0x4B459FC: __pthread_kill_implementation (pthread_kill.c:44)
+==3468808==    by 0x4B459FC: __pthread_kill_internal (pthread_kill.c:78)
+==3468808==    by 0x4B459FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==3468808==    by 0x4AF1475: raise (raise.c:26)
+==3468808==    by 0x4AD77F2: abort (abort.c:79)
+==3468808==    by 0x4905B9D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468808==    by 0x491120B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468808==    by 0x4911276: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468808==    by 0x49114D7: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468808==    by 0x10BE6E: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808== 
+==3468808== HEAP SUMMARY:
+==3468808==     in use at exit: 77,449 bytes in 17 blocks
+==3468808==   total heap usage: 185 allocs, 168 frees, 84,964 bytes allocated
+==3468808== 
+==3468808== 144 bytes in 1 blocks are possibly lost in loss record 5 of 8
+==3468808==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468808==    by 0x4910073: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468808==    by 0x10BE02: BstMap<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.2)
+==3468808== 
+==3468808== LEAK SUMMARY:
+==3468808==    definitely lost: 0 bytes in 0 blocks
+==3468808==    indirectly lost: 0 bytes in 0 blocks
+==3468808==      possibly lost: 144 bytes in 1 blocks
+==3468808==    still reachable: 77,305 bytes in 16 blocks
+==3468808==                       of which reachable via heuristic:
+==3468808==                         stdstring          : 42 bytes in 1 blocks
+==3468808==         suppressed: 0 bytes in 0 blocks
+==3468808== Reachable blocks (those to which a pointer was found) are not shown.
+==3468808== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3468808== 
+==3468808== For lists of detected and suppressed errors, rerun with: -s
+==3468808== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
 ...compiling...
 The code compiled.
 Valgrind reported errors (test failed).
-==3462339== Memcheck, a memory error detector
-==3462339== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3462339== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3462339== Command: ./test.3
-==3462339== Parent PID: 3462338
-==3462339== 
-==3462339== 
-==3462339== HEAP SUMMARY:
-==3462339==     in use at exit: 2,540 bytes in 57 blocks
-==3462339==   total heap usage: 636 allocs, 579 frees, 113,222 bytes allocated
-==3462339== 
-==3462339== 2,540 (1,280 direct, 1,260 indirect) bytes in 20 blocks are definitely lost in loss record 5 of 5
-==3462339==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3462339==    by 0x10BD47: BstMap<int, Tester>::add(int const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.3)
-==3462339==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.3)
-==3462339== 
-==3462339== LEAK SUMMARY:
-==3462339==    definitely lost: 1,280 bytes in 20 blocks
-==3462339==    indirectly lost: 1,260 bytes in 37 blocks
-==3462339==      possibly lost: 0 bytes in 0 blocks
-==3462339==    still reachable: 0 bytes in 0 blocks
-==3462339==         suppressed: 0 bytes in 0 blocks
-==3462339== 
-==3462339== For lists of detected and suppressed errors, rerun with: -s
-==3462339== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==3468846== Memcheck, a memory error detector
+==3468846== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3468846== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3468846== Command: ./test.3
+==3468846== Parent PID: 3468845
+==3468846== 
+==3468846== Invalid read of size 4
+==3468846==    at 0x10BE27: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==  Address 0x4dd5ce0 is 16 bytes inside a block of size 64 free'd
+==3468846==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468846==    by 0x10C009: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==  Block was alloc'd at
+==3468846==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468846==    by 0x10BD47: BstMap<int, Tester>::add(int const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846== 
+==3468846== Invalid read of size 4
+==3468846==    at 0x10BE3B: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==  Address 0x4dd5ce0 is 16 bytes inside a block of size 64 free'd
+==3468846==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468846==    by 0x10C009: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==  Block was alloc'd at
+==3468846==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468846==    by 0x10BD47: BstMap<int, Tester>::add(int const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846== 
+==3468846== Invalid read of size 8
+==3468846==    at 0x10BE62: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==  Address 0x4dd5cd8 is 8 bytes inside a block of size 64 free'd
+==3468846==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468846==    by 0x10C009: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==  Block was alloc'd at
+==3468846==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468846==    by 0x10BD47: BstMap<int, Tester>::add(int const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846== 
+==3468846== Invalid read of size 8
+==3468846==    at 0x10BE71: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==  Address 0x4dd5cd8 is 8 bytes inside a block of size 64 free'd
+==3468846==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468846==    by 0x10C009: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==  Block was alloc'd at
+==3468846==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468846==    by 0x10BD47: BstMap<int, Tester>::add(int const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A77C: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846== 
+==3468846== 
+==3468846== Process terminating with default action of signal 6 (SIGABRT)
+==3468846==    at 0x4B459FC: __pthread_kill_implementation (pthread_kill.c:44)
+==3468846==    by 0x4B459FC: __pthread_kill_internal (pthread_kill.c:78)
+==3468846==    by 0x4B459FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==3468846==    by 0x4AF1475: raise (raise.c:26)
+==3468846==    by 0x4AD77F2: abort (abort.c:79)
+==3468846==    by 0x4905B9D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468846==    by 0x491120B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468846==    by 0x4911276: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468846==    by 0x49114D7: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468846==    by 0x10BEEE: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846== 
+==3468846== HEAP SUMMARY:
+==3468846==     in use at exit: 77,497 bytes in 17 blocks
+==3468846==   total heap usage: 205 allocs, 188 frees, 85,564 bytes allocated
+==3468846== 
+==3468846== 144 bytes in 1 blocks are possibly lost in loss record 5 of 8
+==3468846==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468846==    by 0x4910073: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468846==    by 0x10BE82: BstMap<int, Tester>::remove(int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846==    by 0x10A997: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.3)
+==3468846== 
+==3468846== LEAK SUMMARY:
+==3468846==    definitely lost: 0 bytes in 0 blocks
+==3468846==    indirectly lost: 0 bytes in 0 blocks
+==3468846==      possibly lost: 144 bytes in 1 blocks
+==3468846==    still reachable: 77,353 bytes in 16 blocks
+==3468846==                       of which reachable via heuristic:
+==3468846==                         stdstring          : 42 bytes in 1 blocks
+==3468846==         suppressed: 0 bytes in 0 blocks
+==3468846== Reachable blocks (those to which a pointer was found) are not shown.
+==3468846== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3468846== 
+==3468846== For lists of detected and suppressed errors, rerun with: -s
+==3468846== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 4 : Testing with BstMap<std::string,int>
 ...compiling...
 The code compiled.
 Valgrind reported errors (test failed).
-==3462409== Memcheck, a memory error detector
-==3462409== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3462409== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3462409== Command: ./test.4
-==3462409== Parent PID: 3462408
-==3462409== 
-==3462409== 
-==3462409== HEAP SUMMARY:
-==3462409==     in use at exit: 1,787 bytes in 34 blocks
-==3462409==   total heap usage: 522 allocs, 488 frees, 110,573 bytes allocated
-==3462409== 
-==3462409== 1,787 (1,120 direct, 667 indirect) bytes in 20 blocks are definitely lost in loss record 4 of 4
-==3462409==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3462409==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.4)
-==3462409==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.4)
-==3462409== 
-==3462409== LEAK SUMMARY:
-==3462409==    definitely lost: 1,120 bytes in 20 blocks
-==3462409==    indirectly lost: 667 bytes in 14 blocks
-==3462409==      possibly lost: 0 bytes in 0 blocks
-==3462409==    still reachable: 0 bytes in 0 blocks
-==3462409==         suppressed: 0 bytes in 0 blocks
-==3462409== 
-==3462409== For lists of detected and suppressed errors, rerun with: -s
-==3462409== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==3468884== Memcheck, a memory error detector
+==3468884== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3468884== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3468884== Command: ./test.4
+==3468884== Parent PID: 3468883
+==3468884== 
+==3468884== Invalid read of size 8
+==3468884==    at 0x49AF694: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x10B87C: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10BE1B: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5ce8 is 24 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== Invalid read of size 8
+==3468884==    at 0x49B13C4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x10B89C: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10BE1B: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5ce0 is 16 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== Invalid read of size 8
+==3468884==    at 0x4851FE8: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10B6E2: std::char_traits<char>::compare(char const*, char const*, unsigned long) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10B8B9: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10BE1B: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5cf0 is 32 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== Invalid read of size 1
+==3468884==    at 0x4851FBD: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10B6E2: std::char_traits<char>::compare(char const*, char const*, unsigned long) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10B8B9: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10BE1B: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5cf0 is 32 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== Invalid read of size 8
+==3468884==    at 0x49B19EE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x10BC23: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10BE39: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5ce8 is 24 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== Invalid read of size 8
+==3468884==    at 0x49B1A01: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x10BC23: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10BE39: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5ce0 is 16 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== Invalid read of size 8
+==3468884==    at 0x4851FE8: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x49B1A0B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x10BC23: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10BE39: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5cf0 is 32 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== Invalid read of size 1
+==3468884==    at 0x4851FBD: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x49B1A0B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x10BC23: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10BE39: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5cf0 is 32 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== Invalid read of size 8
+==3468884==    at 0x10BE5E: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5cd8 is 8 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== Invalid read of size 8
+==3468884==    at 0x10BE6D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Address 0x4dd5cd8 is 8 bytes inside a block of size 56 free'd
+==3468884==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10C005: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==  Block was alloc'd at
+==3468884==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x10BD2F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10A7FC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== 
+==3468884== Process terminating with default action of signal 6 (SIGABRT)
+==3468884==    at 0x4B459FC: __pthread_kill_implementation (pthread_kill.c:44)
+==3468884==    by 0x4B459FC: __pthread_kill_internal (pthread_kill.c:78)
+==3468884==    by 0x4B459FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==3468884==    by 0x4AF1475: raise (raise.c:26)
+==3468884==    by 0x4AD77F2: abort (abort.c:79)
+==3468884==    by 0x4905B9D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x491120B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x4911276: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x49114D7: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x10BEEA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== HEAP SUMMARY:
+==3468884==     in use at exit: 77,130 bytes in 8 blocks
+==3468884==   total heap usage: 105 allocs, 97 frees, 83,364 bytes allocated
+==3468884== 
+==3468884== 144 bytes in 1 blocks are possibly lost in loss record 5 of 7
+==3468884==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468884==    by 0x4910073: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468884==    by 0x10BE7E: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884==    by 0x10AA05: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.4)
+==3468884== 
+==3468884== LEAK SUMMARY:
+==3468884==    definitely lost: 0 bytes in 0 blocks
+==3468884==    indirectly lost: 0 bytes in 0 blocks
+==3468884==      possibly lost: 144 bytes in 1 blocks
+==3468884==    still reachable: 76,986 bytes in 7 blocks
+==3468884==                       of which reachable via heuristic:
+==3468884==                         stdstring          : 42 bytes in 1 blocks
+==3468884==         suppressed: 0 bytes in 0 blocks
+==3468884== Reachable blocks (those to which a pointer was found) are not shown.
+==3468884== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3468884== 
+==3468884== For lists of detected and suppressed errors, rerun with: -s
+==3468884== ERROR SUMMARY: 11 errors from 11 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 5 : Testing with BstMap<std::string,std::string>
 ...compiling...
 The code compiled.
 Valgrind reported errors (test failed).
-==3462470== Memcheck, a memory error detector
-==3462470== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3462470== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3462470== Command: ./test.5
-==3462470== Parent PID: 3462469
-==3462470== 
-==3462470== 
-==3462470== HEAP SUMMARY:
-==3462470==     in use at exit: 3,211 bytes in 64 blocks
-==3462470==   total heap usage: 639 allocs, 575 frees, 113,878 bytes allocated
-==3462470== 
-==3462470== 3,211 (1,600 direct, 1,611 indirect) bytes in 20 blocks are definitely lost in loss record 7 of 7
-==3462470==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3462470==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.5)
-==3462470==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.5)
-==3462470== 
-==3462470== LEAK SUMMARY:
-==3462470==    definitely lost: 1,600 bytes in 20 blocks
-==3462470==    indirectly lost: 1,611 bytes in 44 blocks
-==3462470==      possibly lost: 0 bytes in 0 blocks
-==3462470==    still reachable: 0 bytes in 0 blocks
-==3462470==         suppressed: 0 bytes in 0 blocks
-==3462470== 
-==3462470== For lists of detected and suppressed errors, rerun with: -s
-==3462470== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==3468922== Memcheck, a memory error detector
+==3468922== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3468922== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3468922== Command: ./test.5
+==3468922== Parent PID: 3468921
+==3468922== 
+==3468922== Invalid read of size 8
+==3468922==    at 0x49AF694: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x10BA32: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10C073: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5ce8 is 24 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== Invalid read of size 8
+==3468922==    at 0x49B13C4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x10BA52: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10C073: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5ce0 is 16 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== Invalid read of size 8
+==3468922==    at 0x4851FE8: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10B897: std::char_traits<char>::compare(char const*, char const*, unsigned long) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10BA6F: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10C073: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5cf0 is 32 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== Invalid read of size 1
+==3468922==    at 0x4851FBD: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10B897: std::char_traits<char>::compare(char const*, char const*, unsigned long) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10BA6F: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10C073: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5cf0 is 32 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== Invalid read of size 8
+==3468922==    at 0x49B19EE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x10BDD9: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10C091: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5ce8 is 24 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== Invalid read of size 8
+==3468922==    at 0x49B1A01: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x10BDD9: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10C091: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5ce0 is 16 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== Invalid read of size 8
+==3468922==    at 0x4851FE8: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x49B1A0B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x10BDD9: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10C091: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5cf0 is 32 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== Invalid read of size 1
+==3468922==    at 0x4851FBD: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x49B1A0B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x10BDD9: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10C091: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5cf0 is 32 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== Invalid read of size 8
+==3468922==    at 0x10C0B6: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5cd8 is 8 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== Invalid read of size 8
+==3468922==    at 0x10C0C5: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Address 0x4dd5cd8 is 8 bytes inside a block of size 80 free'd
+==3468922==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10C26A: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==  Block was alloc'd at
+==3468922==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x10BF2D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== 
+==3468922== Process terminating with default action of signal 6 (SIGABRT)
+==3468922==    at 0x4B459FC: __pthread_kill_implementation (pthread_kill.c:44)
+==3468922==    by 0x4B459FC: __pthread_kill_internal (pthread_kill.c:78)
+==3468922==    by 0x4B459FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==3468922==    by 0x4AF1475: raise (raise.c:26)
+==3468922==    by 0x4AD77F2: abort (abort.c:79)
+==3468922==    by 0x4905B9D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x491120B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x4911276: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x49114D7: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x10C142: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== HEAP SUMMARY:
+==3468922==     in use at exit: 77,228 bytes in 10 blocks
+==3468922==   total heap usage: 189 allocs, 179 frees, 85,688 bytes allocated
+==3468922== 
+==3468922== 144 bytes in 1 blocks are possibly lost in loss record 6 of 9
+==3468922==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468922==    by 0x4910073: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468922==    by 0x10C0D6: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.5)
+==3468922== 
+==3468922== LEAK SUMMARY:
+==3468922==    definitely lost: 0 bytes in 0 blocks
+==3468922==    indirectly lost: 0 bytes in 0 blocks
+==3468922==      possibly lost: 144 bytes in 1 blocks
+==3468922==    still reachable: 77,084 bytes in 9 blocks
+==3468922==                       of which reachable via heuristic:
+==3468922==                         stdstring          : 42 bytes in 1 blocks
+==3468922==         suppressed: 0 bytes in 0 blocks
+==3468922== Reachable blocks (those to which a pointer was found) are not shown.
+==3468922== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3468922== 
+==3468922== For lists of detected and suppressed errors, rerun with: -s
+==3468922== ERROR SUMMARY: 11 errors from 11 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
 ...compiling...
 The code compiled.
 Valgrind reported errors (test failed).
-==3462538== Memcheck, a memory error detector
-==3462538== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3462538== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3462538== Command: ./test.6
-==3462538== Parent PID: 3462537
-==3462538== 
-==3462538== 
-==3462538== HEAP SUMMARY:
-==3462538==     in use at exit: 3,459 bytes in 64 blocks
-==3462538==   total heap usage: 665 allocs, 601 frees, 114,682 bytes allocated
-==3462538== 
-==3462538== 3,459 (1,760 direct, 1,699 indirect) bytes in 20 blocks are definitely lost in loss record 7 of 7
-==3462538==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3462538==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.6)
-==3462538==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.6)
-==3462538== 
-==3462538== LEAK SUMMARY:
-==3462538==    definitely lost: 1,760 bytes in 20 blocks
-==3462538==    indirectly lost: 1,699 bytes in 44 blocks
-==3462538==      possibly lost: 0 bytes in 0 blocks
-==3462538==    still reachable: 0 bytes in 0 blocks
-==3462538==         suppressed: 0 bytes in 0 blocks
-==3462538== 
-==3462538== For lists of detected and suppressed errors, rerun with: -s
-==3462538== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==3468967== Memcheck, a memory error detector
+==3468967== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3468967== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3468967== Command: ./test.6
+==3468967== Parent PID: 3468966
+==3468967== 
+==3468967== Invalid read of size 8
+==3468967==    at 0x49AF694: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x10BA70: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10C0F3: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5ce8 is 24 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== Invalid read of size 8
+==3468967==    at 0x49B13C4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x10BA90: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10C0F3: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5ce0 is 16 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== Invalid read of size 8
+==3468967==    at 0x4851FE8: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10B897: std::char_traits<char>::compare(char const*, char const*, unsigned long) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10BAAD: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10C0F3: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5cf0 is 32 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== Invalid read of size 1
+==3468967==    at 0x4851FBD: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10B897: std::char_traits<char>::compare(char const*, char const*, unsigned long) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10BAAD: __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10C0F3: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5cf0 is 32 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== Invalid read of size 8
+==3468967==    at 0x49B19EE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x10BE17: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10C111: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5ce8 is 24 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== Invalid read of size 8
+==3468967==    at 0x49B1A01: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x10BE17: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10C111: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5ce0 is 16 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== Invalid read of size 8
+==3468967==    at 0x4851FE8: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x49B1A0B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x10BE17: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10C111: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5cf0 is 32 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== Invalid read of size 1
+==3468967==    at 0x4851FBD: __memcmp_sse4_1 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x49B1A0B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x10BE17: bool std::operator< <char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10C111: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5cf0 is 32 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== Invalid read of size 8
+==3468967==    at 0x10C136: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5cd8 is 8 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== Invalid read of size 8
+==3468967==    at 0x10C145: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Address 0x4dd5cd8 is 8 bytes inside a block of size 88 free'd
+==3468967==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10C2EA: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==  Block was alloc'd at
+==3468967==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x10BFAD: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10A7F8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== 
+==3468967== Process terminating with default action of signal 6 (SIGABRT)
+==3468967==    at 0x4B459FC: __pthread_kill_implementation (pthread_kill.c:44)
+==3468967==    by 0x4B459FC: __pthread_kill_internal (pthread_kill.c:78)
+==3468967==    by 0x4B459FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==3468967==    by 0x4AF1475: raise (raise.c:26)
+==3468967==    by 0x4AD77F2: abort (abort.c:79)
+==3468967==    by 0x4905B9D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x491120B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x4911276: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x49114D7: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x10C1C2: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== HEAP SUMMARY:
+==3468967==     in use at exit: 77,244 bytes in 10 blocks
+==3468967==   total heap usage: 209 allocs, 199 frees, 86,288 bytes allocated
+==3468967== 
+==3468967== 144 bytes in 1 blocks are possibly lost in loss record 6 of 9
+==3468967==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3468967==    by 0x4910073: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3468967==    by 0x10C156: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Tester>::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967==    by 0x10AA2B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.6)
+==3468967== 
+==3468967== LEAK SUMMARY:
+==3468967==    definitely lost: 0 bytes in 0 blocks
+==3468967==    indirectly lost: 0 bytes in 0 blocks
+==3468967==      possibly lost: 144 bytes in 1 blocks
+==3468967==    still reachable: 77,100 bytes in 9 blocks
+==3468967==                       of which reachable via heuristic:
+==3468967==                         stdstring          : 42 bytes in 1 blocks
+==3468967==         suppressed: 0 bytes in 0 blocks
+==3468967== Reachable blocks (those to which a pointer was found) are not shown.
+==3468967== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3468967== 
+==3468967== For lists of detected and suppressed errors, rerun with: -s
+==3468967== ERROR SUMMARY: 11 errors from 11 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 7 : Testing with BstMap<(a custom class we wrote),int>
 ...compiling...
 The code compiled.
 Valgrind reported errors (test failed).
-==3462617== Memcheck, a memory error detector
-==3462617== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3462617== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3462617== Command: ./test.7
-==3462617== Parent PID: 3462616
-==3462617== 
-==3462617== 
-==3462617== HEAP SUMMARY:
-==3462617==     in use at exit: 2,035 bytes in 34 blocks
-==3462617==   total heap usage: 534 allocs, 500 frees, 110,884 bytes allocated
-==3462617== 
-==3462617== 2,035 (1,280 direct, 755 indirect) bytes in 20 blocks are definitely lost in loss record 4 of 4
-==3462617==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3462617==    by 0x10BD97: BstMap<Tester, int>::add(Tester const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.7)
-==3462617==    by 0x10A7DC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.7)
-==3462617== 
-==3462617== LEAK SUMMARY:
-==3462617==    definitely lost: 1,280 bytes in 20 blocks
-==3462617==    indirectly lost: 755 bytes in 14 blocks
-==3462617==      possibly lost: 0 bytes in 0 blocks
-==3462617==    still reachable: 0 bytes in 0 blocks
-==3462617==         suppressed: 0 bytes in 0 blocks
-==3462617== 
-==3462617== For lists of detected and suppressed errors, rerun with: -s
-==3462617== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==3469005== Memcheck, a memory error detector
+==3469005== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3469005== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3469005== Command: ./test.7
+==3469005== Parent PID: 3469004
+==3469005== 
+==3469005== Invalid read of size 4
+==3469005==    at 0x10B748: Tester::operator==(Tester const&) const (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10BEC5: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==  Address 0x4dd5ce0 is 16 bytes inside a block of size 64 free'd
+==3469005==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469005==    by 0x10C0AF: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==  Block was alloc'd at
+==3469005==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469005==    by 0x10BD97: BstMap<Tester, int>::add(Tester const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A7DC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005== 
+==3469005== Invalid read of size 4
+==3469005==    at 0x10B7F8: Tester::operator<(Tester const&) const (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10BEE3: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==  Address 0x4dd5ce0 is 16 bytes inside a block of size 64 free'd
+==3469005==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469005==    by 0x10C0AF: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==  Block was alloc'd at
+==3469005==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469005==    by 0x10BD97: BstMap<Tester, int>::add(Tester const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A7DC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005== 
+==3469005== Invalid read of size 8
+==3469005==    at 0x10BF08: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==  Address 0x4dd5cd8 is 8 bytes inside a block of size 64 free'd
+==3469005==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469005==    by 0x10C0AF: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==  Block was alloc'd at
+==3469005==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469005==    by 0x10BD97: BstMap<Tester, int>::add(Tester const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A7DC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005== 
+==3469005== Invalid read of size 8
+==3469005==    at 0x10BF17: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==  Address 0x4dd5cd8 is 8 bytes inside a block of size 64 free'd
+==3469005==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469005==    by 0x10C0AF: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==  Block was alloc'd at
+==3469005==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469005==    by 0x10BD97: BstMap<Tester, int>::add(Tester const&, int const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A7DC: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005== 
+==3469005== 
+==3469005== Process terminating with default action of signal 6 (SIGABRT)
+==3469005==    at 0x4B459FC: __pthread_kill_implementation (pthread_kill.c:44)
+==3469005==    by 0x4B459FC: __pthread_kill_internal (pthread_kill.c:78)
+==3469005==    by 0x4B459FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==3469005==    by 0x4AF1475: raise (raise.c:26)
+==3469005==    by 0x4AD77F2: abort (abort.c:79)
+==3469005==    by 0x4905B9D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469005==    by 0x491120B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469005==    by 0x4911276: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469005==    by 0x49114D7: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469005==    by 0x10BF94: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005== 
+==3469005== HEAP SUMMARY:
+==3469005==     in use at exit: 77,402 bytes in 12 blocks
+==3469005==   total heap usage: 105 allocs, 93 frees, 83,564 bytes allocated
+==3469005== 
+==3469005== 144 bytes in 1 blocks are possibly lost in loss record 4 of 7
+==3469005==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469005==    by 0x4910073: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469005==    by 0x10BF28: BstMap<Tester, int>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005==    by 0x10A9E5: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.7)
+==3469005== 
+==3469005== LEAK SUMMARY:
+==3469005==    definitely lost: 0 bytes in 0 blocks
+==3469005==    indirectly lost: 0 bytes in 0 blocks
+==3469005==      possibly lost: 144 bytes in 1 blocks
+==3469005==    still reachable: 77,258 bytes in 11 blocks
+==3469005==                       of which reachable via heuristic:
+==3469005==                         stdstring          : 42 bytes in 1 blocks
+==3469005==         suppressed: 0 bytes in 0 blocks
+==3469005== Reachable blocks (those to which a pointer was found) are not shown.
+==3469005== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3469005== 
+==3469005== For lists of detected and suppressed errors, rerun with: -s
+==3469005== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
 ...compiling...
 The code compiled.
 Valgrind reported errors (test failed).
-==3462694== Memcheck, a memory error detector
-==3462694== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3462694== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3462694== Command: ./test.8
-==3462694== Parent PID: 3462693
-==3462694== 
-==3462694== 
-==3462694== HEAP SUMMARY:
-==3462694==     in use at exit: 3,335 bytes in 60 blocks
-==3462694==   total heap usage: 646 allocs, 586 frees, 114,046 bytes allocated
-==3462694== 
-==3462694== 3,335 (1,760 direct, 1,575 indirect) bytes in 20 blocks are definitely lost in loss record 6 of 6
-==3462694==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3462694==    by 0x10BF95: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(Tester const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.8)
-==3462694==    by 0x10A7D8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.8)
-==3462694== 
-==3462694== LEAK SUMMARY:
-==3462694==    definitely lost: 1,760 bytes in 20 blocks
-==3462694==    indirectly lost: 1,575 bytes in 40 blocks
-==3462694==      possibly lost: 0 bytes in 0 blocks
-==3462694==    still reachable: 0 bytes in 0 blocks
-==3462694==         suppressed: 0 bytes in 0 blocks
-==3462694== 
-==3462694== For lists of detected and suppressed errors, rerun with: -s
-==3462694== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==3469043== Memcheck, a memory error detector
+==3469043== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3469043== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3469043== Command: ./test.8
+==3469043== Parent PID: 3469042
+==3469043== 
+==3469043== Invalid read of size 4
+==3469043==    at 0x10B8FE: Tester::operator==(Tester const&) const (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10C11D: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==  Address 0x4dd5ce0 is 16 bytes inside a block of size 88 free'd
+==3469043==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469043==    by 0x10C314: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==  Block was alloc'd at
+==3469043==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469043==    by 0x10BF95: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(Tester const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10A7D8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043== 
+==3469043== Invalid read of size 4
+==3469043==    at 0x10B9AE: Tester::operator<(Tester const&) const (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10C13B: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==  Address 0x4dd5ce0 is 16 bytes inside a block of size 88 free'd
+==3469043==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469043==    by 0x10C314: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==  Block was alloc'd at
+==3469043==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469043==    by 0x10BF95: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(Tester const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10A7D8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043== 
+==3469043== Invalid read of size 8
+==3469043==    at 0x10C160: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==  Address 0x4dd5cd8 is 8 bytes inside a block of size 88 free'd
+==3469043==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469043==    by 0x10C314: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==  Block was alloc'd at
+==3469043==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469043==    by 0x10BF95: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(Tester const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10A7D8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043== 
+==3469043== Invalid read of size 8
+==3469043==    at 0x10C16F: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==  Address 0x4dd5cd8 is 8 bytes inside a block of size 88 free'd
+==3469043==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469043==    by 0x10C314: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==  Block was alloc'd at
+==3469043==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469043==    by 0x10BF95: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::add(Tester const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10A7D8: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043== 
+==3469043== 
+==3469043== Process terminating with default action of signal 6 (SIGABRT)
+==3469043==    at 0x4B459FC: __pthread_kill_implementation (pthread_kill.c:44)
+==3469043==    by 0x4B459FC: __pthread_kill_internal (pthread_kill.c:78)
+==3469043==    by 0x4B459FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==3469043==    by 0x4AF1475: raise (raise.c:26)
+==3469043==    by 0x4AD77F2: abort (abort.c:79)
+==3469043==    by 0x4905B9D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469043==    by 0x491120B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469043==    by 0x4911276: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469043==    by 0x49114D7: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469043==    by 0x10C1EC: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043== 
+==3469043== HEAP SUMMARY:
+==3469043==     in use at exit: 77,641 bytes in 17 blocks
+==3469043==   total heap usage: 185 allocs, 168 frees, 85,764 bytes allocated
+==3469043== 
+==3469043== 144 bytes in 1 blocks are possibly lost in loss record 5 of 8
+==3469043==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469043==    by 0x4910073: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469043==    by 0x10C180: BstMap<Tester, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043==    by 0x10AA0B: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.8)
+==3469043== 
+==3469043== LEAK SUMMARY:
+==3469043==    definitely lost: 0 bytes in 0 blocks
+==3469043==    indirectly lost: 0 bytes in 0 blocks
+==3469043==      possibly lost: 144 bytes in 1 blocks
+==3469043==    still reachable: 77,497 bytes in 16 blocks
+==3469043==                       of which reachable via heuristic:
+==3469043==                         stdstring          : 42 bytes in 1 blocks
+==3469043==         suppressed: 0 bytes in 0 blocks
+==3469043== Reachable blocks (those to which a pointer was found) are not shown.
+==3469043== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3469043== 
+==3469043== For lists of detected and suppressed errors, rerun with: -s
+==3469043== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wrote)>
 ...compiling...
 The code compiled.
 Valgrind reported errors (test failed).
-==3462761== Memcheck, a memory error detector
-==3462761== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3462761== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3462761== Command: ./test.9
-==3462761== Parent PID: 3462760
-==3462761== 
-==3462761== 
-==3462761== HEAP SUMMARY:
-==3462761==     in use at exit: 3,583 bytes in 60 blocks
-==3462761==   total heap usage: 672 allocs, 612 frees, 114,850 bytes allocated
-==3462761== 
-==3462761== 3,583 (1,920 direct, 1,663 indirect) bytes in 20 blocks are definitely lost in loss record 6 of 6
-==3462761==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3462761==    by 0x10C004: BstMap<Tester, Tester>::add(Tester const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.9)
-==3462761==    by 0x10A7EA: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.BnjMWO/test.9)
-==3462761== 
-==3462761== LEAK SUMMARY:
-==3462761==    definitely lost: 1,920 bytes in 20 blocks
-==3462761==    indirectly lost: 1,663 bytes in 40 blocks
-==3462761==      possibly lost: 0 bytes in 0 blocks
-==3462761==    still reachable: 0 bytes in 0 blocks
-==3462761==         suppressed: 0 bytes in 0 blocks
-==3462761== 
-==3462761== For lists of detected and suppressed errors, rerun with: -s
-==3462761== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==3469081== Memcheck, a memory error detector
+==3469081== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3469081== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3469081== Command: ./test.9
+==3469081== Parent PID: 3469080
+==3469081== 
+==3469081== Invalid read of size 4
+==3469081==    at 0x10B910: Tester::operator==(Tester const&) const (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10C14D: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==  Address 0x4dd5ce0 is 16 bytes inside a block of size 96 free'd
+==3469081==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469081==    by 0x10C344: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==  Block was alloc'd at
+==3469081==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469081==    by 0x10C004: BstMap<Tester, Tester>::add(Tester const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10A7EA: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081== 
+==3469081== Invalid read of size 4
+==3469081==    at 0x10B9C0: Tester::operator<(Tester const&) const (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10C16B: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==  Address 0x4dd5ce0 is 16 bytes inside a block of size 96 free'd
+==3469081==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469081==    by 0x10C344: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==  Block was alloc'd at
+==3469081==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469081==    by 0x10C004: BstMap<Tester, Tester>::add(Tester const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10A7EA: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081== 
+==3469081== Invalid read of size 8
+==3469081==    at 0x10C190: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==  Address 0x4dd5cd8 is 8 bytes inside a block of size 96 free'd
+==3469081==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469081==    by 0x10C344: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==  Block was alloc'd at
+==3469081==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469081==    by 0x10C004: BstMap<Tester, Tester>::add(Tester const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10A7EA: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081== 
+==3469081== Invalid read of size 8
+==3469081==    at 0x10C19F: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==  Address 0x4dd5cd8 is 8 bytes inside a block of size 96 free'd
+==3469081==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469081==    by 0x10C344: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==  Block was alloc'd at
+==3469081==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469081==    by 0x10C004: BstMap<Tester, Tester>::add(Tester const&, Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10A7EA: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081== 
+==3469081== 
+==3469081== Process terminating with default action of signal 6 (SIGABRT)
+==3469081==    at 0x4B459FC: __pthread_kill_implementation (pthread_kill.c:44)
+==3469081==    by 0x4B459FC: __pthread_kill_internal (pthread_kill.c:78)
+==3469081==    by 0x4B459FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==3469081==    by 0x4AF1475: raise (raise.c:26)
+==3469081==    by 0x4AD77F2: abort (abort.c:79)
+==3469081==    by 0x4905B9D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469081==    by 0x491120B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469081==    by 0x4911276: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469081==    by 0x49114D7: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469081==    by 0x10C21C: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081== 
+==3469081== HEAP SUMMARY:
+==3469081==     in use at exit: 77,689 bytes in 17 blocks
+==3469081==   total heap usage: 205 allocs, 188 frees, 86,364 bytes allocated
+==3469081== 
+==3469081== 144 bytes in 1 blocks are possibly lost in loss record 5 of 8
+==3469081==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3469081==    by 0x4910073: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3469081==    by 0x10C1B0: BstMap<Tester, Tester>::remove(Tester const&) (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081==    by 0x10AA1D: main (in /home/ece551db/graderbase/work/gl183.104_bst_map.HEJMlj/test.9)
+==3469081== 
+==3469081== LEAK SUMMARY:
+==3469081==    definitely lost: 0 bytes in 0 blocks
+==3469081==    indirectly lost: 0 bytes in 0 blocks
+==3469081==      possibly lost: 144 bytes in 1 blocks
+==3469081==    still reachable: 77,545 bytes in 16 blocks
+==3469081==                       of which reachable via heuristic:
+==3469081==                         stdstring          : 42 bytes in 1 blocks
+==3469081==         suppressed: 0 bytes in 0 blocks
+==3469081== Reachable blocks (those to which a pointer was found) are not shown.
+==3469081== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3469081== 
+==3469081== For lists of detected and suppressed errors, rerun with: -s
+==3469081== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
 
 Overall Grade: F
