@@ -3,7 +3,8 @@
 
 #include <cstdlib>
 #include <stdexcept>
-#include "bst.h" // inheritance is not efficient
+//#include "bst.h" // inheritance is not efficient
+#include "map.h"
 
 template<typename K, typename V>
 class BstMap : public Map<K, V> {
