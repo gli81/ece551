@@ -6,7 +6,7 @@
 #include "bst.h" // inheritance is not efficient
 
 template<typename K, typename V>
-class BstMap {
+class BstMap : public Map<K, V> {
 private:
   class Node {
   public:
