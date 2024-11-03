@@ -1,0 +1,203 @@
+Grading at 11/03/2024:07:32:43.423035
+For commit ID 378dc87793235d6a54911653e405490db8033417
+Grading at Sun Nov  3 02:32:42 AM EST 2024
+-----------------------------------------------
+testcase 1 : Testing with BstMap<int,int>
+...compiling...
+89-tester.cpp:55:9: error: ‘Map’ does not name a type
+   55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
+      |         ^~~
+89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
+   71 |   MapTy * m = bmt;
+      |   ^~~~~
+      |   BSTMapTy
+89-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   MapTy * m = bmt;
+      |           ^
+      |           tm
+89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
+   99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
+  134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 2 : Testing with BstMap<int,std::string>
+...compiling...
+89-tester.cpp:55:9: error: ‘Map’ does not name a type
+   55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
+      |         ^~~
+89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
+   71 |   MapTy * m = bmt;
+      |   ^~~~~
+      |   BSTMapTy
+89-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   MapTy * m = bmt;
+      |           ^
+      |           tm
+89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
+   99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
+  134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
+...compiling...
+89-tester.cpp:55:9: error: ‘Map’ does not name a type
+   55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
+      |         ^~~
+89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
+   71 |   MapTy * m = bmt;
+      |   ^~~~~
+      |   BSTMapTy
+89-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   MapTy * m = bmt;
+      |           ^
+      |           tm
+89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
+   99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
+  134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 4 : Testing with BstMap<std::string,int>
+...compiling...
+89-tester.cpp:55:9: error: ‘Map’ does not name a type
+   55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
+      |         ^~~
+89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
+   71 |   MapTy * m = bmt;
+      |   ^~~~~
+      |   BSTMapTy
+89-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   MapTy * m = bmt;
+      |           ^
+      |           tm
+89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
+   99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
+  134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 5 : Testing with BstMap<std::string,std::string>
+...compiling...
+89-tester.cpp:55:9: error: ‘Map’ does not name a type
+   55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
+      |         ^~~
+89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
+   71 |   MapTy * m = bmt;
+      |   ^~~~~
+      |   BSTMapTy
+89-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   MapTy * m = bmt;
+      |           ^
+      |           tm
+89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
+   99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
+  134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
+...compiling...
+89-tester.cpp:55:9: error: ‘Map’ does not name a type
+   55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
+      |         ^~~
+89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
+   71 |   MapTy * m = bmt;
+      |   ^~~~~
+      |   BSTMapTy
+89-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   MapTy * m = bmt;
+      |           ^
+      |           tm
+89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
+   99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
+  134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 7 : Testing with BstMap<(a custom class we wrote),int>
+...compiling...
+89-tester.cpp:55:9: error: ‘Map’ does not name a type
+   55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
+      |         ^~~
+89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
+   71 |   MapTy * m = bmt;
+      |   ^~~~~
+      |   BSTMapTy
+89-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   MapTy * m = bmt;
+      |           ^
+      |           tm
+89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
+   99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
+  134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
+...compiling...
+89-tester.cpp:55:9: error: ‘Map’ does not name a type
+   55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
+      |         ^~~
+89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
+   71 |   MapTy * m = bmt;
+      |   ^~~~~
+      |   BSTMapTy
+89-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   MapTy * m = bmt;
+      |           ^
+      |           tm
+89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
+   99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
+  134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wrote)>
+...compiling...
+89-tester.cpp:55:9: error: ‘Map’ does not name a type
+   55 | typedef Map<KEYTYPE,VALTYPE> MapTy;
+      |         ^~~
+89-tester.cpp: In function ‘int main()’:
+89-tester.cpp:71:3: error: ‘MapTy’ was not declared in this scope; did you mean ‘BSTMapTy’?
+   71 |   MapTy * m = bmt;
+      |   ^~~~~
+      |   BSTMapTy
+89-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   MapTy * m = bmt;
+      |           ^
+      |           tm
+89-tester.cpp:99:14: error: ‘ptr’ was not declared in this scope
+   99 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+89-tester.cpp:134:14: error: ‘ptr’ was not declared in this scope
+  134 |       MapTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+The code did not compile.  This test failed.
+
+Overall Grade: F
