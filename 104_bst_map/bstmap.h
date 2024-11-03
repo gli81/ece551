@@ -77,11 +77,13 @@ public:
     if (NULL == *cur) {
       throw std::invalid_argument("Element not found");
     }
-    //Node* to_remove = *cur;
+    Node* to_remove = *cur;
     if (NULL == (*cur)->left) {
       *cur = (*cur)->right;
+      to_remove->right = NULL;
     } else if (NULL == (*cur)->right) {
       *cur = (*cur)->left;
+      to_remove->left = NULL;
     } else {
       Node** next_smaller = &(*cur)->left;
       while (NULL != (*next_smaller)->right) {
@@ -89,10 +91,12 @@ public:
       }
       (*cur)->key = (*next_smaller)->key;
       (*cur)->val = (*next_smaller)->val;
-      //to_remove = *next_smaller;
+      to_remove = *next_smaller;
       *next_smaller = (*next_smaller)->left;
+      to_remove->left = NULL;
+      to_remove->right = NULL;
     }
-    //delete to_remove;
+    delete to_remove;
   }
 
   friend class BstMapTester;
