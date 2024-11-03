@@ -139,6 +139,47 @@ public:
     test1.remove(20);
     assert(test1.root == NULL);
   }
+
+  void testRemove2() {
+    BstMap<int, int> test1;
+    int arr[] = {20, 15, 22, 8, 17, 7, 10, 9, 12};
+    for (size_t i = 0; i < 9; ++i) {
+      test1.add(arr[i], arr[i] * 2);
+    }
+    test1.remove(15);
+    assert(test1.root->left->key == 12);
+    assert(test1.root->left->right->key == 17);
+    assert(test1.root->left->left->key == 8);
+    assert(test1.root->left->left->right->key == 10);
+    assert(test1.root->left->left->left->key == 7);
+    assert(test1.root->left->right->right == NULL);
+    assert(test1.root->left->left->right->right == NULL);
+    assert(test1.root->left->left->right->left->key == 9);
+    test1.remove(12);
+    assert(test1.root->left->key == 10);
+    assert(test1.root->left->right->key == 17);
+    assert(test1.root->left->left->right->key == 9);
+    assert(test1.root->left->left->right->left == NULL);
+    assert(test1.root->left->left->right->right == NULL);
+    assert(test1.root->left->left->left->key == 7);
+    assert(test1.root->left->left->left->left == NULL);
+    assert(test1.root->left->left->left->right == NULL);
+    test1.remove(10);
+    assert(test1.root->left->key == 9);
+    assert(test1.root->left->right->key == 17);
+    assert(test1.root->left->left->key == 8);
+    assert(test1.root->left->left->left->key == 7);
+    assert(test1.root->left->left->right == NULL);
+    test1.remove(9);
+    assert(test1.root->left->key == 8);
+    assert(test1.root->left->right->key == 17);
+    assert(test1.root->left->left->key == 7);
+    //test1.add(16, 32);
+    //test1.remove(20);
+    test1.remove(20);
+    assert(test1.root->key == 17);
+    assert(test1.root->left->key == 8);
+  }
 };
 
 
@@ -146,5 +187,5 @@ int main(void) {
   BstMapTester test;
   test.testAdd();
   test.testFind();
-  test.testRemove();
+  test.testRemove2();
 }

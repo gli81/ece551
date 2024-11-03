@@ -89,8 +89,11 @@ public:
       }
       (*cur)->key = (*next_smaller)->key;
       (*cur)->val = (*next_smaller)->val;
-      to_remove = *next_smaller;
+      //to_remove = *next_smaller;
+      Node* temp = *next_smaller;
       *next_smaller = (*next_smaller)->left;
+      delete temp;
+      return;
     }
     delete to_remove;
   }
