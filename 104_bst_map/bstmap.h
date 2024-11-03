@@ -90,7 +90,7 @@ public:
       (*cur)->key = (*next_smaller)->key;
       (*cur)->val = (*next_smaller)->val;
       to_remove = *next_smaller;
-      *next_smaller = NULL;
+      *next_smaller = (*next_smaller)->left;
     }
     delete to_remove;
   }

@@ -146,4 +146,5 @@ int main(void) {
   BstMapTester test;
   test.testAdd();
   test.testFind();
+  test.testRemove();
 }
