@@ -77,7 +77,7 @@ public:
     if (NULL == *cur) {
       throw std::invalid_argument("Element not found");
     }
-    Node* to_remove = *cur;
+    //Node* to_remove = *cur;
     if (NULL == (*cur)->left) {
       *cur = (*cur)->right;
     } else if (NULL == (*cur)->right) {
@@ -90,12 +90,9 @@ public:
       (*cur)->key = (*next_smaller)->key;
       (*cur)->val = (*next_smaller)->val;
       //to_remove = *next_smaller;
-      Node* temp = *next_smaller;
       *next_smaller = (*next_smaller)->left;
-      delete temp;
-      return;
     }
-    delete to_remove;
+    //delete to_remove;
   }
 
   friend class BstMapTester;
