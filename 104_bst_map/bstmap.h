@@ -28,10 +28,22 @@ public:
   BstMap(): root(NULL) {}
   BstMap(Node* root_): root(root_) {}
   virtual ~BstMap<K, V>() {
-    
+    // post order traversal
+    deleteNode(this->root);
   }
 
 
+private:
+  void deleteNode(Node* root) {
+    if (NULL == root) {
+      return;
+    }
+    deleteNode(root->left);
+    deleteNode(root->right);
+    delete root;
+  }
+
+public:
   virtual void add(const K& key, const V& value) {
     Node** cur = &this->root;
     while (NULL != *cur) {
@@ -87,14 +99,10 @@ public:
       while (NULL != (*next_smaller)->right) {
         next_smaller = &(*next_smaller)->right;
       }
-      //(*cur)->key = (*next_smaller)->key;
-      //(*cur)->val = (*next_smaller)->val;
-      //to_remove = *next_smaller;
-      //*next_smaller = (*next_smaller)->left;
-      *cur = *next_smaller;
-      *next_smaller = (*next_smaller) ->left;
-      (*cur)->left = to_remove->left;
-      (*cur)->right = to_remove->right;
+      (*cur)->key = (*next_smaller)->key;
+      (*cur)->val = (*next_smaller)->val;
+      to_remove = *next_smaller;
+      *next_smaller = (*next_smaller)->left;
     }
     delete to_remove;
   }

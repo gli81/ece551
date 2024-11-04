@@ -188,6 +188,34 @@ public:
     assert(test1.root->left->left->right == NULL);
     assert(test1.root->right->key == 22);
   }
+
+  void testRemove3() {
+    BstMap<double, double> test1;
+    test1.add(6, 12);
+    test1.add(1, 2);
+    test1.add(7, 14);
+    test1.add(0, 0);
+    test1.add(3, 6);
+    test1.add(-1, -2);
+    test1.add(0.5, 1);
+    test1.add(2, 4);
+    test1.add(4, 8);
+    test1.remove(1);
+    assert(test1.root->left->key == 0.5);
+    assert(test1.root->left->left->key == 0);
+    assert(test1.root->left->left->right == NULL);
+    assert(test1.root->left->right->key == 3);
+    test1.remove(6);
+    assert(test1.root->key == 4);
+    assert(test1.root->left->key == 0.5);
+    assert(test1.root->left->right->key == 3);
+    assert(test1.root->left->right->right == NULL);
+    assert(test1.root->left->right->left->key == 2);
+    test1.remove(4);
+    assert(test1.root->key == 3);
+    assert(test1.root->left->key == 0.5);
+    assert(test1.root->left->right->key == 2);
+  }
 };
 
 
@@ -196,4 +224,5 @@ int main(void) {
   test.testAdd();
   test.testFind();
   test.testRemove2();
+  test.testRemove3();
 }
