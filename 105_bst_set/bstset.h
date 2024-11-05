@@ -15,8 +15,8 @@ private:
     Node* right;
     K key;
     Node(): left(NULL), right(NULL), key(K()) {}
-    Node(Node* l, Node* r, K key_, V val_): left(l), right(r), key(key_) {}
-    Node(K key_, V val_): left(NULL), right(NULL), key(key_) {}
+    Node(Node* l, Node* r, K key_): left(l), right(r), key(key_) {}
+    Node(K key_): left(NULL), right(NULL), key(key_) {}
   };
 
 
