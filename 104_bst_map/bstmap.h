@@ -27,13 +27,27 @@ private:
 public:
   BstMap(): root(NULL) {}
   BstMap(Node* root_): root(root_) {}
-  virtual ~BstMap<K, V>() {
+  BstMap(const BstMap& rhs) {
+    this->root = NULL;
+    this->add(rhs.root);
+  }
+  virtual ~BstMap() {
     // post order traversal
     deleteNode(this->root);
   }
 
 
 private:
+  BstMap& operator=(const BstMap& rhs) {
+    if (this != &rhs) {
+      Node* tmp = this->root;
+      this->root = NULL;
+      this->add(rhs.root);
+      deleteNode(tmp);
+    }
+    return *this;
+  }
+
   void deleteNode(Node* root) {
     if (NULL == root) {
       return;
@@ -41,6 +55,15 @@ private:
     deleteNode(root->left);
     deleteNode(root->right);
     delete root;
+  }
+
+  void add(Node* root) {
+    if (NULL == root) {
+      return;
+    }
+    this->add(root->key, root->val);
+    this->add(root->left);
+    this->add(root->right);
   }
 
 public:

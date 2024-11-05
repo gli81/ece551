@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <vector>
 //#include <algorithm>
+#include <iostream>
 
 class BstMapTester {
 public:
@@ -216,6 +217,42 @@ public:
     assert(test1.root->left->key == 0.5);
     assert(test1.root->left->right->key == 2);
   }
+
+  void testCopyConstructor() {
+    BstMap<int, int> test1;
+    BstMap<int, int> test2(test1);
+    //std::cout << test2.root << "\n";
+    assert(test2.root == NULL);
+    test1.add(1, 2);
+    test1.add(0, 0);
+    test1.add(3, 6);
+    BstMap<int, int> test3(test1);
+    assert(test3.root->key == 1);
+    assert(test3.root->left->key == 0);
+    assert(test3.root->right->key == 3);
+    assert(test3.root->left->left == NULL);
+    assert(test3.root->left->right == NULL);
+    assert(test3.root->right->left == NULL);
+    assert(test3.root->right->right == NULL);
+  }
+
+  void testAssignmentOperator() {
+    BstMap<int, int> test1;
+    BstMap<int, int> test2 = test1;
+    assert(test2.root == NULL);
+    test2.add(1, 2);
+    test2.add(3, 6);
+    test2.add(0, 0);
+    test2 = test1;
+    assert(test2.root == NULL);
+    test2.add(1, 2);
+    test2.add(3, 6);
+    test2.add(0, 0);
+    test1 = test2;
+    assert(test1.root->key == 1);
+    assert(test1.root->left->key == 0);
+    assert(test1.root->right->key == 3);
+  }
 };
 
 
@@ -223,6 +260,9 @@ int main(void) {
   BstMapTester test;
   test.testAdd();
   test.testFind();
+  test.testRemove();
   test.testRemove2();
   test.testRemove3();
+  test.testCopyConstructor();
+  test.testAssignmentOperator();
 }
