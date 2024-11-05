@@ -1,50 +1,23 @@
-Grading at 11/05/2024:10:41:07.284573
-For commit ID 71486dcc3eaca77c2ef1011a70d12710215fdd0f
-Grading at Tue Nov  5 05:41:06 AM EST 2024
+Grading at 11/05/2024:10:42:00.400424
+For commit ID 3777cc48e40f51479a627da824ba56fb91a8f563
+Grading at Tue Nov  5 05:41:57 AM EST 2024
 -----------------------------------------------
 testcase 1 : Testing with BstSet<int>
 ...compiling...
-In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘class BstSet<int>’:
-90-tester.cpp:70:33:   required from here
-bstset.h:84:22: error: conflicting return type specified for ‘const bool BstSet<K>::contains(const K&) const [with K = int]’
-   84 |   virtual const bool contains(const K& key) const {
-      |                      ^~~~~~~~
-In file included from bstset.h:7,
-                 from 90-tester.cpp:1:
-set.h:9:16: note: overridden function is ‘bool Set<T>::contains(const T&) const [with T = int]’
-    9 |   virtual bool contains(const T& key) const = 0;
-      |                ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 2 : Testing with BstSet<std::string>
 ...compiling...
-In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘class BstSet<std::__cxx11::basic_string<char> >’:
-90-tester.cpp:70:33:   required from here
-bstset.h:84:22: error: conflicting return type specified for ‘const bool BstSet<K>::contains(const K&) const [with K = std::__cxx11::basic_string<char>]’
-   84 |   virtual const bool contains(const K& key) const {
-      |                      ^~~~~~~~
-In file included from bstset.h:7,
-                 from 90-tester.cpp:1:
-set.h:9:16: note: overridden function is ‘bool Set<T>::contains(const T&) const [with T = std::__cxx11::basic_string<char>]’
-    9 |   virtual bool contains(const T& key) const = 0;
-      |                ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 3 : Testing with BstSet<(a custom class we wrote)>
 ...compiling...
-In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘class BstSet<Tester>’:
-90-tester.cpp:70:33:   required from here
-bstset.h:84:22: error: conflicting return type specified for ‘const bool BstSet<K>::contains(const K&) const [with K = Tester]’
-   84 |   virtual const bool contains(const K& key) const {
-      |                      ^~~~~~~~
-In file included from bstset.h:7,
-                 from 90-tester.cpp:1:
-set.h:9:16: note: overridden function is ‘bool Set<T>::contains(const T&) const [with T = Tester]’
-    9 |   virtual bool contains(const T& key) const = 0;
-      |                ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 
-Overall Grade: F
+Overall Grade: A
