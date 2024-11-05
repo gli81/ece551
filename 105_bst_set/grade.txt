@@ -1,74 +1,50 @@
-Grading at 11/05/2024:10:38:56.675344
-For commit ID 55ba985f7d3660b925e1da7b73ff89ba016bb50b
-Grading at Tue Nov  5 05:38:56 AM EST 2024
+Grading at 11/05/2024:10:41:07.284573
+For commit ID 71486dcc3eaca77c2ef1011a70d12710215fdd0f
+Grading at Tue Nov  5 05:41:06 AM EST 2024
 -----------------------------------------------
 testcase 1 : Testing with BstSet<int>
 ...compiling...
-90-tester.cpp: In function ‘int main()’:
-90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<int>’
-   70 |   BSTSetTy * bmt = new BSTSetTy();
-      |                                 ^
 In file included from 90-tester.cpp:1:
-bstset.h:10:7: note:   because the following virtual functions are pure within ‘BstSet<int>’:
-   10 | class BstSet : public Set<K> {
-      |       ^~~~~~
+bstset.h: In instantiation of ‘class BstSet<int>’:
+90-tester.cpp:70:33:   required from here
+bstset.h:84:22: error: conflicting return type specified for ‘const bool BstSet<K>::contains(const K&) const [with K = int]’
+   84 |   virtual const bool contains(const K& key) const {
+      |                      ^~~~~~~~
 In file included from bstset.h:7,
                  from 90-tester.cpp:1:
-set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = int]’
+set.h:9:16: note: overridden function is ‘bool Set<T>::contains(const T&) const [with T = int]’
     9 |   virtual bool contains(const T& key) const = 0;
       |                ^~~~~~~~
-90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<int>’
-   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
-      |                                    ^
-90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<int>’
-  151 |   m = bmt = new BSTSetTy();
-      |                          ^
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 2 : Testing with BstSet<std::string>
 ...compiling...
-90-tester.cpp: In function ‘int main()’:
-90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
-   70 |   BSTSetTy * bmt = new BSTSetTy();
-      |                                 ^
 In file included from 90-tester.cpp:1:
-bstset.h:10:7: note:   because the following virtual functions are pure within ‘BstSet<std::__cxx11::basic_string<char> >’:
-   10 | class BstSet : public Set<K> {
-      |       ^~~~~~
+bstset.h: In instantiation of ‘class BstSet<std::__cxx11::basic_string<char> >’:
+90-tester.cpp:70:33:   required from here
+bstset.h:84:22: error: conflicting return type specified for ‘const bool BstSet<K>::contains(const K&) const [with K = std::__cxx11::basic_string<char>]’
+   84 |   virtual const bool contains(const K& key) const {
+      |                      ^~~~~~~~
 In file included from bstset.h:7,
                  from 90-tester.cpp:1:
-set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = std::__cxx11::basic_string<char>]’
+set.h:9:16: note: overridden function is ‘bool Set<T>::contains(const T&) const [with T = std::__cxx11::basic_string<char>]’
     9 |   virtual bool contains(const T& key) const = 0;
       |                ^~~~~~~~
-90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
-   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
-      |                                    ^
-90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
-  151 |   m = bmt = new BSTSetTy();
-      |                          ^
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 3 : Testing with BstSet<(a custom class we wrote)>
 ...compiling...
-90-tester.cpp: In function ‘int main()’:
-90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
-   70 |   BSTSetTy * bmt = new BSTSetTy();
-      |                                 ^
 In file included from 90-tester.cpp:1:
-bstset.h:10:7: note:   because the following virtual functions are pure within ‘BstSet<Tester>’:
-   10 | class BstSet : public Set<K> {
-      |       ^~~~~~
+bstset.h: In instantiation of ‘class BstSet<Tester>’:
+90-tester.cpp:70:33:   required from here
+bstset.h:84:22: error: conflicting return type specified for ‘const bool BstSet<K>::contains(const K&) const [with K = Tester]’
+   84 |   virtual const bool contains(const K& key) const {
+      |                      ^~~~~~~~
 In file included from bstset.h:7,
                  from 90-tester.cpp:1:
-set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = Tester]’
+set.h:9:16: note: overridden function is ‘bool Set<T>::contains(const T&) const [with T = Tester]’
     9 |   virtual bool contains(const T& key) const = 0;
       |                ^~~~~~~~
-90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
-   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
-      |                                    ^
-90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
-  151 |   m = bmt = new BSTSetTy();
-      |                          ^
 The code did not compile.  This test failed.
 
 Overall Grade: F
