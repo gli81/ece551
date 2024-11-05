@@ -81,7 +81,7 @@ public:
     *cur = new Node(key);
   }
 
-  virtual const bool contains(const K& key) const {
+  virtual bool contains(const K& key) const {
     Node* cur = this->root;
     while (NULL != cur) {
       if (key == cur->key) {
