@@ -1,176 +1,59 @@
-Grading at 11/05/2024:10:28:05.982486
-For commit ID c4871b1ccee2ec48a7d49614e53e26697184a467
-Grading at Tue Nov  5 05:28:04 AM EST 2024
+Grading at 11/05/2024:10:29:25.447846
+For commit ID 0e7ada8b9e82e810e56ea7311508ad6347608909
+Grading at Tue Nov  5 05:29:16 AM EST 2024
 -----------------------------------------------
 testcase 1 : Testing with BstMap<int,int>
 ...compiling...
-89-tester.cpp: In function ‘int main()’:
-89-tester.cpp:131:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = int]’ is private within this context
-  131 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-89-tester.cpp:167:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = int]’ is private within this context
-  167 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 2 : Testing with BstMap<int,std::string>
 ...compiling...
-89-tester.cpp: In function ‘int main()’:
-89-tester.cpp:131:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = std::__cxx11::basic_string<char>]’ is private within this context
-  131 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-89-tester.cpp:167:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = std::__cxx11::basic_string<char>]’ is private within this context
-  167 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
 ...compiling...
-89-tester.cpp: In function ‘int main()’:
-89-tester.cpp:131:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = Tester]’ is private within this context
-  131 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-89-tester.cpp:167:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = Tester]’ is private within this context
-  167 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 4 : Testing with BstMap<std::string,int>
 ...compiling...
-89-tester.cpp: In function ‘int main()’:
-89-tester.cpp:131:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = int]’ is private within this context
-  131 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-89-tester.cpp:167:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = int]’ is private within this context
-  167 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 5 : Testing with BstMap<std::string,std::string>
 ...compiling...
-89-tester.cpp: In function ‘int main()’:
-89-tester.cpp:131:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’ is private within this context
-  131 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-89-tester.cpp:167:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’ is private within this context
-  167 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
 ...compiling...
-89-tester.cpp: In function ‘int main()’:
-89-tester.cpp:131:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = Tester]’ is private within this context
-  131 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-89-tester.cpp:167:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = Tester]’ is private within this context
-  167 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 7 : Testing with BstMap<(a custom class we wrote),int>
 ...compiling...
-89-tester.cpp: In function ‘int main()’:
-89-tester.cpp:131:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = int]’ is private within this context
-  131 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-89-tester.cpp:167:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = int]’ is private within this context
-  167 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
 ...compiling...
-89-tester.cpp: In function ‘int main()’:
-89-tester.cpp:131:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = std::__cxx11::basic_string<char>]’ is private within this context
-  131 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-89-tester.cpp:167:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = std::__cxx11::basic_string<char>]’ is private within this context
-  167 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wrote)>
 ...compiling...
-89-tester.cpp: In function ‘int main()’:
-89-tester.cpp:131:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = Tester]’ is private within this context
-  131 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-89-tester.cpp:167:10: error: ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = Tester]’ is private within this context
-  167 |   *m2 = *bmt;
-      |          ^~~
-In file included from 89-tester.cpp:1:
-bstmap.h:41:11: note: declared private here
-   41 |   BstMap& operator=(const BstMap& rhs) {
-      |           ^~~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Your file matched the expected output
+Testcase passed 
 
-Overall Grade: F
+Overall Grade: A
