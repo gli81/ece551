@@ -38,16 +38,6 @@ public:
 
 
 private:
-  BstMap& operator=(const BstMap& rhs) {
-    if (this != &rhs) {
-      Node* tmp = this->root;
-      this->root = NULL;
-      this->add(rhs.root);
-      deleteNode(tmp);
-    }
-    return *this;
-  }
-
   void deleteNode(Node* root) {
     if (NULL == root) {
       return;
@@ -67,6 +57,16 @@ private:
   }
 
 public:
+  BstMap& operator=(const BstMap& rhs) {
+    if (this != &rhs) {
+      Node* tmp = this->root;
+      this->root = NULL;
+      this->add(rhs.root);
+      deleteNode(tmp);
+    }
+    return *this;
+  }
+
   virtual void add(const K& key, const V& value) {
     Node** cur = &this->root;
     while (NULL != *cur) {
