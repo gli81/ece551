@@ -1,0 +1,167 @@
+Grading at 11/05/2024:10:37:56.068445
+For commit ID fd591b10d367a398fc4093208774a5dd312340a7
+Grading at Tue Nov  5 05:37:55 AM EST 2024
+-----------------------------------------------
+testcase 1 : Testing with BstSet<int>
+...compiling...
+In file included from 90-tester.cpp:1:
+bstset.h:18:36: error: ‘V’ has not been declared
+   18 |     Node(Node* l, Node* r, K key_, V val_): left(l), right(r), key(key_) {}
+      |                                    ^
+bstset.h:19:18: error: ‘V’ has not been declared
+   19 |     Node(K key_, V val_): left(NULL), right(NULL), key(key_) {}
+      |                  ^
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<int>’
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |                                 ^
+In file included from 90-tester.cpp:1:
+bstset.h:10:7: note:   because the following virtual functions are pure within ‘BstSet<int>’:
+   10 | class BstSet : public Set<K> {
+      |       ^~~~~~
+In file included from bstset.h:7,
+                 from 90-tester.cpp:1:
+set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = int]’
+    9 |   virtual bool contains(const T& key) const = 0;
+      |                ^~~~~~~~
+90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<int>’
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |                                    ^
+90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<int>’
+  151 |   m = bmt = new BSTSetTy();
+      |                          ^
+In file included from 90-tester.cpp:1:
+bstset.h: In instantiation of ‘void BstSet<K>::add(const K&) [with K = int]’:
+bstset.h:53:14:   required from ‘void BstSet<K>::add(BstSet<K>::Node*) [with K = int]’
+bstset.h:63:16:   required from ‘BstSet<K>& BstSet<K>::operator=(const BstSet<K>&) [with K = int]’
+90-tester.cpp:122:10:   required from here
+bstset.h:81:12: error: no matching function for call to ‘BstSet<int>::Node::Node(const int&)’
+   81 |     *cur = new Node(key);
+      |            ^~~~~~~~~~~~~
+bstset.h:19:5: note: candidate: ‘BstSet<K>::Node::Node(K, int) [with K = int]’
+   19 |     Node(K key_, V val_): left(NULL), right(NULL), key(key_) {}
+      |     ^~~~
+bstset.h:19:5: note:   candidate expects 2 arguments, 1 provided
+bstset.h:18:5: note: candidate: ‘BstSet<K>::Node::Node(BstSet<K>::Node*, BstSet<K>::Node*, K, int) [with K = int]’
+   18 |     Node(Node* l, Node* r, K key_, V val_): left(l), right(r), key(key_) {}
+      |     ^~~~
+bstset.h:18:5: note:   candidate expects 4 arguments, 1 provided
+bstset.h:17:5: note: candidate: ‘BstSet<K>::Node::Node() [with K = int]’
+   17 |     Node(): left(NULL), right(NULL), key(K()) {}
+      |     ^~~~
+bstset.h:17:5: note:   candidate expects 0 arguments, 1 provided
+bstset.h:12:9: note: candidate: ‘BstSet<int>::Node::Node(const BstSet<int>::Node&)’
+   12 |   class Node {
+      |         ^~~~
+bstset.h:12:9: note:   no known conversion for argument 1 from ‘const int’ to ‘const BstSet<int>::Node&’
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 2 : Testing with BstSet<std::string>
+...compiling...
+In file included from 90-tester.cpp:1:
+bstset.h:18:36: error: ‘V’ has not been declared
+   18 |     Node(Node* l, Node* r, K key_, V val_): left(l), right(r), key(key_) {}
+      |                                    ^
+bstset.h:19:18: error: ‘V’ has not been declared
+   19 |     Node(K key_, V val_): left(NULL), right(NULL), key(key_) {}
+      |                  ^
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |                                 ^
+In file included from 90-tester.cpp:1:
+bstset.h:10:7: note:   because the following virtual functions are pure within ‘BstSet<std::__cxx11::basic_string<char> >’:
+   10 | class BstSet : public Set<K> {
+      |       ^~~~~~
+In file included from bstset.h:7,
+                 from 90-tester.cpp:1:
+set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = std::__cxx11::basic_string<char>]’
+    9 |   virtual bool contains(const T& key) const = 0;
+      |                ^~~~~~~~
+90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |                                    ^
+90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
+  151 |   m = bmt = new BSTSetTy();
+      |                          ^
+In file included from 90-tester.cpp:1:
+bstset.h: In instantiation of ‘void BstSet<K>::add(const K&) [with K = std::__cxx11::basic_string<char>]’:
+bstset.h:53:14:   required from ‘void BstSet<K>::add(BstSet<K>::Node*) [with K = std::__cxx11::basic_string<char>]’
+bstset.h:63:16:   required from ‘BstSet<K>& BstSet<K>::operator=(const BstSet<K>&) [with K = std::__cxx11::basic_string<char>]’
+90-tester.cpp:122:10:   required from here
+bstset.h:81:12: error: no matching function for call to ‘BstSet<std::__cxx11::basic_string<char> >::Node::Node(const std::__cxx11::basic_string<char>&)’
+   81 |     *cur = new Node(key);
+      |            ^~~~~~~~~~~~~
+bstset.h:19:5: note: candidate: ‘BstSet<K>::Node::Node(K, int) [with K = std::__cxx11::basic_string<char>]’
+   19 |     Node(K key_, V val_): left(NULL), right(NULL), key(key_) {}
+      |     ^~~~
+bstset.h:19:5: note:   candidate expects 2 arguments, 1 provided
+bstset.h:18:5: note: candidate: ‘BstSet<K>::Node::Node(BstSet<K>::Node*, BstSet<K>::Node*, K, int) [with K = std::__cxx11::basic_string<char>]’
+   18 |     Node(Node* l, Node* r, K key_, V val_): left(l), right(r), key(key_) {}
+      |     ^~~~
+bstset.h:18:5: note:   candidate expects 4 arguments, 1 provided
+bstset.h:17:5: note: candidate: ‘BstSet<K>::Node::Node() [with K = std::__cxx11::basic_string<char>]’
+   17 |     Node(): left(NULL), right(NULL), key(K()) {}
+      |     ^~~~
+bstset.h:17:5: note:   candidate expects 0 arguments, 1 provided
+bstset.h:12:9: note: candidate: ‘BstSet<std::__cxx11::basic_string<char> >::Node::Node(const BstSet<std::__cxx11::basic_string<char> >::Node&)’
+   12 |   class Node {
+      |         ^~~~
+bstset.h:12:9: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string<char>’ to ‘const BstSet<std::__cxx11::basic_string<char> >::Node&’
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 3 : Testing with BstSet<(a custom class we wrote)>
+...compiling...
+In file included from 90-tester.cpp:1:
+bstset.h:18:36: error: ‘V’ has not been declared
+   18 |     Node(Node* l, Node* r, K key_, V val_): left(l), right(r), key(key_) {}
+      |                                    ^
+bstset.h:19:18: error: ‘V’ has not been declared
+   19 |     Node(K key_, V val_): left(NULL), right(NULL), key(key_) {}
+      |                  ^
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |                                 ^
+In file included from 90-tester.cpp:1:
+bstset.h:10:7: note:   because the following virtual functions are pure within ‘BstSet<Tester>’:
+   10 | class BstSet : public Set<K> {
+      |       ^~~~~~
+In file included from bstset.h:7,
+                 from 90-tester.cpp:1:
+set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = Tester]’
+    9 |   virtual bool contains(const T& key) const = 0;
+      |                ^~~~~~~~
+90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |                                    ^
+90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
+  151 |   m = bmt = new BSTSetTy();
+      |                          ^
+In file included from 90-tester.cpp:1:
+bstset.h: In instantiation of ‘void BstSet<K>::add(const K&) [with K = Tester]’:
+bstset.h:53:14:   required from ‘void BstSet<K>::add(BstSet<K>::Node*) [with K = Tester]’
+bstset.h:63:16:   required from ‘BstSet<K>& BstSet<K>::operator=(const BstSet<K>&) [with K = Tester]’
+90-tester.cpp:122:10:   required from here
+bstset.h:81:12: error: no matching function for call to ‘BstSet<Tester>::Node::Node(const Tester&)’
+   81 |     *cur = new Node(key);
+      |            ^~~~~~~~~~~~~
+bstset.h:19:5: note: candidate: ‘BstSet<K>::Node::Node(K, int) [with K = Tester]’
+   19 |     Node(K key_, V val_): left(NULL), right(NULL), key(key_) {}
+      |     ^~~~
+bstset.h:19:5: note:   candidate expects 2 arguments, 1 provided
+bstset.h:18:5: note: candidate: ‘BstSet<K>::Node::Node(BstSet<K>::Node*, BstSet<K>::Node*, K, int) [with K = Tester]’
+   18 |     Node(Node* l, Node* r, K key_, V val_): left(l), right(r), key(key_) {}
+      |     ^~~~
+bstset.h:18:5: note:   candidate expects 4 arguments, 1 provided
+bstset.h:17:5: note: candidate: ‘BstSet<K>::Node::Node() [with K = Tester]’
+   17 |     Node(): left(NULL), right(NULL), key(K()) {}
+      |     ^~~~
+bstset.h:17:5: note:   candidate expects 0 arguments, 1 provided
+bstset.h:12:9: note: candidate: ‘BstSet<Tester>::Node::Node(const BstSet<Tester>::Node&)’
+   12 |   class Node {
+      |         ^~~~
+bstset.h:12:9: note:   no known conversion for argument 1 from ‘const Tester’ to ‘const BstSet<Tester>::Node&’
+The code did not compile.  This test failed.
+
+Overall Grade: F
