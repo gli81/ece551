@@ -56,7 +56,7 @@ private:
   }
 
 public:
-  BstSet& operator=(const BstSet& rhs) {
+  virtual BstSet& operator=(const BstSet& rhs) {
     if (this != &rhs) {
       Node* tmp = this->root;
       this->root = NULL;
@@ -81,7 +81,7 @@ public:
     *cur = new Node(key);
   }
 
-  virtual const bool lookup(const K& key) const {
+  virtual const bool contains(const K& key) const {
     Node* cur = this->root;
     while (NULL != cur) {
       if (key == cur->key) {
