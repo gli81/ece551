@@ -1,72 +1,28 @@
-Grading at 11/06/2024:05:44:10.997587
-For commit ID edd705606b9c4fcbe3821537548c009dba9bb93f
-Grading at Wed Nov  6 12:44:06 AM EST 2024
+Grading at 11/06/2024:05:57:35.558378
+For commit ID 22fc8dfee188f4399af75e1ac3a35d0e7235bc94
+Grading at Wed Nov  6 12:57:31 AM EST 2024
 compiling
 g++ -ggdb3 -Wall -Werror -pedantic -o testFreq testFreq.cpp readFreq.cpp
 Make succeed, testFreq created
 Testcase 1
 -----------------------
 Checking output:
-Your file did not match the expected output
-**Testcase failed **
+Your file matched the expected output
+Testcase passed 
 Testcase 2
 -----------------------
 Checking output:
-Your file did not match the expected output
-**Testcase failed **
+Your file matched the expected output
+Testcase passed 
 Testcase 3
 -----------------------
 Checking output:
-Line_1_did_not_match
-Line_2_did_not_match
-Line_3_did_not_match
-Line_4_did_not_match
-Line_5_did_not_match
-Line_6_did_not_match
-Line_7_did_not_match
-Line_8_did_not_match
-Line_9_did_not_match
-Line_10_did_not_match
-Line_13_did_not_match
-Line_15_did_not_match
-Line_21_did_not_match
-Line_23_did_not_match
-Line_29_did_not_match
-Line_31_did_not_match
-Line_33_did_not_match
-Line_37_did_not_match
-Line_38_did_not_match
-Line_39_did_not_match
-Line_40_did_not_match
-Line_41_did_not_match
-Line_42_did_not_match
-Line_43_did_not_match
-Line_44_did_not_match
-Line_45_did_not_match
-Line_46_did_not_match
-Line_47_did_not_match
-Line_48_did_not_match
-Line_49_did_not_match
-Line_51_did_not_match
-Line_52_did_not_match
-Line_53_did_not_match
-Line_54_did_not_match
-Line_55_did_not_match
-Line_56_did_not_match
-Line_57_did_not_match
-Line_59_did_not_match
-Line_60_did_not_match
-Line_61_did_not_match
-Line_62_did_not_match
-Line_63_did_not_match
-Line_64_did_not_match
-Line_65_did_not_match
-Your file did not match the expected output
-**Testcase failed **
+Your file matched the expected output
+Testcase passed 
 Testcase 4
 -----------------------
 Checking output:
 Your file did not match the expected output
 **Testcase failed **
 
-Overall Grade: F
+Overall Grade: C
