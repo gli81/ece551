@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "readFreq.h"
 #include "node.h"
-
+#include <fstream>
 
 
 void writeHeader(BitFileWriter * bfw, const std::map<unsigned,BitString> &theMap) {
@@ -32,14 +32,23 @@ void writeCompressedOutput(const char* inFile,
 
   //WRITE YOUR CODE HERE!
   //open the input file for reading
-
+  std::ifstream f(inFile);
   //You need to read the input file, lookup the characters in the map,
   //and write the proper bit string with the BitFileWriter
-
+  char c;
+  std::map<unsigned, BitString>::const_iterator it;
+  while (f.get(c)) {
+    it = theMap.find((unsigned int)c);
+    assert(it != theMap.end());
+    bfw.writeBitString(it->second);
+  }
   //dont forget to lookup 256 for the EOF marker, and write it out.
-
+  it = theMap.find(256);
+  assert(it != theMap.end());
+  bfw.writeBitString(it->second);
   //BitFileWriter will close the output file in its destructor
   //but you probably need to close your input file.
+  f.close();
 }
 
 int main(int argc, char ** argv) {
@@ -51,7 +60,14 @@ int main(int argc, char ** argv) {
   //Implement main
   //hint 1: most of the work is already done. 
   //hint 2: you can look at the main from the previous tester for 90% of this
-
-
+  uint64_t* counts = readFrequencies(argv[1]);
+  assert(counts != NULL);
+  Node* tree = buildTree(counts);
+  delete[] counts;
+  std::map<unsigned, BitString> theMap;
+  BitString empty;
+  tree->buildMap(empty, theMap);
+  writeCompressedOutput(argv[1], argv[2], theMap);
+  delete tree;
   return EXIT_SUCCESS;
 }
