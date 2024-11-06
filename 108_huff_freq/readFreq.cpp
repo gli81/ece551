@@ -56,6 +56,8 @@ uint64_t * readFrequencies(const char * fname) {
     //std::cout << c;
   }
   arr[256] = 1;
-  fclose(f);
+  if (fclose(f) != 0) {
+    exit(EXIT_FAILURE);
+  }
   return arr;
 }
