@@ -38,7 +38,7 @@ void writeCompressedOutput(const char* inFile,
   char c;
   std::map<unsigned, BitString>::const_iterator it;
   while (f.get(c)) {
-    it = theMap.find((unsigned int)c);
+    it = theMap.find((unsigned char)c);
     assert(it != theMap.end());
     bfw.writeBitString(it->second);
   }
