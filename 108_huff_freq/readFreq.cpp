@@ -23,10 +23,10 @@ void printSym(std::ostream & s, unsigned sym) {
 }
 uint64_t * readFrequencies(const char * fname) {
   std::ifstream f(fname);
-  if (!f.is_open()) {
-    std::cerr << "Error opening file" << std::endl;
-    exit(EXIT_FAILURE);
-  }
+  //if (!f.is_open()) {
+  //  std::cerr << "Error opening file" << std::endl;
+  //  exit(EXIT_FAILURE);
+  //}
   uint64_t* arr = new uint64_t[257]();
   //for (size_t i = 0; i < 257; ++i) {
   //  arr[i] = 0;
