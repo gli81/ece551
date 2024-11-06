@@ -28,15 +28,15 @@ uint64_t * readFrequencies(const char * fname) {
     exit(EXIT_FAILURE);
   }
   uint64_t* arr = new uint64_t[257]();
+  for (size_t i = 0; i < 257; ++i) {
+    arr[i] = 0;
+  }
   char c;
   while (f.get(c)) {
-    if (c == EOF) {
-      arr[256] = 1;
-      break;
-    } else {
-      arr[(int)c]++;
-    }
+    arr[(unsigned char)c]++;
+    //std::cout << c;
   }
+  arr[256] = 1;
   f.close();
   return arr;
 }
