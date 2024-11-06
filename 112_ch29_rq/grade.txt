@@ -1,11 +1,10 @@
-Grading at 11/06/2024:23:24:21.682418
-For commit ID 297ca6e80fc29741672f8fb0534623c685f33f39
-Grading at Wed Nov  6 06:24:21 PM EST 2024
+Grading at 11/06/2024:23:28:22.357298
+For commit ID 59f5948584da162b0b320f72e32ea468a70adc7d
+Grading at Wed Nov  6 06:28:22 PM EST 2024
 Reading your quiz answers from answers.txt
-You got 2 questions incorrect.
+You got 1 questions incorrect.
 You might want to review these concepts:
 ------------
-Multiple Inheritance
 Virtual Multiple Inheritance
 ------------
 
