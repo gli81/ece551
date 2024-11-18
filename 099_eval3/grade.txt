@@ -1,6 +1,6 @@
-Grading at 11/18/2024:04:16:03.538364
-For commit ID 52c14d56709355f513d72320443847717986de71
-Grading at Sun Nov 17 11:15:58 PM EST 2024
+Grading at 11/18/2024:04:17:08.629575
+For commit ID 5c941411ba50d64cac7a23cdbfb0ccd4bd05c1c5
+Grading at Sun Nov 17 11:17:03 PM EST 2024
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -8,7 +8,7 @@ Running your test cases
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/ships0.txt 
+ inputs/ships0.txt 
 -------------------------
 I need to compile your code for ships-step1 (make ships-step1)
 
@@ -19,24 +19,28 @@ rm utils.o
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
+ *** This is one of the three test cases for step 1 early start EC **
 -------------------------
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/ships1.txt 
+ inputs/ships1.txt 
 -------------------------
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
+ *** This is one of the three test cases for step 1 early start EC **
 -------------------------
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/ships2.txt 
+ inputs/ships2.txt 
 -------------------------
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
+ *** This is one of the three test cases for step 1 early start EC **
+**step1 basic tests passed for gl183 at 1731903428** : d68bb0b29559db45a723aa76a7afd2e31dd52f97  -
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
 
