@@ -27,9 +27,11 @@ int main (int argc, char** argv) {
     ship_vec.push_back(new_ship);
     ship_names.insert(new_ship->getName());
   }
+  /*
   for (size_t i = 0; i < lines.size(); ++i) {
-    std::cout << ship_vec[i]->getName() << std::endl;
+    //@@@std::cout << ship_vec[i]->getName() << std::endl;
   }
+  */
   // print every route
   printRoutes(ship_vec);
   while (!ship_vec.empty()) {
