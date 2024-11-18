@@ -1,0 +1,336 @@
+Grading at 11/18/2024:04:14:28.369531
+For commit ID d35995515435f3d96c379d3e60a13f339ca83f8a
+Grading at Sun Nov 17 11:14:23 PM EST 2024
+Doing make clean
+rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
+Running your test cases
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/ships0.txt 
+-------------------------
+I need to compile your code for ships-step1 (make ships-step1)
+
+Compiling ships-step1
+g++ -c -Wall -Werror -ggdb3 -pedantic --std=gnu++03 utils.cpp
+g++ -o ships-step1 -Wall -Werror -ggdb3 -pedantic --std=gnu++03 step1.cpp utils.o
+rm utils.o
+Running our code...
+Running your code
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+The Majestic Dreadnought				      <
+The Majestic Kraken					      <
+The Misty Dreadnought					      <
+The Night Eagle						      <
+The Swift Shark						      <
+The Shining Turtle					      <
+(Gondor -> The Shire) has total capacity 1550			(Gondor -> The Shire) has total capacity 1550
+(Mordor -> Luthadel) has total capacity 2150			(Mordor -> Luthadel) has total capacity 2150
+(Mordor -> Sarth) has total capacity 4550			(Mordor -> Sarth) has total capacity 4550
+Your file did not match the expected output
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/ships1.txt 
+-------------------------
+Running our code...
+Running your code
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+The Dawn Clipper					      <
+The Dawn Dolphin					      <
+The Dawn Dreadnought					      <
+The Gleaming Dreadnought				      <
+The Gleaming Eagle					      <
+The Gleaming Narwhal					      <
+The Gleaming Shark					      <
+(Luthadel -> Midgar) has total capacity 3940			(Luthadel -> Midgar) has total capacity 3940
+Your file did not match the expected output
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/ships2.txt 
+-------------------------
+Running our code...
+Running your code
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+The Dawn Boat						      <
+The Dawn Clipper					      <
+The Dawn Dolphin					      <
+The Dawn Dragon						      <
+The Dawn Dreadnought					      <
+The Dawn Eagle						      <
+The Dawn Eel						      <
+The Dawn Galleon					      <
+The Dawn Hawk						      <
+The Dawn Kraken						      <
+The Dawn Leviathan					      <
+The Dawn Narwhal					      <
+The Dawn Phoenix					      <
+The Dawn Shark						      <
+The Dawn Snake						      <
+The Dawn Turtle						      <
+The Dawn Whale						      <
+The Gleaming Boat					      <
+The Gleaming Clipper					      <
+The Gleaming Dragon					      <
+The Gleaming Dreadnought				      <
+The Gleaming Eagle					      <
+The Gleaming Eel					      <
+The Gleaming Galleon					      <
+The Gleaming Hawk					      <
+The Gleaming Kraken					      <
+The Gleaming Leviathan					      <
+The Gleaming Narwhal					      <
+The Gleaming Phoenix					      <
+The Gleaming Shark					      <
+The Gleaming Snake					      <
+The Gleaming Turtle					      <
+The Gleaming Whale					      <
+The King's Boat						      <
+The King's Clipper					      <
+The King's Dolphin					      <
+The King's Dragon					      <
+The King's Dreadnought					      <
+The King's Eagle					      <
+The King's Eel						      <
+The King's Galleon					      <
+The King's Hawk						      <
+The King's Kraken					      <
+The King's Leviathan					      <
+The King's Narwhal					      <
+The King's Phoenix					      <
+The King's Shark					      <
+The King's Turtle					      <
+The King's Whale					      <
+The Majestic Boat					      <
+The Majestic Clipper					      <
+The Majestic Dolphin					      <
+The Majestic Dragon					      <
+The Majestic Eagle					      <
+The Majestic Eel					      <
+The Majestic Galleon					      <
+The Majestic Hawk					      <
+The Majestic Kraken					      <
+The Majestic Leviathan					      <
+The Majestic Narwhal					      <
+The Majestic Phoenix					      <
+The Majestic Shark					      <
+The Majestic Snake					      <
+The Majestic Turtle					      <
+The Majestic Whale					      <
+The Misty Boat						      <
+The Misty Clipper					      <
+The Misty Dolphin					      <
+The Misty Dragon					      <
+The Misty Dreadnought					      <
+The Misty Eagle						      <
+The Misty Eel						      <
+The Misty Galleon					      <
+The Misty Hawk						      <
+The Misty Kraken					      <
+The Misty Leviathan					      <
+The Misty Narwhal					      <
+The Misty Phoenix					      <
+The Misty Shark						      <
+The Misty Snake						      <
+The Misty Turtle					      <
+The Misty Whale						      <
+The Night Boat						      <
+The Night Clipper					      <
+The Night Dolphin					      <
+The Night Dragon					      <
+The Night Dreadnought					      <
+The Night Eagle						      <
+The Night Eel						      <
+The Night Galleon					      <
+The Night Hawk						      <
+The Night Kraken					      <
+The Night Leviathan					      <
+The Night Narwhal					      <
+The Night Phoenix					      <
+The Night Shark						      <
+The Night Snake						      <
+The Night Turtle					      <
+The Night Whale						      <
+The Queen's Boat					      <
+The Queen's Clipper					      <
+The Queen's Dolphin					      <
+The Queen's Dragon					      <
+The Queen's Dreadnought					      <
+The Queen's Eagle					      <
+The Queen's Eel						      <
+The Queen's Galleon					      <
+The Queen's Hawk					      <
+The Queen's Kraken					      <
+The Queen's Leviathan					      <
+The Queen's Narwhal					      <
+The Queen's Phoenix					      <
+The Queen's Shark					      <
+The Queen's Snake					      <
+The Queen's Turtle					      <
+The Queen's Whale					      <
+The Royal Boat						      <
+The Royal Clipper					      <
+The Royal Dolphin					      <
+The Royal Dragon					      <
+The Royal Dreadnought					      <
+The Royal Eagle						      <
+The Royal Eel						      <
+The Royal Galleon					      <
+The Royal Hawk						      <
+The Royal Kraken					      <
+The Royal Leviathan					      <
+The Royal Narwhal					      <
+The Royal Phoenix					      <
+The Royal Shark						      <
+The Royal Snake						      <
+The Royal Turtle					      <
+The Royal Whale						      <
+The Sailing Boat					      <
+The Sailing Clipper					      <
+The Sailing Dragon					      <
+The Sailing Dreadnought					      <
+The Sailing Eagle					      <
+The Sailing Eel						      <
+The Sailing Galleon					      <
+The Sailing Hawk					      <
+The Sailing Kraken					      <
+The Sailing Leviathan					      <
+The Sailing Narwhal					      <
+The Sailing Phoenix					      <
+The Sailing Shark					      <
+The Sailing Snake					      <
+The Sailing Turtle					      <
+The Sailing Whale					      <
+The Secret Boat						      <
+The Secret Clipper					      <
+The Secret Dolphin					      <
+The Secret Dragon					      <
+The Secret Eagle					      <
+The Secret Eel						      <
+The Secret Galleon					      <
+The Secret Hawk						      <
+The Secret Kraken					      <
+The Secret Leviathan					      <
+The Secret Narwhal					      <
+The Secret Phoenix					      <
+The Secret Shark					      <
+The Secret Snake					      <
+The Secret Turtle					      <
+The Secret Whale					      <
+The Shining Boat					      <
+The Shining Clipper					      <
+The Shining Dolphin					      <
+The Shining Dragon					      <
+The Shining Dreadnought					      <
+The Shining Eagle					      <
+The Shining Eel						      <
+The Shining Galleon					      <
+The Shining Hawk					      <
+The Shining Kraken					      <
+The Shining Leviathan					      <
+The Shining Narwhal					      <
+The Shining Phoenix					      <
+The Shining Shark					      <
+The Shining Snake					      <
+The Shining Turtle					      <
+The Shining Whale					      <
+The Slippery Boat					      <
+The Slippery Clipper					      <
+The Slippery Dolphin					      <
+The Slippery Dragon					      <
+The Slippery Dreadnought				      <
+The Slippery Eagle					      <
+The Slippery Eel					      <
+The Slippery Galleon					      <
+The Slippery Hawk					      <
+The Slippery Kraken					      <
+The Slippery Leviathan					      <
+The Slippery Narwhal					      <
+The Slippery Phoenix					      <
+The Slippery Shark					      <
+The Slippery Snake					      <
+The Slippery Turtle					      <
+The Slippery Whale					      <
+The Swift Boat						      <
+The Swift Clipper					      <
+The Swift Dolphin					      <
+The Swift Dragon					      <
+The Swift Dreadnought					      <
+The Swift Eagle						      <
+The Swift Eel						      <
+The Swift Galleon					      <
+The Swift Hawk						      <
+The Swift Kraken					      <
+The Swift Leviathan					      <
+The Swift Narwhal					      <
+The Swift Phoenix					      <
+The Swift Shark						      <
+The Swift Snake						      <
+The Swift Turtle					      <
+The Swift Whale						      <
+The Wet Boat						      <
+The Wet Clipper						      <
+The Wet Dolphin						      <
+The Wet Dragon						      <
+The Wet Dreadnought					      <
+The Wet Eagle						      <
+The Wet Eel						      <
+The Wet Galleon						      <
+The Wet Hawk						      <
+The Wet Kraken						      <
+The Wet Leviathan					      <
+The Wet Narwhal						      <
+The Wet Phoenix						      <
+The Wet Shark						      <
+The Wet Snake						      <
+The Wet Turtle						      <
+The Wet Whale						      <
+The Wooden Boat						      <
+The Wooden Clipper					      <
+The Wooden Dolphin					      <
+The Wooden Dragon					      <
+The Wooden Dreadnought					      <
+The Wooden Eagle					      <
+The Wooden Eel						      <
+The Wooden Galleon					      <
+The Wooden Hawk						      <
+The Wooden Kraken					      <
+The Wooden Leviathan					      <
+The Wooden Narwhal					      <
+The Wooden Phoenix					      <
+The Wooden Shark					      <
+The Wooden Snake					      <
+The Wooden Turtle					      <
+The Wooden Whale					      <
+(Elantris -> Luthadel) has total capacity 5930			(Elantris -> Luthadel) has total capacity 5930
+(Elantris -> Midgar) has total capacity 5350			(Elantris -> Midgar) has total capacity 5350
+(Elantris -> Mordor) has total capacity 12430			(Elantris -> Mordor) has total capacity 12430
+(Elantris -> Sarth) has total capacity 2200			(Elantris -> Sarth) has total capacity 2200
+(Luthadel -> Elantris) has total capacity 2880			(Luthadel -> Elantris) has total capacity 2880
+(Luthadel -> Midgar) has total capacity 10120			(Luthadel -> Midgar) has total capacity 10120
+(Luthadel -> Mordor) has total capacity 19130			(Luthadel -> Mordor) has total capacity 19130
+(Luthadel -> Sarth) has total capacity 8740			(Luthadel -> Sarth) has total capacity 8740
+(Midgar -> Elantris) has total capacity 13290			(Midgar -> Elantris) has total capacity 13290
+(Midgar -> Luthadel) has total capacity 23900			(Midgar -> Luthadel) has total capacity 23900
+(Midgar -> Mordor) has total capacity 18590			(Midgar -> Mordor) has total capacity 18590
+(Midgar -> Sarth) has total capacity 10090			(Midgar -> Sarth) has total capacity 10090
+(Mordor -> Elantris) has total capacity 10490			(Mordor -> Elantris) has total capacity 10490
+(Mordor -> Luthadel) has total capacity 19690			(Mordor -> Luthadel) has total capacity 19690
+(Mordor -> Midgar) has total capacity 27960			(Mordor -> Midgar) has total capacity 27960
+(Mordor -> Sarth) has total capacity 7440			(Mordor -> Sarth) has total capacity 7440
+(Sarth -> Elantris) has total capacity 3300			(Sarth -> Elantris) has total capacity 3300
+(Sarth -> Luthadel) has total capacity 15960			(Sarth -> Luthadel) has total capacity 15960
+(Sarth -> Midgar) has total capacity 8260			(Sarth -> Midgar) has total capacity 8260
+(Sarth -> Mordor) has total capacity 3620			(Sarth -> Mordor) has total capacity 3620
+Your file did not match the expected output
+You have FAILED one or more of your test cases
+Keep debugging
+
+Overall Grade: NO GRADE YET
