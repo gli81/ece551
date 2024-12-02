@@ -8,7 +8,10 @@ ships-step1 ./inputs/invalidCap.txt
 ships-step1 ./inputs/duplicateNames.txt
 ships-step1 ./inputs/empty.txt
 ships-step1 ./inputs/newLine.txt
-ships-step2 inputs/ship0.txt inputs/cargo0.txt
-ships-step2 ./inputs/ships0.txt ./inputs/cargo0.txt
-ships-step2 ./inputs/ship0.txt ./inputs/duplicateType.txt
-
+ships-step2 inputs/ships0.txt inputs/cargo0.txt
+ships-step2 ./inputs/ships0.txt ./inputs/duplicateType.txt
+ships-step3 inputs/ships0.txt inputs/cargo1.txt
+ships-step3 inputs/ships1.txt inputs/cargo0.txt
+ships-step3 inputs/ships1.txt inputs/cargo1.txt
+ships-step3 inputs/ships2.txt inputs/cargo2.txt
+ships-step3 ./inputs/ships1.txt ./inputs/hazardousAnimal.txt

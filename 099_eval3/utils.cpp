@@ -7,29 +7,20 @@
 #include <map>
 #include <sstream>
 #include "cargo.hpp"
+#include "utils.hpp"
 
 /*
  * print Cargo
  */
 std::ostream& operator<<(std::ostream& os, const Cargo& cargo) {
   return os << cargo.toString();
-  //os << cargo.name << ": " << cargo.src << " -> " << cargo.dest;
-  //os << ", weight: " << cargo.weight << std::endl;
-  //for (size_t i = 0; i < cargo.props.size(); ++i) {
-  //  os << cargo.props[i];
-  //  if (i != cargo.props.size() - 1) {
-  //    os << ", ";
-  //  }
-  //}
-  //os << std::endl;
-  //return os;
 }
 
 /*
  * print Ship
  */
 std::ostream& operator<<(std::ostream& os, const Ship& ship) {
-  return os << ship.toString();
+  return os << ship.toString(true);
 }
 
 /*
@@ -46,29 +37,6 @@ std::ostream& operator<<(std::ostream& os, const Ship& ship) {
 void printErrorAndExit(const std::string err) {
   std::cerr << err << std::endl;
   exit(EXIT_FAILURE);
-}
-
-/*
- * print a vector
- *
- * Params
- * ----------
- *     vec (const std::vector<T>&) : the vector
- *     delim (const char) : seperator after each element
- *
- * Returns
- * ----------
- *     None
- */
-template <typename T>
-void printVec(const std::vector<T>& vec, const char delim) {
-  for (size_t i = 0; i < vec.size(); ++i) {
-    std::cout << vec[i];
-    if (i != vec.size() - 1) {
-      std::cout << delim;
-    }
-  }
-  std::cout << std::endl;
 }
 
 /*
@@ -121,39 +89,14 @@ std::vector<std::string> splitBy(const std::string& str, const char delim) {
     ans.push_back(str.substr(start, end - start));
     start = end + 1;
   }
-  ans.push_back(str.substr(start, end - start));
+  // put everything from start to end of string to ans
+  // TODO what if the last delim right before end of string?
+  if (start != str.size()) {
+    ans.push_back(str.substr(start, end - start));
+  }
   return ans;
 }
 
-/*
- * parse container type
- * 
- * Params
- * ----------
- *     types_str (std::string) : type string
- *
- * Returns
- * ----------
- *     std::vector<std::string> : a vector of property strings
- */
-/*
-std::vector<std::string> parseContainerType(std::string& types_str) {
-  //@@@std::cout << types_str << std::endl;
-  std::vector<std::string> ans;
-  if (types_str.size() == 0) {
-    return ans;
-  }
-  size_t start = 0;
-  size_t end = 0;
-  while ((end = types_str.find(',', start)) != std::string::npos) {
-    ans.push_back(types_str.substr(start, end - start));
-    start = end + 1;
-  }
-  ans.push_back(types_str.substr(start, end - start));
-  //@@@printVec(ans);
-  return ans;
-}
-*/
 /*
  * process one line for step1, create one Ship instance
  *
@@ -190,7 +133,12 @@ Ship* createShip(const std::string& line) {
   // parse type
   std::vector<std::string> type_vec = splitBy(vec[1], ',');
   std::string ship_type = type_vec[0];
+  //@@@printVec(type_vec, '\n');
   if (ship_type.compare("Container") == 0) {
+    if (type_vec.size() < 2) {
+      // at least need Container,<num_slots>
+      printErrorAndExit("Invalid input - Not enough fields for container ship");
+    }
     unsigned slot = std::strtoul(type_vec[1].c_str(), &end, 10);
     if (*end != '\0') {
       printErrorAndExit("Invalid input - invalid slot");
@@ -200,63 +148,46 @@ Ship* createShip(const std::string& line) {
       ship->addProperty(type_vec[i]);
     }
     return ship;
+  } else if (ship_type.compare("Tanker") == 0) {
+    if (type_vec.size() < 4) {
+      // at least need Tanker,<min_temp>,<max_temp>,<num_tanks>
+      printErrorAndExit("Invalid input - Not enough fields for tanker ship");
+    }
+    signed min_temp = std::strtol(type_vec[1].c_str(), &end, 10);
+    if (*end != '\0') {
+      printErrorAndExit("Invalid input - invalid min temp");
+    }
+    signed max_temp = std::strtol(type_vec[2].c_str(), &end, 10);
+    if (*end != '\0') {
+      printErrorAndExit("Invalid input - invalid max temp");
+    }
+    unsigned num_tank = std::strtoul(type_vec[3].c_str(), &end, 10);
+    if (*end != '\0') {
+      printErrorAndExit("Invalid input - invalid num tanks");
+    }
+    TankerShip* ship = new TankerShip(vec[0], vec[2], vec[3], cap, num_tank, min_temp, max_temp);
+    for (size_t i = 4; i < type_vec.size(); ++i) {
+      ship->addProperty(type_vec[i]);
+    }
+    return ship;
+  } else if (ship_type.compare("Animals") == 0) {
+    if (type_vec.size() != 2) {
+      // exactly two fields: Animals,<small_enough>
+      printErrorAndExit("Invalid input - Invalid fields for animal ship");
+    }
+    unsigned small_enough = std::strtoul(type_vec[1].c_str(), &end, 10);
+    if (*end != '\0') {
+      printErrorAndExit("Invalid input - Invalid small enough");
+    }
+    AnimalShip* ship = new AnimalShip(vec[0], vec[2], vec[3], cap, small_enough);
+
+    return ship;
   } else {
-    return new Ship(vec[0], vec[2], vec[3], cap);
+    // not valid ship type
+    printErrorAndExit("Invalid input - Invalid ship type");
+    // unreachable, but cpp requires :-(
+    return NULL;
   }
-  //size_t name_end = line.find(':');
-  ////@@@std::cout << name_end << line[name_end] << std::endl;
-  //if (name_end == std::string::npos) {
-  //  std::cerr << "Not enough fields - No colon found" << std::endl;
-  //  exit(EXIT_FAILURE);
-  //}
-  //std::string name = line.substr(0, name_end);
-  ////@@@std::cout << "name: " << name << std::endl;
-  //size_t type_end = line.find(':', name_end + 1);
-  ////@@@std::cout << type_end << "check if same as " << name_end <<std::endl;
-  //if (type_end == std::string::npos) {
-  //  std::cerr << "Not enough fields - One colon found" << std::endl;
-  //  exit(EXIT_FAILURE);
-  //}
-  ////@@@std::cout << "type: " << line.substr(name_end + 1, type_end - name_end - 1) << std::endl;
-  //// process types
-  //std::string type = line.substr(name_end + 1, type_end - name_end - 1);
-  //std::vector<std::string> container_type = parseContainerType(type);
-  //if (container_type.size() < 2) {
-  //  // at least need two fields
-  //  std::cerr << "Invalid types - At least need two fields" << std::endl;
-  //  exit(EXIT_FAILURE);
-  //}
-  //size_t src_end = line.find(':', type_end + 1);
-  //if (src_end == std::string::npos) {
-  //  std::cerr << "Not enough fields - Two colons found" << std::endl;
-  //  exit(EXIT_FAILURE);
-  //}
-  //std::string src = line.substr(type_end + 1, src_end - type_end - 1);
-  ////@@@std::cout << src << std::endl;
-  //size_t dest_end = line.find(':', src_end + 1);
-  //if (dest_end == std::string::npos) {
-  //  std::cerr << "Not enough fields - Three colons found" << std::endl;
-  //  exit(EXIT_FAILURE);
-  //}
-  //std::string dest = line.substr(src_end + 1, dest_end - src_end - 1);
-  ////@@@std::cout << dest << std::endl;
-  //std::string rest = line.substr(dest_end + 1);
-  ////size_t length = rest.size();
-  //// return new Ship(name, src, dest, cap);
-  //if (container_type[0] == "Container") {
-  //  // check slot
-  //  unsigned slot = std::strtoul(container_type[1].c_str(), &end, 10);
-  //  if (*end != '\0') {
-  //    std::cerr << "Invalid input - invalid slot" << std::endl;
-  //    exit(EXIT_FAILURE);
-  //  }
-  //  ContainerShip* ans = new ContainerShip(name, src, dest, cap, slot);
-  //  for (size_t i = 3; i < container_type.size(); ++i) {
-  //    ans->addProperty(container_type[i]);
-  //  }
-  //  return ans;
-  //}
-  //return new Ship(name, src, dest, cap);
 }
 
 /*
@@ -313,49 +244,79 @@ Cargo* createCargo(const std::string& line) {
   if (*end != '\0') {
     printErrorAndExit("Invalid input - invalid weight");
   }
-  Cargo* ans = new Cargo(vec[0], vec[1], vec[2], wt);
+  //Cargo* ans = new Cargo(vec[0], vec[1], vec[2], wt);
+  Cargo* ans = NULL;
   // type field index
   size_t type_field = 4;
   bool type_found = false;
+  // find the field that represent the cargo type
   for (size_t i = 4; i < vec.size(); ++i) {
     if (!type_found) {
       if (vec[i].compare("container") == 0) {
-        delete ans;
+        //delete ans;
         ans = new ContainerCargo(vec[0], vec[1], vec[2], wt);
+        type_field = i;
+        type_found = true;
+      } else if (vec[i].compare("gas") == 0 || vec[i].compare("liquid") == 0) {
+        ans = new TankerCargo(vec[0], vec[1], vec[2], wt);
+        type_field = i;
+        type_found = true;
+      } else if (vec[i].compare("animal") == 0) {
+        ans = new AnimalCargo(vec[0], vec[1], vec[2], wt);
         type_field = i;
         type_found = true;
       }
       continue;
     } else {
-      if (vec[i].compare("container") == 0) {
+      if (
+        vec[i].compare("container") == 0 ||
+        vec[i].compare("gas") == 0 ||
+        vec[i].compare("liquid") == 0 || 
+        vec[i].compare("animal") == 0
+      ) {
         printErrorAndExit("Invalid input - Multiple cargo type");
       }
     }
   }
   for (size_t i = 4; i < vec.size(); ++i) {
+    if (i == type_field) continue;
     //@@@std::cout << vec[i].substr(0, 10) << std::endl;
-    if (i != type_field && vec[i].substr(0, 10).compare("hazardous-") == 0) {
+    if (vec[i].substr(0, 10).compare("hazardous-") == 0) {
+      ans->setHazardous(true);
       ans->addProperty(vec[i].substr(10));
+    }
+    //@@@if (vec[i].compare("roamer") == 0)std::cout << vec[i] << std::endl;
+    if (vec[i].compare("roamer") == 0 && ans->getRequiredShip().compare("animal") == 0) {
+      ans->addProperty(vec[i]);
+    }
+    if (ans->getRequiredShip().compare("tanker") == 0 && (vec[i].substr(0, 7).compare("mintemp") == 0 || vec[i].substr(0, 7).compare("maxtemp") == 0)) {
+      ans->addProperty(vec[i]);
     }
   }
   return ans;
 }
 
-
-/*
- * checks if a ship can load a cargo
- *
- * Params:
- * ----------
- *     ship (Ship*) : the ship
- *     cargo (Cargo*) : the cargo
- *
- * Returns:
- * ----------
- *     bool : whether the cargo can be loaded to the ship or not
- */
-/*
-bool canLoad(Ship* ship, Cargo* cargo) {
-  // check if ship's property have all   
+void TankerCargo::addProperty(const std::string& prop) {
+  //@@@std::cout << prop << std::endl;
+  // split by =
+  std::vector<std::string> kv = splitBy(prop, '=');
+  //@@@printVec(kv, '\n');
+  // add to map
+  // if len = 1, key only, insert (k, 0)
+  signed num;
+  switch (kv.size()) {
+    case 1:
+      this->props[kv[0]] = 0;
+      break;
+    case 2:
+      char* end;
+      num = std::strtol(kv[1].c_str(), &end, 10);
+      if (*end != '\0') {
+        printErrorAndExit("Invalid input - Wrong value type");
+      }
+      this->props[kv[0]] = num;
+      break;
+    default:
+      printErrorAndExit("Invalid input - Too many fields for tanker property");
+  }
 }
-*/

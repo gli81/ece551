@@ -6,6 +6,7 @@
 #include "cargo.hpp"
 #include <sstream>
 #include <set>
+#include <map>
 #include <iostream>
 
 class Ship {
@@ -14,30 +15,50 @@ protected:
   std::string src;
   std::string dest;
   unsigned cap;
+  std::set<std::string> properties;
+  std::vector<const Cargo*> loaded;
+  unsigned loaded_wt;
 
 
 public:
-  Ship(): name(std::string()), src(std::string()), dest(std::string()), cap(0) {}
+  Ship():
+    name(std::string()),
+    src(std::string()),
+    dest(std::string()),
+    cap(0),
+    properties(std::set<std::string>()),
+    loaded(std::vector<const Cargo*>()),
+    loaded_wt(0) {}
 
   Ship(
     std::string nm,
     std::string src_,
     std::string dest_,
     unsigned cap_
-  ): name(nm), src(src_), dest(dest_), cap(cap_) {}
+  ):
+    name(nm),
+    src(src_),
+    dest(dest_),
+    cap(cap_),
+    properties(std::set<std::string>()),
+    loaded(std::vector<const Cargo*>()),
+    loaded_wt(0) {}
 
   virtual ~Ship(){}
+
+
+  void addProperty(std::string prop) {
+    if (prop.size() == 0) {
+      // empty field
+    }
+    this->properties.insert(prop);
+  }
 
   std::string getName() {
     return this->name;
   }
 
-  virtual std::string toString() const {
-    std::ostringstream ss;
-    ss << this->name << ": " << this->src << " -> " << this->dest;
-    ss << ", " << this->cap << std::endl;
-    return ss.str();
-  }
+  virtual std::string toString(bool verbose = false) const = 0;
 
   virtual bool canLoad(const Cargo* cargo) const {
     return false;
@@ -47,8 +68,6 @@ public:
     return;
   }
 
-  virtual void printShip() const {}
-
   friend void printRoutes(const std::vector<Ship*>&);
 
   friend std::ostream& operator<<(std::ostream& os, const Ship&);
@@ -57,18 +76,13 @@ public:
 
 class ContainerShip : public Ship {
 private:
-  std::set<std::string> properties;
   unsigned slots;
-  std::vector<const Cargo*> loaded;
-  unsigned loaded_wt;
+
 
 public:
   ContainerShip():
     Ship(),
-    properties(std::set<std::string>()),
-    slots(0),
-    loaded(std::vector<const Cargo*>()),
-    loaded_wt(0) {}
+    slots(0) {}
 
   ContainerShip(
     std::string nm,
@@ -78,19 +92,9 @@ public:
     unsigned slots_
   ):
     Ship(nm, src_, dest_, cap_),
-    properties(std::set<std::string>()),
-    slots(slots_),
-    loaded(std::vector<const Cargo*>()),
-    loaded_wt(0) {}
+    slots(slots_){}
 
   
-  void addProperty(std::string prop) {
-    if (prop.size() == 0) {
-      // empty field
-    }
-    this->properties.insert(prop);
-  }
-
   bool canLoad(const Cargo* cargo) const {
     if (cargo->getRequiredShip().compare("container") != 0) {
       return false;
@@ -112,41 +116,145 @@ public:
     return true;
   }
 
-  void printShip() const {
-    std::ostringstream ss;
-    ss << "The Container Ship " << this->name << "(" << this->loaded_wt << "/";
-    ss << this->cap << ") is carrying : " << std::endl;
-    for (size_t i = 0; i < this->loaded.size(); ++i) {
-      ss << "  " << this->loaded[i]->getName() << "(" << this->loaded[i]->getWt() << ")" << std::endl;
-    }
-    ss << "  (" << this->slots - this->loaded.size() << ") slots remain" << std::endl;
-    std::cout << ss.str();
-  }
-
   void load(const Cargo* cargo) {
     this->loaded_wt += cargo->getWt();
     this->loaded.push_back(cargo);
     std::cout << "  **Loading the cargo onto " << this->name << "**" << std::endl;
   }
 
-  std::string toString() const {
+  std::string toString(bool verbose = false) const {
     std::ostringstream ss;
-    ss << this->name << ": " << this->src << " -> " << this->dest;
-    ss << ", capacity: " << this->loaded_wt << "/" << this->cap << std::endl << "Types: ";
-    std::set<std::string>::iterator it = this->properties.begin();
-    while (it != this->properties.end()) {
-      ss << *it;
-      ++it;
-      if (it != this->properties.end()) {
-        ss << ", ";
+    ss << "The Container Ship " << this->name << "(" << this->loaded_wt << "/";
+    ss << this->cap << ") ";
+    if (verbose) {
+      ss << this->src << " -> " << this->dest << std::endl;
+      ss << "  Types: ";
+      std::set<std::string>::iterator it = this->properties.begin();
+      while (it != this->properties.end()) {
+        ss << *it;
+        ++it;
+        if (it != this->properties.end()) {
+          ss << ", ";
+        }
       }
+      ss << std::endl;
+      ss << "  Slots: " << this->slots;
+      ss << "  Loaded: " << this->loaded.size() << std::endl << "  ";
     }
-    ss << std::endl;
-    ss << "Slots: " << slots << std::endl;
-    ss << "Loaded: " << loaded.size() << std::endl;
+    ss << "is carrying : " << std::endl;
+    for (size_t i = 0; i < this->loaded.size(); ++i) {
+      ss << "  " << this->loaded[i]->getName() << "(" << this->loaded[i]->getWt() << ")" << std::endl;
+    }
+    ss << "  (" << this->slots - this->loaded.size() << ") slots remain" << std::endl;
     return ss.str();
   }
 };
 
+
+class TankerShip : public Ship {
+private:
+  unsigned num_tanks;
+  signed min_temp;
+  signed max_temp;
+  unsigned tank_used;
+  std::map<std::string, unsigned> cargo_wt;
+
+public:
+  TankerShip():
+    Ship(),
+    num_tanks(0),
+    min_temp(0),
+    max_temp(0),
+    tank_used(0),
+    cargo_wt(std::map<std::string, unsigned>()) {}
+
+  TankerShip(
+    std::string nm,
+    std::string src_,
+    std::string dest_,
+    unsigned cap_,
+    unsigned num_t,
+    signed min_t,
+    signed max_t
+  ):
+    Ship(nm, src_, dest_, cap_),
+    num_tanks(num_t),
+    min_temp(min_t),
+    max_temp(max_t),
+    tank_used(0),
+    cargo_wt(std::map<std::string, unsigned>()) {}
+  
+
+  std::string toString(bool verbose = false) const {
+    std::ostringstream ss;
+    ss << "The Tanker Ship " << this->name << "(" << this->loaded_wt << "/";
+    ss << this->cap << ") ";
+    if (verbose) {
+      ss << this->src << " -> " << this->dest << std::endl;
+      ss << "  Temp: " << this->min_temp << " ~ " << this->max_temp << std::endl;
+      ss << "  Types: ";
+      std::set<std::string>::iterator it = this->properties.begin();
+      while (it != this->properties.end()) {
+        ss << *it;
+        ++it;
+        if (it != this->properties.end()) {
+          ss << ", ";
+        }
+      }
+      ss << std::endl << "  ";
+    }
+    ss << "is carrying : " << std::endl;
+    for (size_t i = 0; i < this->loaded.size(); ++i) {
+      ss << "  " << this->loaded[i]->getName() << "(" << this->loaded[i]->getWt() << ")" << std::endl;
+    }
+    ss << "  (" << this->tank_used << "/" <<  this->num_tanks << ") tanks used" << std::endl;
+    return ss.str();
+  }
+};
+
+
+class AnimalShip : public Ship {
+private:
+  unsigned small_enough;
+  bool has_roamer;
+
+
+public:
+  AnimalShip():
+    Ship(),
+    small_enough(0),
+    has_roamer(false) {}
+
+  AnimalShip(
+    std::string nm,
+    std::string src_,
+    std::string dest_,
+    unsigned cap_,
+    unsigned small_enough_
+  ):
+    Ship(nm, src_, dest_, cap_),
+    small_enough(small_enough_){}
+
+
+  bool hasRoamer() const {return this->has_roamer;}
+
+  std::string toString(bool verbose = false) const {
+    std::ostringstream ss;
+    ss << "The Animal Ship " << this->name << "(" << this->loaded_wt << "/";
+    ss << this->cap << ") ";
+    if (verbose) {
+      ss << this->src << " -> " << this->dest << std::endl;
+      ss << "  Small enough: " << this->small_enough << std::endl << "  ";
+    }
+    ss << "is carrying : " << std::endl;
+    for (size_t i = 0; i < this->loaded.size(); ++i) {
+      ss << "  " << this->loaded[i]->getName() << "(" << this->loaded[i]->getWt() << ")" << std::endl;
+    }
+    if (this->hasRoamer()) {ss << "  has a roamer";}
+    else {ss << "  does not have a roamer";}
+    ss << std::endl;
+    return ss.str();
+  }
+};
 
 #endif

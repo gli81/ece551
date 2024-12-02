@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
     ship_vec.push_back(new_ship);
     ship_names.insert(new_ship->getName());
   }
-  // printPointerVec<Ship*>(ship_vec, '\n');
+  //@@@printPointerVec<Ship*>(ship_vec, '\n');
   // open, read, close cargo file
   std::vector<std::string> cargo_lines = readFile(argv[2]);
   //@@@printVec<std::string>(cargo_lines, '\n');
@@ -34,7 +34,8 @@ int main(int argc, char** argv) {
     Cargo* new_cargo = createCargo(cargo_lines[i]);
     cargo_vec.push_back(new_cargo);
   }
-  //@@@printPointerVec<Cargo*>(cargo_vec, '\n');
+  printPointerVec<Cargo*>(cargo_vec, '\n');
+  exit(EXIT_SUCCESS);
   //for (size_t i = 0; i < cargo_vec.size(); ++i) {
   //  std::cout << cargo_vec[i]->getName() << std::endl;
   //  std::cout << cargo_vec[i]->getRequiredShip() << std::endl;
@@ -73,7 +74,7 @@ int main(int argc, char** argv) {
   }
   std::cout << "---Done Loading---Here are the ships---" << std::endl;
   for (size_t i = 0; i < ship_vec.size(); ++i) {
-    std::cout << ship_vec[i]->toString();
+    ship_vec[i]->toString();
   }
   // free ships
   while (!ship_vec.empty()) {
