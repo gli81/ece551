@@ -1,6 +1,6 @@
-Grading at 11/18/2024:04:17:08.629575
-For commit ID 5c941411ba50d64cac7a23cdbfb0ccd4bd05c1c5
-Grading at Sun Nov 17 11:17:03 PM EST 2024
+Grading at 11/26/2024:00:21:13.415722
+For commit ID 618a8e3969e1b178350930eca580f1a37e95b71d
+Grading at Mon Nov 25 07:20:58 PM EST 2024
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -40,7 +40,114 @@ Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
  *** This is one of the three test cases for step 1 early start EC **
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/nocolon.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/onecolon.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/threeColon.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/invalidCap.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/duplicateNames.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/empty.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/newLine.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ inputs/ship0.txt inputs/cargo0.txt 
+-------------------------
+I need to compile your code for ships-step2 (make ships-step2)
+
+Compiling ships-step2
+g++ -c -Wall -Werror -ggdb3 -pedantic --std=gnu++03 utils.cpp
+g++ -o ships-step2 -Wall -Werror -ggdb3 -pedantic --std=gnu++03 step2.cpp utils.o
+rm utils.o
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/ships0.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/ship0.txt ./inputs/duplicateType.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+You have already pass the basic tests for step1:
 **step1 basic tests passed for gl183 at 1731903428** : d68bb0b29559db45a723aa76a7afd2e31dd52f97  -
+You have already pass the basic tests for step2:
+**step2 basic tests passed for gl183 at 1732577111** : 0f2cb183480ba747eb61e262e61c35319000ec42  -
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
 

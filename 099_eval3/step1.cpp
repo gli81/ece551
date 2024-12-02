@@ -18,11 +18,10 @@ int main (int argc, char** argv) {
   for (size_t i = 0; i < lines.size(); ++i) {
     //@@@std::cout << lines[i] << "\t created by me!" << std::endl;
     // parse each line
-    Ship* new_ship = createContainer(lines[i]);
+    Ship* new_ship = createShip(lines[i]);
     if (ship_names.find(new_ship->getName()) != ship_names.end()) {
       // name exists
-      std::cerr << "Duplicate ship names" << std::endl;
-      exit(EXIT_FAILURE);
+      printErrorAndExit("Invalid input - Duplicate ship names");
     }
     ship_vec.push_back(new_ship);
     ship_names.insert(new_ship->getName());
