@@ -185,6 +185,33 @@ public:
     cargo_wt(std::map<std::string, unsigned>()) {}
   
 
+  bool canLoad(const Cargo* cargo) const {
+    if (cargo->getRequiredShip().compare("tanker") != 0) {
+      return false;
+    }
+    if (cargo->getSrc().compare(this->src) != 0 || cargo->getDest().compare(this->dest) != 0) {
+      return false;
+    }
+    for (size_t i = 0; i < cargo->getProperties().size(); ++i) {
+      if (this->properties.find(cargo->getProperties()[i]) == this->properties.end()) {
+        return false;
+      }
+    }
+    if (this->loaded_wt + cargo->getWt() > this->cap) {
+      return false;
+    }
+    //if (this->slots == this->loaded.size()) {
+    //  return false;
+    //}
+    return true;
+  }
+
+  void load(const Cargo* cargo) {
+    this->loaded_wt += cargo->getWt();
+    this->loaded.push_back(cargo);
+    std::cout << "  **Loading the cargo onto " << this->name << "**" << std::endl;
+  }
+
   std::string toString(bool verbose = false) const {
     std::ostringstream ss;
     ss << "The Tanker Ship " << this->name << "(" << this->loaded_wt << "/";
@@ -237,6 +264,44 @@ public:
 
 
   bool hasRoamer() const {return this->has_roamer;}
+
+  bool canLoad(const Cargo* cargo) const {
+    if (cargo->getRequiredShip().compare("tanker") == 0) {
+      return false;
+    }
+    if (cargo->getSrc().compare(this->src) != 0 || cargo->getDest().compare(this->dest) != 0) {
+      return false;
+    }
+    if (this->loaded_wt + cargo->getWt() > this->cap) {
+      return false;
+    }
+    std::string type = cargo->getRequiredShip();
+    // animal cargo
+    if (type.compare("animal") == 0) {
+      if (this->hasRoamer() && cargo->isRoamer()) {
+        return false;
+      }
+    } else if (type.compare("container") == 0) {
+      // container cargo
+      // not hazardous
+      if (cargo->getHazardous()) {return false;}
+      // small enough
+      if (cargo->getWt() > this->small_enough) {return false;}
+    } else {
+      // liquid or gas can't be loaded
+      return false;
+    }
+    return true;
+  }
+
+  void load(const Cargo* cargo) {
+    this->loaded_wt += cargo->getWt();
+    if (cargo->isRoamer()) {
+      this->has_roamer = true;
+    }
+    this->loaded.push_back(cargo);
+    std::cout << "  **Loading the cargo onto " << this->name << "**" << std::endl;
+  }
 
   std::string toString(bool verbose = false) const {
     std::ostringstream ss;

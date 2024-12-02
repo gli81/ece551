@@ -30,48 +30,32 @@ public:
 
   virtual ~Cargo() {}
 
+  virtual bool isRoamer() const {return false;}
+
   virtual void addProperty(const std::string& prop) = 0;
 
   virtual std::vector<std::string> getProperties() const = 0;
 
-  std::string& getName() {
-    return this->name;
-  };
+  std::string& getName() {return this->name;};
 
-  std::string getName() const {
-    return this->name;
-  }
+  std::string getName() const {return this->name;}
 
-  std::string& getSrc() {
-    return this->src;
-  }
+  std::string& getSrc() {return this->src;}
 
-  std::string getSrc() const {
-    return this->src;
-  }
+  std::string getSrc() const {return this->src;}
 
-  std::string& getDest() {
-    return this->dest;
-  }
+  std::string& getDest() {return this->dest;}
 
-  std::string getDest() const {
-    return this->dest;
-  }
+  std::string getDest() const {return this->dest;}
 
-  virtual __uint64_t getWt() const {
-    return this->weight;
-  }
+  virtual __uint64_t getWt() const {return this->weight;}
 
   virtual std::string getRequiredShip() const = 0;
 
-  virtual std::string toString() const {
-    std::ostringstream ss;
-    ss << this->name << ": " << this->src << " -> " << this->dest;
-    ss << ", weight: " << this->weight << std::endl;
-    return ss.str();
-  }
+  virtual std::string toString() const = 0;
 
   virtual void setHazardous(bool haz_) {this->hazardous = haz_;}
+  bool getHazardous() const {return this->hazardous;}
 
   friend std::ostream& operator<<(std::ostream& os, const Cargo& cargo);
 };
@@ -93,9 +77,7 @@ public:
     props(std::vector<std::string>()) {}
 
 
-  std::string getRequiredShip() const {
-    return "container";
-  }
+  std::string getRequiredShip() const {return "container";}
 
   void addProperty(const std::string& prop) {
     if (prop.size() == 0) {
@@ -106,7 +88,6 @@ public:
 
   std::vector<std::string> getProperties() const {return this->props;}
 
-  //TODO figure out can return a reference?
   std::string toString() const {
     std::ostringstream ss;
     ss << this->name << ": " << this->src << " -> " << this->dest;
@@ -197,13 +178,14 @@ public:
   
 
   std::string getRequiredShip() const {return "animal";}
+  
+  bool isRoamer() const {return this->roamer;}
 
   void addProperty(const std::string& prop) {
     if (prop.size() == 0) {
       // empty field
     }
     if (prop.compare("roamer") == 0) {
-      //@@@std::cout << "GEEGEEGEEGEEGEE"<< std::endl;
       this->roamer = true;
       return;
     }
