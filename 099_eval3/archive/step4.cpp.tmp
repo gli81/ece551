@@ -31,16 +31,32 @@ int main(int argc, char** argv) {
   for (size_t i = 0; i < ship_vec.size(); ++i) {
     bst.add(ship_vec[i]->getRemainingCap(), ship_vec[i]); // add() handles same key
   }
+  //@@@std::vector<std::pair<std::pair<__uint64_t, std::set<Ship*, std::less<Ship*> > >, int> > pre = bst.preOrderDump();
+  //std::cout << pre.size() << std::endl;
+  //for (size_t i = 0; i < pre.size(); ++i) {
+  //  std::cout << pre[i].first.first << ": " << std::endl;
+  //  for (std::set<Ship*>::iterator it=pre[i].first.second.begin(); it != pre[i].first.second.end(); ++it) {
+  //    std::cout << (*it)->toString(true);
+  //  }
+  //}
   // open, read, close cargo file
   std::vector<std::string> cargo_lines = readFile(argv[2]);
+  //@@@printVec<std::string>(cargo_lines, '\n');
   std::vector<Cargo*> cargo_vec;
   for (size_t i = 0; i < cargo_lines.size(); ++i) {
     Cargo* new_cargo = createCargo(cargo_lines[i]);
     cargo_vec.push_back(new_cargo);
   }
+  //@@@printPointerVec<Cargo*>(cargo_vec, '\n');
   // sort the cargos
   std::stable_sort(cargo_vec.begin(), cargo_vec.end(), cmpCargoWtDesc);
+  //@@@printPointerVec<Cargo*>(cargo_vec, '\n');
+  //for (size_t i = 0; i < cargo_vec.size(); ++i) {
+  //  std::cout << cargo_vec[i]->getName() << std::endl;
+  //  std::cout << cargo_vec[i]->getRequiredShip() << std::endl;
+  //}
   for (size_t i = 0; i < cargo_vec.size(); ++i) {
+    //@@@std::cout << cargo_vec[i]->toString();
     // check which ship can load
     Ship* load_ship = findBestShip(bst, cargo_vec[i]);
     if (load_ship != NULL) {
@@ -54,6 +70,9 @@ int main(int argc, char** argv) {
       std::cout << "No ships can carry the " << cargo_vec[i]->getName() << " from ";
       std::cout << cargo_vec[i]->getSrc() << " to " << cargo_vec[i]->getDest() << std::endl;
     }
+    //@@@std::cout << std::endl;
+    //@@@printPointerVec<Ship*>(ship_vec, '\n');
+    //@@@std::cout << std::endl;
   }
   std::cout << "---Done Loading---Here are the ships---" << std::endl;
   for (size_t i = 0; i < ship_vec.size(); ++i) {

@@ -25,20 +25,13 @@ int main(int argc, char** argv) {
     ship_vec.push_back(new_ship);
     ship_names.insert(new_ship->getName());
   }
-  // printPointerVec<Ship*>(ship_vec, '\n');
   // open, read, close cargo file
   std::vector<std::string> cargo_lines = readFile(argv[2]);
-  //@@@printVec<std::string>(cargo_lines, '\n');
   std::vector<Cargo*> cargo_vec;
   for (size_t i = 0; i < cargo_lines.size(); ++i) {
     Cargo* new_cargo = createCargo(cargo_lines[i]);
     cargo_vec.push_back(new_cargo);
   }
-  //@@@printPointerVec<Cargo*>(cargo_vec, '\n');
-  //for (size_t i = 0; i < cargo_vec.size(); ++i) {
-  //  std::cout << cargo_vec[i]->getName() << std::endl;
-  //  std::cout << cargo_vec[i]->getRequiredShip() << std::endl;
-  //}
   for (size_t i = 0; i < cargo_vec.size(); ++i) {
     std::vector<Ship*> can_load_vec;
     std::vector<std::string> name_vec;
@@ -56,20 +49,15 @@ int main(int argc, char** argv) {
       std::cout << cargo_vec[i]->getSrc() << " to ";
       std::cout << cargo_vec[i]->getDest() << std::endl;
       std::sort(name_vec.begin(), name_vec.end());
-      //@@@printVec<std::string>(name_vec, '\n');
       for (size_t idx = 0; idx < name_vec.size(); ++idx) {
         std::cout << "  " << name_vec[idx] << std::endl;
       }
       // load the cargo to the first available ship
-      //@@@std::cout << *(can_load_vec[0]);
       can_load_vec[0]->load(cargo_vec[i]);
     } else {
       std::cout << "No ships can carry the " << cargo_vec[i]->getName() << " from ";
       std::cout << cargo_vec[i]->getSrc() << " to " << cargo_vec[i]->getDest() << std::endl;
     }
-    //std::cout << std::endl;
-    //printPointerVec<Ship*>(ship_vec, '\n');
-    //std::cout << std::endl;
   }
   std::cout << "---Done Loading---Here are the ships---" << std::endl;
   for (size_t i = 0; i < ship_vec.size(); ++i) {
