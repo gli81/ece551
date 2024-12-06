@@ -55,7 +55,10 @@ public:
   virtual std::string toString() const = 0;
 
   virtual void setHazardous(bool haz_) {this->hazardous = haz_;}
+  
   bool getHazardous() const {return this->hazardous;}
+  
+  virtual std::map<std::string, signed> getPropMap() const {return std::map<std::string, signed>();}
 
   friend std::ostream& operator<<(std::ostream& os, const Cargo& cargo);
 };
@@ -126,10 +129,14 @@ public:
   std::vector<std::string> getProperties() const {
     std::vector<std::string> ans;
     for (std::map<std::string, signed>::const_iterator it = this->props.begin(); it != this->props.end(); ++it) {
-      ans.push_back(it->first);
+      if (it->first.compare("maxtemp") != 0 && it->first.compare("mintemp") != 0) {
+        ans.push_back(it->first);
+      }
     }
     return ans;
   }
+  
+  std::map<std::string, signed> getPropMap() const {return this->props;}
 
   std::string toString() const {
     std::ostringstream ss;

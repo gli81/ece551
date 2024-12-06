@@ -208,5 +208,7 @@ class AVLMultiMap {
     preOrderDumpHelper(ans, root);
     return ans;
   }
+
+  friend Ship* findBestShip(AVLMultiMap<__uint64_t, Ship*>& bst, Cargo* cargo);
 };
 #endif

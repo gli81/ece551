@@ -1,0 +1,1 @@
+cargo5,Midgar,Mordor,31,animal,roamer

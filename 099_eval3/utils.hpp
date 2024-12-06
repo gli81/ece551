@@ -5,6 +5,7 @@
 #include <string>
 #include "ships.hpp"
 #include <iostream>
+#include "avlmultimap03.hpp"
 
 void printErrorAndExit(const std::string err);
 std::vector<std::string> readFile(const char* fName);
@@ -56,4 +57,7 @@ void printPointerVec(const std::vector<T>& vec, const char delim) {
   }
   std::cout << std::endl;
 }
+
+bool cmpCargoWtDesc(const Cargo* a, const Cargo* b);
+Ship* findBestShip(AVLMultiMap<__uint64_t, Ship*>& bst, Cargo* cargo);
 #endif

@@ -8,6 +8,8 @@
 #include <sstream>
 #include "cargo.hpp"
 #include "utils.hpp"
+#include "avlmultimap03.hpp"
+#include <stack>
 
 /*
  * print Cargo
@@ -319,4 +321,87 @@ void TankerCargo::addProperty(const std::string& prop) {
     default:
       printErrorAndExit("Invalid input - Too many fields for tanker property");
   }
+}
+
+/*
+ * comparator for cargo in desc order
+ *
+ * Params
+ * ----------
+ *     a (const Cargo*) : one Cargo
+ *     b (const Cargo*) : another Cargo
+ *
+ * Returns
+ * ----------
+ *     bool : a is larger or not
+ */
+bool cmpCargoWtDesc(const Cargo* a, const Cargo* b) {
+  return a->getWt() > b->getWt();
+}
+
+/*
+ * find the next node that has larger remaining capacity
+ * 
+ * Params
+ * ----------
+ *     root
+ */
+
+/*
+ * find the best ship from bst
+ *
+ * Params
+ * ----------
+ *     bst (AVLMultiMap<__uint64_t, Ship*>) : the bst that contains
+ *         all remaining capacity and all ships
+ *     cargo (Cargo*) : the cargo being loaded
+ *
+ * Returns
+ * ----------
+ *     Ship* : the ship that best fit the cargo
+ */     
+Ship* findBestShip(AVLMultiMap<__uint64_t, Ship*>& bst, Cargo* cargo) {
+  Ship* ans = NULL;
+  // a stack based in order traversal
+  // std::stack<std::set<Ship*> > stack;
+  std::stack<AVLMultiMap<__uint64_t, Ship*>::Node*> stk;
+  AVLMultiMap<__uint64_t, Ship*>::Node* cur = bst.root;
+  __uint64_t target = cargo->getWt();
+  while (cur != NULL) {
+    if (cur->key >= target) {
+      stk.push(cur);
+      cur = cur->left;
+    } else {
+      cur = cur->right;
+    }
+  }
+  while (!stk.empty()) {
+    cur = stk.top(); stk.pop();
+    //@@@std::cout << cur->key << std::endl;
+    // cur is the smallest candidate (smaller candidate can't load cargo)
+    for (std::set<Ship*>::iterator it = cur->vals.begin(); it != cur->vals.end(); ++it) {
+      if ((*it)->canLoad(cargo)) {return *it;}
+    }
+    cur = cur->right;
+    while (cur != NULL) {
+      stk.push(cur);
+      cur = cur->left;
+    }
+  }
+  return ans;
+  //// found the smallest larger remaining cap first
+  //while (cur != NULL && cur->key >= cargo->getWt()) {
+  //  // skipping some node in the leftmost branch
+  //  // if their capcaity less than cargo weight
+  //  stack.push(cur);
+  //  cur = cur->left;
+  //}
+  //while (!stack.empty()) {
+  //  cur = stack.top();stack.pop();
+  //  cur = cur->right;
+  //  while (cur != NULL) {
+  //    stack.push(cur);
+  //    cur = cur->left;
+  //  }
+  //}
 }
