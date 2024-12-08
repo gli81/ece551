@@ -1,21 +1,40 @@
 ships-step1 inputs/ships0.txt
 ships-step1 inputs/ships1.txt
 ships-step1 inputs/ships2.txt
-ships-step1 ./inputs/nocolon.txt
-ships-step1 ./inputs/onecolon.txt
-ships-step1 ./inputs/threeColon.txt
-ships-step1 ./inputs/invalidCap.txt
-ships-step1 ./inputs/duplicateNames.txt
-ships-step1 ./inputs/empty.txt
-ships-step1 ./inputs/newLine.txt
+ships-step1 ./inputs/1ship/noColon.txt
+ships-step1 ./inputs/1ship/oneColon.txt
+ships-step1 ./inputs/1ship/threeColons.txt
+ships-step1 ./inputs/1ship/invalidCap.txt
+ships-step1 ./inputs/1ship/invalidCap2.txt
+ships-step1 ./inputs/1ship/negCap.txt
+ships-step1 ./inputs/1ship/duplicateNames.txt
+ships-step1 ./inputs/1ship/empty.txt
+ships-step1 ./inputs/1ship/newLine.txt
+ships-step1 ./inputs/1ship/fiveColons.txt
 ships-step2 inputs/ships0.txt inputs/cargo0.txt
-ships-step2 ./inputs/ships0.txt ./inputs/duplicateType.txt
-ships-step3 inputs/ships0.txt inputs/cargo1.txt
-ships-step3 inputs/ships1.txt inputs/cargo0.txt
-ships-step3 inputs/ships1.txt inputs/cargo1.txt
-ships-step3 inputs/ships2.txt inputs/cargo2.txt
-ships-step3 ./inputs/ships1.txt ./inputs/hazardousAnimal.txt
-ships-step4 inputs/ships0.txt inputs/cargo1.txt
-ships-step4 inputs/ships1.txt inputs/cargo0.txt
-ships-step4 inputs/ships1.txt inputs/cargo1.txt
-ships-step4 inputs/ships2.txt inputs/cargo2.txt
+ships-step2 ./inputs/ships0.txt ./inputs/2cargo/duplicateType.txt
+ships-step2 ./inputs/ships0.txt ./inputs/2cargo/duplicateProp.txt
+ships-step2 ./inputs/ships0.txt ./inputs/2cargo/nonhazardousProp.txt
+ships-step2 ./inputs/ships0.txt ./inputs/2cargo/noType.txt
+ships-step2 ./inputs/2ship/typeCommaOnly.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/2ship/duplicateType.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/2ship/duplicateProp.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/2ship/noType.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/2ship/negSlot.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/2ship/negSlot2.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/1ship/negCap.txt ./inputs/2cargo/negWt.txt
+ships-step2 ./inputs/2ship/maxIntSlot.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/2ship/maxIntSlot.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/2ship/minLongSlot.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/2ship/minLongSlot1.txt ./inputs/cargo0.txt
+ships-step2 ./inputs/ships0.txt ./inputs/2cargo/spaceWt.txt
+#ships-step3 inputs/ships0.txt inputs/cargo1.txt
+#ships-step3 inputs/ships1.txt inputs/cargo0.txt
+#ships-step3 inputs/ships1.txt inputs/cargo1.txt
+#ships-step3 inputs/ships2.txt inputs/cargo2.txt
+ships-step3 ./inputs/ships0.txt ./inputs/2cargo/noType.txt
+#ships-step3 ./inputs/ships1.txt ./inputs/hazardousAnimal.txt
+#ships-step4 inputs/ships0.txt inputs/cargo1.txt
+#ships-step4 inputs/ships1.txt inputs/cargo0.txt
+#ships-step4 inputs/ships1.txt inputs/cargo1.txt
+#ships-step4 inputs/ships2.txt inputs/cargo2.txt

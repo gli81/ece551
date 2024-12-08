@@ -1,0 +1,1 @@
+fireworks,Mordor,Sarth,100,container,hazardous-explosive,hazardous-explosive

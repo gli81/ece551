@@ -225,4 +225,32 @@ public:
     return ss.str();
   }
 };
+
+
+class NullCargo : public Cargo {
+public:
+  NullCargo(): Cargo() {}
+
+  NullCargo(
+    std::string nm,
+    std::string src_,
+    std::string dest_,
+    __uint64_t wt
+  ): Cargo(nm, src_, dest_, wt) {}
+  
+
+  void addProperty(const std::string& prop) {}
+
+  std::vector<std::string> getProperties() const {return std::vector<std::string>();}
+
+  std::string getRequiredShip() const {return "";}
+
+  std::string toString() const {
+    std::ostringstream ss;
+    ss << this->name << ": " << this->src << " -> " << this->dest;
+    ss << ", weight: " << this->weight << std::endl;
+    return ss.str();
+  }
+};
+
 #endif

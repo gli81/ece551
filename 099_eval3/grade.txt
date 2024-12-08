@@ -1,6 +1,6 @@
-Grading at 12/06/2024:22:21:10.939599
-For commit ID eccbbb262b1c989e947ced95ad0aec918ca2aaa7
-Grading at Fri Dec  6 05:20:39 PM EST 2024
+Grading at 12/08/2024:06:14:10.374460
+For commit ID 5f144b36bba7a6b1509be46e1c9c42331e1b2757
+Grading at Sun Dec  8 01:13:35 AM EST 2024
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -44,7 +44,7 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/nocolon.txt 
+ ./inputs/1ship/noColon.txt 
 -------------------------
 Running our code...
 Running your code
@@ -54,7 +54,7 @@ And valgrind reported no errors
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/onecolon.txt 
+ ./inputs/1ship/oneColon.txt 
 -------------------------
 Running our code...
 Running your code
@@ -64,7 +64,7 @@ And valgrind reported no errors
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/threeColon.txt 
+ ./inputs/1ship/threeColons.txt 
 -------------------------
 Running our code...
 Running your code
@@ -74,7 +74,7 @@ And valgrind reported no errors
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/invalidCap.txt 
+ ./inputs/1ship/invalidCap.txt 
 -------------------------
 Running our code...
 Running your code
@@ -84,7 +84,7 @@ And valgrind reported no errors
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/duplicateNames.txt 
+ ./inputs/1ship/invalidCap2.txt 
 -------------------------
 Running our code...
 Running your code
@@ -94,7 +94,7 @@ And valgrind reported no errors
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/empty.txt 
+ ./inputs/1ship/negCap.txt 
 -------------------------
 Running our code...
 Running your code
@@ -103,7 +103,36 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  ships-step1 
  With arguments 
- ./inputs/newLine.txt 
+ ./inputs/1ship/duplicateNames.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/1ship/empty.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/1ship/newLine.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ ./inputs/1ship/fiveColons.txt 
 -------------------------
 Running our code...
 Running your code
@@ -129,21 +158,187 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  ships-step2 
  With arguments 
- ./inputs/ships0.txt ./inputs/duplicateType.txt 
+ ./inputs/ships0.txt ./inputs/2cargo/duplicateType.txt 
 -------------------------
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Invalid input - Multiple cargo type
-------
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/ships0.txt ./inputs/2cargo/duplicateProp.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/ships0.txt ./inputs/2cargo/nonhazardousProp.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/ships0.txt ./inputs/2cargo/noType.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/typeCommaOnly.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/duplicateType.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/duplicateProp.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/noType.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/negSlot.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/negSlot2.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/1ship/negCap.txt ./inputs/2cargo/negWt.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/maxIntSlot.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/maxIntSlot.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/minLongSlot.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/2ship/minLongSlot1.txt ./inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step2 
+ With arguments 
+ ./inputs/ships0.txt ./inputs/2cargo/spaceWt.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ #ships-step3 
+ With arguments 
+ inputs/ships0.txt inputs/cargo1.txt 
+-------------------------
+#ships-step3 does not seem to be a valid command for this assignment
+Skipping this testcase
+-------------------------
+ This test case will run 
+ #ships-step3 
+ With arguments 
+ inputs/ships1.txt inputs/cargo0.txt 
+-------------------------
+#ships-step3 does not seem to be a valid command for this assignment
+Skipping this testcase
+-------------------------
+ This test case will run 
+ #ships-step3 
+ With arguments 
+ inputs/ships1.txt inputs/cargo1.txt 
+-------------------------
+#ships-step3 does not seem to be a valid command for this assignment
+Skipping this testcase
+-------------------------
+ This test case will run 
+ #ships-step3 
+ With arguments 
+ inputs/ships2.txt inputs/cargo2.txt 
+-------------------------
+#ships-step3 does not seem to be a valid command for this assignment
+Skipping this testcase
 -------------------------
  This test case will run 
  ships-step3 
  With arguments 
- inputs/ships0.txt inputs/cargo1.txt 
+ ./inputs/ships0.txt ./inputs/2cargo/noType.txt 
 -------------------------
 I need to compile your code for ships-step3 (make ships-step3)
 
@@ -154,100 +349,51 @@ rm utils.o
 Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
- *** This is one of the four test cases for step 3 early start EC **
 -------------------------
  This test case will run 
- ships-step3 
- With arguments 
- inputs/ships1.txt inputs/cargo0.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four test cases for step 3 early start EC **
--------------------------
- This test case will run 
- ships-step3 
- With arguments 
- inputs/ships1.txt inputs/cargo1.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 3 early start EC **
--------------------------
- This test case will run 
- ships-step3 
- With arguments 
- inputs/ships2.txt inputs/cargo2.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 3 early start EC **
--------------------------
- This test case will run 
- ships-step3 
+ #ships-step3 
  With arguments 
  ./inputs/ships1.txt ./inputs/hazardousAnimal.txt 
 -------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
+#ships-step3 does not seem to be a valid command for this assignment
+Skipping this testcase
 -------------------------
  This test case will run 
- ships-step4 
+ #ships-step4 
  With arguments 
  inputs/ships0.txt inputs/cargo1.txt 
 -------------------------
-I need to compile your code for ships-step4 (make ships-step4)
-
-Compiling ships-step4
-g++ -c -Wall -Werror -ggdb3 -pedantic --std=gnu++03 utils.cpp
-g++ -o ships-step4 -Wall -Werror -ggdb3 -pedantic --std=gnu++03 step4.cpp utils.o
-rm utils.o
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 4 early start EC **
+#ships-step4 does not seem to be a valid command for this assignment
+Skipping this testcase
 -------------------------
  This test case will run 
- ships-step4 
+ #ships-step4 
  With arguments 
  inputs/ships1.txt inputs/cargo0.txt 
 -------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 4 early start EC **
+#ships-step4 does not seem to be a valid command for this assignment
+Skipping this testcase
 -------------------------
  This test case will run 
- ships-step4 
+ #ships-step4 
  With arguments 
  inputs/ships1.txt inputs/cargo1.txt 
 -------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 4 early start EC **
+#ships-step4 does not seem to be a valid command for this assignment
+Skipping this testcase
 -------------------------
  This test case will run 
- ships-step4 
+ #ships-step4 
  With arguments 
  inputs/ships2.txt inputs/cargo2.txt 
 -------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 4 early start EC **
+#ships-step4 does not seem to be a valid command for this assignment
+Skipping this testcase
 You have already pass the basic tests for step1:
 **step1 basic tests passed for gl183 at 1731903428** : d68bb0b29559db45a723aa76a7afd2e31dd52f97  -
 You have already pass the basic tests for step2:
-**step2 basic tests passed for gl183 at 1732577111** : 0f2cb183480ba747eb61e262e61c35319000ec42  -
-You have already pass the basic tests for step3:
-**step3 basic tests passed for gl183 at 1733192879** : d4c0c05aad481ff1b356327ade4503fa87056b92  -
-**step4 basic tests passed for gl183 at 1733523670** : 5afb072f7a819b2a2577858a0039ac94795589de  -
-You have FAILED one or more of your test cases
-Keep debugging
+**step2 basic tests passed for gl183 at 1733631283** : add8635d15772d6a4965ba09376fe8183ee685fc  -
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
