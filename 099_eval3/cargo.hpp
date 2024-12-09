@@ -202,10 +202,6 @@ public:
   std::vector<std::string> getProperties() const {return this->props;}
 
   //animal can be hazardous according to pregrader
-  //void setHazardous(bool haz_) {
-  //  std::cerr << "Invalid input - Animal can't be hazardous" << std::endl;
-  //  exit(EXIT_FAILURE);
-  //}
 
   std::string toString() const {
     std::ostringstream ss;

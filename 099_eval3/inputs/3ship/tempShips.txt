@@ -1,0 +1,3 @@
+-2 to -1:Tanker,-2,-1,500,flammable:Luthadel:Midgar:50000
+1 to 1:Tanker,1,1,500,flammable:Luthadel:Midgar:50000
+0 to 0:Tanker,0,0,500,flammable:Luthadel:Midgar:50000

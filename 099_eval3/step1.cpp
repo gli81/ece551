@@ -16,7 +16,6 @@ int main (int argc, char** argv) {
   std::vector<Ship*> ship_vec;
   std::set<std::string> ship_names;
   for (size_t i = 0; i < lines.size(); ++i) {
-    //@@@std::cout << lines[i] << "\t created by me!" << std::endl;
     // parse each line
     Ship* new_ship = createShip(lines[i]);
     if (ship_names.find(new_ship->getName()) != ship_names.end()) {
@@ -26,13 +25,9 @@ int main (int argc, char** argv) {
     ship_vec.push_back(new_ship);
     ship_names.insert(new_ship->getName());
   }
-  /*
-  for (size_t i = 0; i < lines.size(); ++i) {
-    //@@@std::cout << ship_vec[i]->getName() << std::endl;
-  }
-  */
   // print every route
   printRoutes(ship_vec);
+  // free ships
   while (!ship_vec.empty()) {
     delete ship_vec.back();
     ship_vec.pop_back();

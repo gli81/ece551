@@ -92,7 +92,6 @@ std::vector<std::string> splitBy(const std::string& str, const char delim) {
     start = end + 1;
   }
   // put everything from start to end of string to ans
-  //if (start != str.size()) {
   if (start != str.size() + 1) { // +1 to handle the last delim right before end of string
     ans.push_back(str.substr(start, end - start));
   }
@@ -133,12 +132,10 @@ Ship* createShip(const std::string& line) {
   if (*end != '\0') { // pregrader says negative input is fine -_-||
     printErrorAndExit("Invalid input - invalid capacity");
   }
-  //@@@std::cout << cap << std::endl;
   // parse type
   std::vector<std::string> type_vec = splitBy(vec[1], ',');
   std::string ship_type = type_vec[0];
-  //@@@printVec(type_vec, '\n');
-  if (ship_type.compare("Container") == 0) {
+  if (ship_type.compare("Container") == 0) { // processing container ship
     if (type_vec.size() < 2) {
       // at least need Container,<num_slots>
       printErrorAndExit("Invalid input - Not enough fields for container ship");
@@ -157,22 +154,35 @@ Ship* createShip(const std::string& line) {
       ship->addProperty(type_vec[i]);
     }
     return ship;
-  } else if (ship_type.compare("Tanker") == 0) {
+  } else if (ship_type.compare("Tanker") == 0) { //processing tanker ship
     if (type_vec.size() < 4) {
       // at least need Tanker,<min_temp>,<max_temp>,<num_tanks>
       printErrorAndExit("Invalid input - Not enough fields for tanker ship");
     }
-    signed min_temp = std::strtol(type_vec[1].c_str(), &end, 10);
+    __int64_t min_temp_ = std::strtoll(type_vec[1].c_str(), &end, 10);
     if (*end != '\0') {
-      printErrorAndExit("Invalid input - invalid min temp");
+      printErrorAndExit("Invalid input - Invalid min temp");
     }
-    signed max_temp = std::strtol(type_vec[2].c_str(), &end, 10);
+    __int64_t max_temp_ = std::strtol(type_vec[2].c_str(), &end, 10);
     if (*end != '\0') {
-      printErrorAndExit("Invalid input - invalid max temp");
+      printErrorAndExit("Invalid input - Invalid max temp");
     }
-    unsigned num_tank = std::strtoul(type_vec[3].c_str(), &end, 10);
-    if (*end != '\0') {
-      printErrorAndExit("Invalid input - invalid num tanks");
+    signed min_temp = min_temp_;
+    signed max_temp = max_temp_;
+    if ((__int64_t)min_temp != min_temp_ || (__int64_t)max_temp != max_temp_) {
+      printErrorAndExit("Invalid input - temp overflow");
+    }
+    __uint64_t num_tank_ = std::strtoull(type_vec[3].c_str(), &end, 10);
+    if (*end != '\0' || num_tank_ == 0) {
+      printErrorAndExit("Invalid input - Invalid num tanks");
+    }
+    unsigned num_tank = num_tank_;
+    if ((__uint64_t)num_tank != num_tank_) {
+      // overflow
+      printErrorAndExit("Invalid input - num tanks overflows");
+    }
+    if (num_tank > cap || cap % num_tank != 0) {
+      printErrorAndExit("Invalid input - Invalid relationship between cap and num tanks");
     }
     TankerShip* ship = new TankerShip(vec[0], vec[2], vec[3], cap, num_tank, min_temp, max_temp);
     for (size_t i = 4; i < type_vec.size(); ++i) {
@@ -184,9 +194,13 @@ Ship* createShip(const std::string& line) {
       // exactly two fields: Animals,<small_enough>
       printErrorAndExit("Invalid input - Invalid fields for animal ship");
     }
-    unsigned small_enough = std::strtoul(type_vec[1].c_str(), &end, 10);
+    __uint64_t small_enough_ = std::strtoull(type_vec[1].c_str(), &end, 10);
     if (*end != '\0') {
       printErrorAndExit("Invalid input - Invalid small enough");
+    }
+    unsigned small_enough = small_enough_;
+    if ((__uint64_t)small_enough != small_enough_) {
+      printErrorAndExit("Invalid input - small enough overflows");
     }
     AnimalShip* ship = new AnimalShip(vec[0], vec[2], vec[3], cap, small_enough);
     return ship;
@@ -252,7 +266,6 @@ Cargo* createCargo(const std::string& line) {
   if (*end != '\0') {
     printErrorAndExit("Invalid input - invalid weight");
   }
-  //Cargo* ans = new Cargo(vec[0], vec[1], vec[2], wt);
   Cargo* ans = NULL;
   // type field index
   size_t type_field = 4;
@@ -261,7 +274,6 @@ Cargo* createCargo(const std::string& line) {
   for (size_t i = 4; i < vec.size(); ++i) {
     if (!type_found) {
       if (vec[i].compare("container") == 0) {
-        //delete ans;
         ans = new ContainerCargo(vec[0], vec[1], vec[2], wt);
         type_field = i;
         type_found = true;
@@ -275,29 +287,19 @@ Cargo* createCargo(const std::string& line) {
         type_found = true;
       }
       continue;
-    } //else {
-    //  if (
-    //    vec[i].compare("container") == 0 ||
-    //    vec[i].compare("gas") == 0 ||
-    //    vec[i].compare("liquid") == 0 || 
-    //    vec[i].compare("animal") == 0
-    //  ) {
-    //    printErrorAndExit("Invalid input - Multiple cargo type");
-    //  }
-    //}
+    }
   }
   if (!type_found) {
-    //printErrorAndExit("Invalid input - No cargo type");
+    // no type for the cargo, no ship can load then
     ans = new NullCargo(vec[0], vec[1], vec[2], wt);
   }
   for (size_t i = 4; i < vec.size(); ++i) {
     if (i == type_field) continue;
-    //@@@std::cout << vec[i].substr(0, 10) << std::endl;
+    // only hazardous properties are added
     if (vec[i].substr(0, 10).compare("hazardous-") == 0) {
       ans->setHazardous(true);
       ans->addProperty(vec[i].substr(10));
     }
-    //@@@if (vec[i].compare("roamer") == 0)std::cout << vec[i] << std::endl;
     if (vec[i].compare("roamer") == 0 && ans->getRequiredShip().compare("animal") == 0) {
       ans->addProperty(vec[i]);
     }
@@ -309,28 +311,51 @@ Cargo* createCargo(const std::string& line) {
 }
 
 void TankerCargo::addProperty(const std::string& prop) {
-  //@@@std::cout << prop << std::endl;
   // split by =
   std::vector<std::string> kv = splitBy(prop, '=');
-  //@@@printVec(kv, '\n');
   // add to map
   // if len = 1, key only, insert (k, 0)
-  signed num;
+  __int64_t num;
+  signed num_;
   switch (kv.size()) {
     case 1:
       this->props[kv[0]] = 0;
       break;
     case 2:
       char* end;
-      num = std::strtol(kv[1].c_str(), &end, 10);
+      if (kv[1].size() == 0) {
+        // error if no value after =
+        printErrorAndExit("Invalid input - No value after =");
+      }
+      num = std::strtoll(kv[1].c_str(), &end, 10);
       if (*end != '\0') {
         printErrorAndExit("Invalid input - Wrong value type");
       }
-      this->props[kv[0]] = num;
+      num_ = num;
+      if ((__int64_t) num_ != num) {
+        printErrorAndExit("Invalid input - Value overflows");
+      }
+      this->props[kv[0]] = num_;
       break;
     default:
       printErrorAndExit("Invalid input - Too many fields for tanker property");
   }
+}
+
+/*
+ * comparator for ships in alphabetical order
+ *
+ * Params
+ * ----------
+ *     a (const Ship*) : one Ship
+ *     b (const Ship*) : another Ship
+ *
+ * Returns
+ * ----------
+ *     bool : a is larger or not
+ */
+bool cmpShipName(const Ship* a, const Ship* b) {
+  return a->getName() < b->getName();
 }
 
 /*
@@ -373,10 +398,10 @@ bool cmpCargoWtDesc(const Cargo* a, const Cargo* b) {
 Ship* findBestShip(AVLMultiMap<__uint64_t, Ship*>& bst, Cargo* cargo) {
   Ship* ans = NULL;
   // a stack based in order traversal
-  // std::stack<std::set<Ship*> > stack;
   std::stack<AVLMultiMap<__uint64_t, Ship*>::Node*> stk;
   AVLMultiMap<__uint64_t, Ship*>::Node* cur = bst.root;
   __uint64_t target = cargo->getWt();
+  // find the smallest remaining capacity that can still hold the cargo
   while (cur != NULL) {
     if (cur->key >= target) {
       stk.push(cur);
@@ -387,7 +412,6 @@ Ship* findBestShip(AVLMultiMap<__uint64_t, Ship*>& bst, Cargo* cargo) {
   }
   while (!stk.empty()) {
     cur = stk.top(); stk.pop();
-    //@@@std::cout << cur->key << std::endl;
     // cur is the smallest candidate (smaller candidate can't load cargo)
     for (std::set<Ship*>::iterator it = cur->vals.begin(); it != cur->vals.end(); ++it) {
       if ((*it)->canLoad(cargo)) {return *it;}
@@ -399,19 +423,4 @@ Ship* findBestShip(AVLMultiMap<__uint64_t, Ship*>& bst, Cargo* cargo) {
     }
   }
   return ans;
-  //// found the smallest larger remaining cap first
-  //while (cur != NULL && cur->key >= cargo->getWt()) {
-  //  // skipping some node in the leftmost branch
-  //  // if their capcaity less than cargo weight
-  //  stack.push(cur);
-  //  cur = cur->left;
-  //}
-  //while (!stack.empty()) {
-  //  cur = stack.top();stack.pop();
-  //  cur = cur->right;
-  //  while (cur != NULL) {
-  //    stack.push(cur);
-  //    cur = cur->left;
-  //  }
-  //}
 }

@@ -59,5 +59,6 @@ void printPointerVec(const std::vector<T>& vec, const char delim) {
 }
 
 bool cmpCargoWtDesc(const Cargo* a, const Cargo* b);
+bool cmpShipName(const Ship* a, const Ship* b);
 Ship* findBestShip(AVLMultiMap<__uint64_t, Ship*>& bst, Cargo* cargo);
 #endif

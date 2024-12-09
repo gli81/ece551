@@ -49,13 +49,14 @@ public:
 
 
   void addProperty(std::string prop) {
-    if (prop.size() == 0) {
-      // empty field
-    }
     this->properties.insert(prop);
   }
 
   std::string getName() {
+    return this->name;
+  }
+
+  std::string getName() const {
     return this->name;
   }
 
@@ -95,20 +96,25 @@ public:
 
   
   bool canLoad(const Cargo* cargo) const {
+    // check type match
     if (cargo->getRequiredShip().compare("container") != 0) {
       return false;
     }
+    // check route
     if (cargo->getSrc().compare(this->src) != 0 || cargo->getDest().compare(this->dest) != 0) {
       return false;
     }
+    // check each hazardous property
     for (size_t i = 0; i < cargo->getProperties().size(); ++i) {
       if (this->properties.find(cargo->getProperties()[i]) == this->properties.end()) {
         return false;
       }
     }
+    // check capacity
     if (this->loaded_wt + cargo->getWt() > this->cap) {
       return false;
     }
+    // check slot
     if (this->slots == this->loaded.size()) {
       return false;
     }
@@ -118,11 +124,13 @@ public:
   void load(const Cargo* cargo, bool step4=false) {
     this->loaded_wt += cargo->getWt();
     this->loaded.push_back(cargo);
+    // step4 format
     if (step4) {
       std::cout << "Loading " << cargo->getName() << " onto " << this->name << " from ";
       std::cout << this->src << " to " << this->dest << " " << this->cap - this->loaded_wt;
       std::cout << " capacity remains" << std::endl;
     } else {
+      // step2,3 format
       std::cout << "  **Loading the cargo onto " << this->name << "**" << std::endl;
     }
   }
@@ -191,6 +199,7 @@ public:
   
 
   bool canLoad(const Cargo* cargo) const {
+    // basic checks
     if (cargo->getRequiredShip().compare("tanker") != 0) {
       return false;
     }
@@ -208,14 +217,13 @@ public:
     }
     // check if there is enough tank
     __uint64_t per_tank = this->cap / this->num_tanks;
-    //@@@std::cout << "gethere before check enough tank\n";
     if (this->cargo_wt.find(cargo->getName()) != this->cargo_wt.end()) {
       // there is some same item in a tank
       __uint64_t cur_wt = this->cargo_wt.at(cargo->getName());
-      unsigned cur_tank = cur_wt / per_tank;// + (cur_wt % per_tank > 0);
+      unsigned cur_tank = cur_wt / per_tank;
       if (cur_wt % per_tank > 0) ++cur_tank;
       __uint64_t new_wt = cur_wt + cargo->getWt();
-      unsigned extra_tank = new_wt / per_tank - cur_tank;// + (cur_wt % per_tank > 0) - cur_tank;
+      unsigned extra_tank = new_wt / per_tank - cur_tank;
       if (new_wt % per_tank > 0) ++extra_tank;
       if (tank_used + extra_tank > num_tanks) {
         return false;
@@ -229,7 +237,6 @@ public:
       }
     }
     // check temperature
-    //@@@std::cout << "gethere before check temperature\n";
     signed cargo_min_temp = std::numeric_limits<int>::min();
     signed cargo_max_temp = std::numeric_limits<int>::max();
     std::map<std::string, signed> cargo_pmap = cargo->getPropMap();
@@ -252,25 +259,19 @@ public:
     if (this->cargo_wt.find(cargo->getName()) != this->cargo_wt.end()) {
       // there is some same item in some tank
       __uint64_t cur_wt = this->cargo_wt.at(cargo->getName());
-      unsigned cur_tank = cur_wt / per_tank;// + (cur_wt % per_tank > 0);
+      unsigned cur_tank = cur_wt / per_tank;
       if (cur_wt % per_tank > 0) ++cur_tank;
-      //@@@std::cout << this->name << " current tank taken by " << cargo->getName() << ": " << cur_tank << std::endl;
       __uint64_t new_wt = cur_wt + cargo->getWt();
-      unsigned extra_tank = new_wt / per_tank - cur_tank;// + (cur_wt % per_tank > 0) - cur_tank;
+      unsigned extra_tank = new_wt / per_tank - cur_tank;
       if (new_wt % per_tank > 0) ++extra_tank;
       this->tank_used += extra_tank;
       this->cargo_wt[cargo->getName()] += cargo->getWt();
-      //@@@std::cout << this->name << " after loading tank taken by " << cargo->getName() << ": " << cur_tank + extra_tank << std::endl;
-      //@@@std::cout << "Extraa " << extra_tank << " taken\n" << num_tanks - tank_used << " left\n";
     } else {
       // new item
-      //@@@std::cout << this->name << " current tank taken by " << cargo->getName() << ": 0" << std::endl;
       unsigned extra_tank = cargo->getWt() / per_tank;
       if (cargo->getWt() % per_tank > 0) ++extra_tank;
       this->tank_used += extra_tank;
       this->cargo_wt[cargo->getName()] = cargo->getWt();
-      //@@@std::cout << this->name << " after loading tank taken by " << cargo->getName() << ": " << extra_tank << std::endl;
-      //@@@std::cout << "Extrab " << extra_tank << " taken\n" << num_tanks - tank_used << "left\n";
     }
     if (step4) {
       std::cout << "Loading " << cargo->getName() << " onto " << this->name << " from ";
@@ -336,34 +337,29 @@ public:
   bool hasRoamer() const {return this->has_roamer;}
 
   bool canLoad(const Cargo* cargo) const {
-    //if (cargo->getRequiredShip().compare("tanker") == 0) {
-    //  return false;
-    //}
+    // check route
     if (cargo->getSrc().compare(this->src) != 0 || cargo->getDest().compare(this->dest) != 0) {
-      //@@@if (this->name.compare("The Dawn Boat") == 0) std::cout << "lane wrong\n";
       return false;
     }
+    // check remaining space
     if (this->loaded_wt + cargo->getWt() > this->cap) {
-      //@@@if (this->name.compare("The Dawn Boat") == 0) std::cout << "weight wrong\n";
       return false;
     }
     std::string type = cargo->getRequiredShip();
-    // animal cargo
     if (type.compare("animal") == 0) {
+      // animal cargo
+      // check already a roamer
       if (this->hasRoamer() && cargo->isRoamer()) {
-        //@@@if (this->name.compare("The Dawn Boat") == 0) std::cout << "roamer wrong\n";
         return false;
       }
     } else if (type.compare("container") == 0) {
       // container cargo
       // not hazardous
       if (cargo->getHazardous()) {
-        //@@@if (this->name.compare("The Dawn Boat") == 0) std::cout << "hazardous wrong\n";
         return false;
       }
       // small enough
       if (cargo->getWt() > this->small_enough) {
-        //@@@if (this->name.compare("The Dawn Boat") == 0) std::cout << "small enough wrong\n";
         return false;
       }
     } else {
@@ -380,10 +376,12 @@ public:
     }
     this->loaded.push_back(cargo);
     if (step4) {
+      // step4 format
       std::cout << "Loading " << cargo->getName() << " onto " << this->name << " from ";
       std::cout << this->src << " to " << this->dest << " " << this->cap - this->loaded_wt;
       std::cout << " capacity remains" << std::endl;
     } else {
+      // step2, 3 format
       std::cout << "  **Loading the cargo onto " << this->name << "**" << std::endl;
     }
   }

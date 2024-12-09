@@ -1,0 +1,1 @@
+milk,Luthadel,Midgar,472,liquid,mintemp,maxtemp=10

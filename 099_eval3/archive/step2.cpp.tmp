@@ -41,13 +41,13 @@ int main(int argc, char** argv) {
   //}
   for (size_t i = 0; i < cargo_vec.size(); ++i) {
     std::vector<Ship*> can_load_vec;
-    std::vector<std::string> name_vec;
+    //std::vector<std::string> name_vec;
     // check which ship can have
     for (size_t j = 0; j < ship_vec.size(); ++j) {
       if (ship_vec[j]->canLoad(cargo_vec[i])) {
         // add to the vector
         can_load_vec.push_back(ship_vec[j]);
-        name_vec.push_back(ship_vec[j]->getName());
+        //name_vec.push_back(ship_vec[j]->getName());
       }
     }
     if (can_load_vec.size() != 0) {
@@ -55,10 +55,11 @@ int main(int argc, char** argv) {
       std::cout << cargo_vec[i]->getName() << " from ";
       std::cout << cargo_vec[i]->getSrc() << " to ";
       std::cout << cargo_vec[i]->getDest() << std::endl;
-      std::sort(name_vec.begin(), name_vec.end());
+      //std::sort(name_vec.begin(), name_vec.end());
+      std::sort(can_load_vec.begin(), can_load_vec.end(), cmpShipName);
       //@@@printVec<std::string>(name_vec, '\n');
-      for (size_t idx = 0; idx < name_vec.size(); ++idx) {
-        std::cout << "  " << name_vec[idx] << std::endl;
+      for (size_t idx = 0; idx < can_load_vec.size(); ++idx) {
+        std::cout << "  " << can_load_vec[idx]->getName() << std::endl;
       }
       // load the cargo to the first available ship
       //@@@std::cout << *(can_load_vec[0]);
